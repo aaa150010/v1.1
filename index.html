@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script>
+	  if(window.navigator.userAgent.indexOf('MSIE') > -1 || window.navigator.userAgent.indexOf('Trident') > -1){
+		  window.location.replace("../not_support_vue.htm");
+	  }
+	</script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" href="/favicon.ico" />
+    <view class="preloading">
+        <div style="width: 100vw;height: 100vh;display: flex;justify-content: center;align-items: center;flex-direction: column;">
+            <!--           <img src="https://bozhonglc.oss-cn-beijing.aliyuncs.com/image1/assets/logo.png" width="80px">-->
+            <img src="https://bozhonglc.oss-cn-beijing.aliyuncs.com/image1/assets/loading.gif" width="150px">
+            <div style="font-size: 36px;margin-top: 50px">博众数科</div>
+        </div>
+    </view>
+	<title></title>
+	${AWSJSAndCSSImport}
+	<!--
+    其它的js或css引用方式示例（<%= htmlWebpackPlugin.options.awsjsandcsspath%>）
+    <link rel="stylesheet" type="text/css" href="<%= htmlWebpackPlugin.options.awsjsandcsspath%>apps/_bpm.platform/css/model/console.m.dw.design.css"/>
+  -->
+	<script>
+	  const settingParam = ${settingParam};
+	  const axiosBaseUrl =  "${axiosBaseUrl}";
+	  const production =  ${isProduction};
+		const devUserInfo = ${devUserInfo};
+      sessionStorage.setItem("settingParam", JSON.stringify(settingParam));
+      const sess=sessionStorage.getItem('settingParam')
+	</script>
+</head>
+<body style="margin:0;">
+<div id="app"></div>
+<script type="module" src="/src/main.ts"></script>
+<!-- built files will be auto injected -->
+</body>
+</html>

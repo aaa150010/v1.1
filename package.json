@@ -1,0 +1,70 @@
+{
+	"name": "vue3.0-ts-template",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"serve": "vite preview"
+	},
+	"dependencies": {
+		"@ant-design/icons-vue": "^7.0.1",
+		"ant-design-vue": "^4.1.2",
+		"axios": "^1.6.8",
+		"core-js": "^3.6.5",
+		"register-service-worker": "^1.7.1",
+		"vue": "^3.2.19",
+		"vue-router": "^4.0.2",
+		"vuex": "^4.0.2"
+	},
+	"devDependencies": {
+		"@types/fs-extra": "^9.0.12",
+		"@typescript-eslint/eslint-plugin": "^4.18.0",
+		"@typescript-eslint/parser": "^4.18.0",
+		"@vitejs/plugin-vue": "^2.3.3",
+		"@vue/compiler-sfc": "^3.2.19",
+		"@vue/eslint-config-typescript": "^7.0.0",
+		"babel-polyfill": "^6.26.0",
+		"eslint": "^6.7.2",
+		"eslint-plugin-vue": "^7.0.0",
+		"fs-extra": "^10.0.0",
+		"less": "^3.0.4",
+		"less-loader": "^5.0.0",
+		"typescript": "^4.3.2",
+		"unplugin-vue-components": "^0.26.0",
+		"vite": "^2.9.9",
+		"vue-tsc": "^0.2.2"
+	},
+	"eslintConfig": {
+		"root": true,
+		"env": {
+			"node": true
+		},
+		"extends": [
+			"plugin:vue/vue3-essential",
+			"eslint:recommended",
+			"@vue/typescript/recommended"
+		],
+		"parserOptions": {
+			"ecmaVersion": 2020
+		},
+		"rules": {
+			"generator-star-spacing": "off",
+			"no-tabs": "off",
+			"no-this-alias": "off",
+			"no-unused-vars": "off",
+			"no-console": "off",
+			"no-irregular-whitespace": "off",
+			"no-debugger": "off",
+			"@typescript-eslint/no-var-requires": "off",
+			"@typescript-eslint/no-unused-vars": "off",
+			"@typescript-eslint/ban-types": "off",
+			"@typescript-eslint/no-this-alias": "off",
+			"@typescript-eslint/explicit-module-boundary-types": "off"
+		}
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not dead"
+	]
+}
