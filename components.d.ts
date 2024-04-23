@@ -17,6 +17,8 @@ declare module 'vue' {
     AProgress: typeof import('ant-design-vue/es')['Progress']
     ATabPane: typeof import('ant-design-vue/es')['TabPane']
     ATabs: typeof import('ant-design-vue/es')['Tabs']
+    AUploadDragger: typeof import('ant-design-vue/es')['UploadDragger']
+    Localupload: typeof import('./src/components/localupload.vue')['default']
     Overview: typeof import('./src/components/overview.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

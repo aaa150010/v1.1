@@ -1,9 +1,52 @@
 <template>
-  <div>数据湖</div>
+  <div class="workbenchContainer">
+    <div class="leftTabs">
+      <a-tabs v-model:activeKey="activeKey" @change="handleChange" type="card" tab-position="left" style="height: 100%;overflow: scroll">
+        <a-tab-pane key="1" tab="本地上传">
+          <localupload></localupload>
+        </a-tab-pane>
+        <a-tab-pane key="2" tab="我的空间">
+
+        </a-tab-pane>
+        <a-tab-pane key="3" tab="部门空间">
+          <p>Content of Tab Pane 2</p>
+          <p>Content of Tab Pane 2</p>
+          <p>Content of Tab Pane 2</p>
+        </a-tab-pane>
+        <a-tab-pane key="4" tab="学校公共空间">
+          <p>Content of Tab Pane 2</p>
+          <p>Content of Tab Pane 2</p>
+          <p>Content of Tab Pane 2</p>
+        </a-tab-pane>
+        <a-tab-pane key="5" tab="核心数据管理">
+          <p>Content of Tab Pane 2</p>
+          <p>Content of Tab Pane 2</p>
+          <p>Content of Tab Pane 2</p>
+        </a-tab-pane>
+      </a-tabs>
+    </div>
+    <div>
+
+    </div>
+  </div>
 </template>
 <script setup>
+import {onMounted, ref} from "vue";
+import Workprogress from "@/components/workprogress.vue";
+import Overview from "@/components/overview.vue";
+import Localupload from "@/components/localupload.vue";
+const activeKey = ref('1');
+onMounted(()=>{
 
+})
 </script>
 <style scoped>
-
+.workbenchContainer{
+  width: 100%;
+  height: 100%;
+}
+.leftTabs{
+  width: 100%;
+  height: 100%;
+}
 </style>
