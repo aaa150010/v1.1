@@ -1,4 +1,5 @@
 module.exports = {
+  //
   moduleTemplateInAWS:
     "apps/install/com.awspaas.user.apps.app_test/template/page/vue.htm" /*apps/install/_bpm.platform/template/page/console.m.dw.design.vue.htm*/, //build后生成到平台的模板位置及名称
   outputDir:
