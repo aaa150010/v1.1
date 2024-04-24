@@ -17,7 +17,7 @@ service.interceptors.request.use(
 // 响应拦截器
 service.interceptors.response.use(
   (res) => {
-      if (res.data.result!='ok'){
+      if (res.data.result!='ok'&&res.data.data.result!=='ok'){
           message.error(res.data.msg);
       }
     return res.data;

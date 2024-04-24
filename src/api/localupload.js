@@ -6,10 +6,18 @@ export function uploadFile(file) {
     let apiBasePath=`${isDev?'AWSDEVURL/r/':'/portal/r/'}uf`
     return axios({
         method: "post",
-        url:  `${apiBasePath}?appId=com.awspaas.user.apps.complex_task_decomposition&sid=${getSid()}&groupValue=dir1&fileValue=dir2&repositoryName=myfile`,
+        url:  `${apiBasePath}?appId=com.awspaas.user.apps.complex_task_decomposition&sid=${getSid()}&groupValue=dir1&fileValue=dir2&repositoryName=myfile&extParam=`,
         data:{file},
         headers: {
             "Content-Type": "multipart/form-data",
         },
+    });
+}
+//获取目录树
+export function getTreeData(space) {
+    let apiBasePath=`${isDev?'AWSDEVURL/r/':'/portal/r/'}jd`
+    return axios({
+        method: "post",
+        url:  `${apiBasePath}?cmd=com.awspaas.user.apps.complex_task_decomposition.controller_getResource&sid=${getSid()}&space=${space}&type=文件夹&isDeep=true&parent=我的空间`,
     });
 }
