@@ -1,4 +1,5 @@
 <template>
+  <a-spin :spinning="pinia.spin">
   <div class="boxContainer">
     <div class="leftMenu">
       <left-menu></left-menu>
@@ -7,9 +8,12 @@
       <router-view></router-view>
     </div>
   </div>
+  </a-spin>
 </template>
 <script setup>
 import LeftMenu from "@/layout/leftMenu.vue";
+import {usePiniaStore} from "@/pinia";
+const pinia=usePiniaStore()
 </script>
 <style scoped>
 .boxContainer{

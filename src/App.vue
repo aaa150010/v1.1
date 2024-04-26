@@ -41,6 +41,7 @@ export default defineComponent({
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 .ant-tabs-nav{
   border: 1px solid #fff!important;

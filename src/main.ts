@@ -8,13 +8,16 @@ import awsui from "../lib/awsui.es"; //注意awsui组件库根据情况指定路
 import "../lib/awsui.css";
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/reset.css';
+import { createPinia } from "pinia";
 
+
+const pinia = createPinia();
 const app = createApp(App);
 app.use(store);
 app.use(router);
 app.use(awsui);
 app.use(Antd)
-
+app.use(pinia);
 // app.use(ElementPlus, { size: 'small', zIndex: 3000 });
 const mountApp = ()=>{
     app.mount('#app');

@@ -5,8 +5,6 @@
         name="file"
         :multiple="true"
         :before-upload="beforeUpload"
-        @change="handleChange"
-        @drop="handleDrop"
     >
       <div style="height: 400px;display: flex;justify-content: center;flex-direction: column">
         <p class="ant-upload-drag-icon">
@@ -59,16 +57,18 @@
 <script setup>
 import {UploadOutlined } from '@ant-design/icons-vue';
 import {onMounted, ref, watch} from "vue";
-import {getTreeData, uploadFile} from "@/api/localupload";
+import {getTreeData} from "@/api/localupload";
 import { message, Upload } from 'ant-design-vue';
 import isDev from "@/config";
 import axios from "@/axios";
 import {getSid} from "@/utils";
+import {usePiniaStore} from "@/pinia";
 const fileList = ref([]);
 const optionValue1=ref('我的空间')
 const treeData = ref([])
 const showFullLoading=ref(false)
 const percent=ref(0)
+const pinia=usePiniaStore()
 onMounted(()=>{
   //获取树形目录
   getTreeData(optionValue1.value).then(res=>{
@@ -90,19 +90,22 @@ const beforeUpload = file => {
 
   const isLt500M = file.size / 1024 / 1024 < 1;
   if (!isLt500M) {
-    message.error('文件大小不能超过500MB!');
+    message.error('文件大小不能超过1MB!');
     return   Upload.LIST_IGNORE
   }else{
     fileList.value = [...(fileList.value || []), file];
   }
   return false;
 }
+// 返回第一个接口返回url的数组
 const urlList=ref([])
+// 存放第一波返回接口的对象数组
 const responses=ref([])
 const handleClick=()=>{
   if (fileList.value.length==0){
     message.error('请先选择文件!');
   }else {
+    pinia.showFullLoading()
     fileList.value.forEach((item)=>{
       const request=  axios({
         method: "post",
@@ -117,28 +120,40 @@ const handleClick=()=>{
     Promise.all(responses.value)
     .then(responses => {
       // 提取所有请求的数据
-      responses.forEach(item=>{
-        urlList.value.push(item.data.data.attrs.url)
+      console.log(responses)
+      responses.forEach((response,index)=>{
+        const newObj={
+          "type": "文件",
+          "parent": value.value,
+          "name": fileList.value[index].name,
+          "size": fileList.value[index].size,
+          "space": optionValue1.value,
+          "url": response.data.data.attrs.url
+        }
+        if (value.value==undefined){
+          newObj.parent=newObj.space
+        }
+        urlList.value.push(newObj)
       })
-      console.log(urlList.value)
+      // console.log(urlList.value)
       // 发送第二个 axios 请求
-      // return axios({
-      //   method: "post",
-      //   url:  `${isDev?'AWSDEVURL/r/':'/portal/r/'}jd?cmd=com.awspaas.user.apps.complex_task_decomposition&sid=${getSid()}&groupValue=dir1&fileValue=dir2&repositoryName=myfile&extParam=`,
-      //   data:{item},
-      //   headers: {
-      //     "Content-Type": "multipart/form-data",
-      //   },
-      // })
+      return axios({
+        method: "post",
+        url:  `${isDev?'AWSDEVURL/r/':'/portal/r/'}jd?cmd=com.awspaas.user.apps.complex_task_decomposition.controller_createResource&sid=${getSid()}`,
+        data:  urlList.value,
+      })
     })
-    // .then(finalResponse => {
-    //   // 对第二个请求的返回数据进行处理
-    //   console.log(finalResponse.data);
-    // })
-    // .catch(error => {
-    //   // 错误处理
-    //   console.error(error);
-    // });
+    .then(finalResponse => {
+      // 对第二个请求的返回数据进行处理
+      if (finalResponse.result=='ok'){
+        message.success(finalResponse.msg)
+      }
+    }).finally(()=>{
+      urlList.value=[]
+      fileList.value=[]
+      responses.value=[]
+      pinia.hideFullLoading()
+    })
   }
 
   }

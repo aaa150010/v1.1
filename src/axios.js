@@ -2,7 +2,7 @@ import axios from "axios";
 import {message} from "ant-design-vue";
 const service = axios.create({
   // axios中请求配置有baseURL选项，表示请求URL公共部分
-    timeout:5000
+  //   timeout:5000
 });
 // request拦截器
 service.interceptors.request.use(
