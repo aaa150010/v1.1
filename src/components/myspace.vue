@@ -64,9 +64,11 @@
     <a-empty v-else/>
   </a-card>
 
-  <a-modal v-model:open="open" title="新增" @ok="handleOk">
+  <a-modal v-model:open="open" title="新增" @ok="onSubmit" cancel-text="取消" ok-text="确认" :destroyOnClose="true" :maskClosable="false">
     <a-form
+        ref="formRef"
         :model="formState"
+        :rules="rules"
         autocomplete="off"
         @finish="onFinish"
         @finishFailed="onFinishFailed"
@@ -100,6 +102,7 @@ import { Form } from 'ant-design-vue';
 const useForm = Form.useForm;
 const temporyParent=ref('')
 const open = ref(false);
+const formRef=ref()
 onMounted(()=>{
   //获取我的空间所有文件
   spinning.value=true
@@ -158,11 +161,13 @@ const handleAddFolder=()=>{
 }
 const { resetFields, validate } = useForm(formState);
 const onSubmit = () => {
-  validate()
+  formRef.value.validate()
       .then(() => {
-        console.log(modelRef);
+        //校验成功
+        console.log('values');
       })
       .catch(err => {
+        //校验失败
         console.log('error', err);
       });
 };

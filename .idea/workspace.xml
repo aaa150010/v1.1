@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88dffc6e-3494-447a-a47e-980c5d5cf613" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/myspace.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/myspace.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pinia/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/coredata.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AWSDevServiceParams.js" beforeDir="false" afterPath="$PROJECT_DIR$/AWSDevServiceParams.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/axios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/localupload.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/localupload.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/myspace.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/myspace.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/datalake/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/datalake/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Composition API Component" />
         <option value="JavaScript File" />
+        <option value="Vue Composition API Component" />
       </list>
     </option>
   </component>
@@ -111,6 +103,11 @@
       <workItem from="1713923943186" duration="17583000" />
       <workItem from="1714006880923" duration="5282000" />
       <workItem from="1714093187739" duration="4389000" />
+      <workItem from="1714113942058" duration="3739000" />
+      <workItem from="1714265994521" duration="3074000" />
+      <workItem from="1714282223646" duration="710000" />
+      <workItem from="1714352565977" duration="5815000" />
+      <workItem from="1714438896878" duration="5994000" />
     </task>
     <servers />
   </component>

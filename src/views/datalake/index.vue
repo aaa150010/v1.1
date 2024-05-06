@@ -19,9 +19,7 @@
           <p>Content of Tab Pane 2</p>
         </a-tab-pane>
         <a-tab-pane key="5" tab="核心数据管理">
-          <p>Content of Tab Pane 2</p>
-          <p>Content of Tab Pane 2</p>
-          <p>Content of Tab Pane 2</p>
+          <coredata v-if="activeKey=='5'"></coredata>
         </a-tab-pane>
       </a-tabs>
     </div>
@@ -36,6 +34,7 @@ import Workprogress from "@/components/workprogress.vue";
 import Overview from "@/components/overview.vue";
 import Localupload from "@/components/localupload.vue";
 import Myspace from "@/components/myspace.vue";
+import Coredata from "@/components/coredata.vue";
 const activeKey = ref('1');
 onMounted(()=>{
 
