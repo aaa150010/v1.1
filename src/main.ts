@@ -10,14 +10,16 @@ import Antd from "ant-design-vue";
 import "ant-design-vue/dist/reset.css";
 import "@/style/main.css";
 import Menus from "vue3-menus";
+import { createPinia } from "pinia";
 
+const pinia = createPinia();
 const app = createApp(App);
 app.use(store);
 app.use(router);
 app.use(awsui);
 app.use(Antd);
 app.use(Menus);
-
+app.use(pinia);
 // app.use(ElementPlus, { size: 'small', zIndex: 3000 });
 const mountApp = () => {
   app.mount("#app");
