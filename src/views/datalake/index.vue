@@ -6,7 +6,7 @@
           <localupload v-if="activeKey=='1'"></localupload>
         </a-tab-pane>
         <a-tab-pane key="2" tab="我的空间">
-          <myspace v-if="activeKey=='2'"></myspace>
+          <common-components space="我的空间" v-if="activeKey=='2'"></common-components>
         </a-tab-pane>
         <a-tab-pane key="3" tab="部门空间">
           <p>Content of Tab Pane 2</p>
@@ -33,8 +33,9 @@ import {onMounted, ref} from "vue";
 import Workprogress from "@/components/workprogress.vue";
 import Overview from "@/components/overview.vue";
 import Localupload from "@/components/localupload.vue";
-import Myspace from "@/components/myspace.vue";
+import Myspace from "@/components/commonComponents.vue";
 import Coredata from "@/components/coredata.vue";
+import CommonComponents from "@/components/commonComponents.vue";
 const activeKey = ref('1');
 onMounted(()=>{
 

@@ -17,9 +17,11 @@ service.interceptors.request.use(
 // 响应拦截器
 service.interceptors.response.use(
   (res) => {
-      if (res.data.result!='ok'&&res.data.data.result!=='ok'){
-          message.error(res.data.msg);
+      // &&res.data.data.result!=='ok'
+      if (res.data.result!=='ok'){
+          message.error(res.data.msg?res.data.msg:res.data.desc);
       }
+
     return res.data;
   },
   (error) => {

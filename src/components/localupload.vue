@@ -69,10 +69,12 @@ const treeData = ref([])
 const showFullLoading=ref(false)
 const percent=ref(0)
 const pinia=usePiniaStore()
+const value = ref('');
 onMounted(()=>{
   //获取树形目录
   getTreeData(optionValue1.value).then(res=>{
     if (res.result=='ok'){
+      console.log(res.data)
       treeData.value=res.data
     }
   })
@@ -102,8 +104,8 @@ const urlList=ref([])
 // 存放第一波返回接口的对象数组
 const responses=ref([])
 const handleClick=()=>{
-  if (fileList.value.length==0){
-    message.error('请先选择文件!');
+  if (fileList.value.length==0||value.value==''){
+    message.error('请先选择文件或目录!');
   }else {
     pinia.showFullLoading()
     fileList.value.forEach((item)=>{
@@ -128,6 +130,7 @@ const handleClick=()=>{
           "name": fileList.value[index].name,
           "size": fileList.value[index].size,
           "space": optionValue1.value,
+          "permissionType": "私密",
           "url": response.data.data.attrs.url
         }
         if (value.value==undefined){
@@ -139,8 +142,11 @@ const handleClick=()=>{
       // 发送第二个 axios 请求
       return axios({
         method: "post",
-        url:  `${isDev?'AWSDEVURL/r/':'/portal/r/'}jd?cmd=com.awspaas.user.apps.complex_task_decomposition.controller_createResource&sid=${getSid()}`,
-        data:  urlList.value,
+        url:  `${isDev?'AWSDEVURL/r/':'/portal/r/'}jd?cmd=com.awspaas.user.apps.complex_task_decomposition.controller_createResources&sid=${getSid()}`,
+        data:  {
+          list:urlList.value,
+          parent:value.value
+        },
       })
     })
     .then(finalResponse => {
@@ -157,20 +163,6 @@ const handleClick=()=>{
   }
 
   }
-
- //  showFullLoading.value=true
- //  percent.value=0
- // const setInt= setInterval(()=>{
- //    percent.value++
- //    if (percent.value==100){
- //      clearInterval(setInt)
- //    }
- //  },5)
-const value = ref();
-
-watch(value, () => {
-  console.log(value.value);
-})
 </script>
 <style scoped>
 .fullLoading{
