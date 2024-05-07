@@ -18,6 +18,6 @@ export function getTreeData(space) {
     let apiBasePath=`${isDev?'AWSDEVURL/r/':'/portal/r/'}jd`
     return axios({
         method: "post",
-        url:  `${apiBasePath}?cmd=com.awspaas.user.apps.complex_task_decomposition.controller_getResource&sid=${getSid()}&space=${space}&type=文件夹&isDeep=true&parent=我的空间`,
+        url:  `${apiBasePath}?cmd=com.awspaas.user.apps.complex_task_decomposition.controller_getSpace&sid=${getSid()}&space=${space}&type=文件夹&isDeep=true`,
     });
 }
