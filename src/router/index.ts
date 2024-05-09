@@ -27,6 +27,11 @@ const routes: Array<RouteRecordRaw> = [
         name: "任务管理中心",
         component: () => import("@/views/taskManageCenter/index.vue"),
       },
+      {
+        path: "/index/information",
+        name: "消息",
+        component: () => import("@/views/information/index.vue"),
+      },
     ],
   },
 ];
