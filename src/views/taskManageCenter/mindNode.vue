@@ -1,13 +1,13 @@
 <template>
   <div class="w-full h-full bg-slate-200 px-4 relative" @click="toggleCollapse">
-    <div>{{ dataObj.id + dataObj.label }}</div>
-    <div>总任务数:100</div>
-    <div>完成进度:8.3%</div>
-    <div>当前得分:1分</div>
-    <div>2023.2.1~2024.2.1</div>
+    <div>{{ dataObj.name }}</div>
+    <div>总任务数:{{ dataObj.totalTasks }}</div>
+    <div>完成进度:{{ dataObj.schedule }}%</div>
+    <div>当前得分:{{ dataObj.score }}分</div>
+    <div>{{ dataObj.startTime + "~" + dataObj.endTime }}</div>
     <span
       class="absolute right-2 bottom-2 cursor-pointer text-lg"
-      @click.stop="selectRowClick({})"
+      @click.stop="selectRowClick(dataObj)"
       v-menus:left="menus"
       >...</span
     >

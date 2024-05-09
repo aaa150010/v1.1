@@ -1,124 +1,162 @@
 <template>
   <a-form
-    ref="formRef"
-    :model="formState"
-    :rules="rules"
+    ref="formNodeRef"
+    :model="formNode"
+    :rules="rulesNode"
     :label-col="labelCol"
     :wrapper-col="wrapperCol"
   >
-    <a-form-item ref="name" label="子任务名称" name="name">
-      <a-input v-model:value="formState.name" />
+    <a-form-item label="子任务名称" name="taskName">
+      <a-input v-model:value="formNode.taskName" />
     </a-form-item>
-    <a-form-item label="负责部门" name="region">
-      <a-select
-        v-model:value="formState.region"
-        placeholder="please select your zone"
+    <a-form-item label="负责部门" name="responsibleDepartment">
+      <a-tree-select
+        v-model:value="formNode.responsibleDepartment"
+        placeholder="请选择部门"
+        show-search
+        :tree-data="deptListTree"
+        allowClear
+        @change="deptChange"
       >
-        <a-select-option value="shanghai">Zone one</a-select-option>
-        <a-select-option value="beijing">Zone two</a-select-option>
+      </a-tree-select>
+    </a-form-item>
+    <a-form-item label="责任人" name="personResponsible">
+      <a-select
+        v-model:value="formNode.personResponsible"
+        placeholder="请选择负责人"
+      >
+        <a-select-option
+          v-for="item in peopleList"
+          :key="item.value"
+          :value="item.value"
+          >{{ item.label }}</a-select-option
+        >
       </a-select>
     </a-form-item>
-    <a-form-item label="责任人" name="region">
-      <a-select
-        v-model:value="formState.region"
-        placeholder="please select your zone"
-      >
-        <a-select-option value="shanghai">Zone one</a-select-option>
-        <a-select-option value="beijing">Zone two</a-select-option>
-      </a-select>
-    </a-form-item>
-    <a-form-item label="任务截止时间" required name="date1">
+    <a-form-item label="任务开始时间" name="startTime">
       <a-date-picker
-        v-model:value="formState.date1"
-        show-time
-        type="date"
-        placeholder="Pick a date"
-        style="width: 100%"
+        v-model:value="formNode.startTime"
+        format="YYYY-MM-DD HH:mm:ss"
+        :show-time="{ defaultValue: dayjs('00:00:00', 'HH:mm:ss') }"
       />
     </a-form-item>
-    <a-form-item label="任务说明" name="type">
-      <a-checkbox-group v-model:value="formState.type">
-        <a-checkbox value="1" name="type">Online</a-checkbox>
-        <a-checkbox value="2" name="type">Promotion</a-checkbox>
-        <a-checkbox value="3" name="type">Offline</a-checkbox>
-      </a-checkbox-group>
+    <a-form-item label="任务截止时间" name="endTime">
+      <a-date-picker
+        v-model:value="formNode.endTime"
+        format="YYYY-MM-DD HH:mm:ss"
+        :show-time="{ defaultValue: dayjs('00:00:00', 'HH:mm:ss') }"
+      />
     </a-form-item>
+    <a-form-item label="任务说明" name="taskDescription">
+      <a-textarea v-model:value="formNode.taskDescription" />
+    </a-form-item>
+    <div class="flex justify-between">
+      <div></div>
+      <div>
+        <a-button @click="handleCancel">取消</a-button>
+        <a-button @click="handleOk" type="primary" class="ml-2">确定</a-button>
+      </div>
+    </div>
   </a-form>
 </template>
-<script lang="ts" setup>
-import { Dayjs } from "dayjs";
-import { reactive, ref, toRaw } from "vue";
-import type { UnwrapRef } from "vue";
-import type { Rule } from "ant-design-vue/es/form";
+<script setup>
+import { onMounted, reactive, ref } from "vue";
+import { useStore } from "vuex";
+import { getSelectDataApi } from "@/api/taskManage.js";
+import dayjs, { Dayjs } from "dayjs";
+const store = useStore();
 
-interface FormState {
-  name: string;
-  region: string | undefined;
-  date1: Dayjs | undefined;
-  delivery: boolean;
-  type: string[];
-  resource: string;
-  desc: string;
-}
-const formRef = ref();
-const labelCol = { span: 5 };
+console.log(store.state.nodeConfig.selectRow);
+const formNodeRef = ref();
+const labelCol = { span: 6 };
 const wrapperCol = { span: 13 };
-const formState: UnwrapRef<FormState> = reactive({
-  name: "",
-  region: undefined,
-  date1: undefined,
-  delivery: false,
-  type: [],
-  resource: "",
-  desc: "",
+
+const deptListTree = ref([]);
+const peopleList = ref([]);
+
+const formNode = reactive({
+  projectCode: store.state.nodeConfig.selectRow.projectCode,
+  parentTaskCode: store.state.nodeConfig.selectRow.id,
+  taskName: "",
+  responsibleDepartment: "",
+  personResponsible: "",
+  startTime: "",
+  endTime: "",
+  taskType: 1,
+  taskDescription: "",
 });
-const rules: Record<string, Rule[]> = {
-  name: [
+const rulesNode = {
+  taskName: [
     {
       required: true,
-      message: "Please input Activity name",
-      trigger: "change",
+      message: "必填项",
+      trigger: "blur",
     },
-    { min: 3, max: 5, message: "Length should be 3 to 5", trigger: "blur" },
   ],
-  region: [
+  responsibleDepartment: [
     {
       required: true,
-      message: "Please select Activity zone",
-      trigger: "change",
+      message: "必填项",
+      trigger: "blur",
     },
   ],
-  date1: [
+  personResponsible: [
     {
       required: true,
-      message: "Please pick a date",
-      trigger: "change",
-      type: "object",
+      message: "必填项",
+      trigger: "blur",
     },
   ],
-  type: [
+  startTime: [
     {
-      type: "array",
       required: true,
-      message: "Please select at least one activity type",
-      trigger: "change",
+      message: "必填项",
+      trigger: "blur",
     },
   ],
-  desc: [
-    { required: true, message: "Please input activity form", trigger: "blur" },
+  endTime: [
+    {
+      required: true,
+      message: "必填项",
+      trigger: "blur",
+    },
+  ],
+  taskDescription: [
+    {
+      required: true,
+      message: "必填项",
+      trigger: "blur",
+    },
   ],
 };
-const onSubmit = () => {
-  formRef.value
-    .validate()
-    .then(() => {
-      console.log("values", formState, toRaw(formState));
-    })
-    .catch((error) => {
-      console.log("error", error);
-    });
+
+const getDeptListTree = () => {
+  return getSelectDataApi({ type: "department" }).then((res) => {
+    if (res.result == "ok") {
+      deptListTree.value = res.data;
+    }
+  });
 };
-const resetForm = () => {
-  formRef.value.resetFields();
+
+const deptChange = () => {
+  return getSelectDataApi({
+    type: "person",
+    departmentId: formNode.responsibleDepartment,
+  }).then((res) => {
+    if (res.result == "ok") {
+      peopleList.value = res.data;
+    }
+  });
+};
+
+onMounted(async () => {
+  await getDeptListTree();
+});
+
+const handleOk = () => {
+  store.commit("setNodeConfig", { visible: false });
+};
+const handleCancel = () => {
+  store.commit("setNodeConfig", { visible: false });
 };
 </script>

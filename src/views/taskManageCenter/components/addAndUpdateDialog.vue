@@ -1,12 +1,6 @@
 <template>
   <div>
-    <a-modal
-      v-model:open="nodeConfig.visible"
-      ok-text="确认"
-      cancel-text="取消"
-      @ok="handleOk"
-      @cancel="handleCancel"
-    >
+    <a-modal v-model:open="nodeConfig.visible" :footer="null">
       <template #title>
         <div>{{ nodeConfig.title }}</div>
       </template>
@@ -21,10 +15,4 @@ import addAndUpdateForm from "./addAndUpdateForm.vue";
 
 const store = useStore();
 const nodeConfig = computed(() => store.state.nodeConfig);
-const handleOk = () => {
-  store.commit("setNodeConfig", { visible: false });
-};
-const handleCancel = () => {
-  store.commit("setNodeConfig", { visible: false });
-};
 </script>

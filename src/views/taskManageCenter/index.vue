@@ -20,18 +20,24 @@
           </div>
           <div class="overflow-y-auto h-residue2">
             <div
-              v-for="(item, index) in 4"
+              v-for="(item, index) in projectList"
               class="h-24 border mt-2 p-2 cursor-pointer hover:bg-cyan-300"
               :class="index == activeKey ? 'bg-cyan-300' : ''"
               @click="selectRowProject(index)"
-              :key="item"
+              :key="item.projectCode"
             >
-              <div>2024高等职业学校教学考核</div>
-              <div>2024.2.1~2024.11.2</div>
+              <div>{{ item.projectYear + item.projectName }}</div>
+              <div>
+                {{
+                  dayjs(item.startTime).format("YYYY-MM-DD") +
+                  "~" +
+                  dayjs(item.endTime).format("YYYY-MM-DD")
+                }}
+              </div>
               <div class="flex justify-around items-center">
-                <span>50%</span>
+                <span>{{ item.schedule }}%</span>
                 <a-progress
-                  :percent="50"
+                  :percent="item.schedule"
                   :size="8"
                   strokeLinecap="square"
                   class="w-20"
@@ -40,41 +46,57 @@
                 <span>>></span>
               </div>
             </div>
+            <div v-if="projectList.length == 0">暂无项目</div>
           </div>
         </div>
       </div>
       <div class="w-residue1" style="padding-left: 5px; padding-right: 5px">
         <div class="border h-residue3">
-          <div class="p-4 flex items-center border-b">
-            <span class="ml-2">项目模板</span>
-            <span
-              class="border px-1 py-2 mx-4 text-blue-700 underline"
-              v-for="item in 7"
-              :key="item"
-              >2023高校综合考核模板</span
-            >
-            <span class="border px-9 py-2 mx-4 text-blue-700 underline"
-              >查看更多</span
-            >
-          </div>
-          <div class="flex justify-between items-center p-2 border-b">
+          <projectModel
+            :projectModelList="projectModelList"
+            :openAddProject="openAddProject"
+          />
+          <div
+            v-if="projectList.length > 0"
+            class="flex justify-between items-center p-2 border-b"
+          >
             <div>
-              <span>2024高等职业学校教学质量考核</span>
-              <a-tag class="ml-2" color="green">已上架</a-tag>
-              <a-tag color="blue">执行中</a-tag>
-              <span>2024.2.1 12:15:00 ~ 2024.11.2 18:00:00</span>
+              <span>{{
+                projectList[activeKey].projectYear +
+                projectList[activeKey].projectName
+              }}</span>
+              <a-tag
+                v-if="projectList[activeKey].listed"
+                class="ml-2"
+                color="green"
+                >已上架</a-tag
+              >
+              <a-tag v-else class="ml-2" color="red">已下架</a-tag>
+              <a-tag v-if="projectList[activeKey].feedback" color="blue"
+                >执行中</a-tag
+              >
+              <a-tag v-else class="ml-2" color="red">停止反馈</a-tag>
+              <span>{{
+                projectList[activeKey].startTime +
+                "~" +
+                projectList[activeKey].endTime
+              }}</span>
             </div>
             <div>
-              <a-button class="">关闭反馈</a-button>
-              <a-button class="ml-2">项目下架</a-button>
+              <a-button class="" @click="updateFeedback">{{
+                projectList[activeKey].feedback ? "关闭反馈" : "开启反馈"
+              }}</a-button>
+              <a-button class="ml-2" @click="updateListed">{{
+                projectList[activeKey].listed ? "项目下架" : "项目上架"
+              }}</a-button>
             </div>
           </div>
-          <div>{{ activeKey }}</div>
-          <div class="w-full h-full p-2"><mind></mind></div>
+          <div v-if="projectList.length > 0" class="w-full h-full p-2">
+            <mind :selectRow="projectList[activeKey]"></mind>
+          </div>
         </div>
       </div>
     </div>
-    <addAndUpdateDialog />
     <a-modal
       v-model:open="addVisible"
       ok-text="确认"
@@ -92,98 +114,209 @@
         :wrapper-col="wrapperCol"
       >
         <a-form-item label="项目隶属年份" name="projectYear">
-          <a-input v-model:value="formProject.projectName" />
+          <a-select
+            v-model:value="formProject.projectYear"
+            placeholder="暂无模板"
+          >
+            <a-select-option
+              v-for="item in yearList"
+              :key="item"
+              :value="item"
+              >{{ item }}</a-select-option
+            >
+          </a-select>
         </a-form-item>
         <a-form-item label="项目名称" name="projectName">
-          <a-input v-model:value="formProject.projectName" /> </a-form-item
-      ></a-form>
-      <a-form-item label="项目开始时间" name="startTime">
-        <a-date-picker
-          v-model:value="formProject.startTime"
-          format="YYYY-MM-DD HH:mm:ss"
-          :show-time="{ defaultValue: dayjs('00:00:00', 'HH:mm:ss') }"
-        />
-      </a-form-item>
-      <a-form-item label="项目截止时间" name="endTime">
-        <a-date-picker
-          v-model:value="formProject.endTime"
-          format="YYYY-MM-DD HH:mm:ss"
-          :show-time="{ defaultValue: dayjs('00:00:00', 'HH:mm:ss') }"
-        />
-      </a-form-item>
-      <a-form-item label="项目模板" name="templateCode">
-        <a-select v-model:value="formProject.templateCode">
-          <!-- <a-select-option value="001">模板1</a-select-option> -->
-        </a-select>
-      </a-form-item>
-      <a-form-item label="是否直接发布（项目上架）" name="isListed">
-        <a-radio-group v-model:value="formProject.isListed">
-          <a-radio :value="true">是</a-radio>
-          <a-radio :value="false">否</a-radio>
-        </a-radio-group>
-      </a-form-item>
-      <a-form-item label="是否开启反馈" name="isFeedback">
-        <a-radio-group v-model:value="formProject.isFeedback">
-          <a-radio :value="true">是</a-radio>
-          <a-radio :value="false">否</a-radio>
-        </a-radio-group>
-      </a-form-item>
+          <a-input v-model:value="formProject.projectName" />
+        </a-form-item>
+        <a-form-item label="项目开始时间" name="startTime">
+          <a-date-picker
+            v-model:value="formProject.startTime"
+            format="YYYY-MM-DD HH:mm:ss"
+            :show-time="{ defaultValue: dayjs('00:00:00', 'HH:mm:ss') }"
+          />
+        </a-form-item>
+        <a-form-item label="项目截止时间" name="endTime">
+          <a-date-picker
+            v-model:value="formProject.endTime"
+            format="YYYY-MM-DD HH:mm:ss"
+            :show-time="{ defaultValue: dayjs('00:00:00', 'HH:mm:ss') }"
+          />
+        </a-form-item>
+        <a-form-item label="项目模板" name="templateCode">
+          <a-select
+            v-model:value="formProject.templateCode"
+            allowClear
+            placeholder="暂无模板"
+          >
+            <a-select-option
+              v-for="item in projectModelList"
+              :key="item.templateCode"
+              :value="item.templateCode"
+            >
+              {{ item.templateName }}</a-select-option
+            >
+          </a-select>
+        </a-form-item>
+        <a-form-item label="" name="listed">
+          <div class="flex justify-center">
+            <span class="w-24">是否直接发布:（项目上架）</span>
+            <a-radio-group
+              class="inline-block"
+              v-model:value="formProject.listed"
+            >
+              <a-radio :value="true">是</a-radio>
+              <a-radio :value="false">否</a-radio>
+            </a-radio-group>
+          </div>
+        </a-form-item>
+        <a-form-item label="" name="feedback">
+          <div class="flex justify-center">
+            <span class="w-24">是否开启反馈:</span>
+            <a-radio-group v-model:value="formProject.feedback">
+              <a-radio :value="true">是</a-radio>
+              <a-radio :value="false">否</a-radio>
+            </a-radio-group>
+          </div>
+        </a-form-item>
+      </a-form>
     </a-modal>
   </div>
 </template>
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, nextTick } from "vue";
 import { SortAscendingOutlined, FilterOutlined } from "@ant-design/icons-vue";
 import mind from "./mind.vue";
-import addAndUpdateDialog from "./components/addAndUpdateDialog.vue";
+
+import projectModel from "./components/projectModel.vue";
 import { useStore } from "vuex";
 import dayjs, { Dayjs } from "dayjs";
+import {
+  addProjectApi,
+  getProjectModelApi,
+  getProjectApi,
+  updateProjectApi,
+} from "@/api/taskManage.js";
+import { message } from "ant-design-vue";
 
 const store = useStore();
 
-const activeKey = ref(0);
+const activeKey = ref(-1);
+
+const orderBy = ref("DESC");
+
+const projectList = ref([]);
+const projectModelList = ref([]);
 
 const selectRowProject = (index) => {
   activeKey.value = index;
 };
-onMounted(() => {});
+
+const yearList = ref([
+  dayjs().format("YYYY") - 5,
+  dayjs().format("YYYY") - 4,
+  dayjs().format("YYYY") - 3,
+  dayjs().format("YYYY") - 2,
+  dayjs().format("YYYY") - 1,
+  dayjs().format("YYYY"),
+  parseInt(dayjs().format("YYYY")) + 1,
+  parseInt(dayjs().format("YYYY")) + 2,
+  parseInt(dayjs().format("YYYY")) + 3,
+  parseInt(dayjs().format("YYYY")) + 4,
+  parseInt(dayjs().format("YYYY")) + 5,
+]);
+onMounted(async () => {
+  await getProjectModelList();
+  await getProjectList();
+});
 
 const addVisible = ref(false);
 const formProjectRef = ref(null);
 const formProject = ref({
-  projectYear: "",
+  projectYear: dayjs().format("YYYY"),
   projectName: "",
   startTime: "",
   endTime: "",
   templateCode: "",
-  isListed: false,
-  isFeedback: true,
+  listed: false,
+  feedback: false,
 });
 
-const formProjectRules = ref({
+const formProjectRules = {
   projectYear: [{ required: true, message: "请选择项目年份", trigger: "blur" }],
   projectName: [{ required: true, message: "请输入项目名称", trigger: "blur" }],
   startTime: [
     { required: true, message: "请选择项目开始时间", trigger: "blur" },
   ],
   endTime: [{ required: true, message: "请选择项目截止时间", trigger: "blur" }],
-  templateCode: [
-    { required: true, message: "请选择项目模块", trigger: "blur" },
-  ],
-  isListed: [],
-  isFeedback: [],
-});
+  templateCode: [],
+  listed: [],
+  feedback: [],
+};
 
-const labelCol = { span: 5 };
+const labelCol = { span: 6 };
 const wrapperCol = { span: 13 };
 
-const openAddProject = () => {
+const openAddProject = (modelValue) => {
+  if (modelValue && typeof modelValue == "string") {
+    formProject.value.templateCode = modelValue;
+  }
   addVisible.value = true;
 };
 
 const addProject = () => {
   formProjectRef.value.validate().then(() => {
-    addVisible.value = false;
+    addProjectApi(formProject.value).then((res) => {
+      if (res.result == "ok") {
+        message.success("新建成功！");
+        addVisible.value = false;
+        formProjectRef.value.resetFields();
+        getProjectList();
+      }
+    });
+  });
+};
+
+const getProjectModelList = () => {
+  return getProjectModelApi().then((res) => {
+    if (res.result == "ok") {
+      projectModelList.value = res.data;
+    }
+  });
+};
+
+const getProjectList = () => {
+  return getProjectApi({ order: orderBy.value }).then((res) => {
+    if (res.result == "ok") {
+      if (activeKey.value == -1 && res.data.length > 0) {
+        activeKey.value = 0;
+      }
+      projectList.value = res.data;
+    }
+  });
+};
+// 修改反馈
+const updateFeedback = () => {
+  updateProjectApi({
+    ...projectList.value[activeKey.value],
+    feedback: !projectList.value[activeKey.value].feedback,
+  }).then((res) => {
+    if (res.result == "ok") {
+      message.success("修改成功");
+      getProjectList();
+    }
+  });
+};
+// 修改上架
+const updateListed = () => {
+  updateProjectApi({
+    ...projectList.value[activeKey.value],
+    listed: !projectList.value[activeKey.value].listed,
+  }).then((res) => {
+    if (res.result == "ok") {
+      message.success("修改成功");
+      getProjectList();
+    }
   });
 };
 </script>

@@ -21,7 +21,7 @@ export default defineComponent({
   },
   methods: {
     clickText() {
-      alert("点击事件");
+      // alert("点击事件");
     },
   },
   computed: {
