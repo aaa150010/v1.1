@@ -11,14 +11,24 @@
           @change="handleChange"
           @focus="focus"
       >
-        <a-select-option value="全部">全部</a-select-option>
-        <a-select-option value="仅查看未读">仅查看未读</a-select-option>
+        <a-select-option value="all">全部</a-select-option>
+        <a-select-option value="unread">仅查看未读</a-select-option>
+        <a-select-option value="read">仅查看已读</a-select-option>
       </a-select>
     </div>
   </div>
   <a-card  :bordered="false" style="margin-top: 10px">
     <a-table :columns="columns" :data-source="data" :pagination="pagination">
+      <template #headerCell="{column,record}">
+        <template v-if="column.key === 'action'">
+          <div>操作</div>
+        </template>
+      </template>
       <template #bodyCell="{ column,record }">
+        <template v-if="column.key === 'status'">
+          <a-tag color="#2db7f5" v-if="record.status=='已读'">已读</a-tag>
+          <a-tag color="#f50" v-else>未读</a-tag>
+        </template>
         <template v-if="column.key === 'action'">
           <a style="color: blue" @click="handleClickItem(record)">查看</a>
         </template>
@@ -29,79 +39,56 @@
     </a-table>
   </a-card>
 <!--  查看的dialog-->
-  <a-modal v-model:open="open" :title="formState.title" :footer="null">
-    <a-form
-        :model="formState"
-        name="basic"
-    >
-      <a-form-item
-          label="项目名称"
-      >
-        <div>{{formState.title}}</div>
-      </a-form-item>
-      <a-form-item
-          label="任务名称"
-      >
-        <div>{{formState.title}}</div>
-      </a-form-item>
-      <a-form-item
-          label="任务说明"
-      >
-        <div>{{formState.title}}</div>
-      </a-form-item>
-      <a-form-item
-          label="任务下发时间"
-      >
-        <div>{{formState.title}}</div>
-      </a-form-item>
-      <a-form-item
-          label="任务截止时间"
-      >
-        <div>{{formState.title}}</div>
-      </a-form-item>
-    </a-form>
-      <a-button type="primary" style="width: 100%">立即处理</a-button>
+  <a-modal v-model:open="open" :footer="null" width="50%">
+    <div style="text-align: center;margin-top: 30px;font-size: 20px" class="ellipsis">{{title}}</div>
+    <iframe :src="src" class="test" width="100%" allow="payment"></iframe>
+      <a-button type="primary" v-if="showBtn" style="width: 100%">立即处理</a-button>
   </a-modal>
 </div>
 </template>
 <script setup>
-import {onMounted, reactive, ref} from "vue";
-import {notification} from "ant-design-vue";
-const viewValue=ref('全部')
+import {computed, createVNode, onMounted, reactive, ref} from "vue";
+import {message, Modal, notification} from "ant-design-vue";
+import {addDeleteMessage, addReadMessage, getInformationByType} from "@/api/information";
+import {ExclamationCircleOutlined} from "@ant-design/icons-vue";
+const viewValue=ref('all')
 const open=ref(false)
-const formState=ref({
-  title:'【2023高等职业学校综合考核】 任务将到期'
+const showBtn=ref(false)
+const itemUrl=ref()
+const title=ref()
+const src=computed(()=>{
+  return  src.value=`${import.meta.env.VITE_APP_BASE_API}/portal/r${itemUrl.value}&sid=${localStorage.getItem('sid')}`
 })
 onMounted(()=>{
   //页面初始化请求全部并且带有分页的数据
-
-
-  //如果有待办项则提示
-  notification.open({
-    message: 'Notification Title',
-    description:
-        'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
-    onClick: () => {
-      console.log('Notification Clicked!');
-    },
-  });
+  getInformationByType(pagination.current,viewValue.value).then(res=>{
+    if (res.result=='ok'){
+      console.log(res.data)
+      pagination.total=res.data.total
+      data.value=res.data.messageData
+    }
+  })
 })
+const pageChange=(page)=>{
+  pagination.current=page
+  getInformationByType(pagination.current,viewValue.value).then(res=>{
+    if (res.result=='ok'){
+      pagination.total=res.data.total
+      data.value=res.data.messageData
+    }
+  })
+}
 const pagination =reactive({
-  total: 10,
+  total: 1,
   current: 1,
-  pageSize: 5,
-  // onChange: pageChange
+  pageSize: 10,
+  onChange: pageChange
 });
 const columns = [
   {
-    title: '序号',
-    dataIndex: 'serialNumber',
-    key: 'serialNumber',
-  },
-  {
     title: '消息内容',
-    dataIndex: 'desc',
-    key: 'desc',
+    dataIndex: 'messageTitle',
+    key: 'messageTitle',
     width:'40%',
     ellipsis: true,
   },
@@ -125,25 +112,60 @@ const columns = [
     key: 'action',
   },
 ];
-const data = [
-  {
-    serialNumber: '1',
-    desc: '【2023高等职业学校综合考核】 任务将到期,请立即前去处理,任务将到期,请立即前去处理,任务将到期,请立即前去处理',
-    deliveryTime: '2023-10-25',
-    readTime: '2023-10-25',
-    status: '未读',
-  },
-];
-// 一键已读
+const data = ref([])
+// 一键删除已读
 const handleReadMessage=()=>{
+  Modal.confirm({
+    title: '确认要删除吗?',
+    icon: createVNode(ExclamationCircleOutlined),
+    okText: '确认',
+    okType: 'danger',
+    cancelText: '取消',
+    onOk() {
+      addDeleteMessage().then(res=>{
+        if (res.result=='ok'){
+          message.success('删除成功')
+          pagination.current=1
+          getInformationByType(pagination.current,viewValue.value).then(res=>{
+            if (res.result=='ok'){
+              console.log(res.data)
+              pagination.total=res.data.total
+              data.value=res.data.messageData
+            }
+          })
+        }
+      })
+    },
+    onCancel() {
+    },
+  });
 
 }
 //更改查看的消息类型
 const handleChange=()=>{
-
+  pagination.current=1
+  getInformationByType(pagination.current,viewValue.value).then(res=>{
+    if (res.result=='ok'){
+      pagination.total=res.data.total
+      data.value=res.data.messageData
+    }
+  })
 }
 const handleClickItem=(item)=>{
-  console.log(item)
+  addReadMessage(item.messageCode).then(res=>{
+    if (res.result=='ok'){
+      getInformationByType(pagination.current,viewValue.value).then(res=>{
+        if (res.result=='ok'){
+          console.log(res.data)
+          pagination.total=res.data.total
+          data.value=res.data.messageData
+        }
+      })
+    }
+  })
+  title.value=item.messageTitle
+  showBtn.value=item.flag
+  itemUrl.value=item.messageContent
   open.value=true
 }
 </script>
@@ -154,5 +176,9 @@ const handleClickItem=(item)=>{
 .topNative{
   display: flex;
   justify-content: space-between;
+}
+.test{
+  height: 0;
+  min-height: 600px;
 }
 </style>
