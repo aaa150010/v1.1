@@ -126,7 +126,14 @@ const addNode = (item) => {
   });
 };
 
-const updateNode = (item) => {};
+const updateNode = (item) => {
+  store.commit("setNodeConfig", {
+    visible: true,
+    title: "修改任务",
+    type: "update",
+    selectRow: item,
+  });
+};
 
 const initGraph = () => {
   const graph = new Graph({

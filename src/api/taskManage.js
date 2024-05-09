@@ -48,3 +48,27 @@ export function getSelectDataApi(data) {
     data: data,
   });
 }
+
+// 获取新增子节点
+export function addNodeApi(data) {
+  return post({
+    cmd: "com.awspaas.user.apps.complex_task_decomposition_addTask",
+    data: data,
+  });
+}
+
+// 修改子节点
+export function updateNodeApi(data) {
+  return post({
+    cmd: "com.awspaas.user.apps.complex_task_decomposition_updateTask",
+    data: data,
+  });
+}
+
+// 删除子节点
+export function deleteNodeApi(data) {
+  return get({
+    cmd: "com.awspaas.user.apps.complex_task_decomposition_deleteTask",
+    data: data,
+  });
+}

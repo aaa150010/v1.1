@@ -7,7 +7,6 @@ export default createStore({
       title: "",
       type: "",
       selectRow: {},
-      nodeForm: {},
     },
     loading: false,
   },
