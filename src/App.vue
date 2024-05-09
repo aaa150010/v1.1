@@ -70,4 +70,10 @@ export default defineComponent({
   > .ant-tabs-tabpane {
   padding: 0 10px !important;
 }
+//文字超出显示省略号
+.ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 </style>
