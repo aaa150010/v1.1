@@ -18,7 +18,6 @@
 import { ref, defineProps, computed } from "vue";
 import { useStore } from "vuex";
 import addAndUpdateForm from "./addAndUpdateForm.vue";
-
 const store = useStore();
 const nodeConfig = computed(() => store.state.nodeConfig);
 const handleOk = () => {

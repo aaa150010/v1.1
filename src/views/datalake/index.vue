@@ -9,14 +9,10 @@
           <common-components space="我的空间" v-if="activeKey=='2'"></common-components>
         </a-tab-pane>
         <a-tab-pane key="3" tab="部门空间">
-          <p>Content of Tab Pane 2</p>
-          <p>Content of Tab Pane 2</p>
-          <p>Content of Tab Pane 2</p>
+          <common-components space="部门空间" v-if="activeKey=='3'"></common-components>
         </a-tab-pane>
         <a-tab-pane key="4" tab="学校公共空间">
-          <p>Content of Tab Pane 2</p>
-          <p>Content of Tab Pane 2</p>
-          <p>Content of Tab Pane 2</p>
+          <common-components space="学校公共空间" v-if="activeKey=='4'"></common-components>
         </a-tab-pane>
         <a-tab-pane key="5" tab="核心数据管理">
           <coredata v-if="activeKey=='5'"></coredata>

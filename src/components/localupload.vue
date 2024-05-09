@@ -74,7 +74,6 @@ onMounted(()=>{
   //获取树形目录
   getTreeData(optionValue1.value).then(res=>{
     if (res.result=='ok'){
-      console.log(res.data)
       treeData.value=res.data
     }
   })
