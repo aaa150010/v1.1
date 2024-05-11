@@ -1,6 +1,11 @@
 <template>
   <div>
-    <a-modal v-model:open="nodeConfig.visible" destroyOnClose :footer="null">
+    <a-modal
+      v-model:open="nodeConfig.visible"
+      destroyOnClose
+      :footer="null"
+      width="700px"
+    >
       <template #title>
         <div>{{ nodeConfig.title }}</div>
       </template>

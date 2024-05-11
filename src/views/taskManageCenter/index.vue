@@ -91,7 +91,7 @@
               }}</a-button>
             </div>
           </div>
-          <div v-if="projectList.length > 0" class="w-full h-full p-2">
+          <div v-if="projectList.length > 0" class="w-full h-residue4 p-2">
             <mind :selectRow="projectList[activeKey]"></mind>
           </div>
         </div>
@@ -197,12 +197,12 @@ import {
   getProjectApi,
   updateProjectApi,
 } from "@/api/taskManage.js";
-import { message } from "ant-design-vue";
+import { message, Modal } from "ant-design-vue";
+import { ExclamationCircleOutlined } from "@ant-design/icons-vue";
+import { createVNode } from "vue";
 
 const store = useStore();
-
 const activeKey = ref(-1);
-
 const orderBy = ref("DESC");
 
 const projectList = ref([]);
@@ -225,6 +225,7 @@ const yearList = ref([
   parseInt(dayjs().format("YYYY")) + 4,
   parseInt(dayjs().format("YYYY")) + 5,
 ]);
+
 onMounted(async () => {
   await getProjectModelList();
   await getProjectList();
@@ -295,29 +296,70 @@ const getProjectList = () => {
     }
   });
 };
+
 // 修改反馈
 const updateFeedback = () => {
-  updateProjectApi({
-    ...projectList.value[activeKey.value],
-    feedback: !projectList.value[activeKey.value].feedback,
-  }).then((res) => {
-    if (res.result == "ok") {
-      message.success("修改成功");
-      getProjectList();
-    }
-  });
+  if (projectList.value[activeKey.value].feedback) {
+    Modal.confirm({
+      title:
+        "关闭反馈后，项目相关人员无法进行业务办理，仅能查看相关信息。请确认，是否关闭反馈...",
+      icon: createVNode(ExclamationCircleOutlined),
+      onOk() {
+        updateProjectApi({
+          ...projectList.value[activeKey.value],
+          feedback: !projectList.value[activeKey.value].feedback,
+        }).then((res) => {
+          if (res.result == "ok") {
+            message.success("修改成功");
+            getProjectList();
+          }
+        });
+      },
+      onCancel() {},
+    });
+  } else {
+    updateProjectApi({
+      ...projectList.value[activeKey.value],
+      feedback: !projectList.value[activeKey.value].feedback,
+    }).then((res) => {
+      if (res.result == "ok") {
+        message.success("修改成功");
+        getProjectList();
+      }
+    });
+  }
 };
 // 修改上架
 const updateListed = () => {
-  updateProjectApi({
-    ...projectList.value[activeKey.value],
-    listed: !projectList.value[activeKey.value].listed,
-  }).then((res) => {
-    if (res.result == "ok") {
-      message.success("修改成功");
-      getProjectList();
-    }
-  });
+  if (projectList.value[activeKey.value].listed) {
+    Modal.confirm({
+      title:
+        "项目下架后，用户将无法查看该项目信息，包括工作台数据概览统计、待办事项、任务栈数据信息等。请确认，是否项目下架...",
+      icon: createVNode(ExclamationCircleOutlined),
+      onOk() {
+        updateProjectApi({
+          ...projectList.value[activeKey.value],
+          listed: !projectList.value[activeKey.value].listed,
+        }).then((res) => {
+          if (res.result == "ok") {
+            message.success("修改成功");
+            getProjectList();
+          }
+        });
+      },
+      onCancel() {},
+    });
+  } else {
+    updateProjectApi({
+      ...projectList.value[activeKey.value],
+      listed: !projectList.value[activeKey.value].listed,
+    }).then((res) => {
+      if (res.result == "ok") {
+        message.success("修改成功");
+        getProjectList();
+      }
+    });
+  }
 };
 </script>
 <style scoped>
@@ -336,5 +378,8 @@ const updateListed = () => {
 }
 .h-residue3 {
   height: calc(100% - 1rem);
+}
+.h-residue4 {
+  height: calc(100% - 8rem);
 }
 </style>
