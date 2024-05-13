@@ -18,11 +18,11 @@ export function addFolder(parent,permissionType,name) {
     });
 }
 //获取某个文件夹下的文件
-export function getFolderFiles(parent) {
+export function getFolderFiles(space,parent) {
     let apiBasePath=`${isDev?'AWSDEVURL/r/':'/portal/r/'}jd`
     return axios({
         method: "post",
-        url:  `${apiBasePath}?cmd=com.awspaas.user.apps.complex_task_decomposition.controller_getResource&sid=${getSid()}&space=我的空间&type=all&isDeep=false&parent=${parent}`,
+        url:  `${apiBasePath}?cmd=com.awspaas.user.apps.complex_task_decomposition.controller_getResource&sid=${getSid()}&space=${space}&type=all&isDeep=false&parent=${parent}`,
     });
 }
 //删除文件或者文件夹
