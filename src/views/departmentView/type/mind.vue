@@ -2,68 +2,24 @@
   <div class="app-content border h-full">
     <div id="container" style="width: 100%; height: 100%"></div>
     <TeleportContainer />
-    <addAndUpdateDialog :getProjectTree="getProjectTree" />
   </div>
 </template>
 
 <script setup>
-import mindNode from "./mindNode.vue";
+import mindNode from "../components/mindNode.vue";
 import { register, getTeleport } from "@antv/x6-vue-shape";
 import { onMounted, ref, defineProps, watch } from "vue";
 import { Graph, Cell, Node, Path, Shape } from "@antv/x6";
 import Hierarchy from "@antv/hierarchy";
 import { useStore } from "vuex";
-import addAndUpdateDialog from "./components/addAndUpdateDialog.vue";
 
-import { getProjectTreeApi, deleteNodeApi } from "@/api/taskManage.js";
-import { message, Modal } from "ant-design-vue";
-import { ExclamationCircleOutlined } from "@ant-design/icons-vue";
-import { createVNode } from "vue";
-const store = useStore();
+import { getProjectTreeApi } from "@/api/taskManage.js";
 
 const props = defineProps(["selectRow"]);
 
 const TeleportContainer = getTeleport();
 
 const dataTree = ref({});
-// const dataTree = ref({
-//   id: "1",
-//   label: "中心主题",
-//   width: 280,
-//   height: 100,
-//   children: [
-//     {
-//       id: "1-1",
-//       label: "分支主题1",
-//       button: "998989",
-//       width: 280,
-//       height: 100,
-//       children: [
-//         {
-//           id: "1-1-1",
-//           label: "子主题1",
-//           width: 280,
-//           height: 100,
-//           leaf: true,
-//         },
-//         {
-//           id: "1-1-2",
-//           label: "子主题2",
-//           width: 280,
-//           height: 100,
-//           leaf: true,
-//         },
-//       ],
-//     },
-//     {
-//       id: "1-2",
-//       label: "分支主题2",
-//       width: 280,
-//       height: 100,
-//       leaf: true,
-//     },
-//   ],
-// });
 
 onMounted(async () => {
   initGraph();
@@ -118,41 +74,6 @@ registerGraph();
 
 let render;
 
-const deleteNode = (item) => {
-  Modal.confirm({
-    title:
-      "删除当前任务后，与其有关的子任务、统计数据等都将删除。请确认，是否删除当前任务。",
-    icon: createVNode(ExclamationCircleOutlined),
-    onOk() {
-      deleteNodeApi({ taskCode: item.id }).then((res) => {
-        if (res.result == "ok") {
-          message.success("删除成功！");
-          getProjectTree();
-        }
-      });
-    },
-    onCancel() {},
-  });
-};
-
-const addNode = (item) => {
-  store.commit("setNodeConfig", {
-    visible: true,
-    title: "新增子任务",
-    type: "add",
-    selectRow: item,
-  });
-};
-
-const updateNode = (item) => {
-  store.commit("setNodeConfig", {
-    visible: true,
-    title: "修改任务",
-    type: "update",
-    selectRow: item,
-  });
-};
-
 const initGraph = () => {
   const graph = new Graph({
     container: document.getElementById("container"),
@@ -174,6 +95,8 @@ const initGraph = () => {
   });
 
   render = () => {
+    // const zoom = graph.getZoom();
+    // const lastPoint = graph.getCanvasByPoint(0, 0);
     const result = Hierarchy.mindmap(dataTree.value, {
       direction: "H",
       getHeight(d) {
@@ -205,9 +128,6 @@ const initGraph = () => {
             width: data.width,
             height: data.height,
             data: data,
-            deleteNode,
-            addNode,
-            updateNode,
             attrs: {},
           })
         );
@@ -236,6 +156,15 @@ const initGraph = () => {
     traverse(result);
     graph.resetCells(cells);
     graph.centerContent();
+
+    //缩放至之前的比例
+    // graph.zoomTo(zoom);
+
+    //获取重新渲染之后点（0， 0）在画布的位置
+    // const newPoint = graph.getCanvasByPoint(0, 0);
+
+    //移动画布相对位移
+    // graph.translate(lastPoint.x - newPoint.x, lastPoint.y - newPoint.y);
   };
 };
 
@@ -270,4 +199,4 @@ watch(
 );
 </script>
 
-<style lang="less" scoped></style>
+<style></style>

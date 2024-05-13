@@ -32,6 +32,16 @@ const routes: Array<RouteRecordRaw> = [
         name: "消息",
         component: () => import("@/views/information/index.vue"),
       },
+      {
+        path: "/index/departmentView",
+        name: "调度中心_部门视图",
+        component: () => import("@/views/departmentView/index.vue"),
+      },
+      {
+        path: "/index/wisdomDataV",
+        name: "智慧驾舱",
+        component: () => import("@/views/wisdomDataV/index.vue"),
+      },
     ],
   },
 ];

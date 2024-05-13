@@ -5,12 +5,6 @@
     <div>完成进度:{{ dataObj.schedule }}%</div>
     <div>当前得分:{{ dataObj.score }}分</div>
     <div>{{ dataObj.startTime + "~" + dataObj.endTime }}</div>
-    <span
-      class="absolute right-2 bottom-2 cursor-pointer text-lg"
-      @click.stop="selectRowClick(dataObj)"
-      v-menus:left="menus"
-      >...</span
-    >
   </div>
 </template>
 
@@ -23,31 +17,6 @@ const dataObj = ref({});
 const selectRowClick = (item) => {
   selectRow.value = item;
 };
-
-const menus = shallowRef({
-  menus: [
-    {
-      label: "新增子任务",
-      click: () => {
-        getNode().store.data.addNode(selectRow.value);
-      },
-    },
-    {
-      label: "修改",
-      click: () => {
-        getNode().store.data.updateNode(selectRow.value);
-      },
-    },
-    {
-      label: "删除",
-      click: () => {
-        getNode().store.data.deleteNode(selectRow.value);
-      },
-    },
-  ],
-});
-
-const vMenus = directive;
 
 onMounted(() => {
   dataObj.value = getNode().store.data.data;
