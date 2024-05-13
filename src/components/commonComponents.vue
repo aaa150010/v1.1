@@ -235,7 +235,7 @@ const handleItem=(item)=>{
   }else if (item.type=='文件夹'){
     //如果是文件夹则重新获取该文件夹下的目录
     spinning.value=true
-    getFolderFiles(item.value).then(res=>{
+    getFolderFiles(props.space,item.value).then(res=>{
       if (res.result=='ok'){
         //把上方当前路径更换
         currentUrl.value=res.data[0].path
@@ -265,7 +265,7 @@ const onSubmit = () => {
           editFolderOrFile(formState.value.permission,formState.value.name,formState.value.resourceCode).then(res=>{
             if (res.result=='ok'){
               message.success('修改成功');
-              getFolderFiles(parentCode.value).then(res=>{
+              getFolderFiles(props.space,parentCode.value).then(res=>{
                 if (res.result=='ok'){
                   //把上方当前路径更换
                   currentUrl.value=res.data[0].path
@@ -285,7 +285,7 @@ const onSubmit = () => {
             console.log(res)
             if (res.result=='ok'){
               message.success('创建成功');
-              getFolderFiles(parentCode.value).then(res=>{
+              getFolderFiles(props.space,parentCode.value).then(res=>{
                 if (res.result=='ok'){
                   //把上方当前路径更换
                   currentUrl.value=res.data[0].path
@@ -312,7 +312,7 @@ const onSubmit1 = () => {
         removeTo(permissionState.value.resourceCode,permissionState.value.newParent).then(res=>{
           if (res.result=='ok'){
             message.success('移动成功');
-            getFolderFiles(parentCode.value).then(res=>{
+            getFolderFiles(props.space,parentCode.value).then(res=>{
               if (res.result=='ok'){
                 //把上方当前路径更换
                 currentUrl.value=res.data[0].path
@@ -332,8 +332,9 @@ const onSubmit1 = () => {
 }
 //返回上一级
 const enterTop=()=>{
+  console.log(parent.value)
   spinning.value=true
-  getFolderFiles(parent.value).then(res=>{
+  getFolderFiles(props.space,parent.value).then(res=>{
     if (res.result=='ok'){
       //把上方当前路径更换
       currentUrl.value=res.data[0].path
@@ -380,7 +381,7 @@ const handleDelete=(item)=>{
             if (res.result=='ok'){
               message.success('删除成功');
               spinning.value=true
-              getFolderFiles(parentCode.value).then(res=>{
+              getFolderFiles(props.space,parentCode.value).then(res=>{
                 if (res.result=='ok'){
                   //把上方当前路径更换
                   currentUrl.value=res.data[0].path
