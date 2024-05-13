@@ -9,7 +9,7 @@
         <div>
           <div>{{ item.name }}</div>
           <a-progress
-            :percent="80"
+            :percent="item.schedule"
             :size="8"
             strokeLinecap="square"
             class="w-36"

@@ -76,11 +76,19 @@
               }}</span>
             </div>
             <div>
-              <a-button>全屏显示</a-button>
+              <a-button @click="launchFullScreen(dataV)">全屏显示</a-button>
             </div>
           </div>
-          <div v-if="projectList.length > 0" class="w-full h-full p-2">
-            {{ activeKey }}
+          <div v-if="projectList.length > 0" class="w-full h-residue4 p-2">
+            <!-- {{ activeKey }} -->
+            <div class="h-full overflow-y-auto">
+              <iframe
+                ref="dataV"
+                :src="'#/wisdomDataV_dataV1_index1?taskName=2024高等职业学校教学质量考核'"
+                class="w-full h-full"
+              >
+              </iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -101,6 +109,9 @@ import {
 import { message, Modal } from "ant-design-vue";
 import { ExclamationCircleOutlined } from "@ant-design/icons-vue";
 import { createVNode } from "vue";
+import dataV1 from "./dataV1/index1.vue";
+
+const dataV = ref(null);
 
 const store = useStore();
 const activeKey = ref(-1);
@@ -125,6 +136,18 @@ const getProjectList = () => {
     }
   });
 };
+
+const launchFullScreen = (element) => {
+  if (element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if (element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();
+  } else if (element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen();
+  } else if (element.msRequestFullscreen) {
+    element.msRequestFullscreen();
+  }
+};
 </script>
 <style scoped>
 .workbenchContainer {
@@ -142,5 +165,8 @@ const getProjectList = () => {
 }
 .h-residue3 {
   height: calc(100% - 1rem);
+}
+.h-residue4 {
+  height: calc(100% - 3rem);
 }
 </style>

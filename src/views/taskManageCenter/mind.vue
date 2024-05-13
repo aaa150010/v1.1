@@ -8,9 +8,10 @@
 
 <script setup>
 import mindNode from "./mindNode.vue";
-import { register, getTeleport } from "@antv/x6-vue-shape";
+
 import { onMounted, ref, defineProps, watch } from "vue";
 import { Graph, Cell, Node, Path, Shape } from "@antv/x6";
+import { register, getTeleport } from "@antv/x6-vue-shape";
 import Hierarchy from "@antv/hierarchy";
 import { useStore } from "vuex";
 import addAndUpdateDialog from "./components/addAndUpdateDialog.vue";

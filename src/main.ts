@@ -8,12 +8,14 @@ import awsui from "../lib/awsui.es"; //注意awsui组件库根据情况指定路
 import "../lib/awsui.css";
 import Antd from "ant-design-vue";
 import "ant-design-vue/dist/reset.css";
+import DataVVue3 from "@kjgl77/datav-vue3";
 import "@/style/main.css";
 import Menus from "vue3-menus";
 import { createPinia } from "pinia";
 
 const pinia = createPinia();
 const app = createApp(App);
+app.use(DataVVue3);
 app.use(store);
 app.use(router);
 app.use(awsui);

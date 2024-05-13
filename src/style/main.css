@@ -83,3 +83,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+.hideScroll::-webkit-scrollbar {
+  display: none;
+}
