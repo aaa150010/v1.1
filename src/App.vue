@@ -56,18 +56,18 @@ export default defineComponent({
 });
 </script>
 <style lang="less">
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.ant-tabs-nav {
-  border: 1px solid #fff !important;
-  background-color: #fff !important;
-}
-.ant-tabs-tab-active {
-  background: #e6f4ff !important;
-}
+//* {
+//  margin: 0;
+//  padding: 0;
+//  box-sizing: border-box;
+//}
+//.ant-tabs-nav {
+//  border: 1px solid #fff !important;
+//  background-color: #fff !important;
+//}
+//.ant-tabs-tab-active {
+//  background: #e6f4ff !important;
+//}
 :where(.css-dev-only-do-not-override-1hsjdkk).ant-tabs-left
   > .ant-tabs-content-holder
   > .ant-tabs-content
