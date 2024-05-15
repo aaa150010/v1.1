@@ -69,7 +69,7 @@ const treeData = ref([])
 const showFullLoading=ref(false)
 const percent=ref(0)
 const pinia=usePiniaStore()
-const value = ref('');
+const value = ref(null);
 onMounted(()=>{
   //获取树形目录
   getTreeData(optionValue1.value).then(res=>{
@@ -80,6 +80,7 @@ onMounted(()=>{
 })
 //空间选择变化重新获取树形目录
 const handleChange=()=>{
+  value.value=null
   getTreeData(optionValue1.value).then(res=>{
     if (res.result=='ok'){
       treeData.value=res.data

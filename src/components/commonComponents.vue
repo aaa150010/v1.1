@@ -32,12 +32,12 @@
         <a-dropdown :trigger="['contextmenu']">
         <div class="oneItem" @click="handleItem(item)">
           <div class="topIcon">
-            <img src="@/assets/wjj.png" width="70" v-if="item.format=='文件夹'">
-            <img src="@/assets/ppt.png" width="70" v-else-if="item.format=='pptx'||item.format=='ppt'">
-            <img src="@/assets/excel.png" width="70" v-else-if="item.format=='xlsx'||item.format=='xls'">
-            <img src="@/assets/docx.png" width="70" v-else-if="item.format=='doc'||item.format=='docx'">
-            <img src="@/assets/pdf1.png" width="70" v-else-if="item.format=='pdf'">
-            <img src="@/assets/wz.png" width="70" v-else>
+            <img :src="src1" width="70" v-if="item.format=='文件夹'">
+            <img :src="src2" width="70" v-else-if="item.format=='pptx'||item.format=='ppt'">
+            <img :src="src3" width="70" v-else-if="item.format=='xlsx'||item.format=='xls'">
+            <img :src="src4" width="70" v-else-if="item.format=='doc'||item.format=='docx'">
+            <img :src="src5" width="70" v-else-if="item.format=='pdf'">
+            <img :src="src6" width="70" v-else>
           </div>
           <div class="bottomDesc">
             <a-tooltip placement="bottom">
@@ -150,12 +150,19 @@ import {ArrowUpOutlined, ExclamationCircleOutlined} from '@ant-design/icons-vue'
 import {addFolder, deleteFolder, editFolderOrFile, getFolderFiles, getTreeData1, removeTo} from "@/api/myspace";
 import {getTreeData} from "@/api/localupload";
 import download from 'downloadjs'
+const src1=isDev ? "/wjj.png" : "/portal/console/images/wjj.png";
+const src2=isDev ? "/ppt.png" : "/portal/console/images/ppt.png";
+const src3=isDev ? "/excel.png" : "/portal/console/images/excel.png";
+const src4=isDev ? "/docx.png" : "/portal/console/images/docx.png";
+const src5=isDev ? "/pdf1.png" : "/portal/console/images/pdf1.png";
+const src6=isDev ? "/wz.png" : "/portal/console/images/wz.png";
 const spinning = ref(false);
 const currentUrl=ref('')
 const viewValue=ref('图标')
 const dataList=ref([])
 const destroyOnClose=ref(true)
 import {Form, message, Modal} from 'ant-design-vue';
+import isDev from "@/config";
 const useForm = Form.useForm;
 const open = ref(false);
 const open1=ref(false)

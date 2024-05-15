@@ -9,9 +9,7 @@
         <workprogress v-if="activeKey=='2'"></workprogress>
       </a-tab-pane>
       <a-tab-pane key="3" tab="我的已办">
-        <p>Content of Tab Pane 2</p>
-        <p>Content of Tab Pane 2</p>
-        <p>Content of Tab Pane 2</p>
+        <already-done v-if="activeKey=='3'"></already-done>
       </a-tab-pane>
       <a-tab-pane key="4" tab="我的关注">
         <p>Content of Tab Pane 2</p>
@@ -29,6 +27,7 @@
 import {onMounted, ref} from "vue";
 import Workprogress from "@/components/workprogress.vue";
 import Overview from "@/components/overview.vue";
+import AlreadyDone from "@/components/alreadyDone.vue";
 const activeKey = ref('1');
 onMounted(()=>{
 
@@ -43,4 +42,5 @@ onMounted(()=>{
   width: 100%;
   height: 100%;
 }
+
 </style>
