@@ -22,38 +22,38 @@
         <div class="height1 flex p-2">
           <div class="h-full w-6">
             <div
-              class="px-1 center border mb-1 cursor-pointer hover:bg-sky-600 bg-sky-600"
-            >
-              办学条件
-            </div>
-            <div
               class="px-1 center border mb-1 cursor-pointer hover:bg-sky-600"
+              v-for="(item, index) in dataTree"
+              :key="item.typeCode"
+              :class="index == activeIndex ? 'bg-sky-600' : ''"
+              @click="activeIndex = index"
             >
-              专业课程
-            </div>
-            <div
-              class="px-1 center border mb-1 cursor-pointer hover:bg-sky-600"
-            >
-              人才培养
-            </div>
-            <div
-              class="px-1 center border mb-1 cursor-pointer hover:bg-sky-600"
-            >
-              师资队伍
+              {{ item.typeName }}
             </div>
           </div>
-          <div class="h-full ml-2 width1 overflow-y-auto">
-            <div class="my-6 text-base" v-for="item in 36" :key="item">
+          <div
+            v-if="dataTree.length > 0"
+            class="h-full ml-2 width1 overflow-y-auto"
+          >
+            <div
+              class="my-6 text-base"
+              v-for="item in dataTree[activeIndex].children"
+              :key="item.itemCode"
+            >
               <div class="grid grid-cols-7">
                 <div class="text-blue-400 text-base pl-6">
-                  教学科研及辅助用房面积（平方米）
+                  {{ item.itemName }}
                 </div>
-                <div class="center">138963.16</div>
-                <div class="center">去年对比增幅：3%</div>
-                <div class="center">-</div>
-                <div class="center">省内排名：1</div>
-                <div class="center">对比去年排名：+1</div>
-                <div class="center">-</div>
+                <div class="center">{{ item.value }}</div>
+                <div class="center">
+                  去年对比增幅：{{ item.valueDiffWithLastYear }}
+                </div>
+                <div class="center">{{ item.valueDiffType }}</div>
+                <div class="center">省内排名：{{ item.provinceOrder }}</div>
+                <div class="center">
+                  对比去年排名：{{ item.orderDiffWithLastYear }}
+                </div>
+                <div class="center">{{ item.orderDiffType }}</div>
               </div>
               <div class="px-12">
                 <div class="border-b border-sky-600"></div>
@@ -81,18 +81,37 @@ import { get, post } from "@/awsuiAxios/index.js";
 import isDev from "@/config/index.js";
 import { useRouter, useRoute, onBeforeRouteUpdate } from "vue-router";
 import timeNow from "./component/timeNow.vue";
-
+import { getCoreDataApi } from "@/api/wisdomDataV.js";
 import countTo from "@/components/countTo";
+
+const activeIndex = ref(0);
 
 const router = useRouter();
 const route = useRoute();
 
+const dataTree = ref([]);
+
 let bgUrl = isDev ? "/bg.png" : "/portal/console/images/bg.png";
+
+onMounted(async () => {
+  await getCoreData();
+});
 
 const seeProgress = () => {
   router.push({
     path: "/wisdomDataV_dataV1_index1",
     query: { ...route.query },
+  });
+};
+
+const getCoreData = () => {
+  return getCoreDataApi({
+    school: "0005",
+    year: "2023",
+  }).then((res) => {
+    if (res.result == "ok") {
+      dataTree.value = res.data;
+    }
   });
 };
 </script>

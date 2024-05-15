@@ -10,9 +10,9 @@ axios.defaults.baseURL = typeof axiosBaseUrl == "undefined" ? "" : axiosBaseUrl;
 axios.interceptors.request.use(
   function (request) {
     // 在发送请求之前做些什么
-    if (request.method == "post") {
-      request.params = {};
-    }
+    // if (request.method == "post") {
+    //   request.params = {};
+    // }
     if (request.isLoading) {
       store.commit("setLoading", true);
     }

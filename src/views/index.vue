@@ -1,22 +1,14 @@
 <template>
-  <div>
-    <a-spin :spinning="pinia.spin">
-      <div class="boxContainer">
-        <div class="leftMenu">
-          <left-menu></left-menu>
-        </div>
-        <div class="rightContainer">
-          <router-view></router-view>
-        </div>
+  <a-spin :spinning="pinia.spin">
+    <div class="boxContainer">
+      <div class="leftMenu">
+        <left-menu></left-menu>
       </div>
-    </a-spin>
-    <div
-      class="w-screen h-screen fixed top-0 left-0 z-10 bg-slate-400 bg-opacity-30 center"
-      v-if="fullscreenLoading"
-    >
-      <a-spin tip="加载中" size="large" />
+      <div class="rightContainer">
+        <router-view></router-view>
+      </div>
     </div>
-  </div>
+  </a-spin>
 </template>
 <script setup>
 import LeftMenu from "@/layout/leftMenu.vue";

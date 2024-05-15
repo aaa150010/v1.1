@@ -46,7 +46,10 @@
     <a-row :gutter="24">
       <a-col :span="24">
         <a-form-item label="子任务名称" name="taskName">
-          <a-input v-model:value="formNode.taskName" />
+          <a-input
+            v-model:value="formNode.taskName"
+            placeholder="请输入子任务名称"
+          />
         </a-form-item>
       </a-col>
       <a-col :span="12">
@@ -78,21 +81,40 @@
           <a-date-picker
             v-model:value="formNode.startTime"
             format="YYYY-MM-DD"
+            style="width: 100%"
+            placeholder="请选择任务开始时间"
           />
         </a-form-item>
       </a-col>
       <a-col :span="12">
         <a-form-item label="任务截止时间" name="endTime">
-          <a-date-picker v-model:value="formNode.endTime" format="YYYY-MM-DD" />
+          <a-date-picker
+            v-model:value="formNode.endTime"
+            format="YYYY-MM-DD"
+            style="width: 100%"
+            placeholder="请选择任务结束时间"
+          />
         </a-form-item>
       </a-col>
-      <a-col :span="12">
+      <a-col :span="24">
+        <a-form-item label="任务分数" name="taskScore">
+          <a-input-number
+            v-model:value="formNode.taskScore"
+            placeholder="请填写任务分数"
+            style="width: 100%"
+          />
+        </a-form-item>
+      </a-col>
+      <a-col :span="24">
         <a-form-item
           label="任务说明"
           name="taskDescription"
-          style="width: 550px"
+          placeholder="请填写任务说明"
         >
-          <a-textarea v-model:value="formNode.taskDescription" />
+          <a-textarea
+            style="width: 100%"
+            v-model:value="formNode.taskDescription"
+          />
         </a-form-item>
       </a-col>
     </a-row>
@@ -134,34 +156,38 @@ const formNode = reactive({
   id:
     store.state.nodeConfig.type == "update"
       ? store.state.nodeConfig.selectRow.id
-      : "",
+      : null,
   projectCode: store.state.nodeConfig.selectRow.projectCode,
   parentTaskCode: store.state.nodeConfig.selectRow.id,
   taskName:
     store.state.nodeConfig.type == "update"
       ? store.state.nodeConfig.selectRow.name
-      : "",
+      : null,
   responsibleDepartment:
     store.state.nodeConfig.type == "update"
       ? store.state.nodeConfig.selectRow.responsibleDepartment
-      : "",
+      : null,
   personResponsible:
     store.state.nodeConfig.type == "update"
       ? store.state.nodeConfig.selectRow.personResponsible
-      : "",
+      : null,
   startTime:
     store.state.nodeConfig.type == "update"
       ? dayjs(store.state.nodeConfig.selectRow.startTime)
-      : "",
+      : null,
   endTime:
     store.state.nodeConfig.type == "update"
       ? dayjs(store.state.nodeConfig.selectRow.endTime)
-      : "",
+      : null,
   taskType: 1,
   taskDescription:
     store.state.nodeConfig.type == "update"
       ? store.state.nodeConfig.selectRow.taskDescription
-      : "",
+      : null,
+  taskScore:
+    store.state.nodeConfig.type == "update"
+      ? store.state.nodeConfig.selectRow.taskScore
+      : null,
 });
 const rulesNode = {
   taskName: [
@@ -193,6 +219,13 @@ const rulesNode = {
     },
   ],
   endTime: [
+    {
+      required: true,
+      message: "必填项",
+      trigger: "blur",
+    },
+  ],
+  taskScore: [
     {
       required: true,
       message: "必填项",

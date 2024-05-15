@@ -4,12 +4,30 @@
       <div class="w-48 h-full">
         <div class="border h-residue1 p-2">
           <div class="h-8">
-            <a-button size="small" class="float-right ml-2">
+            <a-button
+              size="small"
+              class="float-right ml-2"
+              @click="
+                () => {
+                  orderBy = 'ASC';
+                  getProjectList();
+                }
+              "
+            >
               <template #icon>
                 <SortAscendingOutlined />
               </template>
             </a-button>
-            <a-button size="small" class="float-right ml-2">
+            <a-button
+              size="small"
+              class="float-right ml-2"
+              @click="
+                () => {
+                  orderBy = 'DESC';
+                  getProjectList();
+                }
+              "
+            >
               <template #icon>
                 <FilterOutlined />
               </template>
@@ -149,7 +167,7 @@ onMounted(async () => {
 });
 
 const getProjectList = () => {
-  return getProjectApi({ order: orderBy.value }).then((res) => {
+  return getProjectApi({ order: orderBy.value, flag: false }).then((res) => {
     if (res.result == "ok") {
       if (activeKey.value == -1 && res.data.length > 0) {
         activeKey.value = 0;

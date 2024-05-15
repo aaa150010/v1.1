@@ -1,5 +1,9 @@
 <template>
-  <div class="w-full h-full bg-slate-200 px-4 relative" @click="toggleCollapse">
+  <div
+    class="w-full h-full bg-slate-200 px-4 relative"
+    v-if="flag"
+    @click="toggleCollapse"
+  >
     <div>{{ dataObj.name }}</div>
     <div>总任务数:{{ dataObj.totalTasks }}</div>
     <div>完成进度:{{ dataObj.schedule }}%</div>
@@ -11,6 +15,7 @@
       v-menus:left="menus"
       >...</span
     >
+    <div class="absolute top-1/2 -right-2 text-lg -translate-y-1/2">+</div>
   </div>
 </template>
 
@@ -23,6 +28,8 @@ const dataObj = ref({});
 const selectRowClick = (item) => {
   selectRow.value = item;
 };
+
+const flag = ref(true);
 
 const menus = shallowRef({
   menus: [
@@ -55,7 +62,7 @@ onMounted(() => {
 
 const toggleCollapse = () => {
   //   console.log(getNode().store.data);
-  //   getNode().toggleCollapse();
+  console.log(getNode());
 };
 </script>
 

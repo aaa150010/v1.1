@@ -31,13 +31,13 @@
             >
               {{ item.tname }}
             </div> -->
-            <div class="center my-2">{{ item.tname }}</div>
+            <div class="center my-2">{{ item.taskName }}</div>
             <div class="flex justify-around">
               <el-progress
-                v-for="itemChild in item.list"
+                v-for="itemChild in item.children"
                 :key="itemChild"
                 type="circle"
-                :percentage="itemChild.sum"
+                :percentage="itemChild.rate"
                 color="#22d3ee"
               >
                 <template #default="{ percentage }">
@@ -81,7 +81,7 @@ import { get, post } from "@/awsuiAxios/index.js";
 import isDev from "@/config/index.js";
 import { useRouter, useRoute, onBeforeRouteUpdate } from "vue-router";
 import timeNow from "./component/timeNow.vue";
-
+import { getSecondTaskApi } from "@/api/wisdomDataV.js";
 import countTo from "@/components/countTo";
 const router = useRouter();
 const route = useRoute();
@@ -107,104 +107,100 @@ onBeforeUnmount(() => {
 });
 
 const getRemoteData = () => {
-  // return get({
-  //   url: "/jd",
-  //   data: {
-  //     cmd: "com.awspaas.user.apps.management_two.getData.get",
-  //     rootTaskId: route.query.rootTaskId,
+  // dataList.value = [
+  //   {
+  //     tname: "A.办学方向与依法治校 （ 15 分）",
+  //     list: [
+  //       {
+  //         taskName: "A2.依法治校 （6分）",
+  //         sum: "0.00",
+  //       },
+  //       {
+  //         taskName: "A1.办学方向 （9分）",
+  //         sum: "0.00",
+  //       },
+  //     ],
   //   },
-  // }).then((res) => {
-  //   if (res.result == "ok") {
-  dataList.value = [
-    {
-      tname: "A.办学方向与依法治校 （ 15 分）",
-      list: [
-        {
-          taskName: "A2.依法治校 （6分）",
-          sum: "0.00",
-        },
-        {
-          taskName: "A1.办学方向 （9分）",
-          sum: "0.00",
-        },
-      ],
-    },
-    {
-      tname: "B.办学条件与资源 （31分）",
-      list: [
-        {
-          taskName: "B2.办学投入 （7分）",
-          sum: "0.00",
-        },
-        {
-          taskName: "B1.硬件设施 （6分）",
-          sum: "0.00",
-        },
-        {
-          taskName: "B3.师资队伍 （8分）",
-          sum: "0.00",
-        },
-        {
-          taskName: "B5.数字化资源（3分）",
-          sum: "0.00",
-        },
-        {
-          taskName: "B4.实习实训资源（7分）",
-          sum: "0.00",
-        },
-      ],
-    },
-    {
-      tname: "C.办学质量与水平 （36分）",
-      list: [
-        {
-          taskName: "C1.专业建设 （20分）",
-          sum: "0.00",
-        },
-        {
-          taskName: "C3.创新成果 （4分）",
-          sum: "0.00",
-        },
-        {
-          taskName: "C2.社会服务 （12分）",
-          sum: "0.00",
-        },
-      ],
-    },
-    {
-      tname: "D.办学声誉与特色 （18分）",
-      list: [
-        {
-          taskName: "D1.办学声誉 （5分）",
-          sum: "0.00",
-        },
-        {
-          taskName: "D2.特色发展 （3分）",
-          sum: "0.00",
-        },
-        {
-          taskName: "D3.满意度评价（10分）",
-          sum: "0.00",
-        },
-      ],
-    },
-    {
-      tname: "E.加减分",
-      list: [
-        {
-          taskName: "加分项",
-          sum: "0.00",
-        },
-        {
-          taskName: "减分项",
-          sum: "0.00",
-        },
-      ],
-    },
-  ];
-  //   }
-  //   return Promise.resolve();
-  // });
+  //   {
+  //     tname: "B.办学条件与资源 （31分）",
+  //     list: [
+  //       {
+  //         taskName: "B2.办学投入 （7分）",
+  //         sum: "0.00",
+  //       },
+  //       {
+  //         taskName: "B1.硬件设施 （6分）",
+  //         sum: "0.00",
+  //       },
+  //       {
+  //         taskName: "B3.师资队伍 （8分）",
+  //         sum: "0.00",
+  //       },
+  //       {
+  //         taskName: "B5.数字化资源（3分）",
+  //         sum: "0.00",
+  //       },
+  //       {
+  //         taskName: "B4.实习实训资源（7分）",
+  //         sum: "0.00",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     tname: "C.办学质量与水平 （36分）",
+  //     list: [
+  //       {
+  //         taskName: "C1.专业建设 （20分）",
+  //         sum: "0.00",
+  //       },
+  //       {
+  //         taskName: "C3.创新成果 （4分）",
+  //         sum: "0.00",
+  //       },
+  //       {
+  //         taskName: "C2.社会服务 （12分）",
+  //         sum: "0.00",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     tname: "D.办学声誉与特色 （18分）",
+  //     list: [
+  //       {
+  //         taskName: "D1.办学声誉 （5分）",
+  //         sum: "0.00",
+  //       },
+  //       {
+  //         taskName: "D2.特色发展 （3分）",
+  //         sum: "0.00",
+  //       },
+  //       {
+  //         taskName: "D3.满意度评价（10分）",
+  //         sum: "0.00",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     tname: "E.加减分",
+  //     list: [
+  //       {
+  //         taskName: "加分项",
+  //         sum: "0.00",
+  //       },
+  //       {
+  //         taskName: "减分项",
+  //         sum: "0.00",
+  //       },
+  //     ],
+  //   },
+  // ];
+  return getSecondTaskApi({
+    projectCode: route.query.projectCode,
+  }).then((res) => {
+    if (res.result == "ok") {
+      dataList.value = res.data;
+    }
+  });
 };
 
 const goBack = () => {

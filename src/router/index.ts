@@ -59,6 +59,16 @@ const routes: Array<RouteRecordRaw> = [
     name: "智慧驾舱-数据大屏1类型-3页面",
     component: () => import("@/views/wisdomDataV/dataV1/index3.vue"),
   },
+  {
+    path: "/wisdomDataV_dataV1_index4",
+    name: "智慧驾舱-数据大屏1类型-4页面",
+    component: () => import("@/views/wisdomDataV/dataV1/index4.vue"),
+  },
+  {
+    path: "/wisdomDataV_dataV1_index5",
+    name: "智慧驾舱-数据大屏1类型-5页面",
+    component: () => import("@/views/wisdomDataV/dataV1/index5.vue"),
+  },
 ];
 
 const router = createRouter({

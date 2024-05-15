@@ -4,12 +4,30 @@
       <div class="w-48 h-full">
         <div class="border h-residue1 p-2">
           <div class="h-8">
-            <a-button size="small" class="float-right ml-2">
+            <a-button
+              size="small"
+              class="float-right ml-2"
+              @click="
+                () => {
+                  orderBy = 'ASC';
+                  getProjectList();
+                }
+              "
+            >
               <template #icon>
                 <SortAscendingOutlined />
               </template>
             </a-button>
-            <a-button size="small" class="float-right ml-2">
+            <a-button
+              size="small"
+              class="float-right ml-2"
+              @click="
+                () => {
+                  orderBy = 'DESC';
+                  getProjectList();
+                }
+              "
+            >
               <template #icon>
                 <FilterOutlined />
               </template>
@@ -84,7 +102,12 @@
             <div class="h-full overflow-y-auto">
               <iframe
                 ref="dataV"
-                :src="'#/wisdomDataV_dataV1_index1?taskName=2024高等职业学校教学质量考核'"
+                :src="
+                  '#/wisdomDataV_dataV1_index1?taskName=' +
+                  projectList[activeKey].projectName +
+                  '&projectCode=' +
+                  projectList[activeKey].projectCode
+                "
                 class="w-full h-full"
               >
               </iframe>
@@ -127,7 +150,7 @@ onMounted(async () => {
 });
 
 const getProjectList = () => {
-  return getProjectApi({ order: orderBy.value }).then((res) => {
+  return getProjectApi({ order: orderBy.value, flag: false }).then((res) => {
     if (res.result == "ok") {
       if (activeKey.value == -1 && res.data.length > 0) {
         activeKey.value = 0;

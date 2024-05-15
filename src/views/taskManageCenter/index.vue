@@ -7,12 +7,30 @@
         </div>
         <div class="border h-residue1 p-2">
           <div class="h-8">
-            <a-button size="small" class="float-right ml-2">
+            <a-button
+              size="small"
+              class="float-right ml-2"
+              @click="
+                () => {
+                  orderBy = 'ASC';
+                  getProjectList();
+                }
+              "
+            >
               <template #icon>
                 <SortAscendingOutlined />
               </template>
             </a-button>
-            <a-button size="small" class="float-right ml-2">
+            <a-button
+              size="small"
+              class="float-right ml-2"
+              @click="
+                () => {
+                  orderBy = 'DESC';
+                  getProjectList();
+                }
+              "
+            >
               <template #icon>
                 <FilterOutlined />
               </template>
@@ -150,11 +168,11 @@
             placeholder="暂无模板"
           >
             <a-select-option
-              v-for="item in projectModelList"
-              :key="item.templateCode"
-              :value="item.templateCode"
+              v-for="item in projectModelAllList"
+              :key="item.value"
+              :value="item.value"
             >
-              {{ item.templateName }}</a-select-option
+              {{ item.label }}</a-select-option
             >
           </a-select>
         </a-form-item>
@@ -196,6 +214,7 @@ import {
   getProjectModelApi,
   getProjectApi,
   updateProjectApi,
+  getSelectDataApi,
 } from "@/api/taskManage.js";
 import { message, Modal } from "ant-design-vue";
 import { ExclamationCircleOutlined } from "@ant-design/icons-vue";
@@ -207,6 +226,7 @@ const orderBy = ref("DESC");
 
 const projectList = ref([]);
 const projectModelList = ref([]);
+const projectModelAllList = ref([]);
 
 const selectRowProject = (index) => {
   activeKey.value = index;
@@ -228,6 +248,7 @@ const yearList = ref([
 
 onMounted(async () => {
   await getProjectModelList();
+  await getProjectModelAllList();
   await getProjectList();
 });
 
@@ -281,13 +302,21 @@ const addProject = () => {
 const getProjectModelList = () => {
   return getProjectModelApi().then((res) => {
     if (res.result == "ok") {
-      projectModelList.value = res.data;
+      projectModelList.value = res.data.templateData;
+    }
+  });
+};
+
+const getProjectModelAllList = () => {
+  return getSelectDataApi({ type: "template" }).then((res) => {
+    if (res.result == "ok") {
+      projectModelAllList.value = res.data;
     }
   });
 };
 
 const getProjectList = () => {
-  return getProjectApi({ order: orderBy.value }).then((res) => {
+  return getProjectApi({ order: orderBy.value, flag: true }).then((res) => {
     if (res.result == "ok") {
       if (activeKey.value == -1 && res.data.length > 0) {
         activeKey.value = 0;

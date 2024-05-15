@@ -1,6 +1,12 @@
 <template>
   <a-config-provider :locale="zhCN">
     <router-view />
+    <div
+      class="w-screen h-screen fixed top-0 left-0 z-50 bg-slate-400 bg-opacity-30 center"
+      v-if="fullscreenLoading"
+    >
+      <a-spin tip="加载中" size="large" />
+    </div>
   </a-config-provider>
 </template>
 <script lang="ts">
@@ -30,6 +36,9 @@ export default defineComponent({
     },
     sessionID() {
       return settingParam.sessionId;
+    },
+    fullscreenLoading() {
+      return this.$store.state.loading;
     },
   },
   created() {
@@ -71,7 +80,7 @@ export default defineComponent({
   padding: 0 10px !important;
 }
 //文字超出显示省略号
-.ellipsis{
+.ellipsis {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
