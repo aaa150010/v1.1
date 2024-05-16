@@ -25,3 +25,19 @@ export function getTaskInfoList(status,flag,projectCode) {
         url:  `${apiBasePath}?cmd=com.awspaas.user.apps.complex_task_decomposition.controller_getTaskInfoList&sid=${getSid()}&status=${status}&flag=${flag}&projectCode=${projectCode}`,
     });
 }
+//获取耗时过半的任务
+export function getHalfTask() {
+    let apiBasePath=`${isDev?'AWSDEVURL/r/':'/portal/r/'}jd`
+    return axios({
+        method: "post",
+        url:  `${apiBasePath}?cmd=com.awspaas.user.apps.complex_task_decomposition.controller_getWarningTaskList&sid=${getSid()}`,
+    });
+}
+//获取耗时过半的任务
+export function getOverTask() {
+    let apiBasePath=`${isDev?'AWSDEVURL/r/':'/portal/r/'}jd`
+    return axios({
+        method: "post",
+        url:  `${apiBasePath}?cmd=com.awspaas.user.apps.complex_task_decomposition.controller_getOverdueTaskList&sid=${getSid()}`,
+    });
+}

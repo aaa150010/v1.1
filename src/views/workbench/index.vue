@@ -12,9 +12,7 @@
         <already-done v-if="activeKey=='3'"></already-done>
       </a-tab-pane>
       <a-tab-pane key="4" tab="我的关注">
-        <p>Content of Tab Pane 2</p>
-        <p>Content of Tab Pane 2</p>
-        <p>Content of Tab Pane 2</p>
+        <focus v-if="activeKey=='4'"></focus>
       </a-tab-pane>
     </a-tabs>
   </div>
@@ -28,6 +26,7 @@ import {onMounted, ref} from "vue";
 import Workprogress from "@/components/workprogress.vue";
 import Overview from "@/components/overview.vue";
 import AlreadyDone from "@/components/alreadyDone.vue";
+import Focus from "@/components/focus.vue";
 const activeKey = ref('1');
 onMounted(()=>{
 

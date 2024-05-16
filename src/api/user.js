@@ -8,4 +8,14 @@ export function getUserInfo() {
         method: "post",
         url:  `${apiBasePath}?cmd=com.awspaas.user.apps.complex_task_decomposition_getUserInfo&sid=${getSid()}`,
     });
+
+}
+
+//根据id获取个人信息
+export function getUserInfoByInfo(uid) {
+    let apiBasePath=`${isDev?'AWSDEVURL/r/':'/portal/r/'}jd`
+    return axios({
+        method: "post",
+        url:  `${apiBasePath}?cmd=com.awspaas.user.apps.complex_task_decomposition_getUserInfoById&sid=${getSid()}&uid=${uid}`,
+    });
 }
