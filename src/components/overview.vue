@@ -60,7 +60,7 @@
             <div>已完成任务数</div>
           </div>
         </div>
-        <a-divider  v-if="index!==2"/>
+        <a-divider  v-if="index!==FollowProjectList.length-1"/>
       </template>
       <template v-else>
         <a-empty />
@@ -179,7 +179,7 @@
     <a-modal v-model:open="open5" title="已逾期任务" @ok="handleOk5" :width="1200">
       <over-time v-if="open5"></over-time>
     </a-modal>
-<!--    关注里面的mode，分为未完成|已完成|审核中-->
+<!--    关注里面的model，分为未完成|已完成|审核中-->
     <a-modal v-model:open="open6" :title="title6" @ok="handleOk6" :width="1200">
       <favorite :project-code="projectCode" :status="status" ref="favoriteRef" v-if="open6"></favorite>
     </a-modal>
