@@ -103,9 +103,23 @@
 </template>
 <script setup>
 import {nextTick, onMounted, ref} from "vue";
-import {getDoneTaskList} from "@/api/alreadyDone";
-import {getTaskInfo} from "@/api/workprogress";
+import {getTaskInfoList} from "@/api/overview";
 import PersonInfo from "@/components/getPersonInfo/personInfo.vue";
+import {getTaskInfo} from "@/api/workprogress";
+const props=defineProps({
+  status:{required:true,type:String},
+  projectCode:{required:true,type:String},
+})
+onMounted(()=>{
+  loading.value=true
+  getTaskInfoList(props.status,false,props.projectCode).then(res=>{
+    if (res.result=='ok'){
+      data.value=res.data
+    }
+  }).finally(()=>{
+    loading.value=false
+  })
+})
 const open=ref(false)
 const columns = ref([
   {
@@ -154,16 +168,6 @@ const columns = ref([
 ]);
 const data=ref([])
 const loading=ref(false)
-onMounted(()=>{
-  loading.value=true
-  getDoneTaskList().then(res=>{
-    if (res.result=='ok'){
-      data.value=res.data
-    }
-  }).finally(()=>{
-    loading.value=false
-  })
-})
 const reviewFormState=ref({
   taskCode:null,
   projectName:null,

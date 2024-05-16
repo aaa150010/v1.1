@@ -26,3 +26,20 @@ export function addFeedback(feedback) {
         data:feedback
     });
 }
+//点击审核中
+export function getTaskInfo(taskCode) {
+    let apiBasePath=`${isDev?'AWSDEVURL/r/':'/portal/r/'}jd`
+    return axios({
+        method: "post",
+        url:  `${apiBasePath}?cmd=com.awspaas.user.apps.complex_task_decomposition.controller_getTaskInfo&sid=${getSid()}&taskCode=${taskCode}`,
+    });
+}
+//确认审核
+export function addReviewMessage(taskCode,auditResult,reviewComments,auditScore) {
+    let apiBasePath=`${isDev?'AWSDEVURL/r/':'/portal/r/'}jd`
+    return axios({
+        method: "post",
+        url:  `${apiBasePath}?cmd=com.awspaas.user.apps.complex_task_decomposition_addReviewMessage&sid=${getSid()}`,
+        data:{taskCode,auditResult,reviewComments,auditScore}
+    });
+}

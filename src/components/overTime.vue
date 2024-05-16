@@ -106,6 +106,7 @@ import {nextTick, onMounted, ref} from "vue";
 import {getDoneTaskList} from "@/api/alreadyDone";
 import {getTaskInfo} from "@/api/workprogress";
 import PersonInfo from "@/components/getPersonInfo/personInfo.vue";
+import {getOverTask} from "@/api/overview";
 const open=ref(false)
 const columns = ref([
   {
@@ -156,7 +157,7 @@ const data=ref([])
 const loading=ref(false)
 onMounted(()=>{
   loading.value=true
-  getDoneTaskList().then(res=>{
+  getOverTask().then(res=>{
     if (res.result=='ok'){
       data.value=res.data
     }

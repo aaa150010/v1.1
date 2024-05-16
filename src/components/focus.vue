@@ -28,7 +28,7 @@
           </template>
         </template>
       </a-table>
-      <!--  查看的dialog-->
+      <!--  审核的dialog-->
       <a-modal v-model:open="open" title="办理" @ok="handleOk3" :width="800">
         <div style="height: 600px;overflow: scroll">
           <a-form :model="reviewFormState" ref="reviewFormStateRef" :rules="rules2">
@@ -103,9 +103,9 @@
 </template>
 <script setup>
 import {nextTick, onMounted, ref} from "vue";
-import {getDoneTaskList} from "@/api/alreadyDone";
 import {getTaskInfo} from "@/api/workprogress";
 import PersonInfo from "@/components/getPersonInfo/personInfo.vue";
+import {getFocus} from "@/api/focus";
 const open=ref(false)
 const columns = ref([
   {
@@ -156,7 +156,7 @@ const data=ref([])
 const loading=ref(false)
 onMounted(()=>{
   loading.value=true
-  getDoneTaskList().then(res=>{
+  getFocus().then(res=>{
     if (res.result=='ok'){
       data.value=res.data
     }
