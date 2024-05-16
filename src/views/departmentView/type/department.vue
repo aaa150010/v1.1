@@ -20,6 +20,7 @@
       @ok="detailDeptOk"
       destroyOnClose
       style="width: 1000px"
+      :footer="null"
     >
       <div class="flex justify-between">
         <div>责任部门：{{ selectRow.responsibleDepartmentName }}</div>

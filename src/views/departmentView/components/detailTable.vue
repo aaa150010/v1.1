@@ -21,6 +21,12 @@
             >查看详情</span
           >
         </template>
+        <template v-else-if="column.dataIndex == 'executorName'">
+          <personInfoGlobal
+            :name="record.executorName"
+            :userId="record.executor"
+          />
+        </template>
       </template>
     </a-table>
     <a-modal
@@ -44,7 +50,13 @@
         <div v-for="item in taskDetail.feedback" :key="item.feedbackCode">
           <div>
             <div>执行部门：{{ item.feedbackDepartmentName }}</div>
-            <div>执行人： {{ item.feedbackPersonName }}</div>
+            <div>
+              执行人：
+              <personInfoGlobal
+                :name="item.feedbackPersonName"
+                :userId="item.feedbackPerson"
+              />
+            </div>
             <div>任务反馈时间： {{ item.submissionTime }}</div>
             <div>任务反馈说明： {{ item.progressFeedback }}</div>
             <div>
@@ -67,7 +79,13 @@
             <div>提交审核时间：{{ item.submissionTime }}</div>
             <div>审核时间： {{ item.reviewData.auditTime }}</div>
             <div>审核部门： {{ item.reviewData.auditDepartmentName }}</div>
-            <div>审核人： {{ item.reviewData.reviewerName }}</div>
+            <div>
+              审核人：
+              <personInfoGlobal
+                :name="item.reviewerName"
+                :userId="item.reviewer"
+              />
+            </div>
             <div>审核意见：{{ item.reviewData.auditResult }}</div>
             <div>审核说明： {{ item.reviewData.reviewComments }}</div>
           </div>
@@ -86,7 +104,6 @@ import {
   getTaskDetailByCodeApi,
 } from "@/api/departmentView.js";
 import download from "downloadjs";
-
 const activeKey = ref("3");
 const props = defineProps(["selectRow", "type"]);
 const detailVisible = ref(false);
@@ -194,7 +211,7 @@ const columns = ref([
   {
     title: "执行人",
     align: "center",
-    width: 100,
+    width: 150,
     dataIndex: "executorName",
     key: "executorName",
     filter: ["0", "3"],

@@ -53,6 +53,8 @@ declare module 'vue' {
     OverTime: typeof import('./src/components/overTime.vue')['default']
     Overview: typeof import('./src/components/overview.vue')['default']
     PersonInfo: typeof import('./src/components/getPersonInfo/personInfo.vue')['default']
+    PersonInfoForm: typeof import('./src/components/getPersonInfoGlobal/personInfoForm.vue')['default']
+    PersonInfoModel: typeof import('./src/components/getPersonInfoGlobal/personInfoModel.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     VueCountTo: typeof import('./src/components/countTo/vue-countTo.vue')['default']
