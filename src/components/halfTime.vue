@@ -167,7 +167,7 @@
           <a-form-item label="审核意见" name="reviewComments">
             <a-textarea placeholder="请输入审核意见" style="height: 80px" v-model:value="reviewFormState.reviewComments" />
           </a-form-item>
-          <a-form-item label="审核得分" name="auditScore">
+          <a-form-item label="审核得分" name="auditScore"   v-if="reviewFormState.auditResult=='通过'||reviewFormState.auditResult==null">
             <a-input-number placeholder="请输入审核得分" style="width: 100%" v-model:value="reviewFormState.auditScore" />
           </a-form-item>
           <a-divider></a-divider>
@@ -307,6 +307,15 @@ const reviewFormState=ref({
   auditScore:null,
 })
 const forFeedBackList=ref([])
+//任务总分，任务自评分和审核得分都不能超过这个
+const taskScore=ref()
+const validataScore=async (_rule, value) => {
+  if (value === null) {
+    return Promise.reject('请输入分数');
+  } else if (value > taskScore.value) {
+    return Promise.reject(`分数不能大于任务分数${taskScore.value}分!`);
+  }
+};
 const rules=ref({
   progressFeedback: [
     {
@@ -317,9 +326,9 @@ const rules=ref({
   ],
   selfScore: [
     {
-      required: true,
-      message: '请输入任务自评分',
-      trigger: 'blur',
+      validator:validataScore,
+      trigger: 'blue',
+      required:true,
     },
   ],
 })
@@ -340,9 +349,9 @@ const rules2=ref({
   ],
   auditScore: [
     {
-      required: true,
-      message: '请输入审核得分',
-      trigger: 'blur',
+      validator:validataScore,
+      trigger: 'blue',
+      required:true,
     },
   ],
 })
@@ -375,6 +384,8 @@ const handleClick=(record)=>{
     // 未完成或者未反馈的信息也得渲染以前的反馈信息
     getTaskInfo(record.taskCode).then(res=>{
       if (res.result=='ok'){
+        // 赋值task的分数做校验，不允许分数大于taskScore
+        taskScore.value=res.data.task.score
         forFeedBackList.value=res.data.feedBackList
       }
     })
@@ -386,6 +397,8 @@ const handleClick=(record)=>{
     open3.value=true
     getTaskInfo(record.taskCode).then(res=>{
       if (res.result=='ok'){
+        // 赋值task的分数做校验，不允许分数大于taskScore
+        taskScore.value=res.data.task.score
         reviewFormState.value.projectName=res.data.task.projectName
         reviewFormState.value.taskName=res.data.task.taskName
         reviewFormState.value.taskDescription=res.data.task.taskDescription

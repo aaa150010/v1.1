@@ -56,7 +56,7 @@
           </div>
           <div>
             <a class="head-example">消息</a>
-            <a-badge :count="item.count" />
+            <a-badge :count="store.unreadNumber" />
           </div>
         </a-menu-item
         >
@@ -74,12 +74,14 @@ import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
 import { getUserInfo } from "@/api/user";
 import isDev from "@/config";
+import {usePiniaStore} from "@/pinia";
 const route = useRoute();
 const activeKey = ref([]);
 const src1=isDev ? "/fuza.png" : "/portal/console/images/fuza.png";
 const clearArray = () => {
   activeKey.value.length = 0;
 };
+const store=usePiniaStore()
 const username = ref();
 const avatarUrl = ref();
 const leftMenu=ref([])
@@ -94,6 +96,11 @@ onMounted(() => {
       avatarUrl.value =
         "https://bzszkj.com/portal/r" + res.data.photo.replace(".", "");
     }
+    leftMenu.value.forEach(item=>{
+      if (item.menuTitle=='消息'){
+        store.setNumber(item.count)
+      }
+    })
   });
 });
 const handleClick = ({ item, key }) => {

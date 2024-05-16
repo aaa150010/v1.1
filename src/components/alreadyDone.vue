@@ -194,6 +194,9 @@ const handleGetInfo=(uid)=>{
     personRef.value.openModel()
   })
 }
+const handleOk3=()=>{
+  open.value=false
+}
 </script>
 <style scoped>
 

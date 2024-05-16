@@ -25,3 +25,11 @@ export function addDeleteMessage() {
         url:  `${apiBasePath}?cmd=com.awspaas.user.apps.complex_task_decomposition_addDeleteMessage&sid=${getSid()}}`,
     });
 }
+//获取未读消息数量
+export function getUnreadNumber() {
+    let apiBasePath=`${isDev?'AWSDEVURL/r/':'/portal/r/'}jd`
+    return axios({
+        method: "post",
+        url:  `${apiBasePath}?cmd=com.awspaas.user.apps.complex_task_decomposition_getMessageCount&sid=${getSid()}}`,
+    });
+}

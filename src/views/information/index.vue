@@ -39,7 +39,7 @@
     </a-table>
   </a-card>
 <!--  查看的dialog-->
-  <a-modal v-model:open="open" :footer="null" width="50%">
+  <a-modal v-model:open="open" :footer="null" width="50%" @cancel="handleCancel">
     <div style="text-align: center;margin-top: 30px;font-size: 20px" class="ellipsis">{{title}}</div>
     <iframe :src="src" class="test" width="100%" allow="payment"></iframe>
       <a-button type="primary" v-if="showBtn" style="width: 100%">立即处理</a-button>
@@ -49,8 +49,9 @@
 <script setup>
 import {computed, createVNode, onMounted, reactive, ref} from "vue";
 import {message, Modal, notification} from "ant-design-vue";
-import {addDeleteMessage, addReadMessage, getInformationByType} from "@/api/information";
+import {addDeleteMessage, addReadMessage, getInformationByType, getUnreadNumber} from "@/api/information";
 import {ExclamationCircleOutlined} from "@ant-design/icons-vue";
+import {usePiniaStore} from "@/pinia";
 const viewValue=ref('all')
 const open=ref(false)
 const showBtn=ref(false)
@@ -167,6 +168,14 @@ const handleClickItem=(item)=>{
   showBtn.value=item.flag
   itemUrl.value=item.messageContent
   open.value=true
+}
+const store=usePiniaStore()
+const handleCancel=()=>{
+  getUnreadNumber().then(res=>{
+    if (res.result=='ok'){
+      store.setNumber(res.data)
+    }
+  })
 }
 </script>
 <style scoped>

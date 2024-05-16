@@ -104,7 +104,7 @@ const urlList=ref([])
 // 存放第一波返回接口的对象数组
 const responses=ref([])
 const handleClick=()=>{
-  if (fileList.value.length==0||value.value==''){
+  if (fileList.value.length==0||value.value==null){
     message.error('请先选择文件或目录!');
   }else {
     pinia.showFullLoading()
