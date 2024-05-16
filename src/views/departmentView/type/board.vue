@@ -15,7 +15,7 @@
             class="w-36"
           />
         </div>
-        <a-button size="small">编辑</a-button>
+        <a-button size="small" @click="openDetail(item)">详情</a-button>
       </div>
       <a-divider class="my-1" />
       <div
@@ -61,10 +61,10 @@
       style="width: 1000px"
     >
       <div class="flex justify-between">
-        <div>责任部门：党委宣传部</div>
-        <div>进展：8%</div>
+        <div>责任部门：{{ selectRow.responsibleDepartmentName }}</div>
+        <div>进展：{{ selectRow.evolve }}%</div>
       </div>
-      <detailTable />
+      <detailTable :selectRow="selectRow" />
     </a-modal>
   </div>
 </template>
@@ -104,7 +104,8 @@ const selectRow = ref({});
 const detailDeptVisible = ref(false);
 
 const openDetail = (item) => {
-  selectRow.value = item;
+  selectRow.value = { ...item, ...props.selectRow, evolve: item.schedule };
+  console.log(selectRow.value);
   detailDeptVisible.value = true;
 };
 

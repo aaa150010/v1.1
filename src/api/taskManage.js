@@ -38,6 +38,7 @@ export function getProjectTreeApi(data) {
   return get({
     cmd: "com.awspaas.user.apps.complex_task_decomposition_getTaskTreeByProjectCode",
     data: data,
+    isLoading: true,
   });
 }
 
