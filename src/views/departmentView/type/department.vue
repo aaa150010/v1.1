@@ -1,7 +1,7 @@
 <template>
   <div>
     <a-table
-      :dataSource="dataSource"
+      :dataSource="dataTree"
       :columns="columns"
       bordered
       style="margin-bottom: 8px"
@@ -22,36 +22,26 @@
       style="width: 1000px"
     >
       <div class="flex justify-between">
-        <div>责任部门：党委宣传部</div>
-        <div>进展：8%</div>
+        <div>责任部门：{{ selectRow.responsibleDepartmentName }}</div>
+        <div>进展：{{ selectRow.evolve }}%</div>
       </div>
-      <detailTable />
+      <detailTable type="department" :selectRow="selectRow" />
     </a-modal>
   </div>
 </template>
 <script setup>
 import { onMounted, ref, defineProps, watch } from "vue";
 import { getProjectTreeApi } from "@/api/taskManage.js";
+import { getTaskByDepartmentIdApi } from "@/api/departmentView.js";
 import detailTable from "../components/detailTable.vue";
 
 const props = defineProps(["selectRow"]);
 
 const selectRow = ref({});
 
-const dataTree = ref({});
+const dataTree = ref([]);
 
 const detailDeptVisible = ref(false);
-
-const dataSource = ref([
-  {
-    responsibleDepartmentName: "党委宣传部",
-    total: "60",
-    todo: "50",
-    audit: "5",
-    completed: "5",
-    evolve: "8.3",
-  },
-]);
 
 const columns = ref([
   {
@@ -73,6 +63,7 @@ const columns = ref([
     title: "总任务数",
     align: "center",
     dataIndex: "total",
+    sorter: (a, b) => parseInt(a.total) - parseInt(b.total),
     key: "total",
   },
   {
@@ -133,7 +124,7 @@ watch(
 );
 
 const openDetail = (item) => {
-  selectRow.value = item;
+  selectRow.value = { ...item, ...props.selectRow };
   detailDeptVisible.value = true;
 };
 

@@ -41,19 +41,39 @@
               :key="item.itemCode"
             >
               <div class="grid grid-cols-7">
-                <div class="text-blue-400 text-base pl-6">
+                <div class="text-blue-400 text-base pl-6 font-bold">
                   {{ item.itemName }}
                 </div>
                 <div class="center">{{ item.value }}</div>
                 <div class="center">
                   去年对比增幅：{{ item.valueDiffWithLastYear }}
                 </div>
-                <div class="center">{{ item.valueDiffType }}</div>
+                <div class="center">
+                  <ArrowUpOutlined
+                    v-if="item.valueDiffType == '上升'"
+                    class="text-2xl text-red-400"
+                  />
+                  <ArrowDownOutlined
+                    v-else-if="item.valueDiffType == '下降'"
+                    class="text-2xl text-blue-400"
+                  />
+                  <div v-else>-</div>
+                </div>
                 <div class="center">省内排名：{{ item.provinceOrder }}</div>
                 <div class="center">
                   对比去年排名：{{ item.orderDiffWithLastYear }}
                 </div>
-                <div class="center">{{ item.orderDiffType }}</div>
+                <div class="center">
+                  <ArrowUpOutlined
+                    v-if="item.orderDiffType == '上升'"
+                    class="text-2xl text-red-400"
+                  />
+                  <ArrowDownOutlined
+                    v-else-if="item.orderDiffType == '下降'"
+                    class="text-2xl text-blue-400"
+                  />
+                  <div v-else>-</div>
+                </div>
               </div>
               <div class="px-12">
                 <div class="border-b border-sky-600"></div>
@@ -83,6 +103,7 @@ import { useRouter, useRoute, onBeforeRouteUpdate } from "vue-router";
 import timeNow from "./component/timeNow.vue";
 import { getCoreDataApi } from "@/api/wisdomDataV.js";
 import countTo from "@/components/countTo";
+import { ArrowUpOutlined, ArrowDownOutlined } from "@ant-design/icons-vue";
 
 const activeIndex = ref(0);
 
@@ -107,7 +128,7 @@ const seeProgress = () => {
 const getCoreData = () => {
   return getCoreDataApi({
     school: "0005",
-    year: "2023",
+    year: "2024",
   }).then((res) => {
     if (res.result == "ok") {
       dataTree.value = res.data;

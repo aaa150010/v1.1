@@ -68,7 +68,7 @@ const dataTree = ref({});
 
 onMounted(async () => {
   initGraph();
-  await getProjectTree();
+  await getProjectTree(true);
 });
 const registerGraph = () => {
   // 注册节点
@@ -81,12 +81,12 @@ const registerGraph = () => {
   Graph.registerConnector(
     "mindmap",
     (sourcePoint, targetPoint, routerPoints, options) => {
-      const midX = sourcePoint.x + 160;
+      const midX = sourcePoint.x + 170;
       const midY = sourcePoint.y;
       const ctrX = midX;
       const ctrY = targetPoint.y;
       const pathData = `
-       M ${sourcePoint.x + 150} ${sourcePoint.y}
+       M ${sourcePoint.x + 160} ${sourcePoint.y}
        L ${midX} ${midY}
        L ${ctrX} ${ctrY}
        L ${targetPoint.x} ${targetPoint.y}
@@ -161,6 +161,7 @@ const initGraph = () => {
       size: 10,
       visible: true,
     },
+
     connecting: {
       connectionPoint: "anchor",
     },
@@ -174,7 +175,10 @@ const initGraph = () => {
     panning: true,
   });
 
-  render = () => {
+  render = (first) => {
+    console.log(graph.translate(), graph.zoom());
+    let initTranslate = graph.translate();
+    let initZoom = graph.zoom();
     const result = Hierarchy.mindmap(dataTree.value, {
       direction: "H",
       getHeight(d) {
@@ -184,7 +188,7 @@ const initGraph = () => {
         return d.width;
       },
       getHGap() {
-        return 20;
+        return 25;
       },
       getVGap() {
         return 20;
@@ -210,6 +214,8 @@ const initGraph = () => {
             addNode,
             updateNode,
             attrs: {},
+            graph: graph,
+            // visible: false,
           })
         );
         if (children) {
@@ -236,7 +242,15 @@ const initGraph = () => {
     };
     traverse(result);
     graph.resetCells(cells);
-    graph.centerContent();
+    if (first) {
+      graph.centerContent();
+    } else {
+      graph.zoomTo(initZoom);
+      graph.translate(initTranslate.tx, initTranslate.ty);
+    }
+    // graph.getSuccessors(cells[0]).forEach((item) => {
+    //   item.visible = false;
+    // });
   };
 };
 
@@ -251,14 +265,14 @@ const addTreeProperty = (obj) => {
   return obj;
 };
 
-const getProjectTree = () => {
+const getProjectTree = (first) => {
   return getProjectTreeApi({
     projectCode: props.selectRow.projectCode,
     type: "MindMap",
   }).then((res) => {
     if (res.result == "ok") {
       dataTree.value = addTreeProperty(res.data);
-      render();
+      render(first);
     }
   });
 };
@@ -266,7 +280,7 @@ const getProjectTree = () => {
 watch(
   () => props.selectRow,
   async () => {
-    await getProjectTree();
+    await getProjectTree(true);
   }
 );
 </script>

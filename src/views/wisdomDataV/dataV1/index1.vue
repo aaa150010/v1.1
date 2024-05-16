@@ -174,6 +174,7 @@ import {
   onUnmounted,
   onBeforeUnmount,
   nextTick,
+  watch,
 } from "vue";
 import { get, post } from "@/awsuiAxios/index.js";
 import isDev from "@/config/index.js";
@@ -205,6 +206,8 @@ const option1 = ref({
   },
   legend: {
     data: [],
+    top: "10",
+    orient: "vertical",
     textStyle: {
       fontFamily: "Arial",
       fontSize: 13,
@@ -213,7 +216,7 @@ const option1 = ref({
   },
   xAxis: {
     name: "",
-    data: ["2.2", "3.1", "3.2", "3.3", "3.4", "3.5", "3.6"],
+    data: [],
     axisLabel: {
       style: {
         fill: "#ffffff",
@@ -261,7 +264,7 @@ const option1 = ref({
 });
 
 onMounted(async () => {
-  getRemoteData();
+  await getRemoteData();
 });
 
 const getRemoteData = () => {
@@ -289,6 +292,12 @@ const getRemoteData = () => {
               show: true,
             },
           };
+        });
+        config1.value.data = res.data.fileRecord.map((item) => {
+          return [`${item.user}在${item.time}上传了${item.fileName}`];
+        });
+        config2.value.data = res.data.messageRecord.map((item) => {
+          return [`${item.user}在${item.time}反馈了${item.taskName}`];
         });
       }
     }
@@ -330,6 +339,15 @@ const seeTaskDetail = (type) => {
     query: { ...route.query, type },
   });
 };
+
+watch(
+  () => {
+    return route.query;
+  },
+  () => {
+    getRemoteData();
+  }
+);
 </script>
 
 <style lang="less" scoped>
