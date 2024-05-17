@@ -18,7 +18,8 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   (res) => {
       // &&res.data.data.result!=='ok'
-      if (res.data.result!=='ok'){
+      console.log(res.data.data.result!=='ok')
+      if (res.data.result!=='ok'&&res.data.data.result!=='ok'){
           message.error(res.data.msg?res.data.msg:res.data.desc);
       }
 
