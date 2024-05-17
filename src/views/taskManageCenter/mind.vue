@@ -77,7 +77,7 @@ const registerGraph = () => {
     component: mindNode,
   });
 
-  // 连接器
+  // 横向连接器
   Graph.registerConnector(
     "mindmap",
     (sourcePoint, targetPoint, routerPoints, options) => {
@@ -106,6 +106,32 @@ const registerGraph = () => {
     },
     true
   );
+  // 纵向连接器
+  // Graph.registerConnector(
+  //   "mindmap",
+  //   (sourcePoint, targetPoint, routerPoints, options) => {
+  //     const midX = sourcePoint.x;
+  //     const midY = sourcePoint.y + 20;
+  //     const ctrX = midX;
+  //     const ctrY = targetPoint.y;
+  //     // console.log(sourcePoint, targetPoint);
+  //     // let a = 0;
+  //     // let b = ctrY - midY;
+  //     // if (Math.sign(b) == 1) {
+  //     //   a = 8;
+  //     // } else if (Math.sign(b) == -1) {
+  //     //   a = -8;
+  //     // }
+  //     const pathData = `
+  //      M ${sourcePoint.x} ${sourcePoint.y + 10}
+  //      L ${midX} ${midY}
+  //      L ${targetPoint.x} ${midY}
+  //     L ${targetPoint.x} ${targetPoint.y}
+  //     `;
+  //     return options.raw ? Path.parse(pathData) : pathData;
+  //   },
+  //   true
+  // );
   // 边
   Graph.registerEdge(
     "mindmap-edge",
@@ -199,7 +225,8 @@ const initGraph = () => {
     // console.log(graph.translate(), graph.zoom());
     let initTranslate = graph.translate();
     let initZoom = graph.zoom();
-    const result = Hierarchy.mindmap(dataTree.value, {
+    // 横向树
+    const result = Hierarchy.compactBox(dataTree.value, {
       direction: "H",
       getHeight(d) {
         return d.height;
@@ -270,6 +297,82 @@ const initGraph = () => {
       graph.zoomTo(initZoom);
       graph.translate(initTranslate.tx, initTranslate.ty);
     }
+    // graph.rotate(90);
+    // 纵向树
+    // const result = Hierarchy.compactBox(dataTree.value, {
+    //   direction: "TB",
+    //   getHeight(d) {
+    //     return d.height;
+    //   },
+    //   getWidth(d) {
+    //     return d.width;
+    //   },
+    //   getHGap() {
+    //     return 20;
+    //   },
+    //   getVGap() {
+    //     return 30;
+    //   },
+    //   // getSide: () => {
+    //   //   return "right";
+    //   // },
+    // });
+    // const cells = [];
+    // const traverse = (hierarchyItem) => {
+    //   if (hierarchyItem) {
+    //     const { data, children } = hierarchyItem;
+    //     cells.push(
+    //       graph.createNode({
+    //         id: data.id,
+    //         shape: "custom-vue-node",
+    //         x: hierarchyItem.x,
+    //         y: hierarchyItem.y,
+    //         width: data.width,
+    //         height: data.height,
+    //         data: data,
+    //         deleteNode,
+    //         addNode,
+    //         updateNode,
+    //         seeDetail,
+    //         attrs: {},
+    //         graph: graph,
+
+    //         // visible: false,
+    //       })
+    //     );
+    //     if (children) {
+    //       children.forEach((item) => {
+    //         const { id, data } = item;
+    //         cells.push(
+    //           graph.createEdge({
+    //             shape: "mindmap-edge",
+    //             source: {
+    //               cell: hierarchyItem.id,
+    //               anchor: {
+    //                 name: "bottom",
+    //               },
+    //             },
+    //             target: {
+    //               cell: id,
+    //               anchor: {
+    //                 name: "top",
+    //               },
+    //             },
+    //           })
+    //         );
+    //         traverse(item);
+    //       });
+    //     }
+    //   }
+    // };
+    // traverse(result);
+    // graph.resetCells(cells);
+    // if (first) {
+    //   graph.centerContent();
+    // } else {
+    //   graph.zoomTo(initZoom);
+    //   graph.translate(initTranslate.tx, initTranslate.ty);
+    // }
     // graph.getSuccessors(cells[0]).forEach((item) => {
     //   item.visible = false;
     // });
