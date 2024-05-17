@@ -172,6 +172,25 @@
           </a-form-item>
           <a-divider></a-divider>
           <template v-for="item in forFeedBackList" :key="item">
+            <!--        审核  根据result字段判断是否渲染-->
+            <div style="border: 2px solid rgba(240, 240, 240);padding: 8px;margin-bottom: 10px" v-if="item.review.auditResult!==''">
+              <div style="font-size: 18px;text-align: center">审核</div>
+              <div class="fieldItem">
+                <span>审核部门：{{item.review.auditDepartmentName}}</span>
+              </div>
+              <div class="fieldItem">
+                <a style="color: blue" @click="handleGetInfo(item.review.auditPerson)">审核人：{{item.review.auditPersonName}}</a>
+              </div>
+              <div class="fieldItem">
+                <span>审核时间：{{item.review.auditTime}}</span>
+              </div>
+              <div class="fieldItem">
+                <span>审核意见：{{item.review.reviewComments}}</span>
+              </div>
+              <div class="fieldItem">
+                <span>审核得分：{{item.review.auditScore}}</span>
+              </div>
+            </div>
             <!--        反馈-->
             <div style="border: 2px solid rgba(240, 240, 240);padding: 8px;margin-bottom: 10px">
               <div style="font-size: 18px;text-align: center">反馈</div>
@@ -193,25 +212,6 @@
                   <a style="color: blue">{{item1.name}}</a>
                   <a style="margin-left: 30px" @click="handleDown(item1)">查看</a>
                 </div>
-              </div>
-            </div>
-            <!--        审核  根据result字段判断是否渲染-->
-            <div style="border: 2px solid rgba(240, 240, 240);padding: 8px;margin-bottom: 10px" v-if="item.review.auditResult!==''">
-              <div style="font-size: 18px;text-align: center">审核</div>
-              <div class="fieldItem">
-                <span>审核部门：{{item.review.auditDepartmentName}}</span>
-              </div>
-              <div class="fieldItem">
-                <a style="color: blue" @click="handleGetInfo(item.review.auditPerson)">审核人：{{item.review.auditPersonName}}</a>
-              </div>
-              <div class="fieldItem">
-                <span>审核时间：{{item.review.auditTime}}</span>
-              </div>
-              <div class="fieldItem">
-                <span>审核意见：{{item.review.reviewComments}}</span>
-              </div>
-              <div class="fieldItem">
-                <span>审核得分：{{item.review.auditScore}}</span>
               </div>
             </div>
           </template>
