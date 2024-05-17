@@ -31,7 +31,6 @@ import {useRoute} from "vue-router";
 const activeKey = ref('1');
 const route=useRoute()
 onMounted(()=>{
-  console.log(route.params.activeKey)
   if (route.params.activeKey){
     activeKey.value=route.params.activeKey
   }
@@ -46,5 +45,4 @@ onMounted(()=>{
   width: 100%;
   height: 100%;
 }
-
 </style>
