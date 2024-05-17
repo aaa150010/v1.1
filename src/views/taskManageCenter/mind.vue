@@ -85,11 +85,22 @@ const registerGraph = () => {
       const midY = sourcePoint.y;
       const ctrX = midX;
       const ctrY = targetPoint.y;
+      // console.log(sourcePoint, targetPoint);
+      let a = 0;
+      let b = ctrY - midY;
+      if (Math.sign(b) == 1) {
+        a = 8;
+      } else if (Math.sign(b) == -1) {
+        a = -8;
+      }
       const pathData = `
        M ${sourcePoint.x + 160} ${sourcePoint.y}
        L ${midX} ${midY}
-       L ${ctrX} ${ctrY}
-       L ${targetPoint.x} ${targetPoint.y}
+       L ${ctrX} ${ctrY - a}
+       C ${ctrX} ${ctrY - a} , ${ctrX} ${ctrY} , ${targetPoint.x - 4} ${
+        targetPoint.y
+      }
+      L ${targetPoint.x} ${targetPoint.y}
       `;
       return options.raw ? Path.parse(pathData) : pathData;
     },
@@ -154,6 +165,15 @@ const updateNode = (item) => {
   });
 };
 
+const seeDetail = (item) => {
+  store.commit("setNodeConfig", {
+    visible: true,
+    title: "查看详情",
+    type: "seeDetail",
+    selectRow: item,
+  });
+};
+
 const initGraph = () => {
   const graph = new Graph({
     container: document.getElementById("container"),
@@ -176,7 +196,7 @@ const initGraph = () => {
   });
 
   render = (first) => {
-    console.log(graph.translate(), graph.zoom());
+    // console.log(graph.translate(), graph.zoom());
     let initTranslate = graph.translate();
     let initZoom = graph.zoom();
     const result = Hierarchy.mindmap(dataTree.value, {
@@ -188,7 +208,7 @@ const initGraph = () => {
         return d.width;
       },
       getHGap() {
-        return 25;
+        return 22;
       },
       getVGap() {
         return 20;
@@ -213,8 +233,10 @@ const initGraph = () => {
             deleteNode,
             addNode,
             updateNode,
+            seeDetail,
             attrs: {},
             graph: graph,
+
             // visible: false,
           })
         );

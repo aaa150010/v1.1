@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-full bg-slate-200 px-4 relative">
+  <div class="w-full h-full bg-slate-200 px-4 relative rounded-md">
     <div>{{ dataObj.name }}</div>
     <div>总任务数:{{ dataObj.totalTasks }}</div>
     <div>完成进度:{{ dataObj.schedule }}%</div>
@@ -57,6 +57,12 @@ const menus = shallowRef({
       label: "删除",
       click: () => {
         getNode().store.data.deleteNode(selectRow.value);
+      },
+    },
+    {
+      label: "查看详情",
+      click: () => {
+        getNode().store.data.seeDetail(selectRow.value);
       },
     },
   ],

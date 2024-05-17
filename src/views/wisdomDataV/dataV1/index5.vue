@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full text-white h-screen"
+    class="w-full text-white h-screen bg-cover"
     :style="'background-image: url(' + bgUrl + ');'"
   >
     <dv-border-box-11

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full text-white h-screen"
+    class="w-full text-white h-screen bg-cover"
     :style="'background-image: url(' + bgUrl + ');'"
   >
     <dv-border-box-11
@@ -252,7 +252,6 @@ const option1 = ref({
       show: false,
     },
     min: 0,
-    max: 30,
     // axisLine: {
     //   show: false,
     // },

@@ -72,10 +72,7 @@
             class="flex justify-between items-center p-2 border-b"
           >
             <div>
-              <span>{{
-                projectList[activeKey].projectYear +
-                projectList[activeKey].projectName
-              }}</span>
+              <span>{{ projectList[activeKey].projectName }}</span>
               <a-tag
                 v-if="projectList[activeKey].listed"
                 class="ml-2"
