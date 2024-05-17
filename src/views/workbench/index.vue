@@ -27,9 +27,14 @@ import Workprogress from "@/components/workprogress.vue";
 import Overview from "@/components/overview.vue";
 import AlreadyDone from "@/components/alreadyDone.vue";
 import Focus from "@/components/focus.vue";
+import {useRoute} from "vue-router";
 const activeKey = ref('1');
+const route=useRoute()
 onMounted(()=>{
-
+  console.log(route.params.activeKey)
+  if (route.params.activeKey){
+    activeKey.value=route.params.activeKey
+  }
 })
 </script>
 <style scoped>

@@ -42,7 +42,7 @@
   <a-modal v-model:open="open" :footer="null" width="50%" @cancel="handleCancel">
     <div style="text-align: center;margin-top: 30px;font-size: 20px" class="ellipsis">{{title}}</div>
     <iframe :src="src" class="test" width="100%" allow="payment"></iframe>
-      <a-button type="primary" v-if="showBtn" style="width: 100%">立即处理</a-button>
+      <a-button type="primary" v-if="showBtn" style="width: 100%" @click="handleToOverView">立即处理</a-button>
   </a-modal>
 </div>
 </template>
@@ -52,11 +52,13 @@ import {message, Modal, notification} from "ant-design-vue";
 import {addDeleteMessage, addReadMessage, getInformationByType, getUnreadNumber} from "@/api/information";
 import {ExclamationCircleOutlined} from "@ant-design/icons-vue";
 import {usePiniaStore} from "@/pinia";
+import {useRouter} from "vue-router";
 const viewValue=ref('all')
 const open=ref(false)
 const showBtn=ref(false)
 const itemUrl=ref()
 const title=ref()
+const toOverview=ref()
 const src=computed(()=>{
   return  src.value=`${import.meta.env.VITE_APP_BASE_API}/portal/r${itemUrl.value}&sid=${localStorage.getItem('sid')}`
 })
@@ -114,6 +116,7 @@ const columns = [
   },
 ];
 const data = ref([])
+const router=useRouter()
 // 一键删除已读
 const handleReadMessage=()=>{
   Modal.confirm({
@@ -153,6 +156,7 @@ const handleChange=()=>{
   })
 }
 const handleClickItem=(item)=>{
+  toOverview.value=item.url
   addReadMessage(item.messageCode).then(res=>{
     if (res.result=='ok'){
       getInformationByType(pagination.current,viewValue.value).then(res=>{
@@ -176,6 +180,9 @@ const handleCancel=()=>{
       store.setNumber(res.data)
     }
   })
+}
+const handleToOverView=()=>{
+  router.push({ name: 'workbench', params: { activeKey: toOverview.value }})
 }
 </script>
 <style scoped>
