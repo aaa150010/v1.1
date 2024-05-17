@@ -7,6 +7,7 @@
     >
       <a-spin tip="加载中" size="large" />
     </div>
+    <PersonInfoModel />
   </a-config-provider>
 </template>
 <script lang="ts">
@@ -16,11 +17,15 @@ declare const devUserInfo: any;
 declare const settingParam: any;
 import dayjs from "dayjs";
 import "dayjs/locale/zh-cn";
+import PersonInfoModel from "@/components/getPersonInfoGlobal/personInfoModel.vue";
 dayjs.locale("zh-cn");
 export default defineComponent({
   name: "HelloWorld",
   props: {
     msg: String,
+  },
+  components: {
+    PersonInfoModel,
   },
   data() {
     return { zhCN };

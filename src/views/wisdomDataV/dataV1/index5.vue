@@ -44,6 +44,12 @@
                 >查看详细</span
               >
             </template>
+            <template v-else-if="column.dataIndex == 'responsiblePersonName'">
+              <personInfoGlobal
+                :name="record.responsiblePersonName"
+                :userId="record.responsiblePerson"
+              />
+            </template>
           </template>
         </a-table>
       </div>

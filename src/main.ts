@@ -12,7 +12,7 @@ import DataVVue3 from "@kjgl77/datav-vue3";
 import "@/style/main.css";
 import Menus from "vue3-menus";
 import { createPinia } from "pinia";
-
+import personInfoGlobal from "@/components/getPersonInfoGlobal/personInfo.vue";
 const pinia = createPinia();
 const app = createApp(App);
 app.use(DataVVue3);
@@ -22,6 +22,8 @@ app.use(awsui);
 app.use(Antd);
 app.use(Menus);
 app.use(pinia);
+app.component("personInfoGlobal", personInfoGlobal);
+
 // app.use(ElementPlus, { size: 'small', zIndex: 3000 });
 const mountApp = () => {
   app.mount("#app");

@@ -9,6 +9,10 @@ export default createStore({
       selectRow: {},
     },
     loading: false,
+    personInfoConfig: {
+      visible: false,
+      userId: "",
+    },
   },
   mutations: {
     setNodeConfig(state, nodeConfig) {
@@ -16,6 +20,12 @@ export default createStore({
     },
     setLoading(state, loading) {
       state.loading = loading;
+    },
+    setPersonInfoConfig(state, personInfoConfig) {
+      state.personInfoConfig = {
+        ...state.personInfoConfig,
+        ...personInfoConfig,
+      };
     },
   },
   actions: {},
