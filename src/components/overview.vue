@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a-card title="工作进度" :bordered="false">
+    <a-card title="工作进度" :bordered="false"  style="margin-top: 10px">
      <div style="display: flex;justify-content: space-around">
        <div>
          <a-progress type="dashboard" :percent="workbenchObj.percent" />
@@ -23,7 +23,7 @@
        </div>
      </div>
     </a-card>
-    <a-card title="时间预警" :bordered="false">
+    <a-card title="时间预警" :bordered="false"  style="margin-top: 10px">
       <div style="display: flex;justify-content: space-around">
         <div class="oneItem" @click="handleHalf">
           <a-button type="link" size="large">{{ workbenchObj.warningTaskNumber }}</a-button>
@@ -213,8 +213,12 @@ onMounted(()=>{
 const getWorkData=()=>{
   getWorkbench().then(res=>{
     if (res.result=='ok'){
-      workbenchObj.value.percent=Math.ceil(res.data.completeTaskNumber/res.data.totalTaskNumber)
-      console.log(workbenchObj.value.percent)
+      if (res.data.totalTaskNumber == 0){
+        workbenchObj.value.percent=0;
+      }else {
+        workbenchObj.value.percent= ((res.data.completeTaskNumber/res.data.totalTaskNumber)* 100).toFixed(0)
+      }
+
       workbenchObj.value.completeTaskNumber=res.data.completeTaskNumber
       workbenchObj.value.overdueTaskNumber=res.data.overdueTaskNumber
       workbenchObj.value.projectNumber=res.data.projectNumber
