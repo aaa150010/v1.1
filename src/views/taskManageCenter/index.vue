@@ -44,7 +44,7 @@
               @click="selectRowProject(index)"
               :key="item.projectCode"
             >
-              <div>{{ item.projectYear + item.projectName }}</div>
+              <div>{{ item.projectName }}</div>
               <div>
                 {{
                   dayjs(item.startTime).format("YYYY-MM-DD") +
@@ -101,12 +101,22 @@
               }}</span>
             </div>
             <div>
-              <a-button class="" @click="updateFeedback">{{
-                projectList[activeKey].feedback ? "关闭反馈" : "开启反馈"
-              }}</a-button>
-              <a-button class="ml-2" @click="updateListed">{{
-                projectList[activeKey].listed ? "项目下架" : "项目上架"
-              }}</a-button>
+              <a-button
+                class=""
+                v-if="projectList[activeKey].feedbackPermission"
+                @click="updateFeedback"
+                >{{
+                  projectList[activeKey].feedback ? "关闭反馈" : "开启反馈"
+                }}</a-button
+              >
+              <a-button
+                class="ml-2"
+                @click="updateListed"
+                v-if="projectList[activeKey].listedPermission"
+                >{{
+                  projectList[activeKey].listed ? "项目下架" : "项目上架"
+                }}</a-button
+              >
             </div>
           </div>
           <div v-if="projectList.length > 0" class="w-full h-residue4 p-2">

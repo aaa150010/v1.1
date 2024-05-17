@@ -41,7 +41,7 @@
               @click="selectRowProject(index)"
               :key="item.projectCode"
             >
-              <div>{{ item.projectYear + item.projectName }}</div>
+              <div>{{ item.projectName }}</div>
               <div>
                 {{
                   dayjs(item.startTime).format("YYYY-MM-DD") +

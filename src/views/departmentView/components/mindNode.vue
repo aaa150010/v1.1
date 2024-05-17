@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-full bg-slate-200 px-4 relative">
+  <div class="w-full h-full bg-slate-200 px-4 relative rounded-md">
     <div>{{ dataObj.name }}</div>
     <div>总任务数:{{ dataObj.totalTasks }}</div>
     <div>完成进度:{{ dataObj.schedule }}%</div>

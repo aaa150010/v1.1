@@ -80,7 +80,8 @@
         <a-form-item label="任务开始时间" name="startTime">
           <a-date-picker
             v-model:value="formNode.startTime"
-            format="YYYY-MM-DD"
+            format="YYYY-MM-DD HH:mm:ss"
+            :show-time="{ defaultValue: dayjs('00:00:00', 'HH:mm:ss') }"
             style="width: 100%"
             placeholder="请选择任务开始时间"
           />
@@ -90,7 +91,8 @@
         <a-form-item label="任务截止时间" name="endTime">
           <a-date-picker
             v-model:value="formNode.endTime"
-            format="YYYY-MM-DD"
+            format="YYYY-MM-DD HH:mm:ss"
+            :show-time="{ defaultValue: dayjs('00:00:00', 'HH:mm:ss') }"
             style="width: 100%"
             placeholder="请选择任务结束时间"
           />
@@ -118,7 +120,7 @@
         </a-form-item>
       </a-col>
     </a-row>
-    <div class="flex justify-between">
+    <div class="flex justify-between" v-if="type != 'seeDetail'">
       <div></div>
       <div>
         <a-button @click="handleCancel">取消</a-button>
@@ -154,38 +156,38 @@ const peopleListTree = ref([]);
 
 const formNode = reactive({
   id:
-    store.state.nodeConfig.type == "update"
+    store.state.nodeConfig.type != "add"
       ? store.state.nodeConfig.selectRow.id
       : null,
   projectCode: store.state.nodeConfig.selectRow.projectCode,
   parentTaskCode: store.state.nodeConfig.selectRow.id,
   taskName:
-    store.state.nodeConfig.type == "update"
+    store.state.nodeConfig.type != "add"
       ? store.state.nodeConfig.selectRow.name
       : null,
   responsibleDepartment:
-    store.state.nodeConfig.type == "update"
+    store.state.nodeConfig.type != "add"
       ? store.state.nodeConfig.selectRow.responsibleDepartment
       : null,
   personResponsible:
-    store.state.nodeConfig.type == "update"
+    store.state.nodeConfig.type != "add"
       ? store.state.nodeConfig.selectRow.personResponsible
       : null,
   startTime:
-    store.state.nodeConfig.type == "update"
+    store.state.nodeConfig.type != "add"
       ? dayjs(store.state.nodeConfig.selectRow.startTime)
       : null,
   endTime:
-    store.state.nodeConfig.type == "update"
+    store.state.nodeConfig.type != "add"
       ? dayjs(store.state.nodeConfig.selectRow.endTime)
       : null,
   taskType: 1,
   taskDescription:
-    store.state.nodeConfig.type == "update"
+    store.state.nodeConfig.type != "add"
       ? store.state.nodeConfig.selectRow.taskDescription
       : null,
   taskScore:
-    store.state.nodeConfig.type == "update"
+    store.state.nodeConfig.type != "add"
       ? store.state.nodeConfig.selectRow.taskScore
       : null,
 });
@@ -226,13 +228,6 @@ const rulesNode = {
     },
   ],
   taskScore: [
-    {
-      required: true,
-      message: "必填项",
-      trigger: "blur",
-    },
-  ],
-  taskDescription: [
     {
       required: true,
       message: "必填项",

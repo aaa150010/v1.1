@@ -113,11 +113,21 @@ const registerGraph = () => {
       const midY = sourcePoint.y;
       const ctrX = midX;
       const ctrY = targetPoint.y;
+      let a = 0;
+      let b = ctrY - midY;
+      if (Math.sign(b) == 1) {
+        a = 8;
+      } else if (Math.sign(b) == -1) {
+        a = -8;
+      }
       const pathData = `
        M ${sourcePoint.x + 160} ${sourcePoint.y}
        L ${midX} ${midY}
-       L ${ctrX} ${ctrY}
-       L ${targetPoint.x} ${targetPoint.y}
+       L ${ctrX} ${ctrY - a}
+       C ${ctrX} ${ctrY - a} , ${ctrX} ${ctrY} , ${targetPoint.x - 4} ${
+        targetPoint.y
+      }
+      L ${targetPoint.x} ${targetPoint.y}
       `;
       return options.raw ? Path.parse(pathData) : pathData;
     },
@@ -184,7 +194,7 @@ const initGraph = () => {
           return 20;
         },
         getVGap() {
-          return 25;
+          return 22;
         },
         getSide: () => {
           return "right";

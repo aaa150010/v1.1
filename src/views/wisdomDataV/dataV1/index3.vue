@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full text-white h-screen"
+    class="w-full text-white h-screen bg-cover"
     :style="'background-image: url(' + bgUrl + ');'"
   >
     <dv-border-box-11
@@ -46,7 +46,14 @@
                 </div>
                 <div class="center">{{ item.value }}</div>
                 <div class="center">
-                  去年对比增幅：{{ item.valueDiffWithLastYear }}
+                  去年对比增幅：<span
+                    :class="
+                      item.valueDiffType == '上升'
+                        ? 'text-red-400'
+                        : 'text-blue-400'
+                    "
+                    >{{ item.valueDiffWithLastYear }}</span
+                  >
                 </div>
                 <div class="center">
                   <ArrowUpOutlined
@@ -61,7 +68,14 @@
                 </div>
                 <div class="center">省内排名：{{ item.provinceOrder }}</div>
                 <div class="center">
-                  对比去年排名：{{ item.orderDiffWithLastYear }}
+                  对比去年排名：<span
+                    :class="
+                      item.orderDiffType == '上升'
+                        ? 'text-red-400'
+                        : 'text-blue-400'
+                    "
+                    >{{ item.orderDiffWithLastYear }}</span
+                  >
                 </div>
                 <div class="center">
                   <ArrowUpOutlined

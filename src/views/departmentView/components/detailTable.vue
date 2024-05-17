@@ -82,8 +82,8 @@
             <div>
               审核人：
               <personInfoGlobal
-                :name="item.reviewerName"
-                :userId="item.reviewer"
+                :name="item.reviewData.reviewerName"
+                :userId="item.reviewData.reviewer"
               />
             </div>
             <div>审核意见：{{ item.reviewData.auditResult }}</div>
