@@ -10,7 +10,9 @@
     >
       <template #bodyCell="{ column, text, record }">
         <template v-if="column.dataIndex == 'operation'">
-          <span class="cursor-pointer text-blue-400" @click="openDetail(record)"
+          <span
+            class="cursor-pointer text-blue-400 underline"
+            @click="openDetail(record)"
             >查看明细</span
           >
         </template>
@@ -75,12 +77,12 @@ const columns = ref([
     dataIndex: "taskItem",
     key: "taskItem",
   },
-  // {
-  //   title: "评分标准",
-  //   dataIndex: "description",
-  //   width: 500,
-  //   key: "description",
-  // },
+  {
+    title: "评分标准",
+    dataIndex: "describe",
+    width: 300,
+    key: "describe",
+  },
   {
     title: "得分",
     align: "center",

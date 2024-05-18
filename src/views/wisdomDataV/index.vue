@@ -36,12 +36,12 @@
           <div class="overflow-y-auto h-residue2">
             <div
               v-for="(item, index) in projectList"
-              class="h-24 border mt-2 p-2 cursor-pointer hover:bg-cyan-300"
+              class="h-26 border mt-2 p-2 cursor-pointer hover:bg-cyan-300"
               :class="index == activeKey ? 'bg-cyan-300' : ''"
               @click="selectRowProject(index)"
               :key="item.projectCode"
             >
-              <div>{{ item.projectYear + item.projectName }}</div>
+              <div>{{ item.projectName }}</div>
               <div>
                 {{
                   dayjs(item.startTime).format("YYYY-MM-DD") +
@@ -49,6 +49,7 @@
                   dayjs(item.endTime).format("YYYY-MM-DD")
                 }}
               </div>
+              <a-divider class="my-1" />
               <div class="flex justify-around items-center">
                 <span>{{ item.schedule }}%</span>
                 <a-progress

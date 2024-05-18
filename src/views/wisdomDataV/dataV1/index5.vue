@@ -39,7 +39,7 @@
           <template #bodyCell="{ column, text, record }">
             <template v-if="column.dataIndex == 'operation'">
               <span
-                class="cursor-pointer text-blue-400"
+                class="cursor-pointer text-blue-400 underline"
                 @click="openDetail(record)"
                 >查看详细</span
               >

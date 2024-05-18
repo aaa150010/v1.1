@@ -207,7 +207,9 @@ const initGraph = () => {
       size: 10,
       visible: true,
     },
-
+    // background: {
+    //   color: "#F2F7FA",
+    // },
     connecting: {
       connectionPoint: "anchor",
     },

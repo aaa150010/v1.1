@@ -55,6 +55,7 @@ export function addNodeApi(data) {
   return post({
     cmd: "com.awspaas.user.apps.complex_task_decomposition_addTask",
     data: data,
+    isLoading: true,
   });
 }
 
