@@ -1,8 +1,14 @@
 <template>
-  <div class="app-content border h-full">
+  <div class="app-content border h-full relative">
     <div id="container" style="width: 100%; height: 100%"></div>
     <TeleportContainer />
     <addAndUpdateDialog :getProjectTree="getProjectTree" />
+    <a-button class="absolute top-2 left-2" @click="toggleCollapseAll(true)"
+      >展开全部</a-button
+    >
+    <a-button class="absolute top-2 left-28" @click="toggleCollapseAll(true)"
+      >收缩全部</a-button
+    >
   </div>
 </template>
 
@@ -223,29 +229,32 @@ const initGraph = () => {
     panning: true,
   });
 
-  render = (first) => {
-    // console.log(graph.translate(), graph.zoom());
+  render = (first, dataTreeVar) => {
     let initTranslate = graph.translate();
     let initZoom = graph.zoom();
-    // 横向树
-    const result = Hierarchy.compactBox(dataTree.value, {
-      direction: "H",
-      getHeight(d) {
-        return d.height;
-      },
-      getWidth(d) {
-        return d.width;
-      },
-      getHGap() {
-        return 22;
-      },
-      getVGap() {
-        return 20;
-      },
-      getSide: () => {
-        return "right";
-      },
-    });
+    const result = Hierarchy.mindmap(
+      dataTreeVar
+        ? dataTreeVar
+        : filtersDataTree(JSON.parse(JSON.stringify(dataTree.value))),
+      {
+        direction: "H",
+        getHeight(d) {
+          return d.height;
+        },
+        getWidth(d) {
+          return d.width;
+        },
+        getHGap() {
+          return 22;
+        },
+        getVGap() {
+          return 20;
+        },
+        getSide: () => {
+          return "right";
+        },
+      }
+    );
     const cells = [];
     const traverse = (hierarchyItem) => {
       if (hierarchyItem) {
@@ -265,7 +274,7 @@ const initGraph = () => {
             seeDetail,
             attrs: {},
             graph: graph,
-
+            toggleCollapse: toggleCollapse,
             // visible: false,
           })
         );
@@ -381,15 +390,64 @@ const initGraph = () => {
   };
 };
 
-const addTreeProperty = (obj) => {
+const addTreeProperty = (obj, isCollapseVar) => {
   obj.width = 280;
   obj.height = 100;
-  if (obj.children) {
+  obj.isCollapse = isCollapseVar == false ? isCollapseVar : true;
+  if (obj.children && obj.children.length > 0) {
     obj.children.forEach(function (children) {
-      addTreeProperty(children);
+      addTreeProperty(children, false);
     });
+  } else {
+    obj.isLeaf = true;
   }
   return obj;
+};
+
+const toggleCollapse = (id, flag) => {
+  traverseTreeAndModify(dataTree.value, id, "isCollapse", flag);
+  let newDataTree = filtersDataTree(JSON.parse(JSON.stringify(dataTree.value)));
+  render(false, newDataTree);
+};
+
+const filtersDataTree = (obj) => {
+  if (!obj.isCollapse) {
+    obj.children = null;
+  } else {
+    if (obj.children && obj.children.length > 0) {
+      obj.children.forEach((item) => {
+        filtersDataTree(item);
+      });
+    }
+  }
+  return obj;
+};
+
+const toggleCollapseAll = (flag) => {
+  addTreeProperty(data.value, flag);
+  let newDataTree = filtersDataTree(JSON.parse(JSON.stringify(dataTree.value)));
+  render(false, newDataTree);
+};
+
+// 定义一个函数来遍历树并查找节点
+const traverseTreeAndModify = (
+  node,
+  targetId,
+  attributeName,
+  attributeValue
+) => {
+  // 检查当前节点是否是目标节点
+  if (node.id === targetId) {
+    // 找到目标节点，改变属性值
+    node[attributeName] = attributeValue;
+  }
+
+  // 递归遍历子节点
+  if (node.children && node.children.length > 0) {
+    node.children.forEach((childNode) => {
+      traverseTreeAndModify(childNode, targetId, attributeName, attributeValue);
+    });
+  }
 };
 
 const getProjectTree = (first) => {

@@ -57,33 +57,36 @@
               :key="item.itemCode"
             >
               <div class="grid grid-cols-7">
-                <div class="text-blue-400 text-base pl-6 font-bold">
+                <div class="text-blue-400 text-base pl-6 font-bold w-72">
                   {{ item.itemName }}
                 </div>
-                <div class="center">{{ item.value }}</div>
-                <div class="center">
+                <div class="center font-bold">{{ item.value }}</div>
+                <div class="center font-bold">
                   去年对比增幅：<span
                     :class="
                       item.valueDiffType == '上升'
                         ? 'text-red-400'
                         : 'text-blue-400'
                     "
+                    class="font-bold"
                     >{{ item.valueDiffWithLastYear }}</span
                   >
                 </div>
                 <div class="center">
                   <ArrowUpOutlined
                     v-if="item.valueDiffType == '上升'"
-                    class="text-2xl text-red-400"
+                    class="text-2xl text-red-400 font-bold"
                   />
                   <ArrowDownOutlined
                     v-else-if="item.valueDiffType == '下降'"
-                    class="text-2xl text-blue-400"
+                    class="text-2xl text-blue-400 font-bold"
                   />
                   <div v-else>-</div>
                 </div>
-                <div class="center">省内排名：{{ item.provinceOrder }}</div>
-                <div class="center">
+                <div class="center font-bold">
+                  省内排名：{{ item.provinceOrder }}
+                </div>
+                <div class="center font-bold">
                   对比去年排名：<span
                     :class="
                       item.orderDiffType == '上升'
@@ -93,7 +96,7 @@
                     >{{ item.orderDiffWithLastYear }}</span
                   >
                 </div>
-                <div class="center">
+                <div class="center font-bold">
                   <ArrowUpOutlined
                     v-if="item.orderDiffType == '上升'"
                     class="text-2xl text-red-400"
@@ -102,10 +105,10 @@
                     v-else-if="item.orderDiffType == '下降'"
                     class="text-2xl text-blue-400"
                   />
-                  <div v-else>-</div>
+                  <div v-else class="font-bold">-</div>
                 </div>
               </div>
-              <div class="px-12">
+              <div class="px-12 font-bold">
                 <div class="border-b border-sky-600"></div>
               </div>
             </div>
@@ -186,29 +189,48 @@ const getCoreData = () => {
 .width1 {
   width: calc(100% - 2rem);
 }
-:deep(:where(.css-dev-only-do-not-override-1hsjdkk).ant-select:not(.ant-select-customize-input) .ant-select-selector) {
-  background-color: rgb(0, 12, 49)!important;
-  color: #fff!important;
+:deep(
+    :where(.css-dev-only-do-not-override-1hsjdkk).ant-select:not(
+        .ant-select-customize-input
+      )
+      .ant-select-selector
+  ) {
+  background-color: rgb(0, 12, 49) !important;
+  color: #fff !important;
 }
-:deep(:where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown){
+:deep(:where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown) {
   color: #fff;
-  background-color: rgb(4, 37, 80)!important;
+  background-color: rgb(4, 37, 80) !important;
 }
-:deep(:where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown .ant-select-item){
-  color: #fff!important;
+:deep(
+    :where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown
+      .ant-select-item
+  ) {
+  color: #fff !important;
 }
-:deep(:where(.css-dev-only-do-not-override-1hsjdkk).ant-select .ant-select-arrow){
+:deep(
+    :where(.css-dev-only-do-not-override-1hsjdkk).ant-select .ant-select-arrow
+  ) {
   color: #fff;
 }
-:deep(:where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown .ant-select-item-option-active:not(.ant-select-item-option-disabled)){
-  background-color: blue!important;
-  color: #fff!important;
+:deep(
+    :where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown
+      .ant-select-item-option-active:not(.ant-select-item-option-disabled)
+  ) {
+  background-color: blue !important;
+  color: #fff !important;
 }
-:deep(:where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown .ant-select-item-option-selected ){
-  color: red!important;
+:deep(
+    :where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown
+      .ant-select-item-option-selected
+  ) {
+  color: red !important;
 }
-:deep(:where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled)){
-  color: #fff!important;
-  background-color: blue!important;
+:deep(
+    :where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown
+      .ant-select-item-option-selected:not(.ant-select-item-option-disabled)
+  ) {
+  color: #fff !important;
+  background-color: blue !important;
 }
 </style>

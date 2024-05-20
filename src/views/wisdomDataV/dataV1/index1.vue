@@ -36,7 +36,6 @@
                 :startVal="0"
                 :endVal="unCompleteTaskList"
                 :duration="3000"
-                v-if="flagT"
                 class="mx-auto"
               ></countTo>
             </div>
@@ -49,7 +48,7 @@
           </div>
           <div
             class="relative h-32 flex flex-col justify-center items-center"
-            style="background-color: #33ffcc"
+            style="background-color: #93c5fd"
           >
             <div>已完成任务数</div>
             <div class="font-bold text-2xl">

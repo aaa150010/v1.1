@@ -14,10 +14,14 @@
     </div>
     <div
       v-if="!isLeafNode"
-      class="absolute top-1/2 -right-4 -translate-y-1/2 cursor-pointer"
+      class="absolute top-1/2 -right-8 -translate-y-1/2 cursor-pointer"
     >
-      <MinusCircleOutlined @click="toggleCollapse(true)" v-if="isCollapse" />
-      <PlusCircleOutlined @click="toggleCollapse(false)" v-else />
+      <div class="p-4 center" @click="toggleCollapse(true)" v-if="isCollapse">
+        <MinusCircleOutlined />
+      </div>
+      <div class="p-4 center" @click="toggleCollapse(false)" v-else>
+        <PlusCircleOutlined />
+      </div>
     </div>
   </div>
 </template>
