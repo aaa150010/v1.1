@@ -141,7 +141,7 @@ import dayjs, { Dayjs } from "dayjs";
 import { message } from "ant-design-vue";
 const store = useStore();
 
-const props = defineProps(["getProjectTree"]);
+const props = defineProps(["getProjectTree", "deptListTree", "peopleListTree"]);
 
 const type = computed(() => store.state.nodeConfig.type);
 const selectRow = computed(() => store.state.nodeConfig.selectRow);
@@ -150,9 +150,6 @@ console.log(store.state.nodeConfig.selectRow);
 const formNodeRef = ref();
 const labelCol = { span: 6 };
 const wrapperCol = { span: 13 };
-
-const deptListTree = ref([]);
-const peopleListTree = ref([]);
 
 const formNode = reactive({
   id:
@@ -235,32 +232,6 @@ const rulesNode = {
     },
   ],
 };
-
-const getDeptListTree = () => {
-  return getSelectDataApi({ type: "department" }).then((res) => {
-    if (res.result == "ok") {
-      deptListTree.value = res.data;
-    }
-  });
-};
-
-const getPeopleListTree = () => {
-  return getSelectDataApi({
-    type: "person",
-  }).then((res) => {
-    if (res.result == "ok") {
-      peopleListTree.value = res.data.map((item) => {
-        item.selectable = false;
-        return item;
-      });
-    }
-  });
-};
-
-onMounted(async () => {
-  await getDeptListTree();
-  await getPeopleListTree();
-});
 
 const handleOk = () => {
   formNodeRef.value.validate().then(async () => {
