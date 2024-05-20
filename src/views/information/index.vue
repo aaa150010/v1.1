@@ -105,11 +105,14 @@ onMounted(() => {
 });
 const pageChange = (page) => {
   pagination.current = page;
+  loading.value = true;
   getInformationByType(pagination.current, viewValue.value).then((res) => {
     if (res.result == "ok") {
       pagination.total = res.data.total;
       data.value = res.data.messageData;
     }
+  }).finally(() => {
+    loading.value = false;
   });
 };
 const pagination = reactive({
@@ -161,6 +164,7 @@ const handleReadMessage = () => {
         if (res.result == "ok") {
           message.success("删除成功");
           pagination.current = 1;
+          loading.value=true
           getInformationByType(pagination.current, viewValue.value).then(
             (res) => {
               if (res.result == "ok") {
@@ -169,7 +173,9 @@ const handleReadMessage = () => {
                 data.value = res.data.messageData;
               }
             }
-          );
+          ).finally(() => {
+            loading.value = false;
+          });
         }
       });
     },
@@ -179,23 +185,29 @@ const handleReadMessage = () => {
 //更改查看的消息类型
 const handleChange = () => {
   pagination.current = 1;
+  loading.value=true
   getInformationByType(pagination.current, viewValue.value).then((res) => {
     if (res.result == "ok") {
       pagination.total = res.data.total;
       data.value = res.data.messageData;
     }
+  }).finally(() => {
+    loading.value = false;
   });
 };
 const handleClickItem = (item) => {
   toOverview.value = item.url;
   addReadMessage(item.messageCode).then((res) => {
     if (res.result == "ok") {
+      loading.value=true
       getInformationByType(pagination.current, viewValue.value).then((res) => {
         if (res.result == "ok") {
           console.log(res.data);
           pagination.total = res.data.total;
           data.value = res.data.messageData;
         }
+      }).finally(() => {
+        loading.value = false;
       });
       // 重新获取未读消息数量
       getUnreadNumber().then((res) => {
