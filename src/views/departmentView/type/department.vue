@@ -24,11 +24,13 @@
       style="width: 1000px"
       :footer="null"
     >
-      <div class="flex justify-between">
-        <div>责任部门：{{ selectRow.responsibleDepartmentName }}</div>
-        <div>进展：{{ selectRow.evolve }}%</div>
+      <div style="height: 650px">
+        <div class="flex justify-between">
+          <div>责任部门：{{ selectRow.responsibleDepartmentName }}</div>
+          <div>进展：{{ selectRow.evolve }}%</div>
+        </div>
+        <detailTable type="department" :selectRow="selectRow" />
       </div>
-      <detailTable type="department" :selectRow="selectRow" />
     </a-modal>
   </div>
 </template>

@@ -2,7 +2,8 @@
   <a-config-provider :locale="zhCN">
     <router-view />
     <div
-      class="w-screen h-screen fixed top-0 left-0 z-50 bg-slate-400 bg-opacity-30 center"
+      class="w-screen h-screen fixed top-0 left-0 bg-slate-400 bg-opacity-30 center"
+      style="z-index: 9000"
       v-if="fullscreenLoading"
     >
       <a-spin tip="加载中" size="large" />

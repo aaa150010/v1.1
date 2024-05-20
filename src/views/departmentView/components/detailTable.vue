@@ -10,7 +10,7 @@
       :dataSource="dataSource"
       :columns="filterColumns"
       bordered
-      :scroll="{ y: 550 }"
+      :scroll="{ y: 450 }"
       style="margin-bottom: 8px"
     >
       <template #bodyCell="{ column, text, record }">
@@ -96,6 +96,35 @@
           </div>
           <a-divider></a-divider>
         </div>
+        <div v-if="taskDetail.feedback.length == 0">
+          <div>
+            <div>执行部门：{{ taskDetail.executionDepartmentName }}</div>
+            <div>
+              执行人：
+              <personInfoGlobal
+                :name="taskDetail.executorName"
+                :userId="taskDetail.executor"
+              />
+            </div>
+            <div>任务反馈时间：</div>
+            <div>任务反馈说明：</div>
+            <div>任务反馈附件：</div>
+            <div>任务自评分：</div>
+          </div>
+          <a-divider></a-divider>
+          <div>
+            <div>提交审核时间：</div>
+            <div>审核时间：</div>
+            <div>审核部门：</div>
+            <div>
+              审核人：
+              <personInfoGlobal :name="''" :userId="''" />
+            </div>
+            <div>审核意见：</div>
+            <div>审核说明：</div>
+          </div>
+          <a-divider></a-divider>
+        </div>
       </div>
     </a-modal>
   </div>
@@ -167,7 +196,7 @@ const columns = ref([
     title: "任务下发时间",
     align: "center",
     dataIndex: "issuingTime",
-    width: 100,
+    width: 150,
     key: "issuingTime",
     filter: ["0", "2"],
   },
@@ -183,7 +212,7 @@ const columns = ref([
     title: "提交审核时间",
     align: "center",
     dataIndex: "submissionTime",
-    width: 100,
+    width: 150,
     key: "submissionTime",
     filter: ["1"],
   },
@@ -191,7 +220,7 @@ const columns = ref([
     title: "审核通过时间",
     align: "center",
     dataIndex: "approvalTime",
-    width: 100,
+    width: 150,
     key: "approvalTime",
     filter: ["2"],
   },
