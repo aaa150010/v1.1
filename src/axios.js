@@ -27,6 +27,7 @@ service.interceptors.response.use(
       if ('result' in res.data){
           if (res.data.result!=='ok'){
               message.error(res.data.msg)
+
           }
       }else if ('result' in res.data.data){
           if (res.data.data.result!=='ok'){
