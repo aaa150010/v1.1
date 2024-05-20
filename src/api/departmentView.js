@@ -5,6 +5,7 @@ export function getTaskByDepartmentIdApi(data) {
   return get({
     cmd: "com.awspaas.user.apps.complex_task_decomposition_getTaskByDepartmentId",
     data: data,
+    isLoading: true,
   });
 }
 
@@ -13,6 +14,7 @@ export function getTaskByTaskCodeApi(data) {
   return get({
     cmd: "com.awspaas.user.apps.complex_task_decomposition_getTaskByTaskCode",
     data: data,
+    isLoading: true,
   });
 }
 
@@ -21,5 +23,6 @@ export function getTaskDetailByCodeApi(data) {
   return get({
     cmd: "com.awspaas.user.apps.complex_task_decomposition_getTaskDetailByCode",
     data: data,
+    isLoading: true,
   });
 }
