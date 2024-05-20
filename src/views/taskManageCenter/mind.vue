@@ -6,7 +6,7 @@
     <a-button class="absolute top-2 left-2" @click="toggleCollapseAll(true)"
       >展开全部</a-button
     >
-    <a-button class="absolute top-2 left-28" @click="toggleCollapseAll(true)"
+    <a-button class="absolute top-2 left-28" @click="toggleCollapseAll(false)"
       >收缩全部</a-button
     >
   </div>
@@ -390,13 +390,13 @@ const initGraph = () => {
   };
 };
 
-const addTreeProperty = (obj, isCollapseVar) => {
+const addTreeProperty = (obj, isCollapseVar, isAll) => {
   obj.width = 280;
   obj.height = 100;
   obj.isCollapse = isCollapseVar == false ? isCollapseVar : true;
   if (obj.children && obj.children.length > 0) {
     obj.children.forEach(function (children) {
-      addTreeProperty(children, false);
+      addTreeProperty(children, isAll ? isCollapseVar : false);
     });
   } else {
     obj.isLeaf = true;
@@ -424,7 +424,7 @@ const filtersDataTree = (obj) => {
 };
 
 const toggleCollapseAll = (flag) => {
-  addTreeProperty(data.value, flag);
+  dataTree.value = addTreeProperty(dataTree.value, flag, true);
   let newDataTree = filtersDataTree(JSON.parse(JSON.stringify(dataTree.value)));
   render(false, newDataTree);
 };

@@ -1,5 +1,5 @@
 <template>
-  <div class="app-content border h-full">
+  <div class="app-content border h-full relative">
     <div id="container" style="width: 100%; height: 100%"></div>
     <TeleportContainer />
     <a-modal
@@ -54,6 +54,12 @@
         </div>
       </div>
     </a-modal>
+    <a-button class="absolute top-2 left-2" @click="toggleCollapseAll(true)"
+      >展开全部</a-button
+    >
+    <a-button class="absolute top-2 left-28" @click="toggleCollapseAll(false)"
+      >收缩全部</a-button
+    >
   </div>
 </template>
 
@@ -256,13 +262,13 @@ const initGraph = () => {
   };
 };
 
-const addTreeProperty = (obj, isCollapseVar) => {
+const addTreeProperty = (obj, isCollapseVar, isAll) => {
   obj.width = 280;
   obj.height = 100;
   obj.isCollapse = isCollapseVar == false ? isCollapseVar : true;
   if (obj.children && obj.children.length > 0) {
     obj.children.forEach(function (children) {
-      addTreeProperty(children, false);
+      addTreeProperty(children, isAll ? isCollapseVar : false);
     });
   } else {
     obj.isLeaf = true;
@@ -328,6 +334,12 @@ const handleDown = (item) => {
     ""
   )}&sid=${localStorage.getItem("sid")}`;
   download(link, item.name);
+};
+
+const toggleCollapseAll = (flag) => {
+  dataTree.value = addTreeProperty(dataTree.value, flag, true);
+  let newDataTree = filtersDataTree(JSON.parse(JSON.stringify(dataTree.value)));
+  render(false, newDataTree);
 };
 
 watch(
