@@ -344,12 +344,16 @@ const enterTop=()=>{
   console.log(parent.value)
   spinning.value=true
   getFolderFiles(props.space,parent.value).then(res=>{
+    console.log(res)
+    console.log(11)
     if (res.result=='ok'){
       //把上方当前路径更换
       currentUrl.value=res.data[0].path
       dataList.value=res.data[0].children
       parentCode.value=res.data[0].value
       parent.value=res.data[0].parent
+    }else {
+      // message.error(res.msg)
     }
   }).finally(()=>{
     spinning.value=false

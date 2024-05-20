@@ -20,8 +20,18 @@ service.interceptors.response.use(
       // &&res.data.data.result!=='ok'
       // console.log(res.data.result!=='ok')
       // console.log(res.data.data.result!=='ok')
-      if (res.data.result!=='ok'&&res.data.data.result!=='ok'){
-          message.error(res.data.msg?res.data.msg:res.data.desc);
+      // if (res.data.result!=='ok'&&res.data.data.result!=='ok'){
+      //     message.error(res.data.msg?res.data.msg:res.data.desc);
+      // }
+      console.log(res)
+      if ('result' in res.data){
+          if (res.data.result!=='ok'){
+              message.error(res.data.msg)
+          }
+      }else if ('result' in res.data.data){
+          if (res.data.data.result!=='ok'){
+              message.error(res.data.data.msg)
+          }
       }
     return res.data;
   },
