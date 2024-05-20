@@ -91,4 +91,7 @@ export default defineComponent({
   overflow: hidden;
   text-overflow: ellipsis;
 }
+:deep(:where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown){
+  background-color: rgb(4, 3, 36)!important;
+}
 </style>
