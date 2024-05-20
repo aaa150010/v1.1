@@ -18,12 +18,13 @@
         <div class="mb-4">
           <a-button ghost @click="seeProgress">进展一览</a-button>
           <a-button class="ml-2" type="primary" ghost>核心数据</a-button>
-          <div class="ml-2 inline-block">
+          <div class="ml-2 inline-block select-wrap">
             <a-select
               v-model:value="yearValue"
               class="w-36"
               @change="getCoreData"
               placeholder="请选择年份"
+              :getPopupContainer="(triggerNode) => triggerNode.parentNode"
             >
               <a-select-option
                 v-for="item in yearList"
@@ -184,5 +185,30 @@ const getCoreData = () => {
 }
 .width1 {
   width: calc(100% - 2rem);
+}
+:deep(:where(.css-dev-only-do-not-override-1hsjdkk).ant-select:not(.ant-select-customize-input) .ant-select-selector) {
+  background-color: rgb(0, 12, 49)!important;
+  color: #fff!important;
+}
+:deep(:where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown){
+  color: #fff;
+  background-color: rgb(4, 37, 80)!important;
+}
+:deep(:where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown .ant-select-item){
+  color: #fff!important;
+}
+:deep(:where(.css-dev-only-do-not-override-1hsjdkk).ant-select .ant-select-arrow){
+  color: #fff;
+}
+:deep(:where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown .ant-select-item-option-active:not(.ant-select-item-option-disabled)){
+  background-color: blue!important;
+  color: #fff!important;
+}
+:deep(:where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown .ant-select-item-option-selected ){
+  color: red!important;
+}
+:deep(:where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled)){
+  color: #fff!important;
+  background-color: blue!important;
 }
 </style>
