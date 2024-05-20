@@ -181,7 +181,9 @@ const initGraph = () => {
     let initTranslate = graph.translate();
     let initZoom = graph.zoom();
     const result = Hierarchy.mindmap(
-      dataTreeVar ? dataTreeVar : dataTree.value,
+      dataTreeVar
+        ? dataTreeVar
+        : filtersDataTree(JSON.parse(JSON.stringify(dataTree.value))),
       {
         direction: "H",
         getHeight(d) {
@@ -254,13 +256,13 @@ const initGraph = () => {
   };
 };
 
-const addTreeProperty = (obj) => {
+const addTreeProperty = (obj, isCollapseVar) => {
   obj.width = 280;
   obj.height = 100;
-  obj.isCollapse = true;
+  obj.isCollapse = isCollapseVar == false ? isCollapseVar : true;
   if (obj.children && obj.children.length > 0) {
     obj.children.forEach(function (children) {
-      addTreeProperty(children);
+      addTreeProperty(children, false);
     });
   } else {
     obj.isLeaf = true;

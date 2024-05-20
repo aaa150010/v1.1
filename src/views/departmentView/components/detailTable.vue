@@ -10,13 +10,14 @@
       :dataSource="dataSource"
       :columns="filterColumns"
       bordered
+      :scroll="{ y: 550 }"
       style="margin-bottom: 8px"
     >
       <template #bodyCell="{ column, text, record }">
         <template v-if="column.dataIndex == 'taskDescription'">
-          <span>{{ text }}</span>
+          <span>{{ text ? text : "暂无说明" }}</span>
           <span
-            class="cursor-pointer text-blue-400 float-right"
+            class="cursor-pointer text-blue-400 float-right underline"
             @click="openDetail(record)"
             >查看详情</span
           >
@@ -39,7 +40,11 @@
     >
       <div>
         <div>任务名称：{{ taskDetail.taskName }}</div>
-        <div>任务说明：{{ taskDetail.taskDescription }}</div>
+        <div>
+          任务说明：{{
+            taskDetail.taskDescription ? taskDetail.taskDescription : "暂无说明"
+          }}
+        </div>
         <div>任务下发时间：{{ taskDetail.issuingTime }}</div>
         <div>任务截止时间： {{ taskDetail.endTime }}</div>
         <div>责任部门：{{ taskDetail.executionDepartmentName }}</div>
@@ -162,6 +167,7 @@ const columns = ref([
     title: "任务下发时间",
     align: "center",
     dataIndex: "issuingTime",
+    width: 100,
     key: "issuingTime",
     filter: ["0", "2"],
   },
@@ -169,6 +175,7 @@ const columns = ref([
     title: "结束时间",
     align: "center",
     dataIndex: "endTime",
+    width: 100,
     key: "endTime",
     filter: [],
   },
@@ -176,6 +183,7 @@ const columns = ref([
     title: "提交审核时间",
     align: "center",
     dataIndex: "submissionTime",
+    width: 100,
     key: "submissionTime",
     filter: ["1"],
   },
@@ -183,6 +191,7 @@ const columns = ref([
     title: "审核通过时间",
     align: "center",
     dataIndex: "approvalTime",
+    width: 100,
     key: "approvalTime",
     filter: ["2"],
   },
@@ -191,19 +200,21 @@ const columns = ref([
     align: "center",
     dataIndex: "taskScore",
     key: "taskScore",
-    width: 200,
+    width: 100,
     filter: ["2"],
   },
   {
     title: "任务已消耗时间",
     align: "center",
     dataIndex: "involvement",
+    width: 150,
     key: "involvement",
     filter: ["0"],
   },
   {
     title: "执行部门",
     align: "center",
+    width: 150,
     dataIndex: "executionDepartmentName",
     key: "executionDepartmentName",
     filter: ["0", "3"],

@@ -6,7 +6,7 @@
     <div>当前得分:{{ dataObj.score }}分</div>
     <div>{{ dataObj.startTime + "~" + dataObj.endTime }}</div>
     <div
-      class="absolute bottom-2 right-2 cursor-pointer"
+      class="absolute bottom-2 right-2 cursor-pointer underline text-blue-400"
       v-if="isLeafNode"
       @click="getNode().store.data.openDetail(dataObj)"
     >
