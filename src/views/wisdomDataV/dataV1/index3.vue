@@ -18,6 +18,21 @@
         <div class="mb-4">
           <a-button ghost @click="seeProgress">进展一览</a-button>
           <a-button class="ml-2" type="primary" ghost>核心数据</a-button>
+          <div class="ml-2 inline-block">
+            <a-select
+              v-model:value="yearValue"
+              class="w-36"
+              @change="getCoreData"
+              placeholder="请选择年份"
+            >
+              <a-select-option
+                v-for="item in yearList"
+                :key="item"
+                :value="item"
+                >{{ item }}</a-select-option
+              >
+            </a-select>
+          </div>
         </div>
         <div class="height1 flex p-2">
           <div class="h-full w-6">
@@ -118,8 +133,20 @@ import timeNow from "./component/timeNow.vue";
 import { getCoreDataApi } from "@/api/wisdomDataV.js";
 import countTo from "@/components/countTo";
 import { ArrowUpOutlined, ArrowDownOutlined } from "@ant-design/icons-vue";
+import dayjs, { Dayjs } from "dayjs";
 
 const activeIndex = ref(0);
+
+const yearValue = ref(dayjs().format("YYYY"));
+
+const yearList = ref([
+  dayjs().format("YYYY") - 5,
+  dayjs().format("YYYY") - 4,
+  dayjs().format("YYYY") - 3,
+  dayjs().format("YYYY") - 2,
+  dayjs().format("YYYY") - 1,
+  dayjs().format("YYYY"),
+]);
 
 const router = useRouter();
 const route = useRoute();
@@ -141,8 +168,8 @@ const seeProgress = () => {
 
 const getCoreData = () => {
   return getCoreDataApi({
-    school: "0005",
-    year: "2024",
+    school: isDev ? "0005" : "0001",
+    year: yearValue.value,
   }).then((res) => {
     if (res.result == "ok") {
       dataTree.value = res.data;

@@ -142,7 +142,7 @@
         <a-form-item label="项目隶属年份" name="projectYear">
           <a-select
             v-model:value="formProject.projectYear"
-            placeholder="暂无模板"
+            placeholder="请选择年份"
           >
             <a-select-option
               v-for="item in yearList"
