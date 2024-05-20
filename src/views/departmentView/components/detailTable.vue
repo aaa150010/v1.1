@@ -115,10 +115,13 @@
           <div>
             <div>提交审核时间：</div>
             <div>审核时间：</div>
-            <div>审核部门：</div>
+            <div>审核部门：{{ taskDetail.auditDepartmentName }}</div>
             <div>
               审核人：
-              <personInfoGlobal :name="''" :userId="''" />
+              <personInfoGlobal
+                :name="taskDetail.reviewerName"
+                :userId="taskDetail.reviewer"
+              />
             </div>
             <div>审核意见：</div>
             <div>审核说明：</div>

@@ -396,7 +396,7 @@ const addTreeProperty = (obj, isCollapseVar, isAll) => {
   obj.isCollapse = isCollapseVar == false ? isCollapseVar : true;
   if (obj.children && obj.children.length > 0) {
     obj.children.forEach(function (children) {
-      addTreeProperty(children, isAll ? isCollapseVar : false);
+      addTreeProperty(children, isAll ? isCollapseVar : false, isAll);
     });
   } else {
     obj.isLeaf = true;
