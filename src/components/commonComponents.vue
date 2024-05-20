@@ -64,11 +64,11 @@
     </div>
     <a-empty v-else-if="dataList.length==0&&viewValue=='图标'"/>
     <a-table v-else-if="viewValue=='列表'" :columns="columns" :customRow="rowClick" :data-source="dataList" :loading="loading" :pagination="false">
-      <template #bodyCell="{ column }">
+      <template #bodyCell="{ column,record}">
         <template v-if="column.key === 'action'">
-          <a @click="handleRemoveTo(item)">移动到</a>
-          <a style="margin-left: 10px;" @click="handleEdit(item)">修改</a>
-          <a style="margin-left: 10px;" @click="handleDelete(item)">删除</a>
+          <a @click="handleRemoveTo(record)">移动到</a>
+          <a style="margin-left: 10px;" @click="handleEdit(record)">修改</a>
+          <a style="margin-left: 10px;" @click="handleDelete(record)">删除</a>
         </template>
       </template>
     </a-table>
