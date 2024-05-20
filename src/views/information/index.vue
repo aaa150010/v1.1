@@ -39,7 +39,7 @@
     </a-table>
   </a-card>
 <!--  查看的dialog-->
-  <a-modal v-model:open="open" :footer="null" width="50%" @cancel="handleCancel">
+  <a-modal v-model:open="open" :footer="null" width="50%">
     <div style="text-align: center;margin-top: 30px;font-size: 20px" class="ellipsis">{{title}}</div>
     <iframe :src="src" class="test" width="100%" allow="payment"></iframe>
       <a-button type="primary" v-if="showBtn" style="width: 100%" @click="handleToOverView">立即处理</a-button>
@@ -166,6 +166,12 @@ const handleClickItem=(item)=>{
           data.value=res.data.messageData
         }
       })
+      // 重新获取未读消息数量
+      getUnreadNumber().then(res=>{
+        if (res.result=='ok'){
+          store.setNumber(res.data)
+        }
+      })
     }
   })
   title.value=item.messageTitle
@@ -174,13 +180,13 @@ const handleClickItem=(item)=>{
   open.value=true
 }
 const store=usePiniaStore()
-const handleCancel=()=>{
-  getUnreadNumber().then(res=>{
-    if (res.result=='ok'){
-      store.setNumber(res.data)
-    }
-  })
-}
+// const handleCancel=()=>{
+//   getUnreadNumber().then(res=>{
+//     if (res.result=='ok'){
+//       store.setNumber(res.data)
+//     }
+//   })
+// }
 const handleToOverView=()=>{
   router.push({ name: 'workbench', params: { activeKey: toOverview.value }})
 }

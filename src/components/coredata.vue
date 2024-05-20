@@ -143,7 +143,7 @@
               placeholder="请选择年份"
               @focus="focus"
           >
-            <a-select-option :value="item" v-for="item in yearList" :key="item">{{item}}</a-select-option>
+            <a-select-option :value="item" v-for="item in nearYears" :key="item">{{item}}</a-select-option>
           </a-select>
         </a-form-item>
         <a-form-item label="学校名称" name="schoolCode">
@@ -329,7 +329,19 @@ const rules1 = {
   ],
 
 }
+const nearYears=ref([])
+function getYear(){
+  let date = new Date();
+  let startYear = date.getFullYear()-5;//起始年份
+  let endYear = date.getFullYear()+5;//结束年份
+  for (var i=startYear;i<=endYear;i++) {
+    nearYears.value.push(i);
+  }
+  console.log(nearYears.value)
+}
+
 onMounted(()=>{
+  getYear()
   getYears().then(res=>{
     if (res.result=='ok'){
       yearList.value=res.data

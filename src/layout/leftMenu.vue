@@ -51,11 +51,11 @@
             v-for="item in leftMenu" :key="item.module"
         >
 
-          <div v-if="item.menuTitle!=='消息'">
+          <div v-if="item.module!=='/index/information'">
             {{ item.menuTitle }}
           </div>
-          <div>
-            <a class="head-example">消息</a>
+          <div v-else>
+            <a class="head-example">{{ item.menuTitle }}</a>
             <a-badge :count="store.unreadNumber" />
           </div>
         </a-menu-item
@@ -93,11 +93,10 @@ onMounted(() => {
     if (res.result == "ok") {
       username.value = res.data.userName;
       leftMenu.value=res.data.permission
-      avatarUrl.value =
-        "https://bzszkj.com/portal/r" + res.data.photo.replace(".", "");
+      avatarUrl.value = "https://bzszkj.com/portal/r" + res.data.photo.replace(".", "");
     }
     leftMenu.value.forEach(item=>{
-      if (item.menuTitle=='消息'){
+      if (item.module=='/index/information'){
         store.setNumber(item.count)
       }
     })
