@@ -268,6 +268,7 @@ const onSubmit = () => {
         //校验成功
         spinning.value=true
         //判断是修改还是新增
+        console.log(editOrAdd.value)
         if (editOrAdd.value){
           editFolderOrFile(formState.value.permission,formState.value.name,formState.value.resourceCode).then(res=>{
             if (res.result=='ok'){
@@ -289,6 +290,7 @@ const onSubmit = () => {
           })
         }else {
           addFolder(parentCode.value,formState.value.permission,formState.value.name).then(res=>{
+            console.log(11)
             console.log(res)
             if (res.result=='ok'){
               message.success('创建成功');

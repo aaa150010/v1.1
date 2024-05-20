@@ -93,8 +93,7 @@ onMounted(() => {
     if (res.result == "ok") {
       username.value = res.data.userName;
       leftMenu.value=res.data.permission
-      avatarUrl.value =
-        "https://bzszkj.com/portal/r" + res.data.photo.replace(".", "");
+      avatarUrl.value = "https://bzszkj.com/portal/r" + res.data.photo.replace(".", "");
     }
     leftMenu.value.forEach(item=>{
       if (item.menuTitle=='消息'){
