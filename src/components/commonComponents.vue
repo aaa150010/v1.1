@@ -31,6 +31,8 @@
       <template v-for="item in dataList" :key="item">
         <a-dropdown :trigger="['contextmenu']">
         <div class="oneItem" @click="handleItem(item)">
+          <a-tooltip placement="bottom">
+            <template #title>{{item.label}}</template>
           <div class="topIcon">
             <img :src="src1" width="70" v-if="item.format=='文件夹'">
             <img :src="src2" width="70" v-else-if="item.format=='pptx'||item.format=='ppt'">
@@ -39,11 +41,9 @@
             <img :src="src5" width="70" v-else-if="item.format=='pdf'">
             <img :src="src6" width="70" v-else>
           </div>
+          </a-tooltip>
           <div class="bottomDesc">
-            <a-tooltip placement="bottom">
-              <template #title>{{item.label}}</template>
               {{item.label}}
-            </a-tooltip>
             </div>
         </div>
           <template #overlay>
