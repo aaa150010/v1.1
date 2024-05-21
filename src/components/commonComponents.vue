@@ -163,6 +163,7 @@ const dataList=ref([])
 const destroyOnClose=ref(true)
 import {Form, message, Modal} from 'ant-design-vue';
 import isDev from "@/config";
+import {exportFile} from "@/api/user";
 const useForm = Form.useForm;
 const open = ref(false);
 const open1=ref(false)
@@ -237,8 +238,10 @@ const rules1 = {
 const handleItem=(item)=>{
   if (item.type=='文件'){
     // 如果是文件则直接下载
-    let link =`${import.meta.env.VITE_APP_BASE_API}/portal/r${item.url.replace('.','')}&sid=${localStorage.getItem('sid')}`
-    download(link,item.label)
+    let newUrl = item.url.replace(/sid=(\w+(-\w+){3,})/, 'sid=@sid').replace('.','').replace("@sid", localStorage.getItem("sid"))
+    let link =`${import.meta.env.VITE_APP_BASE_API}/portal/r${newUrl}`
+    exportFile(link,item.label)
+    // download(link,item.label)
   }else if (item.type=='文件夹'){
     //如果是文件夹则重新获取该文件夹下的目录
     spinning.value=true

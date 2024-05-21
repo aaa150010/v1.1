@@ -141,6 +141,7 @@ import {
   getTaskDetailByCodeApi,
 } from "@/api/departmentView.js";
 import download from "downloadjs";
+import {exportFile} from "@/api/user";
 const activeKey = ref("3");
 const props = defineProps(["selectRow", "type"]);
 const detailVisible = ref(false);
@@ -344,11 +345,9 @@ const getTaskDetailByCode = () => {
 };
 
 const handleDown = (item) => {
-  let link = `${import.meta.env.VITE_APP_BASE_API}/portal/r${item.url.replace(
-    ".",
-    ""
-  )}&sid=${localStorage.getItem("sid")}`;
-  download(link, item.name);
+  let newUrl = item.url.replace(/sid=(\w+(-\w+){3,})/, 'sid=@sid').replace('.','').replace("@sid", localStorage.getItem("sid"))
+  let link =`${import.meta.env.VITE_APP_BASE_API}/portal/r${newUrl}`;
+  exportFile(link, item.name);
 };
 </script>
 

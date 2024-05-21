@@ -74,6 +74,7 @@ import { getTaskDetailByCodeApi } from "@/api/departmentView.js";
 import { getProjectTreeApi } from "@/api/taskManage.js";
 import download from "downloadjs";
 import { isLeaf } from "ant-design-vue/es/vc-cascader/utils/commonUtil";
+import {exportFile} from "@/api/user";
 const props = defineProps(["selectRow"]);
 
 const TeleportContainer = getTeleport();
@@ -330,11 +331,9 @@ const getProjectTree = (first) => {
 };
 
 const handleDown = (item) => {
-  let link = `${import.meta.env.VITE_APP_BASE_API}/portal/r${item.url.replace(
-    ".",
-    ""
-  )}&sid=${localStorage.getItem("sid")}`;
-  download(link, item.name);
+  let newUrl = item.url.replace(/sid=(\w+(-\w+){3,})/, 'sid=@sid').replace('.','').replace("@sid", localStorage.getItem("sid"))
+  let link =`${import.meta.env.VITE_APP_BASE_API}/portal/r${newUrl}`
+  exportFile(link,item.label)
 };
 
 const toggleCollapseAll = (flag) => {

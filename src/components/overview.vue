@@ -67,11 +67,11 @@
       </template>
     </a-card>
 <!--    未完成model-->
-    <a-modal v-model:open="open1" title="未完成任务数" @ok="handleOk1" :width="1200">
+    <a-modal v-model:open="open1" title="未完成任务数" @cancel="handleOk1" @ok="handleOk1" :width="1200" :maskClosable="false">
       <workprogress v-if="open1"></workprogress>
     </a-modal>
 <!--    待审核和已完成model-->
-    <a-modal v-model:open="open2" :title="title" @ok="handleOk1" :width="1200">
+    <a-modal v-model:open="open2" :title="title" @cancel="handleOk1" @ok="handleOk1" :maskClosable="false" :width="1200">
       <a-table :columns="columns" :data-source="data" :pagination="false" :loading="loading">
         <!--      <template #headerCell="{ column }">-->
         <!--        <template v-if="column.key === 'name'">-->
@@ -99,7 +99,7 @@
           </template>
         </template>
       </a-table>
-    </a-modal>
+    </a-modal >
 <!--    待审核和已完成点击查看的dialog-->
     <!--  查看的dialog-->
     <a-modal v-model:open="open3" title="办理" @ok="handleOk3" :width="800">
@@ -172,15 +172,15 @@
     <!--  查询个人信息model-->
     <person-info :user-id="userId" ref="personRef"></person-info>
 <!--    耗时过半-->
-    <a-modal v-model:open="open4" title="耗时过半的任务" @ok="handleOk4" :width="1200">
+    <a-modal v-model:open="open4" title="耗时过半的任务" @cancel="handleOk4" @ok="handleOk4" :width="1200">
       <half-time v-if="open4"></half-time>
     </a-modal>
 <!--    已逾期-->
-    <a-modal v-model:open="open5" title="已逾期任务" @ok="handleOk5" :width="1200">
+    <a-modal v-model:open="open5" title="已逾期任务" @cancel="handleOk5" @ok="handleOk5" :width="1200">
       <over-time v-if="open5"></over-time>
     </a-modal>
 <!--    关注里面的model，分为未完成|已完成|审核中-->
-    <a-modal v-model:open="open6" :title="title6" @ok="handleOk6" :width="1200">
+    <a-modal v-model:open="open6" :title="title6"@cancel="handleOk6" @ok="handleOk6" :width="1200">
       <favorite :project-code="projectCode" :status="status" ref="favoriteRef" v-if="open6"></favorite>
     </a-modal>
   </div>
@@ -376,6 +376,7 @@ const handleFavorite=(item,type)=>{
 }
 const handleOk6=()=>{
   open6.value=false
+  getFollowData()
 }
 
 

@@ -27,3 +27,16 @@ export function loginOutApi() {
     url: `${apiBasePath}?cmd=CLIENT_USER_INFO_LOGOUT&sid=${getSid()}`,
   });
 }
+
+// 下载
+export function exportFile  (url, fileName)  {
+  const link = document.createElement('a')
+  const body = document.querySelector('body')
+  link.href = url
+  link.download = fileName
+  // fix Firefox
+  link.style.display = 'none'
+  body.appendChild(link)
+  link.click()
+  body.removeChild(link)
+}

@@ -230,6 +230,7 @@ import { SmileOutlined} from '@ant-design/icons-vue';
 import Localupload from "@/components/localupload.vue";
 import {message} from "ant-design-vue";
 import PersonInfo from "@/components/getPersonInfo/personInfo.vue";
+import {exportFile} from "@/api/user";
 const activeKey = ref('1');
 const loading=ref(false)
 const open1 =ref(false)
@@ -511,7 +512,8 @@ const handleOk1=()=>{
 const downFile=()=>{
   // 如果是文件则直接下载
   let link =`${import.meta.env.VITE_APP_BASE_API}/portal/r${selectFileUrl.value.replace('.','')}&sid=${localStorage.getItem('sid')}`
-  download(link,selectFileName.value)
+  exportFile(link,selectFileName.value)
+  // download(link,selectFileName.value)
 }
 const updataFile=()=>{
   value.value=valueObjList.value.map(obj => obj.value)
@@ -539,7 +541,8 @@ const handleOk3=()=>{
 }
 const handleDown=(item)=>{
   let link =`${import.meta.env.VITE_APP_BASE_API}/portal/r${item.url.replace('.','')}&sid=${localStorage.getItem('sid')}`
-  download(link,item.name)
+  exportFile(link,item.name)
+  // download(link,item.name)
 }
 const userId=ref()
 const personRef=ref()
