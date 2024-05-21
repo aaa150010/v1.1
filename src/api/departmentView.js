@@ -26,3 +26,11 @@ export function getTaskDetailByCodeApi(data) {
     isLoading: true,
   });
 }
+
+// 根任务编号查看任务详情
+export function involvedClickApi(data) {
+  return get({
+    cmd: "com.awspaas.user.apps.complex_task_decomposition.controller_updateFollow",
+    data: data,
+  });
+}

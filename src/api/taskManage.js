@@ -72,5 +72,6 @@ export function deleteNodeApi(data) {
   return get({
     cmd: "com.awspaas.user.apps.complex_task_decomposition_deleteTask",
     data: data,
+    isLoading: true,
   });
 }

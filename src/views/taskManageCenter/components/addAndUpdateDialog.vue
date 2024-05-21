@@ -13,6 +13,8 @@
         :getProjectTree="props.getProjectTree"
         :deptListTree="deptListTree"
         :peopleListTree="peopleListTree"
+        :getProjectList="getProjectList"
+        :getProjectTreeKeepCollapse="getProjectTreeKeepCollapse"
       />
     </a-modal>
   </div>
@@ -28,7 +30,11 @@ import {
 import addAndUpdateForm from "./addAndUpdateForm.vue";
 const store = useStore();
 
-const props = defineProps(["getProjectTree"]);
+const props = defineProps([
+  "getProjectTree",
+  "getProjectList",
+  "getProjectTreeKeepCollapse",
+]);
 const nodeConfig = computed(() => store.state.nodeConfig);
 
 const deptListTree = ref([]);

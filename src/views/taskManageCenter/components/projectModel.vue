@@ -41,7 +41,7 @@
     </a-modal>
     <a-modal v-model:open="seeMoreVisible" :footer="null" style="width: 900px">
       <template #title> </template>
-      <div>
+      <div class="grid grid-cols-3">
         <div
           v-for="item in projectModelList"
           class="border w-64 p-4"
@@ -63,6 +63,9 @@
             >
             <div class="clear-right"></div>
           </div>
+        </div>
+        <div class="border w-64 p-4 center" v-if="projectModelList.length <= 6">
+          更多模板敬请期待！
         </div>
         <div v-if="projectModelList.length == 0">暂无模板</div>
       </div>

@@ -36,8 +36,8 @@
           <div class="overflow-y-auto h-residue2">
             <div
               v-for="(item, index) in projectList"
-              class="h-26 border mt-2 p-2 cursor-pointer hover:bg-blue-300"
-              :class="index == activeKey ? 'bg-blue-300' : ''"
+              class="h-26 border mt-2 p-2 cursor-pointer hover:bg-blue-200"
+              :class="index == activeKey ? 'bg-blue-200' : ''"
               @click="selectRowProject(index)"
               :key="item.projectCode"
             >
