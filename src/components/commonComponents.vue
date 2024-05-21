@@ -290,7 +290,6 @@ const onSubmit = () => {
           })
         }else {
           addFolder(parentCode.value,formState.value.permission,formState.value.name).then(res=>{
-            console.log(11)
             console.log(res)
             if (res.result=='ok'){
               message.success('创建成功');
