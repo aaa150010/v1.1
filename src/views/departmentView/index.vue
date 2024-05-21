@@ -36,12 +36,18 @@
           <div class="overflow-y-auto h-residue2">
             <div
               v-for="(item, index) in projectList"
-              class="h-26 border mt-2 p-2 cursor-pointer hover:bg-blue-300"
-              :class="index == activeKey ? 'bg-blue-300' : ''"
+              class="h-26 border mt-2 p-2 cursor-pointer hover:bg-blue-200"
+              :class="index == activeKey ? 'bg-blue-200' : ''"
               @click="selectRowProject(index)"
               :key="item.projectCode"
             >
-              <div>{{ item.projectName }}</div>
+              <div class="flex justify-between">
+                <span>{{ item.projectName }}</span>
+                <div @click="involvedClick(item)">
+                  <StarFilled v-if="item.involved" />
+                  <StarOutlined v-else />
+                </div>
+              </div>
               <div>
                 {{
                   dayjs(item.startTime).format("YYYY-MM-DD") +
@@ -138,10 +144,16 @@
 </template>
 <script setup>
 import { onMounted, ref, nextTick } from "vue";
-import { SortAscendingOutlined, FilterOutlined } from "@ant-design/icons-vue";
+import {
+  SortAscendingOutlined,
+  FilterOutlined,
+  StarOutlined,
+  StarFilled,
+} from "@ant-design/icons-vue";
 import { useStore } from "vuex";
 import dayjs, { Dayjs } from "dayjs";
 import { getProjectApi } from "@/api/taskManage.js";
+import { involvedClickApi } from "@/api/departmentView.js";
 import { message, Modal } from "ant-design-vue";
 import { ExclamationCircleOutlined } from "@ant-design/icons-vue";
 import { createVNode } from "vue";
@@ -173,6 +185,21 @@ const getProjectList = () => {
       projectList.value = res.data;
     }
   });
+};
+
+const involvedClick = (item) => {
+  return involvedClickApi({ projectCode: item.projectCode }).then(
+    async (res) => {
+      if (res.result == "ok") {
+        await getProjectList();
+        if (item.involved) {
+          message.success("取消收藏成功！");
+        } else {
+          message.success("收藏成功！");
+        }
+      }
+    }
+  );
 };
 </script>
 <style scoped>

@@ -1,10 +1,22 @@
 <template>
   <div class="w-full h-full bg-slate-200 px-4 relative rounded-md">
-    <div>{{ dataObj.name }}</div>
+    <div
+      class="text-blue-400 underline cursor-pointer txt_over_one"
+      @click="getNode().store.data.seeDetail(dataObj)"
+    >
+      {{ dataObj.name }}
+    </div>
     <div>总任务数:{{ dataObj.totalTasks }}</div>
     <div>完成进度:{{ dataObj.schedule }}%</div>
     <div>当前得分:{{ dataObj.score }}分</div>
     <div>{{ dataObj.startTime + "~" + dataObj.endTime }}</div>
+    <div>
+      负责人：
+      <personInfoGlobal
+        :name="dataObj.personResponsibleName"
+        :userId="dataObj.personResponsible"
+      />
+    </div>
     <div
       class="absolute bottom-2 right-2 cursor-pointer underline text-blue-400"
       v-if="isLeafNode"

@@ -141,12 +141,18 @@ import dayjs, { Dayjs } from "dayjs";
 import { message } from "ant-design-vue";
 const store = useStore();
 
-const props = defineProps(["getProjectTree", "deptListTree", "peopleListTree"]);
+const props = defineProps([
+  "getProjectTree",
+  "deptListTree",
+  "peopleListTree",
+  "getProjectList",
+  "getProjectTreeKeepCollapse",
+]);
 
 const type = computed(() => store.state.nodeConfig.type);
 const selectRow = computed(() => store.state.nodeConfig.selectRow);
 
-console.log(store.state.nodeConfig.selectRow);
+// console.log(store.state.nodeConfig.selectRow);
 const formNodeRef = ref();
 const labelCol = { span: 6 };
 const wrapperCol = { span: 13 };
@@ -248,7 +254,7 @@ const addNode = () => {
   return addNodeApi(formNode).then((res) => {
     if (res.result == "ok") {
       message.success("新增成功！");
-      props.getProjectTree();
+      props.getProjectTreeKeepCollapse();
       store.commit("setNodeConfig", { visible: false });
     }
   });
@@ -258,8 +264,11 @@ const updateNode = () => {
   return updateNodeApi(formNode).then((res) => {
     if (res.result == "ok") {
       message.success("修改成功！");
-      props.getProjectTree();
+      props.getProjectTreeKeepCollapse();
       store.commit("setNodeConfig", { visible: false });
+      if (selectRow.value.origin) {
+        props.getProjectList();
+      }
     }
   });
 };

@@ -1,10 +1,22 @@
 <template>
   <div class="w-full h-full bg-slate-200 px-4 relative rounded-md">
-    <div>{{ dataObj.name }}</div>
+    <div
+      class="text-blue-400 underline cursor-pointer txt_over_one"
+      @click="getNode().store.data.seeDetail(dataObj)"
+    >
+      {{ dataObj.name }}
+    </div>
     <div>总任务数:{{ dataObj.totalTasks }}</div>
     <div>完成进度:{{ dataObj.schedule }}%</div>
     <div>当前得分:{{ dataObj.score }}分</div>
     <div>{{ dataObj.startTime + "~" + dataObj.endTime }}</div>
+    <div>
+      负责人：
+      <personInfoGlobal
+        :name="dataObj.personResponsibleName"
+        :userId="dataObj.personResponsible"
+      />
+    </div>
     <span
       class="absolute right-2 bottom-2 cursor-pointer text-lg"
       @click.stop="selectRowClick(dataObj)"
@@ -50,25 +62,37 @@ const menus = shallowRef({
     {
       label: "新增子任务",
       click: () => {
-        getNode().store.data.addNode(selectRow.value);
+        getNode().store.data.addNode(
+          selectRow.value,
+          getNode().store.data.graph.getNodes()
+        );
       },
     },
     {
       label: "修改",
       click: () => {
-        getNode().store.data.updateNode(selectRow.value);
+        getNode().store.data.updateNode(
+          selectRow.value,
+          getNode().store.data.graph.getNodes()
+        );
       },
     },
     {
       label: "删除",
       click: () => {
-        getNode().store.data.deleteNode(selectRow.value);
+        getNode().store.data.deleteNode(
+          selectRow.value,
+          getNode().store.data.graph.getNodes()
+        );
       },
     },
     {
       label: "查看详情",
       click: () => {
-        getNode().store.data.seeDetail(selectRow.value);
+        getNode().store.data.seeDetail(
+          selectRow.value,
+          getNode().store.data.graph.getNodes()
+        );
       },
     },
   ],

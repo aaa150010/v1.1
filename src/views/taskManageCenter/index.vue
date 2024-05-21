@@ -39,8 +39,8 @@
           <div class="overflow-y-auto h-residue2">
             <div
               v-for="(item, index) in projectList"
-              class="h-26 border mt-2 p-2 cursor-pointer hover:bg-blue-300"
-              :class="index == activeKey ? 'bg-blue-300' : ''"
+              class="h-26 border mt-2 p-2 cursor-pointer hover:bg-blue-200"
+              :class="index == activeKey ? 'bg-blue-200' : ''"
               @click="selectRowProject(index)"
               :key="item.projectCode"
             >
@@ -118,7 +118,11 @@
             </div>
           </div>
           <div v-if="projectList.length > 0" class="w-full h-residue4 p-2">
-            <mind :selectRow="projectList[activeKey]"></mind>
+            <mind
+              :selectRow="projectList[activeKey]"
+              :getProjectList="getProjectList"
+              :getProjectListBack="getProjectListBack"
+            ></mind>
           </div>
         </div>
       </div>
@@ -329,6 +333,15 @@ const getProjectList = () => {
       if (activeKey.value == -1 && res.data.length > 0) {
         activeKey.value = 0;
       }
+      projectList.value = res.data;
+    }
+  });
+};
+
+const getProjectListBack = () => {
+  return getProjectApi({ order: orderBy.value, flag: true }).then((res) => {
+    if (res.result == "ok") {
+      activeKey.value = 0;
       projectList.value = res.data;
     }
   });

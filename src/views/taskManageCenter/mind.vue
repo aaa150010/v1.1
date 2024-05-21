@@ -2,7 +2,11 @@
   <div class="app-content border h-full relative">
     <div id="container" style="width: 100%; height: 100%"></div>
     <TeleportContainer />
-    <addAndUpdateDialog :getProjectTree="getProjectTree" />
+    <addAndUpdateDialog
+      :getProjectTree="getProjectTree"
+      :getProjectTreeKeepCollapse="getProjectTreeKeepCollapse"
+      :getProjectList="getProjectList"
+    />
     <a-button class="absolute top-2 left-2" @click="toggleCollapseAll(true)"
       >展开全部</a-button
     >
@@ -28,11 +32,17 @@ import { ExclamationCircleOutlined } from "@ant-design/icons-vue";
 import { createVNode } from "vue";
 const store = useStore();
 
-const props = defineProps(["selectRow"]);
+const props = defineProps([
+  "selectRow",
+  "getProjectList",
+  "getProjectListBack",
+]);
 
 const TeleportContainer = getTeleport();
 
 const dataTree = ref({});
+
+const treeList = ref([]);
 // const dataTree = ref({
 //   id: "1",
 //   label: "中心主题",
@@ -162,7 +172,8 @@ registerGraph();
 
 let render;
 
-const deleteNode = (item) => {
+const deleteNode = (item, treeListVar) => {
+  treeList.value = treeListVar;
   Modal.confirm({
     title:
       "删除当前任务后，与其有关的子任务、统计数据等都将删除。请确认，是否删除当前任务。",
@@ -171,7 +182,11 @@ const deleteNode = (item) => {
       deleteNodeApi({ taskCode: item.id }).then((res) => {
         if (res.result == "ok") {
           message.success("删除成功！");
-          getProjectTree();
+          if (item.origin) {
+            props.getProjectListBack();
+          } else {
+            getProjectTreeKeepCollapse();
+          }
         }
       });
     },
@@ -179,7 +194,8 @@ const deleteNode = (item) => {
   });
 };
 
-const addNode = (item) => {
+const addNode = (item, treeListVar) => {
+  treeList.value = treeListVar;
   store.commit("setNodeConfig", {
     visible: true,
     title: "新增子任务",
@@ -188,7 +204,8 @@ const addNode = (item) => {
   });
 };
 
-const updateNode = (item) => {
+const updateNode = (item, treeListVar) => {
+  treeList.value = treeListVar;
   store.commit("setNodeConfig", {
     visible: true,
     title: "修改任务",
@@ -216,6 +233,7 @@ const initGraph = () => {
     // background: {
     //   color: "#F2F7FA",
     // },
+    autoResize: true,
     connecting: {
       connectionPoint: "anchor",
     },
@@ -392,7 +410,7 @@ const initGraph = () => {
 
 const addTreeProperty = (obj, isCollapseVar, isAll) => {
   obj.width = 280;
-  obj.height = 100;
+  obj.height = 120;
   obj.isCollapse = isCollapseVar == false ? isCollapseVar : true;
   if (obj.children && obj.children.length > 0) {
     obj.children.forEach(function (children) {
@@ -458,6 +476,38 @@ const getProjectTree = (first) => {
     if (res.result == "ok") {
       dataTree.value = addTreeProperty(res.data);
       render(first);
+    }
+  });
+};
+
+const addTreeKeepCollapse = (obj) => {
+  obj.width = 280;
+  obj.height = 120;
+  let objVar = treeList.value.find((item) => item.id === obj.id);
+  if (objVar) {
+    obj.isCollapse = objVar.store.data.data.isCollapse;
+  } else {
+    obj.isCollapse = false;
+  }
+  if (obj.children && obj.children.length > 0) {
+    obj.children.forEach(function (children) {
+      addTreeKeepCollapse(children);
+    });
+  } else {
+    obj.isLeaf = true;
+  }
+  return obj;
+};
+
+const getProjectTreeKeepCollapse = () => {
+  return getProjectTreeApi({
+    projectCode: props.selectRow.projectCode,
+    type: "MindMap",
+  }).then((res) => {
+    if (res.result == "ok") {
+      dataTree.value = addTreeKeepCollapse(res.data);
+      console.log(dataTree.value, 8888);
+      render();
     }
   });
 };

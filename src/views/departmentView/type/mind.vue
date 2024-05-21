@@ -173,6 +173,7 @@ const initGraph = () => {
     connecting: {
       connectionPoint: "anchor",
     },
+    autoResize: true,
     interacting: () => {
       edgeLabelMovable: true;
     },
@@ -264,7 +265,7 @@ const initGraph = () => {
 
 const addTreeProperty = (obj, isCollapseVar, isAll) => {
   obj.width = 280;
-  obj.height = 100;
+  obj.height = 120;
   obj.isCollapse = isCollapseVar == false ? isCollapseVar : true;
   if (obj.children && obj.children.length > 0) {
     obj.children.forEach(function (children) {
