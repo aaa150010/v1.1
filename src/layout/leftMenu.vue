@@ -84,7 +84,7 @@ import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
 import { getUserInfo, loginOutApi } from "@/api/user";
 import isDev from "@/config";
-import { Modal } from "ant-design-vue";
+import { message, Modal } from "ant-design-vue";
 import { usePiniaStore } from "@/pinia";
 import { createVNode } from "vue";
 const route = useRoute();
@@ -125,7 +125,14 @@ const loginOut = () => {
     title: "你确定要退出登入吗?",
     icon: createVNode(ExclamationCircleOutlined),
     onOk() {
-      loginOutApi();
+      loginOutApi().then((res) => {
+        if (res.result == "ok") {
+          message.success("退出成功");
+          setTimeout(() => {
+            window.location.reload();
+          }, 1000);
+        }
+      });
     },
   });
 };

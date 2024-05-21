@@ -506,7 +506,6 @@ const getProjectTreeKeepCollapse = () => {
   }).then((res) => {
     if (res.result == "ok") {
       dataTree.value = addTreeKeepCollapse(res.data);
-      console.log(dataTree.value, 8888);
       render();
     }
   });
