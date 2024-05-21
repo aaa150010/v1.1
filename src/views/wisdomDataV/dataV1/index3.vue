@@ -190,7 +190,7 @@ const getCoreData = () => {
   width: calc(100% - 2rem);
 }
 :deep(
-    :where(.css-dev-only-do-not-override-1hsjdkk).ant-select:not(
+    :where(.css-1hsjdkk).ant-select:not(
         .ant-select-customize-input
       )
       .ant-select-selector
@@ -198,36 +198,36 @@ const getCoreData = () => {
   background-color: rgb(0, 12, 49) !important;
   color: #fff !important;
 }
-:deep(:where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown) {
+:deep(:where(.css-1hsjdkk).ant-select-dropdown) {
   color: #fff;
   background-color: rgb(4, 37, 80) !important;
 }
 :deep(
-    :where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown
+    :where(.css-1hsjdkk).ant-select-dropdown
       .ant-select-item
   ) {
   color: #fff !important;
 }
 :deep(
-    :where(.css-dev-only-do-not-override-1hsjdkk).ant-select .ant-select-arrow
+    :where(.css-1hsjdkk).ant-select .ant-select-arrow
   ) {
   color: #fff;
 }
 :deep(
-    :where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown
+    :where(.css-1hsjdkk).ant-select-dropdown
       .ant-select-item-option-active:not(.ant-select-item-option-disabled)
   ) {
   background-color: blue !important;
   color: #fff !important;
 }
 :deep(
-    :where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown
+    :where(.css-1hsjdkk).ant-select-dropdown
       .ant-select-item-option-selected
   ) {
   color: red !important;
 }
 :deep(
-    :where(.css-dev-only-do-not-override-1hsjdkk).ant-select-dropdown
+    :where(.css-1hsjdkk).ant-select-dropdown
       .ant-select-item-option-selected:not(.ant-select-item-option-disabled)
   ) {
   color: #fff !important;
