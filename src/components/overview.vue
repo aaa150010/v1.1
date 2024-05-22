@@ -111,6 +111,9 @@
           <a-form-item label="任务名称">
             <a-input disabled v-model:value="reviewFormState.taskName" />
           </a-form-item>
+          <a-form-item label="任务分数">
+            <a-input disabled v-model:value="taskScore" />
+          </a-form-item>
           <a-form-item label="任务说明">
             <a-input disabled v-model:value="reviewFormState.taskDescription" />
           </a-form-item>
@@ -172,15 +175,15 @@
     <!--  查询个人信息model-->
     <person-info :user-id="userId" ref="personRef"></person-info>
 <!--    耗时过半-->
-    <a-modal v-model:open="open4" title="耗时过半的任务" @cancel="handleOk4" @ok="handleOk4" :width="1200">
+    <a-modal v-model:open="open4" title="耗时过半的任务" @cancel="handleOk4" :maskClosable="false" @ok="handleOk4" :width="1200">
       <half-time v-if="open4"></half-time>
     </a-modal>
 <!--    已逾期-->
-    <a-modal v-model:open="open5" title="已逾期任务" @cancel="handleOk5" @ok="handleOk5" :width="1200">
+    <a-modal v-model:open="open5" title="已逾期任务" @cancel="handleOk5" :maskClosable="false" @ok="handleOk5" :width="1200">
       <over-time v-if="open5"></over-time>
     </a-modal>
 <!--    关注里面的model，分为未完成|已完成|审核中-->
-    <a-modal v-model:open="open6" :title="title6"@cancel="handleOk6" @ok="handleOk6" :width="1200">
+    <a-modal v-model:open="open6" :title="title6"@cancel="handleOk6" @ok="handleOk6" :width="1200" :maskClosable="false">
       <favorite :project-code="projectCode" :status="status" ref="favoriteRef" v-if="open6"></favorite>
     </a-modal>
   </div>
@@ -194,6 +197,7 @@ import PersonInfo from "@/components/getPersonInfo/personInfo.vue";
 import HalfTime from "@/components/halfTime.vue";
 import OverTime from "@/components/overTime.vue";
 import Favorite from "@/components/favorite.vue";
+import {exportFile} from "@/api/user";
 const workbenchObj=ref({
   percent:0,
   completeTaskNumber:0,
@@ -259,6 +263,7 @@ const handleItem=(status)=>{
 }
 const open1=ref(false)
 const handleOk1=()=>{
+  open2.value=false
   open1.value=false
   getWorkData()
 }
@@ -320,10 +325,13 @@ const reviewFormState=ref({
   startTime:null,
 })
 const forFeedBackList=ref([])
+//任务总分，任务自评分和审核得分都不能超过这个
+const taskScore=ref()
 const handleClick=(record)=>{
   open3.value=true
   getTaskInfo(record.taskCode).then(res=>{
     if (res.result=='ok'){
+      taskScore.value=res.data.task.score
       forFeedBackList.value=res.data.feedBackList
       reviewFormState.value.projectName=res.data.task.projectName
       reviewFormState.value.taskName=res.data.task.taskName
@@ -358,6 +366,7 @@ const handleOver=()=>{
 }
 const handleOk5=()=>{
   open5.value=false
+  getWorkData()
 }
 
 const open6=ref(false)
@@ -378,9 +387,10 @@ const handleOk6=()=>{
   open6.value=false
   getFollowData()
 }
-
-
-
+const handleDown=(item)=>{
+  let link =`${import.meta.env.VITE_APP_BASE_API}/portal/r${item.url.replace('.','')}&sid=${localStorage.getItem('sid')}`
+  exportFile(link,item.name)
+}
 </script>
 <style scoped>
 .oneItem{

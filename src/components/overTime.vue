@@ -38,8 +38,11 @@
             <a-form-item label="任务名称">
               <a-input disabled v-model:value="reviewFormState.taskName" />
             </a-form-item>
+            <a-form-item label="任务分数">
+              <a-input disabled v-model:value="taskScore" />
+            </a-form-item>
             <a-form-item label="任务说明">
-              <a-input disabled v-model:value="reviewFormState.taskDescription" />
+              <a-textarea disabled v-model:value="reviewFormState.taskDescription" />
             </a-form-item>
             <a-form-item label="责任部门">
               <a-input disabled v-model:value="reviewFormState.assessmentDepartmentName" />
@@ -108,6 +111,7 @@ import {getDoneTaskList} from "@/api/alreadyDone";
 import {getTaskInfo} from "@/api/workprogress";
 import PersonInfo from "@/components/getPersonInfo/personInfo.vue";
 import {getOverTask} from "@/api/overview";
+import {exportFile} from "@/api/user";
 const open=ref(false)
 const columns = ref([
   {
@@ -174,10 +178,13 @@ const reviewFormState=ref({
   assessmentDepartmentName:null,
   startTime:null,
 })
+//任务总分，任务自评分和审核得分都不能超过这个
+const taskScore=ref()
 const forFeedBackList=ref([])
 const handleClick=(record)=>{
   getTaskInfo(record.taskCode).then(res=>{
     if (res.result=='ok'){
+      taskScore.value=res.data.task.score
       forFeedBackList.value=res.data.feedBackList
       reviewFormState.value.projectName=res.data.task.projectName
       reviewFormState.value.taskName=res.data.task.taskName
@@ -195,6 +202,10 @@ const handleGetInfo=(uid)=>{
   nextTick(()=>{
     personRef.value.openModel()
   })
+}
+const handleDown=(item)=>{
+  let link =`${import.meta.env.VITE_APP_BASE_API}/portal/r${item.url.replace('.','')}&sid=${localStorage.getItem('sid')}`
+  exportFile(link,item.name)
 }
 </script>
 <style scoped>

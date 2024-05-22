@@ -39,7 +39,10 @@
               <a-input disabled v-model:value="reviewFormState.taskName" />
             </a-form-item>
             <a-form-item label="任务说明">
-              <a-input disabled v-model:value="reviewFormState.taskDescription" />
+              <a-textarea disabled v-model:value="reviewFormState.taskDescription" />
+            </a-form-item>
+            <a-form-item label="任务分数">
+              <a-input disabled v-model:value="taskScore" />
             </a-form-item>
             <a-form-item label="责任部门">
               <a-input disabled v-model:value="reviewFormState.assessmentDepartmentName" />
@@ -106,6 +109,7 @@ import {nextTick, onMounted, ref} from "vue";
 import {getTaskInfoList} from "@/api/overview";
 import PersonInfo from "@/components/getPersonInfo/personInfo.vue";
 import {getTaskInfo} from "@/api/workprogress";
+import {exportFile} from "@/api/user";
 const props=defineProps({
   status:{required:true,type:String},
   projectCode:{required:true,type:String},
@@ -177,9 +181,11 @@ const reviewFormState=ref({
   startTime:null,
 })
 const forFeedBackList=ref([])
+const taskScore=ref()
 const handleClick=(record)=>{
   getTaskInfo(record.taskCode).then(res=>{
     if (res.result=='ok'){
+      taskScore.value=res.data.task.score
       forFeedBackList.value=res.data.feedBackList
       reviewFormState.value.projectName=res.data.task.projectName
       reviewFormState.value.taskName=res.data.task.taskName
@@ -197,6 +203,10 @@ const handleGetInfo=(uid)=>{
   nextTick(()=>{
     personRef.value.openModel()
   })
+}
+const handleDown=(item)=>{
+  let link =`${import.meta.env.VITE_APP_BASE_API}/portal/r${item.url.replace('.','')}&sid=${localStorage.getItem('sid')}`
+  exportFile(link,item.name)
 }
 </script>
 <style scoped>

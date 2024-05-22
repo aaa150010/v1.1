@@ -39,8 +39,11 @@
           <a-form-item label="任务名称">
             <a-input disabled v-model:value="addFormState.taskName" />
           </a-form-item>
+          <a-form-item label="任务分数">
+            <a-input disabled v-model:value="taskScore" />
+          </a-form-item>
           <a-form-item label="任务说明">
-            <a-input disabled v-model:value="addFormState.taskDescription" />
+            <a-textarea disabled v-model:value="addFormState.taskDescription" />
           </a-form-item>
           <a-form-item label="进度反馈" name="progressFeedback">
             <a-textarea style="height: 80px" v-model:value="addFormState.progressFeedback" />
@@ -147,6 +150,9 @@
           </a-form-item>
           <a-form-item label="任务名称">
             <a-input disabled v-model:value="reviewFormState.taskName" />
+          </a-form-item>
+          <a-form-item label="任务分数">
+            <a-input disabled v-model:value="taskScore" />
           </a-form-item>
           <a-form-item label="任务说明">
             <a-input disabled v-model:value="reviewFormState.taskDescription" />
