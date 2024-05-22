@@ -10,13 +10,11 @@
     <div>完成进度:{{ dataObj.schedule }}%</div>
     <div>当前得分:{{ dataObj.score }}分</div>
     <div>{{ dataObj.startTime + "~" + dataObj.endTime }}</div>
-    <div>
-      负责人：
-      <personInfoGlobal
-        :name="dataObj.personResponsibleName"
-        :userId="dataObj.personResponsible"
-      />
-    </div>
+    <personInfoGlobal
+      :name="dataObj.personResponsibleName"
+      :userId="dataObj.personResponsible"
+      title="负责人："
+    />
     <span
       class="absolute right-2 bottom-2 cursor-pointer text-lg"
       @click.stop="selectRowClick(dataObj)"

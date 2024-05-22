@@ -1,7 +1,7 @@
 <template>
   <div class="h-full flex">
     <div
-      class="border w-56 h-full mr-2 p-2"
+      class="border w-56 h-full overflow-y-auto mr-2 p-2"
       v-for="item in dataTree"
       :key="item.id"
     >
