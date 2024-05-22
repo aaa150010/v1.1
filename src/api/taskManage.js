@@ -64,6 +64,7 @@ export function updateNodeApi(data) {
   return post({
     cmd: "com.awspaas.user.apps.complex_task_decomposition_updateTask",
     data: data,
+    isLoading: true,
   });
 }
 

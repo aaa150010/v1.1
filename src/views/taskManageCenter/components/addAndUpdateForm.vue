@@ -57,6 +57,8 @@
           <a-tree-select
             v-model:value="formNode.responsibleDepartment"
             placeholder="请选择部门"
+            treeNodeFilterProp="label"
+            @change="responsibleDepartmentChange"
             show-search
             :tree-data="deptListTree"
             allowClear
@@ -70,7 +72,9 @@
             v-model:value="formNode.personResponsible"
             placeholder="请选择责任人"
             show-search
+            treeNodeFilterProp="label"
             :tree-data="peopleListTree"
+            :treeDefaultExpandedKeys="treeExpandedKeys"
             allowClear
           >
           </a-tree-select>
@@ -148,6 +152,7 @@ const props = defineProps([
   "getProjectList",
   "getProjectTreeKeepCollapse",
 ]);
+const treeExpandedKeys = ref([]);
 
 const type = computed(() => store.state.nodeConfig.type);
 const selectRow = computed(() => store.state.nodeConfig.selectRow);
@@ -275,5 +280,9 @@ const updateNode = () => {
 
 const handleCancel = () => {
   store.commit("setNodeConfig", { visible: false });
+};
+
+const responsibleDepartmentChange = (valueVar) => {
+  treeExpandedKeys.value = [valueVar];
 };
 </script>

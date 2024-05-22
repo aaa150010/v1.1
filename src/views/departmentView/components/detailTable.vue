@@ -55,13 +55,11 @@
         <div v-for="item in taskDetail.feedback" :key="item.feedbackCode">
           <div>
             <div>执行部门：{{ item.feedbackDepartmentName }}</div>
-            <div>
-              执行人：
-              <personInfoGlobal
-                :name="item.feedbackPersonName"
-                :userId="item.feedbackPerson"
-              />
-            </div>
+            <personInfoGlobal
+              :name="item.feedbackPersonName"
+              :userId="item.feedbackPerson"
+              title="执行人："
+            />
             <div>任务反馈时间： {{ item.submissionTime }}</div>
             <div>任务反馈说明： {{ item.progressFeedback }}</div>
             <div>
@@ -84,13 +82,11 @@
             <div>提交审核时间：{{ item.submissionTime }}</div>
             <div>审核时间： {{ item.reviewData.auditTime }}</div>
             <div>审核部门： {{ item.reviewData.auditDepartmentName }}</div>
-            <div>
-              审核人：
-              <personInfoGlobal
-                :name="item.reviewData.reviewerName"
-                :userId="item.reviewData.reviewer"
-              />
-            </div>
+            <personInfoGlobal
+              title="审核人："
+              :name="item.reviewData.reviewerName"
+              :userId="item.reviewData.reviewer"
+            />
             <div>审核意见：{{ item.reviewData.auditResult }}</div>
             <div>审核说明： {{ item.reviewData.reviewComments }}</div>
           </div>
@@ -99,13 +95,11 @@
         <div v-if="taskDetail.feedback.length == 0">
           <div>
             <div>执行部门：{{ taskDetail.executionDepartmentName }}</div>
-            <div>
-              执行人：
-              <personInfoGlobal
-                :name="taskDetail.executorName"
-                :userId="taskDetail.executor"
-              />
-            </div>
+            <personInfoGlobal
+              :name="taskDetail.executorName"
+              :userId="taskDetail.executor"
+              title="执行人："
+            />
             <div>任务反馈时间：</div>
             <div>任务反馈说明：</div>
             <div>任务反馈附件：</div>
@@ -116,13 +110,11 @@
             <div>提交审核时间：</div>
             <div>审核时间：</div>
             <div>审核部门：{{ taskDetail.auditDepartmentName }}</div>
-            <div>
-              审核人：
-              <personInfoGlobal
-                :name="taskDetail.reviewerName"
-                :userId="taskDetail.reviewer"
-              />
-            </div>
+            <personInfoGlobal
+              :name="taskDetail.reviewerName"
+              :userId="taskDetail.reviewer"
+              title="审核人："
+            />
             <div>审核意见：</div>
             <div>审核说明：</div>
           </div>
@@ -141,7 +133,7 @@ import {
   getTaskDetailByCodeApi,
 } from "@/api/departmentView.js";
 import download from "downloadjs";
-import {exportFile} from "@/api/user";
+import { exportFile } from "@/api/user";
 const activeKey = ref("3");
 const props = defineProps(["selectRow", "type"]);
 const detailVisible = ref(false);
@@ -345,8 +337,11 @@ const getTaskDetailByCode = () => {
 };
 
 const handleDown = (item) => {
-  let newUrl = item.url.replace(/sid=(\w+(-\w+){3,})/, 'sid=@sid').replace('.','').replace("@sid", localStorage.getItem("sid"))
-  let link =`${import.meta.env.VITE_APP_BASE_API}/portal/r${newUrl}`;
+  let newUrl = item.url
+    .replace(/sid=(\w+(-\w+){3,})/, "sid=@sid")
+    .replace(".", "")
+    .replace("@sid", localStorage.getItem("sid"));
+  let link = `${import.meta.env.VITE_APP_BASE_API}/portal/r${newUrl}`;
   exportFile(link, item.name);
 };
 </script>
