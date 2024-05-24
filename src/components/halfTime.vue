@@ -155,7 +155,7 @@
             <a-input disabled v-model:value="taskScore" />
           </a-form-item>
           <a-form-item label="任务说明">
-            <a-input disabled v-model:value="reviewFormState.taskDescription" />
+            <a-textarea disabled v-model:value="reviewFormState.taskDescription" />
           </a-form-item>
           <a-form-item label="责任部门">
             <a-input disabled v-model:value="reviewFormState.assessmentDepartmentName" />
@@ -491,9 +491,6 @@ const handleOk2=()=>{
   open2.value=false
 }
 const handleOk1=()=>{
-  if (valueObjList.value.length==0){
-    message.error('请先选择佐证材料')
-  }else {
     addFormRef.value.validate()
         .then(()=>{
           addFormState.value.supportingMaterials=value.value
@@ -514,7 +511,6 @@ const handleOk1=()=>{
             open1.value=false
           })
         })
-  }
 }
 const downFile=()=>{
   // 如果是文件则直接下载

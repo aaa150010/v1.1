@@ -32,7 +32,22 @@ export function loginOutApi(data) {
 export function exportFile(url, fileName) {
   const link = document.createElement("a");
   const body = document.querySelector("body");
-  link.href = url;
+  // 使用 split() 方法将 URL 字符串按照 & 分割成数组
+  let urlParts = url.split('&');
+
+// 遍历数组,检查每个元素是否以 sid= 开头,如果是则去除
+  let newUrlParts = [];
+  for (let part of urlParts) {
+    if (!part.startsWith('sid=')) {
+      newUrlParts.push(part);
+    }
+  }
+
+// 将处理后的数组重新拼接成新的 URL 字符串
+  let newUrl = newUrlParts.join('&');
+  let newUrl1=`${newUrl}&sid=${localStorage.getItem('sid')}`
+  console.log(newUrl1);
+  link.href = newUrl1;
   link.download = fileName;
   // fix Firefox
   link.style.display = "none";

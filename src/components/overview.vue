@@ -68,10 +68,13 @@
     </a-card>
 <!--    未完成model-->
     <a-modal v-model:open="open1" title="未完成任务数" @cancel="handleOk1" @ok="handleOk1" :width="1200" :maskClosable="false">
-      <workprogress v-if="open1"></workprogress>
+      <div style="height: 600px;overflow: scroll">
+        <workprogress v-if="open1"></workprogress>
+      </div>
     </a-modal>
 <!--    待审核和已完成model-->
     <a-modal v-model:open="open2" :title="title" @cancel="handleOk1" @ok="handleOk1" :maskClosable="false" :width="1200">
+      <div style="height: 600px;overflow: scroll">
       <a-table :columns="columns" :data-source="data" :pagination="false" :loading="loading">
         <!--      <template #headerCell="{ column }">-->
         <!--        <template v-if="column.key === 'name'">-->
@@ -99,6 +102,7 @@
           </template>
         </template>
       </a-table>
+      </div>
     </a-modal >
 <!--    待审核和已完成点击查看的dialog-->
     <!--  查看的dialog-->
@@ -115,7 +119,7 @@
             <a-input disabled v-model:value="taskScore" />
           </a-form-item>
           <a-form-item label="任务说明">
-            <a-input disabled v-model:value="reviewFormState.taskDescription" />
+            <a-textarea disabled v-model:value="reviewFormState.taskDescription" />
           </a-form-item>
           <a-form-item label="责任部门">
             <a-input disabled v-model:value="reviewFormState.assessmentDepartmentName" />
@@ -176,15 +180,21 @@
     <person-info :user-id="userId" ref="personRef"></person-info>
 <!--    耗时过半-->
     <a-modal v-model:open="open4" title="耗时过半的任务" @cancel="handleOk4" :maskClosable="false" @ok="handleOk4" :width="1200">
-      <half-time v-if="open4"></half-time>
+      <div style="height: 600px;overflow: scroll">
+        <half-time v-if="open4"></half-time>
+      </div>
     </a-modal>
 <!--    已逾期-->
     <a-modal v-model:open="open5" title="已逾期任务" @cancel="handleOk5" :maskClosable="false" @ok="handleOk5" :width="1200">
-      <over-time v-if="open5"></over-time>
+      <div style="height: 600px;overflow: scroll">
+        <over-time v-if="open5"></over-time>
+      </div>
     </a-modal>
 <!--    关注里面的model，分为未完成|已完成|审核中-->
     <a-modal v-model:open="open6" :title="title6"@cancel="handleOk6" @ok="handleOk6" :width="1200" :maskClosable="false">
-      <favorite :project-code="projectCode" :status="status" ref="favoriteRef" v-if="open6"></favorite>
+      <div style="height: 600px;overflow: scroll">
+        <favorite :project-code="projectCode" :status="status" ref="favoriteRef" v-if="open6"></favorite>
+      </div>
     </a-modal>
   </div>
 </template>
