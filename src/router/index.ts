@@ -69,6 +69,51 @@ const routes: Array<RouteRecordRaw> = [
     name: "智慧驾舱-数据大屏1类型-5页面",
     component: () => import("@/views/wisdomDataV/dataV1/index5.vue"),
   },
+  {
+    path: "/wisdomDataV_dataV2_index1",
+    name: "智慧驾舱-数据大屏2类型-1页面",
+    component: () => import("@/views/wisdomDataV/dataV2/index1.vue"),
+  },
+  {
+    path: "/wisdomDataV_dataV2_index2",
+    name: "智慧驾舱-数据大屏2类型-2页面",
+    component: () => import("@/views/wisdomDataV/dataV2/index2.vue"),
+  },
+  {
+    path: "/wisdomDataV_dataV2_index3",
+    name: "智慧驾舱-数据大屏2类型-3页面",
+    component: () => import("@/views/wisdomDataV/dataV2/index3.vue"),
+  },
+  {
+    path: "/wisdomDataV_dataV2_index4",
+    name: "智慧驾舱-数据大屏2类型-4页面",
+    component: () => import("@/views/wisdomDataV/dataV2/index4.vue"),
+  },
+  {
+    path: "/wisdomDataV_dataV2_index5",
+    name: "智慧驾舱-数据大屏2类型-5页面",
+    component: () => import("@/views/wisdomDataV/dataV2/index5.vue"),
+  },
+  {
+    path: "/wisdomDataV_dataV2_index6",
+    name: "智慧驾舱-数据大屏2类型-6页面",
+    component: () => import("@/views/wisdomDataV/dataV2/index6.vue"),
+  },
+  {
+    path: "/wisdomDataV_dataV2_index7",
+    name: "智慧驾舱-数据大屏2类型-7页面",
+    component: () => import("@/views/wisdomDataV/dataV2/index7.vue"),
+  },
+  {
+    path: "/wisdomDataV_dataV2_index8",
+    name: "智慧驾舱-数据大屏2类型-8页面",
+    component: () => import("@/views/wisdomDataV/dataV2/index8.vue"),
+  },
+  {
+    path: "/wisdomDataV_dataV2_index9",
+    name: "智慧驾舱-数据大屏2类型-9页面",
+    component: () => import("@/views/wisdomDataV/dataV2/index9.vue"),
+  },
 ];
 
 const router = createRouter({

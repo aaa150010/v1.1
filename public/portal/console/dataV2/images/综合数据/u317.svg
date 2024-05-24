@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="92px" height="52px" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="0" y1="20" x2="81" y2="20" id="LinearGradient138">
+      <stop id="Stop139" stop-color="#07dbff" offset="0" />
+      <stop id="Stop140" stop-color="#07dbff" offset="0.4" />
+      <stop id="Stop141" stop-color="#f6f6f9" offset="0.96" />
+      <stop id="Stop142" stop-color="#f6f6f9" offset="1" />
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="0" y1="20" x2="81" y2="20" id="LinearGradient143">
+      <stop id="Stop144" stop-color="#07dbff" offset="0" />
+      <stop id="Stop145" stop-color="#07dbff" offset="0.4" />
+      <stop id="Stop146" stop-color="#f6f6f9" offset="0.96" />
+      <stop id="Stop147" stop-color="#f6f6f9" offset="1" />
+    </linearGradient>
+  </defs>
+  <g transform="matrix(1 0 0 1 -1090 -223 )">
+    <path d="M 75.91865999344596 3.1906088413246296  L 38 27  L 22 24  L 0 40  " stroke-width="2" stroke="url(#LinearGradient138)" fill="none" transform="matrix(1 0 0 1 1091 233 )" />
+    <path d="M 78.03588504228856 -1.63881153818119  C 76.10288841788078 -1.63881153818119  74.53588504228856 -0.0718081625889675  74.53588504228856 1.86118846181881  C 74.53588504228856 3.7941850862265873  76.10288841788078 5.36118846181881  78.03588504228856 5.36118846181881  C 79.96888166669633 5.36118846181881  81.53588504228856 3.7941850862265873  81.53588504228856 1.86118846181881  C 81.53588504228856 -0.0718081625889675  79.96888166669633 -1.63881153818119  78.03588504228856 -1.63881153818119  Z M 78.03588504228856 0.3611884618188099  C 78.86431216703474 0.3611884618188099  79.53588504228856 1.0327613370726199  79.53588504228856 1.86118846181881  C 79.53588504228856 2.689615586565  78.86431216703474 3.36118846181881  78.03588504228856 3.36118846181881  C 77.20745791754237 3.36118846181881  76.53588504228856 2.689615586565  76.53588504228856 1.86118846181881  C 76.53588504228856 1.0327613370726199  77.20745791754237 0.3611884618188099  78.03588504228856 0.3611884618188099  Z " fill-rule="nonzero" fill="url(#LinearGradient143)" stroke="none" transform="matrix(1 0 0 1 1091 233 )" />
+  </g>
+</svg>

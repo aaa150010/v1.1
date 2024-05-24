@@ -193,9 +193,9 @@ const involvedClick = (item) => {
       if (res.result == "ok") {
         await getProjectList();
         if (item.involved) {
-          message.success("取消收藏成功！");
+          message.success("取消关注成功！");
         } else {
-          message.success("收藏成功！");
+          message.success("已关注成功！");
         }
       }
     }

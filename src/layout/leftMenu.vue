@@ -61,16 +61,24 @@
         </a-menu-item>
       </a-menu>
     </div>
-    <div class="personInfo flex justify-between">
-      <div>
-        <a-avatar size="20" :src="avatarUrl"> </a-avatar>
-        <span style="font-size: 14px; margin-left: 10px">{{ username }}</span>
+    <div>
+      <div
+        class="center text-blue-400 cursor-pointer underline"
+        @click="toDataV"
+      >
+        综合数据大屏监控
       </div>
-      <LogoutOutlined
-        class="float-right"
-        style="font-size: 20px"
-        @click="loginOut"
-      />
+      <div class="personInfo flex justify-between">
+        <div>
+          <a-avatar size="20" :src="avatarUrl"> </a-avatar>
+          <span style="font-size: 14px; margin-left: 10px">{{ username }}</span>
+        </div>
+        <LogoutOutlined
+          class="float-right"
+          style="font-size: 20px"
+          @click="loginOut"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -81,13 +89,14 @@ import {
   ExclamationCircleOutlined,
 } from "@ant-design/icons-vue";
 import { onMounted, ref } from "vue";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { getUserInfo, loginOutApi } from "@/api/user";
 import isDev from "@/config";
 import { message, Modal } from "ant-design-vue";
 import { usePiniaStore } from "@/pinia";
 import { createVNode } from "vue";
 const route = useRoute();
+const router = useRouter();
 const activeKey = ref([]);
 const src1 = isDev ? "/fuza.png" : "/portal/console/images/fuza.png";
 const clearArray = () => {
@@ -105,6 +114,7 @@ onMounted(() => {
     if (res.result == "ok") {
       username.value = res.data.userName;
       leftMenu.value = res.data.permission;
+      sessionStorage.setItem("userInfo", JSON.stringify(res.data));
       avatarUrl.value = "/portal/r" + res.data.photo.replace(".", "");
     }
     leftMenu.value.forEach((item) => {
@@ -134,6 +144,14 @@ const loginOut = () => {
       });
     },
   });
+};
+
+const toDataV = () => {
+  let page = router.resolve({
+    path: "/wisdomDataV_dataV2_index1",
+  });
+
+  window.open(page.href, "_blank");
 };
 </script>
 <style scoped>

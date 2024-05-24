@@ -35,7 +35,7 @@
           {{ selectRow.endTime }}
         </a-form-item>
       </a-col>
-      <a-col :span="12">
+      <a-col :span="24">
         <a-form-item label="任务说明："
           >{{ selectRow.taskDescription }}
         </a-form-item>
@@ -84,10 +84,21 @@
         <a-form-item label="任务开始时间" name="startTime">
           <a-date-picker
             v-model:value="formNode.startTime"
-            format="YYYY-MM-DD HH:mm:ss"
-            :show-time="{ defaultValue: dayjs('00:00:00', 'HH:mm:ss') }"
+            format="YYYY-MM-DD"
             style="width: 100%"
             placeholder="请选择任务开始时间"
+            :disabledDate="
+              (currentDate) => {
+                if (selectRow.origin) {
+                  return false;
+                }
+                return disabledDate(
+                  currentDate,
+                  selectRow.startTime,
+                  selectRow.endTime
+                );
+              }
+            "
           />
         </a-form-item>
       </a-col>
@@ -95,20 +106,64 @@
         <a-form-item label="任务截止时间" name="endTime">
           <a-date-picker
             v-model:value="formNode.endTime"
-            format="YYYY-MM-DD HH:mm:ss"
-            :show-time="{ defaultValue: dayjs('00:00:00', 'HH:mm:ss') }"
+            format="YYYY-MM-DD"
             style="width: 100%"
             placeholder="请选择任务结束时间"
+            :disabledDate="
+              (currentDate) => {
+                return disabledDate(
+                  currentDate,
+                  formNode.startTime,
+                  selectRow.endTime
+                );
+              }
+            "
           />
         </a-form-item>
       </a-col>
       <a-col :span="24">
-        <a-form-item label="任务分数" name="taskScore">
-          <a-input-number
-            v-model:value="formNode.taskScore"
-            placeholder="请填写任务分数"
+        <a-form-item label="考核方式" name="assessmentMethod"
+          ><a-select
+            v-model:value="formNode.assessmentMethod"
+            show-search
             style="width: 100%"
-          />
+            :options="assessmentMethodOption"
+          ></a-select
+        ></a-form-item>
+      </a-col>
+      <a-col :span="24">
+        <a-form-item label="任务分数" name="taskScore">
+          <a-row>
+            <a-col :span="12">
+              <a-slider
+                v-model:value="formNode.taskScore"
+                :min="0"
+                :max="
+                  type == 'add' ? selectRow.maxScore : selectRow.updateScore
+                "
+                :step="0.1"
+                placeholder="请填写任务分数"
+                style="width: 100%"
+              />
+            </a-col>
+            <a-col :span="4">
+              <a-input-number
+                v-model:value="formNode.taskScore"
+                :min="0"
+                :max="
+                  type == 'add' ? selectRow.maxScore : selectRow.updateScore
+                "
+                :step="0.1"
+                style="width: 100%; margin-left: 16px"
+            /></a-col>
+            <!-- <a-col :span="8"> -->
+            <div class="ml-8 h-8 center">
+              最高分：{{
+                type == "add" ? selectRow.maxScore : selectRow.updateScore
+              }}
+            </div>
+            <!-- </a-col> -->
+          </a-row>
         </a-form-item>
       </a-col>
       <a-col :span="24">
@@ -143,7 +198,10 @@ import {
 } from "@/api/taskManage.js";
 import dayjs, { Dayjs } from "dayjs";
 import { message } from "ant-design-vue";
+import { removeTo } from "@/api/myspace";
 const store = useStore();
+
+const userInfo = JSON.parse(sessionStorage.getItem("userInfo"));
 
 const props = defineProps([
   "getProjectTree",
@@ -162,6 +220,8 @@ const formNodeRef = ref();
 const labelCol = { span: 6 };
 const wrapperCol = { span: 13 };
 
+const assessmentMethodOption = ref([{ label: "审核评分", value: "审核评分" }]);
+
 const formNode = reactive({
   id:
     store.state.nodeConfig.type != "add"
@@ -176,20 +236,18 @@ const formNode = reactive({
   responsibleDepartment:
     store.state.nodeConfig.type != "add"
       ? store.state.nodeConfig.selectRow.responsibleDepartment
-      : null,
+      : userInfo.departmentId,
   personResponsible:
     store.state.nodeConfig.type != "add"
       ? store.state.nodeConfig.selectRow.personResponsible
-      : null,
-  startTime:
-    store.state.nodeConfig.type != "add"
-      ? dayjs(store.state.nodeConfig.selectRow.startTime)
-      : null,
-  endTime:
-    store.state.nodeConfig.type != "add"
-      ? dayjs(store.state.nodeConfig.selectRow.endTime)
-      : null,
+      : userInfo.userId,
+  startTime: dayjs(store.state.nodeConfig.selectRow.startTime),
+  endTime: dayjs(store.state.nodeConfig.selectRow.endTime),
   taskType: 1,
+  assessmentMethod:
+    store.state.nodeConfig.type != "add"
+      ? store.state.nodeConfig.selectRow.assessmentMethod
+      : "审核评分",
   taskDescription:
     store.state.nodeConfig.type != "add"
       ? store.state.nodeConfig.selectRow.taskDescription
@@ -242,6 +300,13 @@ const rulesNode = {
       trigger: "blur",
     },
   ],
+  assessmentMethod: [
+    {
+      required: true,
+      message: "必填项",
+      trigger: "blur",
+    },
+  ],
 };
 
 const handleOk = () => {
@@ -284,5 +349,14 @@ const handleCancel = () => {
 
 const responsibleDepartmentChange = (valueVar) => {
   treeExpandedKeys.value = [valueVar];
+};
+const disabledDate = (currentDate, startTime, endTime) => {
+  if (
+    dayjs(startTime).valueOf() <= dayjs(currentDate).valueOf() &&
+    dayjs(currentDate).valueOf() <= dayjs(endTime).valueOf()
+  ) {
+    return false;
+  }
+  return true;
 };
 </script>

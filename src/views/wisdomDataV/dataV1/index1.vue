@@ -108,8 +108,12 @@
               </div>
             </div>
             <div class="h-full">
-              <div class="flex justify-around">
-                <div class="center" v-for="item in firstTaskInfo" :key="item">
+              <div class="flex justify-around w-full overflow-auto">
+                <div
+                  class="center mr-2"
+                  v-for="item in firstTaskInfo"
+                  :key="item"
+                >
                   <el-progress
                     type="circle"
                     :percentage="item.rate"

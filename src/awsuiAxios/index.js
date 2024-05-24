@@ -43,9 +43,13 @@ axios.interceptors.response.use(
       message.info("当前操作过快或访问人数过多，请稍后访问！");
     } else if (
       response.data.result != "ok" &&
-      response.data.data.result != "ok"
+      (!response.data.data || response.data.data.result != "ok")
     ) {
-      message.error("系统错误");
+      if (response.data.msg) {
+        message.error(response.data.msg);
+      } else {
+        message.error("系统错误");
+      }
     }
     store.commit("setLoading", false);
     return response.data;

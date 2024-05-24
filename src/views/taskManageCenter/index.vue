@@ -12,7 +12,11 @@
               class="float-right ml-2"
               @click="
                 () => {
-                  orderBy = 'ASC';
+                  if (orderBy == 'DESC') {
+                    orderBy = 'ASC';
+                  } else {
+                    orderBy = 'DESC';
+                  }
                   getProjectList();
                 }
               "
@@ -26,8 +30,7 @@
               class="float-right ml-2"
               @click="
                 () => {
-                  orderBy = 'DESC';
-                  getProjectList();
+                  filterVisible = true;
                 }
               "
             >
@@ -44,7 +47,13 @@
               @click="selectRowProject(index)"
               :key="item.projectCode"
             >
-              <div>{{ item.projectName }}</div>
+              <div class="flex justify-between">
+                <span>{{ item.projectName }}</span>
+                <div @click="involvedClick(item)">
+                  <StarFilled v-if="item.involved" />
+                  <StarOutlined v-else />
+                </div>
+              </div>
               <div>
                 {{
                   dayjs(item.startTime).format("YYYY-MM-DD") +
@@ -211,11 +220,64 @@
         </a-form-item>
       </a-form>
     </a-modal>
+    <a-modal v-model:open="filterVisible" :footer="null">
+      <template #title>
+        <div>过滤条件</div>
+      </template>
+      <a-checkbox-group
+        v-model:value="filterObj.checks"
+        :options="filterOption"
+        class="mb-4"
+      />
+      <a-form>
+        <div v-for="item in filterObj.checks" :key="item">
+          <a-form-item
+            v-if="item == 'projectName'"
+            label="项目名称"
+            name="projectName"
+          >
+            <a-input v-model:value="filterObj.form.projectName" />
+          </a-form-item>
+          <a-form-item
+            v-else-if="item == 'projectYear'"
+            label="项目年份"
+            name="projectYear"
+          >
+            <a-select
+              v-model:value="filterObj.form.projectYear"
+              placeholder="请选择年份"
+            >
+              <a-select-option
+                v-for="item in yearList"
+                :key="item"
+                :value="item"
+                >{{ item }}</a-select-option
+              >
+            </a-select>
+          </a-form-item>
+        </div>
+      </a-form>
+      <div>
+        <div class="float-right">
+          <a-button @click="filterVisible = false">取消</a-button>
+          <a-button type="primary" class="ml-2">保存筛选</a-button>
+          <a-button type="primary" class="ml-2" @click="filterSureClick"
+            >筛选</a-button
+          >
+        </div>
+        <div class="clear-right"></div>
+      </div>
+    </a-modal>
   </div>
 </template>
 <script setup>
 import { onMounted, ref, nextTick } from "vue";
-import { SortAscendingOutlined, FilterOutlined } from "@ant-design/icons-vue";
+import {
+  SortAscendingOutlined,
+  FilterOutlined,
+  StarOutlined,
+  StarFilled,
+} from "@ant-design/icons-vue";
 import mind from "./mind.vue";
 
 import projectModel from "./components/projectModel.vue";
@@ -228,9 +290,31 @@ import {
   updateProjectApi,
   getSelectDataApi,
 } from "@/api/taskManage.js";
+import { involvedClickApi } from "@/api/departmentView.js";
 import { message, Modal } from "ant-design-vue";
 import { ExclamationCircleOutlined } from "@ant-design/icons-vue";
 import { createVNode } from "vue";
+import { async } from "@antv/x6/lib/registry/marker/async";
+
+const filterVisible = ref(false);
+
+const filterOption = ref([
+  { value: "projectName", label: "项目名称" },
+  { value: "projectYear", label: "项目年份" },
+]);
+
+const filterObj = ref({
+  checks: [],
+  form: {
+    projectName: "",
+    projectYear: "",
+  },
+});
+
+const filterSureClick = async () => {
+  await getProjectList(filterObj.value);
+  filterVisible.value = false;
+};
 
 const store = useStore();
 const activeKey = ref(-1);
@@ -327,8 +411,12 @@ const getProjectModelAllList = () => {
   });
 };
 
-const getProjectList = () => {
-  return getProjectApi({ order: orderBy.value, flag: true }).then((res) => {
+const getProjectList = (filterObjVar) => {
+  return getProjectApi({
+    order: orderBy.value,
+    flag: true,
+    filterObjVar: filterObjVar,
+  }).then((res) => {
     if (res.result == "ok") {
       if (activeKey.value == -1 && res.data.length > 0) {
         activeKey.value = 0;
@@ -410,6 +498,21 @@ const updateListed = () => {
       }
     });
   }
+};
+
+const involvedClick = (item) => {
+  return involvedClickApi({ projectCode: item.projectCode }).then(
+    async (res) => {
+      if (res.result == "ok") {
+        await getProjectList();
+        if (item.involved) {
+          message.success("取消关注成功！");
+        } else {
+          message.success("已关注成功！");
+        }
+      }
+    }
+  );
 };
 </script>
 <style scoped>

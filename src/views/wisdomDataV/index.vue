@@ -41,7 +41,13 @@
               @click="selectRowProject(index)"
               :key="item.projectCode"
             >
-              <div>{{ item.projectName }}</div>
+              <div class="flex justify-between">
+                <span>{{ item.projectName }}</span>
+                <div @click="involvedClick(item)">
+                  <StarFilled v-if="item.involved" />
+                  <StarOutlined v-else />
+                </div>
+              </div>
               <div>
                 {{
                   dayjs(item.startTime).format("YYYY-MM-DD") +
@@ -118,7 +124,12 @@
 </template>
 <script setup>
 import { onMounted, ref, nextTick } from "vue";
-import { SortAscendingOutlined, FilterOutlined } from "@ant-design/icons-vue";
+import {
+  SortAscendingOutlined,
+  FilterOutlined,
+  StarOutlined,
+  StarFilled,
+} from "@ant-design/icons-vue";
 import { useStore } from "vuex";
 import dayjs, { Dayjs } from "dayjs";
 import {
@@ -131,6 +142,7 @@ import { message, Modal } from "ant-design-vue";
 import { ExclamationCircleOutlined } from "@ant-design/icons-vue";
 import { createVNode } from "vue";
 import dataV1 from "./dataV1/index1.vue";
+import { involvedClickApi } from "@/api/departmentView.js";
 
 const dataV = ref(null);
 
@@ -168,6 +180,21 @@ const launchFullScreen = (element) => {
   } else if (element.msRequestFullscreen) {
     element.msRequestFullscreen();
   }
+};
+
+const involvedClick = (item) => {
+  return involvedClickApi({ projectCode: item.projectCode }).then(
+    async (res) => {
+      if (res.result == "ok") {
+        await getProjectList();
+        if (item.involved) {
+          message.success("取消关注成功！");
+        } else {
+          message.success("关注成功！");
+        }
+      }
+    }
+  );
 };
 </script>
 <style scoped>

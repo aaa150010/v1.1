@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="6px" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="1603.9716408129943" y1="700.0779162259323" x2="1620.0283591870057" y2="705.9220837740677" id="LinearGradient251">
+      <stop id="Stop252" stop-color="#000000" offset="0" />
+      <stop id="Stop253" stop-color="#0ee4f9" offset="0.01" />
+      <stop id="Stop254" stop-color="#0ee4f9" offset="1" />
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="1603.9716408129943" y1="700.0779162259323" x2="1620.0283591870057" y2="705.9220837740677" id="LinearGradient255">
+      <stop id="Stop256" stop-color="#000000" offset="0" />
+      <stop id="Stop257" stop-color="#0ee4f9" offset="0.01" />
+      <stop id="Stop258" stop-color="#0ee4f9" offset="1" />
+    </linearGradient>
+  </defs>
+  <g transform="matrix(1 0 0 1 -1604 -700 )">
+    <path d="M 1604.5 700.5  L 1619.5 700.5  L 1619.5 705.5  L 1604.5 705.5  L 1604.5 700.5  Z " fill-rule="nonzero" fill="url(#LinearGradient251)" stroke="none" />
+    <path d="M 1604.5 700.5  L 1619.5 700.5  L 1619.5 705.5  L 1604.5 705.5  L 1604.5 700.5  Z " stroke-width="1" stroke="url(#LinearGradient255)" fill="none" />
+  </g>
+</svg>

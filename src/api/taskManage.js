@@ -19,7 +19,7 @@ export function addProjectApi(data) {
 
 // 获取所有项目
 export function getProjectApi(data) {
-  return get({
+  return post({
     cmd: "com.awspaas.user.apps.complex_task_decomposition_getAllProject",
     data: data,
   });
