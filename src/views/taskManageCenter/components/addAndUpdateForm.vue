@@ -48,6 +48,7 @@
         <a-form-item label="子任务名称" name="taskName">
           <a-input
             v-model:value="formNode.taskName"
+            :disabled="type == 'seeDetail'"
             placeholder="请输入子任务名称"
           />
         </a-form-item>
@@ -57,6 +58,7 @@
           <a-tree-select
             v-model:value="formNode.responsibleDepartment"
             placeholder="请选择部门"
+            :disabled="type == 'seeDetail'"
             treeNodeFilterProp="label"
             @change="responsibleDepartmentChange"
             show-search
@@ -71,6 +73,7 @@
           <a-tree-select
             v-model:value="formNode.personResponsible"
             placeholder="请选择责任人"
+            :disabled="type == 'seeDetail'"
             show-search
             treeNodeFilterProp="label"
             :tree-data="peopleListTree"
@@ -85,6 +88,7 @@
           <a-date-picker
             v-model:value="formNode.startTime"
             format="YYYY-MM-DD"
+            :disabled="type == 'seeDetail'"
             style="width: 100%"
             placeholder="请选择任务开始时间"
             :disabledDate="
@@ -107,6 +111,7 @@
           <a-date-picker
             v-model:value="formNode.endTime"
             format="YYYY-MM-DD"
+            :disabled="type == 'seeDetail'"
             style="width: 100%"
             placeholder="请选择任务结束时间"
             :disabledDate="
@@ -126,6 +131,7 @@
           ><a-select
             v-model:value="formNode.assessmentMethod"
             show-search
+            :disabled="type == 'seeDetail'"
             style="width: 100%"
             :options="assessmentMethodOption"
           ></a-select
@@ -137,6 +143,7 @@
             <a-col :span="12">
               <a-slider
                 v-model:value="formNode.taskScore"
+                :disabled="type == 'seeDetail'"
                 :min="0"
                 :max="
                   type == 'add' ? selectRow.maxScore : selectRow.updateScore
@@ -150,6 +157,7 @@
               <a-input-number
                 v-model:value="formNode.taskScore"
                 :min="0"
+                :disabled="type == 'seeDetail'"
                 :max="
                   type == 'add' ? selectRow.maxScore : selectRow.updateScore
                 "
@@ -174,7 +182,17 @@
         >
           <a-textarea
             style="width: 100%"
+            :disabled="type == 'seeDetail'"
             v-model:value="formNode.taskDescription"
+          />
+        </a-form-item>
+      </a-col>
+      <a-col :span="12" v-if="type != 'add'">
+        <a-form-item label="排序" name="sort" placeholder="排序">
+          <a-input-number
+            style="width: 100%"
+            :disabled="type == 'seeDetail'"
+            v-model:value="formNode.sort"
           />
         </a-form-item>
       </a-col>
@@ -255,6 +273,10 @@ const formNode = reactive({
   taskScore:
     store.state.nodeConfig.type != "add"
       ? store.state.nodeConfig.selectRow.taskScore
+      : null,
+  sort:
+    store.state.nodeConfig.type != "add"
+      ? store.state.nodeConfig.selectRow.sort
       : null,
 });
 const rulesNode = {

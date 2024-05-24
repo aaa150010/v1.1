@@ -3,6 +3,7 @@
     <a-modal
       v-model:open="nodeConfig.visible"
       destroyOnClose
+      :maskClosable="nodeConfig.type == 'seeDetail' ? true : false"
       :footer="null"
       width="700px"
     >

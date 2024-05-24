@@ -85,3 +85,19 @@ export function deleteNodeApi(data) {
     isLoading: true,
   });
 }
+
+// 保存项目筛选条件
+export function addFilterConditionsApi(data) {
+  return post({
+    cmd: "com.awspaas.user.apps.complex_task_decomposition_addFilterConditions",
+    data: data,
+    isLoading: true,
+  });
+}
+
+export function updateShowOneApi(data) {
+  return get({
+    cmd: "com.awspaas.user.apps.complex_task_decomposition_updateShowOne",
+    data: data,
+  });
+}

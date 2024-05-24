@@ -13,6 +13,11 @@
     <a-button class="absolute top-2 left-28" @click="toggleCollapseAll(false)"
       >收缩全部</a-button
     >
+    <a-button class="absolute top-2 right-2"
+      ><a-checkbox v-model:checked="showOne" @change="updateShowOne"
+        >仅展示和我相关任务</a-checkbox
+      ></a-button
+    >
   </div>
 </template>
 
@@ -25,8 +30,11 @@ import { register, getTeleport } from "@antv/x6-vue-shape";
 import Hierarchy from "@antv/hierarchy";
 import { useStore } from "vuex";
 import addAndUpdateDialog from "./components/addAndUpdateDialog.vue";
-
-import { getProjectTreeApi, deleteNodeApi } from "@/api/taskManage.js";
+import {
+  getProjectTreeApi,
+  deleteNodeApi,
+  updateShowOneApi,
+} from "@/api/taskManage.js";
 import { message, Modal } from "ant-design-vue";
 import { ExclamationCircleOutlined } from "@ant-design/icons-vue";
 import { createVNode } from "vue";
@@ -36,8 +44,10 @@ const props = defineProps([
   "selectRow",
   "getProjectList",
   "getProjectListBack",
+  "showOne",
 ]);
 
+const showOne = ref(props.showOne);
 const TeleportContainer = getTeleport();
 
 const dataTree = ref({});
@@ -507,6 +517,17 @@ const getProjectTreeKeepCollapse = () => {
     if (res.result == "ok") {
       dataTree.value = addTreeKeepCollapse(res.data);
       render();
+    }
+  });
+};
+
+const updateShowOne = () => {
+  return updateShowOneApi({
+    showOne: showOne.value,
+  }).then((res) => {
+    if (res.result == "ok") {
+      message.success("更新成功！");
+      getProjectTree(true);
     }
   });
 };

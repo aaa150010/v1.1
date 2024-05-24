@@ -73,6 +73,10 @@
                 />
                 <span>>></span>
               </div>
+              <div>
+                类型：<a-tag color="orange">教学</a-tag
+                ><a-tag color="green">管理</a-tag>
+              </div>
             </div>
             <div v-if="projectList.length == 0">暂无项目</div>
           </div>
@@ -131,6 +135,7 @@
               :selectRow="projectList[activeKey]"
               :getProjectList="getProjectList"
               :getProjectListBack="getProjectListBack"
+              :showOne="showOne"
             ></mind>
           </div>
         </div>
@@ -190,6 +195,21 @@
           >
             <a-select-option
               v-for="item in projectModelAllList"
+              :key="item.value"
+              :value="item.value"
+            >
+              {{ item.label }}</a-select-option
+            >
+          </a-select>
+        </a-form-item>
+        <a-form-item label="项目类型" name="PROJECT_TYPE">
+          <a-select
+            v-model:value="formProject.PROJECT_TYPE"
+            allowClear
+            placeholder="选择类型"
+          >
+            <a-select-option
+              v-for="item in projectTypeList"
               :key="item.value"
               :value="item.value"
             >
@@ -260,24 +280,30 @@
             label="项目类型"
             name="PROJECT_TYPE"
           >
-            <a-select
+            <a-checkbox-group
+              v-model:value="filterObj.form.PROJECT_TYPE.value"
+              :options="projectTypeList"
+            />
+            <!-- <a-select
               v-model:value="filterObj.form.PROJECT_TYPE.value"
               placeholder="请选择类型"
             >
               <a-select-option
-                v-for="item in yearList"
-                :key="item"
-                :value="item"
-                >{{ item }}</a-select-option
+                v-for="item in projectTypeList"
+                :key="item.value"
+                :value="item.value"
+                >{{ item.label }}</a-select-option
               >
-            </a-select>
+            </a-select> -->
           </a-form-item>
         </div>
       </a-form>
       <div>
         <div class="float-right">
           <a-button @click="filterVisible = false">取消</a-button>
-          <a-button type="primary" class="ml-2">保存筛选</a-button>
+          <a-button type="primary" class="ml-2" @click="addFilterConditions"
+            >保存筛选</a-button
+          >
           <a-button type="primary" class="ml-2" @click="filterSureClick"
             >筛选</a-button
           >
@@ -307,6 +333,7 @@ import {
   updateProjectApi,
   getSelectDataApi,
   getProjectTypeListApi,
+  addFilterConditionsApi,
 } from "@/api/taskManage.js";
 import { involvedClickApi } from "@/api/departmentView.js";
 import { message, Modal } from "ant-design-vue";
@@ -315,6 +342,8 @@ import { createVNode } from "vue";
 import { async } from "@antv/x6/lib/registry/marker/async";
 
 const filterVisible = ref(false);
+
+const showOne = ref(false);
 
 const filterOption = ref([
   { value: "PROJECT_NAME", label: "项目名称" },
@@ -334,6 +363,42 @@ const filterObj = ref({
 const filterSureClick = async () => {
   await getProjectList(filterObj.value);
   filterVisible.value = false;
+  message.success("筛选成功！");
+};
+
+const filtersCheckList = (filterObjV) => {
+  let filterObjVar = null;
+  if (filterObjV.checks.length > 0) {
+    filterObjVar = {};
+    let objVar = {};
+    filterObjV.checks.forEach((item) => {
+      objVar[item] = filterObjV.form[item];
+    });
+    filterObjVar.checks = filterObjV.checks;
+    filterObjVar.form = objVar;
+  }
+  return filterObjVar;
+};
+
+const addFilterConditions = () => {
+  Modal.confirm({
+    title: "提示",
+    icon: createVNode(ExclamationCircleOutlined),
+    content: "确定要长期保存过滤条件吗？",
+    okText: "确认",
+    cancelText: "取消",
+    onOk() {
+      return addFilterConditionsApi(filtersCheckList(filterObj.value)).then(
+        (res) => {
+          if (res.result == "ok") {
+            message.success("保存成功！");
+            filterVisible.value = false;
+            getProjectList();
+          }
+        }
+      );
+    },
+  });
 };
 
 const store = useStore();
@@ -341,7 +406,12 @@ const activeKey = ref(-1);
 const orderBy = ref("DESC");
 
 const projectList = ref([]);
-const projectTypeList = ref([]);
+const projectTypeList = ref([
+  { value: "PROJECT_NAME", label: "教学" },
+  { value: "PROJECT_YEAR", label: "事务" },
+  { value: "PROJECT_TYPE", label: "生活" },
+  { value: "PROJECT_OTHER", label: "其他" },
+]);
 const projectModelList = ref([]);
 const projectModelAllList = ref([]);
 
@@ -428,7 +498,7 @@ const getProjectModelList = () => {
 const getProjectTypeList = () => {
   return getProjectTypeListApi().then((res) => {
     if (res.result == "ok") {
-      projectTypeList.value = res.data;
+      // projectTypeList.value = res.data;
     }
   });
 };
@@ -441,17 +511,23 @@ const getProjectModelAllList = () => {
   });
 };
 
-const getProjectList = (filterObjVar) => {
+const getProjectList = () => {
   return getProjectApi({
     order: orderBy.value,
     flag: true,
-    conditions: filterObjVar,
+    conditions: filtersCheckList(filterObj.value),
   }).then((res) => {
     if (res.result == "ok") {
-      if (activeKey.value == -1 && res.data.length > 0) {
+      if (activeKey.value == -1 && res.data.projectData.length > 0) {
         activeKey.value = 0;
       }
-      projectList.value = res.data;
+      projectList.value = res.data.projectData;
+      if (res.data.condition) {
+        let { checks, form } = JSON.parse(res.data.condition);
+        filterObj.value.checks = checks;
+        filterObj.value.form = { ...filterObj.value.form, ...form };
+      }
+      showOne.value = res.data.showOne == "false" ? false : true;
     }
   });
 };

@@ -82,9 +82,9 @@
               v-for="(item, index) in departmentTaskInfo"
               :key="item"
             >
-              <div>{{ item.departmentName }}：</div>
+              <div class="w-80">{{ item.departmentName }}：</div>
               <div
-                class="w-52 center"
+                class="center w-full"
                 :class="index % 2 == 1 ? 'bg-cyan-700' : 'bg-cyan-900'"
               >
                 {{ item.unCompleteTaskListSize }}/{{

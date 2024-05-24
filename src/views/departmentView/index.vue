@@ -179,10 +179,10 @@ onMounted(async () => {
 const getProjectList = () => {
   return getProjectApi({ order: orderBy.value, flag: false }).then((res) => {
     if (res.result == "ok") {
-      if (activeKey.value == -1 && res.data.length > 0) {
+      if (activeKey.value == -1 && res.data.projectData.length > 0) {
         activeKey.value = 0;
       }
-      projectList.value = res.data;
+      projectList.value = res.data.projectData;
     }
   });
 };
