@@ -232,20 +232,37 @@
       <a-form>
         <div v-for="item in filterObj.checks" :key="item">
           <a-form-item
-            v-if="item == 'projectName'"
+            v-if="item == 'PROJECT_NAME'"
             label="项目名称"
-            name="projectName"
+            name="PROJECT_NAME"
           >
-            <a-input v-model:value="filterObj.form.projectName" />
+            <a-input v-model:value="filterObj.form.PROJECT_NAME.value" />
           </a-form-item>
           <a-form-item
-            v-else-if="item == 'projectYear'"
+            v-else-if="item == 'PROJECT_YEAR'"
             label="项目年份"
-            name="projectYear"
+            name="PROJECT_YEAR"
           >
             <a-select
-              v-model:value="filterObj.form.projectYear"
+              v-model:value="filterObj.form.PROJECT_YEAR.value"
               placeholder="请选择年份"
+            >
+              <a-select-option
+                v-for="item in yearList"
+                :key="item"
+                :value="item"
+                >{{ item }}</a-select-option
+              >
+            </a-select>
+          </a-form-item>
+          <a-form-item
+            v-else-if="item == 'PROJECT_TYPE'"
+            label="项目类型"
+            name="PROJECT_TYPE"
+          >
+            <a-select
+              v-model:value="filterObj.form.PROJECT_TYPE.value"
+              placeholder="请选择类型"
             >
               <a-select-option
                 v-for="item in yearList"
@@ -289,6 +306,7 @@ import {
   getProjectApi,
   updateProjectApi,
   getSelectDataApi,
+  getProjectTypeListApi,
 } from "@/api/taskManage.js";
 import { involvedClickApi } from "@/api/departmentView.js";
 import { message, Modal } from "ant-design-vue";
@@ -299,15 +317,17 @@ import { async } from "@antv/x6/lib/registry/marker/async";
 const filterVisible = ref(false);
 
 const filterOption = ref([
-  { value: "projectName", label: "项目名称" },
-  { value: "projectYear", label: "项目年份" },
+  { value: "PROJECT_NAME", label: "项目名称" },
+  { value: "PROJECT_YEAR", label: "项目年份" },
+  { value: "PROJECT_TYPE", label: "项目类型" },
 ]);
 
 const filterObj = ref({
   checks: [],
   form: {
-    projectName: "",
-    projectYear: "",
+    PROJECT_NAME: { value: "", condition: "like" },
+    PROJECT_YEAR: { value: "", condition: "like" },
+    PROJECT_TYPE: { value: "", condition: "like" },
   },
 });
 
@@ -321,6 +341,7 @@ const activeKey = ref(-1);
 const orderBy = ref("DESC");
 
 const projectList = ref([]);
+const projectTypeList = ref([]);
 const projectModelList = ref([]);
 const projectModelAllList = ref([]);
 
@@ -344,6 +365,7 @@ const yearList = ref([
 
 onMounted(async () => {
   await getProjectModelList();
+  await getProjectTypeList();
   await getProjectModelAllList();
   await getProjectList();
 });
@@ -403,6 +425,14 @@ const getProjectModelList = () => {
   });
 };
 
+const getProjectTypeList = () => {
+  return getProjectTypeListApi().then((res) => {
+    if (res.result == "ok") {
+      projectTypeList.value = res.data;
+    }
+  });
+};
+
 const getProjectModelAllList = () => {
   return getSelectDataApi({ type: "template" }).then((res) => {
     if (res.result == "ok") {
@@ -415,7 +445,7 @@ const getProjectList = (filterObjVar) => {
   return getProjectApi({
     order: orderBy.value,
     flag: true,
-    filterObjVar: filterObjVar,
+    conditions: filterObjVar,
   }).then((res) => {
     if (res.result == "ok") {
       if (activeKey.value == -1 && res.data.length > 0) {

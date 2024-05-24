@@ -8,6 +8,14 @@ export function getProjectModelApi(data) {
   });
 }
 
+// 获取项目类型
+export function getProjectTypeListApi(data) {
+  return post({
+    cmd: "com.awspaas.user.apps.complex_task_decomposition_getProjectTypeList",
+    data: data,
+  });
+}
+
 // 新增空白项目
 export function addProjectApi(data) {
   return post({
@@ -18,10 +26,11 @@ export function addProjectApi(data) {
 }
 
 // 获取所有项目
-export function getProjectApi(data) {
+export function getProjectApi({ order, flag, conditions }) {
   return post({
     cmd: "com.awspaas.user.apps.complex_task_decomposition_getAllProject",
-    data: data,
+    params: { order, flag },
+    data: conditions,
   });
 }
 

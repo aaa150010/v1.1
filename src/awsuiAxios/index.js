@@ -92,6 +92,9 @@ const post = (params) => {
     isLoading: params.isLoading ? true : false,
   };
   let my_params = { sid: getSid(), cmd: params.cmd };
+  if (params.params) {
+    my_params = { ...my_params, ...params.params };
+  }
   postConfig.url = postConfig.url + "?" + _toChangeData(my_params);
   return axios(postConfig);
 };
