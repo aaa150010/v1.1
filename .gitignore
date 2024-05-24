@@ -6,3 +6,5 @@ dist-ssr
 .idea/workspace.xml
 *.production
 *.development
+AWSDevParams.js
+AWSDevServiceParams.js
