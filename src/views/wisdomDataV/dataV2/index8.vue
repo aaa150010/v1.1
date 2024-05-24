@@ -162,7 +162,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2735" class="ax_default label">
-      <img id="u2735_img" class="img" src="./images/综合数据/u3.svg" />
+      <img
+        id="u2735_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u3.svg"
+      />
       <div id="u2735_text" class="text">
         <p><span></span></p>
       </div>
@@ -170,7 +174,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2736" class="ax_default line">
-      <img id="u2736_img" class="img" src="./images/综合数据/u1.svg" />
+      <img
+        id="u2736_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u1.svg"
+      />
       <div
         id="u2736_text"
         class="text"
@@ -182,7 +190,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2737" class="ax_default _三级标题">
-      <img id="u2737_img" class="img" src="./images/在校生数据分析/u616.svg" />
+      <img
+        id="u2737_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u616.svg"
+      />
       <div id="u2737_text" class="text">
         <p><span>图书馆数据</span></p>
       </div>
@@ -190,7 +202,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2738" class="ax_default label">
-      <img id="u2738_img" class="img" src="./images/综合数据/u3.svg" />
+      <img
+        id="u2738_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u3.svg"
+      />
       <div id="u2738_text" class="text">
         <p><span></span></p>
       </div>
@@ -234,7 +250,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2742" class="ax_default box_1">
-      <img id="u2742_img" class="img" src="./images/综合数据/u16.svg" />
+      <img
+        id="u2742_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u16.svg"
+      />
       <div
         id="u2742_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -258,7 +278,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2744" class="ax_default box_1">
-      <img id="u2744_img" class="img" src="./images/综合数据/u16.svg" />
+      <img
+        id="u2744_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u16.svg"
+      />
       <div
         id="u2744_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -270,7 +294,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2745" class="ax_default box_1">
-      <img id="u2745_img" class="img" src="./images/综合数据/u16.svg" />
+      <img
+        id="u2745_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u16.svg"
+      />
       <div
         id="u2745_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -282,7 +310,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2746" class="ax_default _三级标题">
-      <img id="u2746_img" class="img" src="./images/综合数据/u22.svg" />
+      <img
+        id="u2746_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u22.svg"
+      />
       <div id="u2746_text" class="text">
         <p><span>智慧校园</span></p>
       </div>
@@ -290,7 +322,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2747" class="ax_default box_1">
-      <img id="u2747_img" class="img" src="./images/综合数据/u23.svg" />
+      <img
+        id="u2747_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u23.svg"
+      />
       <div
         id="u2747_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -302,7 +338,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2748" class="ax_default box_1">
-      <img id="u2748_img" class="img" src="./images/综合数据/u16.svg" />
+      <img
+        id="u2748_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u16.svg"
+      />
       <div
         id="u2748_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -314,7 +354,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2749" class="ax_default icon">
-      <img id="u2749_img" class="img" src="./images/图书馆数据/u2749.svg" />
+      <img
+        id="u2749_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2749.svg"
+      />
       <div
         id="u2749_text"
         class="text"
@@ -390,7 +434,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2757" class="ax_default line">
-      <img id="u2757_img" class="img" src="./images/图书馆数据/u2757.svg" />
+      <img
+        id="u2757_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2757.svg"
+      />
       <div
         id="u2757_text"
         class="text"
@@ -402,7 +450,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2758" class="ax_default line">
-      <img id="u2758_img" class="img" src="./images/图书馆数据/u2758.svg" />
+      <img
+        id="u2758_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2758.svg"
+      />
       <div
         id="u2758_text"
         class="text"
@@ -414,7 +466,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2759" class="ax_default line">
-      <img id="u2759_img" class="img" src="./images/图书馆数据/u2759.svg" />
+      <img
+        id="u2759_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2759.svg"
+      />
       <div
         id="u2759_text"
         class="text"
@@ -426,7 +482,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2760" class="ax_default line">
-      <img id="u2760_img" class="img" src="./images/图书馆数据/u2759.svg" />
+      <img
+        id="u2760_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2759.svg"
+      />
       <div
         id="u2760_text"
         class="text"
@@ -448,7 +508,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u2762" class="ax_default _图片">
-        <img id="u2762_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u2762_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u2762_text"
           class="text"
@@ -471,7 +535,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u2764" class="ax_default _图片">
-        <img id="u2764_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u2764_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u2764_text"
           class="text"
@@ -510,7 +578,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u2768" class="ax_default _图片">
-        <img id="u2768_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u2768_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u2768_text"
           class="text"
@@ -541,7 +613,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u2771" class="ax_default _图片">
-        <img id="u2771_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u2771_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u2771_text"
           class="text"
@@ -572,7 +648,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u2774" class="ax_default _图片">
-        <img id="u2774_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u2774_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u2774_text"
           class="text"
@@ -611,7 +691,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u2778" class="ax_default _图片">
-        <img id="u2778_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u2778_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u2778_text"
           class="text"
@@ -642,7 +726,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u2781" class="ax_default _图片">
-        <img id="u2781_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u2781_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u2781_text"
           class="text"
@@ -673,7 +761,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u2784" class="ax_default _图片">
-        <img id="u2784_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u2784_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u2784_text"
           class="text"
@@ -704,7 +796,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u2787" class="ax_default _图片">
-        <img id="u2787_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u2787_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u2787_text"
           class="text"
@@ -735,7 +831,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u2790" class="ax_default _图片">
-        <img id="u2790_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u2790_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u2790_text"
           class="text"
@@ -756,7 +856,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2792" class="ax_default icon">
-      <img id="u2792_img" class="img" src="./images/图书馆数据/u2792.svg" />
+      <img
+        id="u2792_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2792.svg"
+      />
       <div
         id="u2792_text"
         class="text"
@@ -793,7 +897,7 @@
           <img
             id="u2795_img"
             class="img"
-            src="./images/图书馆数据/path_1001_u2795.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1001_u2795.svg"
           />
           <div
             id="u2795_text"
@@ -809,7 +913,7 @@
           <img
             id="u2796_img"
             class="img"
-            src="./images/图书馆数据/path_1002_u2796.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1002_u2796.svg"
           />
           <div
             id="u2796_text"
@@ -825,7 +929,7 @@
           <img
             id="u2797_img"
             class="img"
-            src="./images/图书馆数据/path_1003_u2797.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1003_u2797.svg"
           />
           <div
             id="u2797_text"
@@ -841,7 +945,7 @@
           <img
             id="u2798_img"
             class="img"
-            src="./images/图书馆数据/path_1004_u2798.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1004_u2798.svg"
           />
           <div
             id="u2798_text"
@@ -868,7 +972,7 @@
             <img
               id="u2800_img"
               class="img"
-              src="./images/图书馆数据/path_1005_u2800.svg"
+              src="/portal/console/dataV2/images/图书馆数据/path_1005_u2800.svg"
             />
             <div
               id="u2800_text"
@@ -884,7 +988,7 @@
             <img
               id="u2801_img"
               class="img"
-              src="./images/图书馆数据/path_1006_u2801.svg"
+              src="/portal/console/dataV2/images/图书馆数据/path_1006_u2801.svg"
             />
             <div
               id="u2801_text"
@@ -900,7 +1004,7 @@
             <img
               id="u2802_img"
               class="img"
-              src="./images/图书馆数据/path_1007_u2802.svg"
+              src="/portal/console/dataV2/images/图书馆数据/path_1007_u2802.svg"
             />
             <div
               id="u2802_text"
@@ -916,7 +1020,7 @@
             <img
               id="u2803_img"
               class="img"
-              src="./images/图书馆数据/path_1008_u2803.svg"
+              src="/portal/console/dataV2/images/图书馆数据/path_1008_u2803.svg"
             />
             <div
               id="u2803_text"
@@ -932,7 +1036,7 @@
             <img
               id="u2804_img"
               class="img"
-              src="./images/图书馆数据/path_1009_u2804.svg"
+              src="/portal/console/dataV2/images/图书馆数据/path_1009_u2804.svg"
             />
             <div
               id="u2804_text"
@@ -948,7 +1052,7 @@
             <img
               id="u2805_img"
               class="img"
-              src="./images/图书馆数据/path_1010_u2805.svg"
+              src="/portal/console/dataV2/images/图书馆数据/path_1010_u2805.svg"
             />
             <div
               id="u2805_text"
@@ -964,7 +1068,7 @@
             <img
               id="u2806_img"
               class="img"
-              src="./images/图书馆数据/path_1011_u2806.svg"
+              src="/portal/console/dataV2/images/图书馆数据/path_1011_u2806.svg"
             />
             <div
               id="u2806_text"
@@ -980,7 +1084,7 @@
             <img
               id="u2807_img"
               class="img"
-              src="./images/图书馆数据/path_1012_u2807.svg"
+              src="/portal/console/dataV2/images/图书馆数据/path_1012_u2807.svg"
             />
             <div
               id="u2807_text"
@@ -996,7 +1100,7 @@
             <img
               id="u2808_img"
               class="img"
-              src="./images/图书馆数据/path_1013_u2808.svg"
+              src="/portal/console/dataV2/images/图书馆数据/path_1013_u2808.svg"
             />
             <div
               id="u2808_text"
@@ -1013,7 +1117,7 @@
           <img
             id="u2809_img"
             class="img"
-            src="./images/图书馆数据/path_1014_u2809.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1014_u2809.svg"
           />
           <div
             id="u2809_text"
@@ -1029,7 +1133,7 @@
           <img
             id="u2810_img"
             class="img"
-            src="./images/图书馆数据/path_1015_u2810.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1015_u2810.svg"
           />
           <div
             id="u2810_text"
@@ -1045,7 +1149,7 @@
           <img
             id="u2811_img"
             class="img"
-            src="./images/图书馆数据/path_1016_u2811.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1016_u2811.svg"
           />
           <div
             id="u2811_text"
@@ -1061,7 +1165,7 @@
           <img
             id="u2812_img"
             class="img"
-            src="./images/图书馆数据/path_1017_u2812.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1017_u2812.svg"
           />
           <div
             id="u2812_text"
@@ -1077,7 +1181,7 @@
           <img
             id="u2813_img"
             class="img"
-            src="./images/图书馆数据/path_1018_u2813.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1018_u2813.svg"
           />
           <div
             id="u2813_text"
@@ -1093,7 +1197,7 @@
           <img
             id="u2814_img"
             class="img"
-            src="./images/图书馆数据/path_1019_u2814.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1019_u2814.svg"
           />
           <div
             id="u2814_text"
@@ -1109,7 +1213,7 @@
           <img
             id="u2815_img"
             class="img"
-            src="./images/图书馆数据/path_1020_u2815.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1020_u2815.svg"
           />
           <div
             id="u2815_text"
@@ -1125,7 +1229,7 @@
           <img
             id="u2816_img"
             class="img"
-            src="./images/图书馆数据/path_1021_u2816.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1021_u2816.svg"
           />
           <div
             id="u2816_text"
@@ -1141,7 +1245,7 @@
           <img
             id="u2817_img"
             class="img"
-            src="./images/图书馆数据/path_1022_u2817.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1022_u2817.svg"
           />
           <div
             id="u2817_text"
@@ -1157,7 +1261,7 @@
           <img
             id="u2818_img"
             class="img"
-            src="./images/图书馆数据/path_1023_u2818.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1023_u2818.svg"
           />
           <div
             id="u2818_text"
@@ -1173,7 +1277,7 @@
           <img
             id="u2819_img"
             class="img"
-            src="./images/图书馆数据/path_1024_u2819.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1024_u2819.svg"
           />
           <div
             id="u2819_text"
@@ -1189,7 +1293,7 @@
           <img
             id="u2820_img"
             class="img"
-            src="./images/图书馆数据/path_1025_u2820.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1025_u2820.svg"
           />
           <div
             id="u2820_text"
@@ -1205,7 +1309,7 @@
           <img
             id="u2821_img"
             class="img"
-            src="./images/图书馆数据/path_1026_u2821.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1026_u2821.svg"
           />
           <div
             id="u2821_text"
@@ -1221,7 +1325,7 @@
           <img
             id="u2822_img"
             class="img"
-            src="./images/图书馆数据/path_1027_u2822.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1027_u2822.svg"
           />
           <div
             id="u2822_text"
@@ -1248,7 +1352,7 @@
             <img
               id="u2824_img"
               class="img"
-              src="./images/图书馆数据/path_1028_u2824.svg"
+              src="/portal/console/dataV2/images/图书馆数据/path_1028_u2824.svg"
             />
             <div
               id="u2824_text"
@@ -1264,7 +1368,7 @@
             <img
               id="u2825_img"
               class="img"
-              src="./images/图书馆数据/path_1029_u2825.svg"
+              src="/portal/console/dataV2/images/图书馆数据/path_1029_u2825.svg"
             />
             <div
               id="u2825_text"
@@ -1280,7 +1384,7 @@
             <img
               id="u2826_img"
               class="img"
-              src="./images/图书馆数据/path_1030_u2826.svg"
+              src="/portal/console/dataV2/images/图书馆数据/path_1030_u2826.svg"
             />
             <div
               id="u2826_text"
@@ -1296,7 +1400,7 @@
             <img
               id="u2827_img"
               class="img"
-              src="./images/图书馆数据/path_1031_u2827.svg"
+              src="/portal/console/dataV2/images/图书馆数据/path_1031_u2827.svg"
             />
             <div
               id="u2827_text"
@@ -1313,7 +1417,7 @@
           <img
             id="u2828_img"
             class="img"
-            src="./images/图书馆数据/path_1032_u2828.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1032_u2828.svg"
           />
           <div
             id="u2828_text"
@@ -1329,7 +1433,7 @@
           <img
             id="u2829_img"
             class="img"
-            src="./images/图书馆数据/path_1033_u2829.svg"
+            src="/portal/console/dataV2/images/图书馆数据/path_1033_u2829.svg"
           />
           <div
             id="u2829_text"
@@ -1380,7 +1484,7 @@
             <img
               id="u2833_img"
               class="img"
-              src="./images/图书馆数据/u2833.svg"
+              src="/portal/console/dataV2/images/图书馆数据/u2833.svg"
             />
             <div
               id="u2833_text"
@@ -1396,7 +1500,7 @@
             <img
               id="u2834_img"
               class="img"
-              src="./images/图书馆数据/u2834.svg"
+              src="/portal/console/dataV2/images/图书馆数据/u2834.svg"
             />
             <div
               id="u2834_text"
@@ -1412,7 +1516,7 @@
             <img
               id="u2835_img"
               class="img"
-              src="./images/图书馆数据/u2835.svg"
+              src="/portal/console/dataV2/images/图书馆数据/u2835.svg"
             />
             <div
               id="u2835_text"
@@ -1428,7 +1532,7 @@
             <img
               id="u2836_img"
               class="img"
-              src="./images/图书馆数据/u2836.svg"
+              src="/portal/console/dataV2/images/图书馆数据/u2836.svg"
             />
             <div
               id="u2836_text"
@@ -1444,7 +1548,7 @@
             <img
               id="u2837_img"
               class="img"
-              src="./images/图书馆数据/u2837.svg"
+              src="/portal/console/dataV2/images/图书馆数据/u2837.svg"
             />
             <div
               id="u2837_text"
@@ -1487,7 +1591,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2841" class="ax_default box_1">
-      <img id="u2841_img" class="img" src="./images/图书馆数据/u2841.svg" />
+      <img
+        id="u2841_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2841.svg"
+      />
       <div
         id="u2841_text"
         class="text"
@@ -1518,7 +1626,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2844" class="ax_default box_1">
-      <img id="u2844_img" class="img" src="./images/图书馆数据/u2844.svg" />
+      <img
+        id="u2844_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2844.svg"
+      />
       <div
         id="u2844_text"
         class="text"
@@ -1549,7 +1661,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2847" class="ax_default box_1">
-      <img id="u2847_img" class="img" src="./images/图书馆数据/u2847.svg" />
+      <img
+        id="u2847_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2847.svg"
+      />
       <div
         id="u2847_text"
         class="text"
@@ -1580,7 +1696,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2850" class="ax_default box_1">
-      <img id="u2850_img" class="img" src="./images/图书馆数据/u2850.svg" />
+      <img
+        id="u2850_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2850.svg"
+      />
       <div
         id="u2850_text"
         class="text"
@@ -1611,7 +1731,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2853" class="ax_default box_1">
-      <img id="u2853_img" class="img" src="./images/图书馆数据/u2853.svg" />
+      <img
+        id="u2853_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2853.svg"
+      />
       <div
         id="u2853_text"
         class="text"
@@ -1718,7 +1842,11 @@
 
     <!-- Unnamed (垂直线) -->
     <div id="u2864" class="ax_default line">
-      <img id="u2864_img" class="img" src="./images/在校生数据分析/u407.svg" />
+      <img
+        id="u2864_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u407.svg"
+      />
       <div
         id="u2864_text"
         class="text"
@@ -1730,7 +1858,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2865" class="ax_default line">
-      <img id="u2865_img" class="img" src="./images/就业数据分析/u1241.svg" />
+      <img
+        id="u2865_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1241.svg"
+      />
       <div
         id="u2865_text"
         class="text"
@@ -1742,7 +1874,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2866" class="ax_default line">
-      <img id="u2866_img" class="img" src="./images/就业数据分析/u1242.svg" />
+      <img
+        id="u2866_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1242.svg"
+      />
       <div
         id="u2866_text"
         class="text"
@@ -1754,7 +1890,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2867" class="ax_default line">
-      <img id="u2867_img" class="img" src="./images/就业数据分析/u1242.svg" />
+      <img
+        id="u2867_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1242.svg"
+      />
       <div
         id="u2867_text"
         class="text"
@@ -1766,7 +1906,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2868" class="ax_default line">
-      <img id="u2868_img" class="img" src="./images/就业数据分析/u1242.svg" />
+      <img
+        id="u2868_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1242.svg"
+      />
       <div
         id="u2868_text"
         class="text"
@@ -1778,7 +1922,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2869" class="ax_default line">
-      <img id="u2869_img" class="img" src="./images/就业数据分析/u1245.svg" />
+      <img
+        id="u2869_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1245.svg"
+      />
       <div
         id="u2869_text"
         class="text"
@@ -1879,7 +2027,7 @@
       <img
         id="u2880_img"
         class="singleImg img"
-        src="./images/图书馆数据/u2880.svg"
+        src="/portal/console/dataV2/images/图书馆数据/u2880.svg"
       />
       <div
         id="u2880p000"
@@ -1896,7 +2044,7 @@
         <img
           id="u2880p000_img"
           class="img"
-          src="./images/图书馆数据/u2880p000.svg"
+          src="/portal/console/dataV2/images/图书馆数据/u2880p000.svg"
         />
       </div>
       <div
@@ -1914,7 +2062,7 @@
         <img
           id="u2880p001_img"
           class="img"
-          src="./images/图书馆数据/u2880p001.svg"
+          src="/portal/console/dataV2/images/图书馆数据/u2880p001.svg"
         />
       </div>
       <div
@@ -1932,7 +2080,7 @@
         <img
           id="u2880p002_img"
           class="img"
-          src="./images/图书馆数据/u2880p002.svg"
+          src="/portal/console/dataV2/images/图书馆数据/u2880p002.svg"
         />
       </div>
       <div
@@ -1950,7 +2098,7 @@
         <img
           id="u2880p003_img"
           class="img"
-          src="./images/图书馆数据/u2880p003.svg"
+          src="/portal/console/dataV2/images/图书馆数据/u2880p003.svg"
         />
       </div>
       <div
@@ -1964,7 +2112,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2881" class="ax_default ellipse">
-      <img id="u2881_img" class="img" src="./images/在校生数据分析/u521.svg" />
+      <img
+        id="u2881_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u521.svg"
+      />
       <div
         id="u2881_text"
         class="text"
@@ -1984,7 +2136,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2883" class="ax_default ellipse">
-      <img id="u2883_img" class="img" src="./images/在校生数据分析/u521.svg" />
+      <img
+        id="u2883_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u521.svg"
+      />
       <div
         id="u2883_text"
         class="text"
@@ -1996,7 +2152,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2884" class="ax_default ellipse">
-      <img id="u2884_img" class="img" src="./images/在校生数据分析/u521.svg" />
+      <img
+        id="u2884_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u521.svg"
+      />
       <div
         id="u2884_text"
         class="text"
@@ -2008,7 +2168,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2885" class="ax_default ellipse">
-      <img id="u2885_img" class="img" src="./images/在校生数据分析/u521.svg" />
+      <img
+        id="u2885_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u521.svg"
+      />
       <div
         id="u2885_text"
         class="text"
@@ -2020,7 +2184,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2886" class="ax_default ellipse">
-      <img id="u2886_img" class="img" src="./images/在校生数据分析/u521.svg" />
+      <img
+        id="u2886_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u521.svg"
+      />
       <div
         id="u2886_text"
         class="text"
@@ -2040,7 +2208,7 @@
       <img
         id="u2887_img"
         class="img"
-        src="./images/图书馆数据/提示一_u2887.svg"
+        src="/portal/console/dataV2/images/图书馆数据/提示一_u2887.svg"
       />
       <div id="u2887_text" class="text">
         <p><span>2018</span></p>
@@ -2058,7 +2226,7 @@
       <img
         id="u2888_img"
         class="img"
-        src="./images/图书馆数据/提示一_u2887.svg"
+        src="/portal/console/dataV2/images/图书馆数据/提示一_u2887.svg"
       />
       <div id="u2888_text" class="text">
         <p><span>2019</span></p>
@@ -2076,7 +2244,7 @@
       <img
         id="u2889_img"
         class="img"
-        src="./images/图书馆数据/提示一_u2887.svg"
+        src="/portal/console/dataV2/images/图书馆数据/提示一_u2887.svg"
       />
       <div id="u2889_text" class="text">
         <p><span>2020</span></p>
@@ -2094,7 +2262,7 @@
       <img
         id="u2890_img"
         class="img"
-        src="./images/图书馆数据/提示一_u2887.svg"
+        src="/portal/console/dataV2/images/图书馆数据/提示一_u2887.svg"
       />
       <div id="u2890_text" class="text">
         <p><span>2021</span></p>
@@ -2112,7 +2280,7 @@
       <img
         id="u2891_img"
         class="img"
-        src="./images/图书馆数据/提示五_u2891.svg"
+        src="/portal/console/dataV2/images/图书馆数据/提示五_u2891.svg"
       />
       <div id="u2891_text" class="text">
         <p><span>2022</span></p>
@@ -2130,7 +2298,11 @@
 
     <!-- Unnamed (垂直线) -->
     <div id="u2893" class="ax_default line">
-      <img id="u2893_img" class="img" src="./images/在校生数据分析/u407.svg" />
+      <img
+        id="u2893_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u407.svg"
+      />
       <div
         id="u2893_text"
         class="text"
@@ -2142,7 +2314,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2894" class="ax_default line">
-      <img id="u2894_img" class="img" src="./images/就业数据分析/u1241.svg" />
+      <img
+        id="u2894_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1241.svg"
+      />
       <div
         id="u2894_text"
         class="text"
@@ -2154,7 +2330,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2895" class="ax_default line">
-      <img id="u2895_img" class="img" src="./images/就业数据分析/u1242.svg" />
+      <img
+        id="u2895_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1242.svg"
+      />
       <div
         id="u2895_text"
         class="text"
@@ -2166,7 +2346,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2896" class="ax_default line">
-      <img id="u2896_img" class="img" src="./images/就业数据分析/u1242.svg" />
+      <img
+        id="u2896_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1242.svg"
+      />
       <div
         id="u2896_text"
         class="text"
@@ -2178,7 +2362,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2897" class="ax_default line">
-      <img id="u2897_img" class="img" src="./images/就业数据分析/u1242.svg" />
+      <img
+        id="u2897_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1242.svg"
+      />
       <div
         id="u2897_text"
         class="text"
@@ -2190,7 +2378,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2898" class="ax_default line">
-      <img id="u2898_img" class="img" src="./images/就业数据分析/u1245.svg" />
+      <img
+        id="u2898_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1245.svg"
+      />
       <div
         id="u2898_text"
         class="text"
@@ -2358,7 +2550,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2916" class="ax_default line">
-      <img id="u2916_img" class="img" src="./images/图书馆数据/u2916.svg" />
+      <img
+        id="u2916_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2916.svg"
+      />
       <div
         id="u2916_text"
         class="text"
@@ -2370,7 +2566,11 @@
 
     <!-- Unnamed (垂直线) -->
     <div id="u2917" class="ax_default line">
-      <img id="u2917_img" class="img" src="./images/科研数据/u2067.svg" />
+      <img
+        id="u2917_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2067.svg"
+      />
       <div
         id="u2917_text"
         class="text"
@@ -2422,7 +2622,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2923" class="ax_default line">
-      <img id="u2923_img" class="img" src="./images/图书馆数据/u2923.svg" />
+      <img
+        id="u2923_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2923.svg"
+      />
       <div
         id="u2923_text"
         class="text"
@@ -2434,7 +2638,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2924" class="ax_default line">
-      <img id="u2924_img" class="img" src="./images/图书馆数据/u2923.svg" />
+      <img
+        id="u2924_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2923.svg"
+      />
       <div
         id="u2924_text"
         class="text"
@@ -2446,7 +2654,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2925" class="ax_default line">
-      <img id="u2925_img" class="img" src="./images/图书馆数据/u2923.svg" />
+      <img
+        id="u2925_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2923.svg"
+      />
       <div
         id="u2925_text"
         class="text"
@@ -2470,7 +2682,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2927" class="ax_default line">
-      <img id="u2927_img" class="img" src="./images/图书馆数据/u2923.svg" />
+      <img
+        id="u2927_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2923.svg"
+      />
       <div
         id="u2927_text"
         class="text"
@@ -2966,7 +3182,11 @@
 
     <!-- Unnamed (垂直线) -->
     <div id="u2977" class="ax_default line">
-      <img id="u2977_img" class="img" src="./images/在校生数据分析/u407.svg" />
+      <img
+        id="u2977_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u407.svg"
+      />
       <div
         id="u2977_text"
         class="text"
@@ -2978,7 +3198,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2978" class="ax_default line">
-      <img id="u2978_img" class="img" src="./images/图书馆数据/u2978.svg" />
+      <img
+        id="u2978_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2978.svg"
+      />
       <div
         id="u2978_text"
         class="text"
@@ -2990,7 +3214,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2979" class="ax_default line">
-      <img id="u2979_img" class="img" src="./images/图书馆数据/u2979.svg" />
+      <img
+        id="u2979_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2979.svg"
+      />
       <div
         id="u2979_text"
         class="text"
@@ -3002,7 +3230,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2980" class="ax_default line">
-      <img id="u2980_img" class="img" src="./images/图书馆数据/u2979.svg" />
+      <img
+        id="u2980_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2979.svg"
+      />
       <div
         id="u2980_text"
         class="text"
@@ -3014,7 +3246,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2981" class="ax_default line">
-      <img id="u2981_img" class="img" src="./images/图书馆数据/u2979.svg" />
+      <img
+        id="u2981_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2979.svg"
+      />
       <div
         id="u2981_text"
         class="text"
@@ -3026,7 +3262,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2982" class="ax_default line">
-      <img id="u2982_img" class="img" src="./images/图书馆数据/u2982.svg" />
+      <img
+        id="u2982_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u2982.svg"
+      />
       <div
         id="u2982_text"
         class="text"
@@ -3522,7 +3762,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u3030" class="ax_default line">
-      <img id="u3030_img" class="img" src="./images/图书馆数据/u3030.svg" />
+      <img
+        id="u3030_img"
+        class="img"
+        src="/portal/console/dataV2/images/图书馆数据/u3030.svg"
+      />
       <div
         id="u3030_text"
         class="text"
@@ -3567,7 +3811,7 @@
               <img
                 id="u3036_img"
                 class="img"
-                src="./images/图书馆数据/u3036.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3036.png"
               />
               <div id="u3036_text" class="text">
                 <p><span>借出</span></p>
@@ -3579,7 +3823,7 @@
               <img
                 id="u3037_img"
                 class="img"
-                src="./images/图书馆数据/u3037.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3037.png"
               />
               <div id="u3037_text" class="text">
                 <p><span>读者A</span></p>
@@ -3591,7 +3835,7 @@
               <img
                 id="u3038_img"
                 class="img"
-                src="./images/招生数据分析/u1066.png"
+                src="/portal/console/dataV2/images/招生数据分析/u1066.png"
               />
               <div id="u3038_text" class="text">
                 <p><span>书籍1</span></p>
@@ -3603,7 +3847,7 @@
               <img
                 id="u3039_img"
                 class="img"
-                src="./images/图书馆数据/u3039.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3039.png"
               />
               <div id="u3039_text" class="text">
                 <p><span>2022.02.01 9:00</span></p>
@@ -3615,7 +3859,7 @@
               <img
                 id="u3040_img"
                 class="img"
-                src="./images/图书馆数据/u3036.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3036.png"
               />
               <div id="u3040_text" class="text">
                 <p><span>还入</span></p>
@@ -3627,7 +3871,7 @@
               <img
                 id="u3041_img"
                 class="img"
-                src="./images/图书馆数据/u3037.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3037.png"
               />
               <div id="u3041_text" class="text">
                 <p><span>读者B</span></p>
@@ -3639,7 +3883,7 @@
               <img
                 id="u3042_img"
                 class="img"
-                src="./images/招生数据分析/u1066.png"
+                src="/portal/console/dataV2/images/招生数据分析/u1066.png"
               />
               <div id="u3042_text" class="text">
                 <p><span>书籍2</span></p>
@@ -3651,7 +3895,7 @@
               <img
                 id="u3043_img"
                 class="img"
-                src="./images/图书馆数据/u3039.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3039.png"
               />
               <div id="u3043_text" class="text">
                 <p><span>2022.02.01 9:00</span></p>
@@ -3663,7 +3907,7 @@
               <img
                 id="u3044_img"
                 class="img"
-                src="./images/图书馆数据/u3036.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3036.png"
               />
               <div id="u3044_text" class="text">
                 <p><span>续借</span></p>
@@ -3675,7 +3919,7 @@
               <img
                 id="u3045_img"
                 class="img"
-                src="./images/图书馆数据/u3037.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3037.png"
               />
               <div id="u3045_text" class="text">
                 <p><span>读者C</span></p>
@@ -3687,7 +3931,7 @@
               <img
                 id="u3046_img"
                 class="img"
-                src="./images/招生数据分析/u1066.png"
+                src="/portal/console/dataV2/images/招生数据分析/u1066.png"
               />
               <div id="u3046_text" class="text">
                 <p><span>书籍3</span></p>
@@ -3699,7 +3943,7 @@
               <img
                 id="u3047_img"
                 class="img"
-                src="./images/图书馆数据/u3039.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3039.png"
               />
               <div id="u3047_text" class="text">
                 <p><span>2022.02.01 9:00</span></p>
@@ -3711,7 +3955,7 @@
               <img
                 id="u3048_img"
                 class="img"
-                src="./images/图书馆数据/u3036.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3036.png"
               />
               <div id="u3048_text" class="text">
                 <p><span>借出</span></p>
@@ -3723,7 +3967,7 @@
               <img
                 id="u3049_img"
                 class="img"
-                src="./images/图书馆数据/u3037.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3037.png"
               />
               <div id="u3049_text" class="text">
                 <p><span>读者S</span></p>
@@ -3735,7 +3979,7 @@
               <img
                 id="u3050_img"
                 class="img"
-                src="./images/招生数据分析/u1066.png"
+                src="/portal/console/dataV2/images/招生数据分析/u1066.png"
               />
               <div id="u3050_text" class="text">
                 <p><span>书籍4</span></p>
@@ -3747,7 +3991,7 @@
               <img
                 id="u3051_img"
                 class="img"
-                src="./images/图书馆数据/u3039.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3039.png"
               />
               <div id="u3051_text" class="text">
                 <p><span>2022.02.01 9:00</span></p>
@@ -3759,7 +4003,7 @@
               <img
                 id="u3052_img"
                 class="img"
-                src="./images/图书馆数据/u3052.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3052.png"
               />
               <div id="u3052_text" class="text">
                 <p><span>借出</span></p>
@@ -3771,7 +4015,7 @@
               <img
                 id="u3053_img"
                 class="img"
-                src="./images/图书馆数据/u3053.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3053.png"
               />
               <div id="u3053_text" class="text">
                 <p><span>读者D</span></p>
@@ -3783,7 +4027,7 @@
               <img
                 id="u3054_img"
                 class="img"
-                src="./images/图书馆数据/u3054.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3054.png"
               />
               <div id="u3054_text" class="text">
                 <p><span>书籍5</span></p>
@@ -3795,7 +4039,7 @@
               <img
                 id="u3055_img"
                 class="img"
-                src="./images/图书馆数据/u3055.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3055.png"
               />
               <div id="u3055_text" class="text">
                 <p><span>2022.02.01 9:00</span></p>
@@ -3818,7 +4062,7 @@
               <img
                 id="u3057_img"
                 class="img"
-                src="./images/图书馆数据/u3036.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3036.png"
               />
               <div id="u3057_text" class="text">
                 <p><span>借出</span></p>
@@ -3830,7 +4074,7 @@
               <img
                 id="u3058_img"
                 class="img"
-                src="./images/图书馆数据/u3037.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3037.png"
               />
               <div id="u3058_text" class="text">
                 <p><span>读者F</span></p>
@@ -3842,7 +4086,7 @@
               <img
                 id="u3059_img"
                 class="img"
-                src="./images/招生数据分析/u1066.png"
+                src="/portal/console/dataV2/images/招生数据分析/u1066.png"
               />
               <div id="u3059_text" class="text">
                 <p><span>书籍6</span></p>
@@ -3854,7 +4098,7 @@
               <img
                 id="u3060_img"
                 class="img"
-                src="./images/图书馆数据/u3039.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3039.png"
               />
               <div id="u3060_text" class="text">
                 <p><span>2022.02.01 9:00</span></p>
@@ -3866,7 +4110,7 @@
               <img
                 id="u3061_img"
                 class="img"
-                src="./images/图书馆数据/u3036.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3036.png"
               />
               <div id="u3061_text" class="text">
                 <p><span>还入</span></p>
@@ -3878,7 +4122,7 @@
               <img
                 id="u3062_img"
                 class="img"
-                src="./images/图书馆数据/u3037.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3037.png"
               />
               <div id="u3062_text" class="text">
                 <p><span>读者G</span></p>
@@ -3890,7 +4134,7 @@
               <img
                 id="u3063_img"
                 class="img"
-                src="./images/招生数据分析/u1066.png"
+                src="/portal/console/dataV2/images/招生数据分析/u1066.png"
               />
               <div id="u3063_text" class="text">
                 <p><span>书籍7</span></p>
@@ -3902,7 +4146,7 @@
               <img
                 id="u3064_img"
                 class="img"
-                src="./images/图书馆数据/u3039.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3039.png"
               />
               <div id="u3064_text" class="text">
                 <p><span>2022.02.01 9:00</span></p>
@@ -3914,7 +4158,7 @@
               <img
                 id="u3065_img"
                 class="img"
-                src="./images/图书馆数据/u3036.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3036.png"
               />
               <div id="u3065_text" class="text">
                 <p><span>续借</span></p>
@@ -3926,7 +4170,7 @@
               <img
                 id="u3066_img"
                 class="img"
-                src="./images/图书馆数据/u3037.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3037.png"
               />
               <div id="u3066_text" class="text">
                 <p><span>读者J</span></p>
@@ -3938,7 +4182,7 @@
               <img
                 id="u3067_img"
                 class="img"
-                src="./images/招生数据分析/u1066.png"
+                src="/portal/console/dataV2/images/招生数据分析/u1066.png"
               />
               <div id="u3067_text" class="text">
                 <p><span>书籍8</span></p>
@@ -3950,7 +4194,7 @@
               <img
                 id="u3068_img"
                 class="img"
-                src="./images/图书馆数据/u3039.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3039.png"
               />
               <div id="u3068_text" class="text">
                 <p><span>2022.02.01 9:00</span></p>
@@ -3962,7 +4206,7 @@
               <img
                 id="u3069_img"
                 class="img"
-                src="./images/图书馆数据/u3036.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3036.png"
               />
               <div id="u3069_text" class="text">
                 <p><span>借出</span></p>
@@ -3974,7 +4218,7 @@
               <img
                 id="u3070_img"
                 class="img"
-                src="./images/图书馆数据/u3037.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3037.png"
               />
               <div id="u3070_text" class="text">
                 <p><span>读者H</span></p>
@@ -3986,7 +4230,7 @@
               <img
                 id="u3071_img"
                 class="img"
-                src="./images/招生数据分析/u1066.png"
+                src="/portal/console/dataV2/images/招生数据分析/u1066.png"
               />
               <div id="u3071_text" class="text">
                 <p><span>书籍9</span></p>
@@ -3998,7 +4242,7 @@
               <img
                 id="u3072_img"
                 class="img"
-                src="./images/图书馆数据/u3039.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3039.png"
               />
               <div id="u3072_text" class="text">
                 <p><span>2022.02.01 9:00</span></p>
@@ -4010,7 +4254,7 @@
               <img
                 id="u3073_img"
                 class="img"
-                src="./images/图书馆数据/u3052.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3052.png"
               />
               <div id="u3073_text" class="text">
                 <p><span>借出</span></p>
@@ -4022,7 +4266,7 @@
               <img
                 id="u3074_img"
                 class="img"
-                src="./images/图书馆数据/u3053.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3053.png"
               />
               <div id="u3074_text" class="text">
                 <p><span>读者W</span></p>
@@ -4034,7 +4278,7 @@
               <img
                 id="u3075_img"
                 class="img"
-                src="./images/图书馆数据/u3054.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3054.png"
               />
               <div id="u3075_text" class="text">
                 <p><span>书籍10</span></p>
@@ -4046,7 +4290,7 @@
               <img
                 id="u3076_img"
                 class="img"
-                src="./images/图书馆数据/u3055.png"
+                src="/portal/console/dataV2/images/图书馆数据/u3055.png"
               />
               <div id="u3076_text" class="text">
                 <p><span>2022.02.01 9:00</span></p>
@@ -4073,7 +4317,11 @@
 
     <!-- Unnamed (垂直线) -->
     <div id="u3080" class="ax_default line">
-      <img id="u3080_img" class="img" src="./images/在校生数据分析/u407.svg" />
+      <img
+        id="u3080_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u407.svg"
+      />
       <div
         id="u3080_text"
         class="text"
@@ -4085,7 +4333,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u3081" class="ax_default line">
-      <img id="u3081_img" class="img" src="./images/就业数据分析/u1241.svg" />
+      <img
+        id="u3081_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1241.svg"
+      />
       <div
         id="u3081_text"
         class="text"
@@ -4097,7 +4349,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u3082" class="ax_default line">
-      <img id="u3082_img" class="img" src="./images/就业数据分析/u1242.svg" />
+      <img
+        id="u3082_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1242.svg"
+      />
       <div
         id="u3082_text"
         class="text"
@@ -4109,7 +4365,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u3083" class="ax_default line">
-      <img id="u3083_img" class="img" src="./images/就业数据分析/u1242.svg" />
+      <img
+        id="u3083_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1242.svg"
+      />
       <div
         id="u3083_text"
         class="text"
@@ -4121,7 +4381,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u3084" class="ax_default line">
-      <img id="u3084_img" class="img" src="./images/就业数据分析/u1242.svg" />
+      <img
+        id="u3084_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1242.svg"
+      />
       <div
         id="u3084_text"
         class="text"
@@ -4133,7 +4397,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u3085" class="ax_default line">
-      <img id="u3085_img" class="img" src="./images/就业数据分析/u1245.svg" />
+      <img
+        id="u3085_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1245.svg"
+      />
       <div
         id="u3085_text"
         class="text"
@@ -4234,7 +4502,7 @@
       <img
         id="u3096_img"
         class="singleImg img"
-        src="./images/图书馆数据/u3096.svg"
+        src="/portal/console/dataV2/images/图书馆数据/u3096.svg"
       />
       <div
         id="u3096p000"
@@ -4251,7 +4519,7 @@
         <img
           id="u3096p000_img"
           class="img"
-          src="./images/图书馆数据/u3096p000.svg"
+          src="/portal/console/dataV2/images/图书馆数据/u3096p000.svg"
         />
       </div>
       <div
@@ -4269,7 +4537,7 @@
         <img
           id="u3096p001_img"
           class="img"
-          src="./images/图书馆数据/u3096p001.svg"
+          src="/portal/console/dataV2/images/图书馆数据/u3096p001.svg"
         />
       </div>
       <div
@@ -4287,7 +4555,7 @@
         <img
           id="u3096p002_img"
           class="img"
-          src="./images/图书馆数据/u3096p002.svg"
+          src="/portal/console/dataV2/images/图书馆数据/u3096p002.svg"
         />
       </div>
       <div
@@ -4305,7 +4573,7 @@
         <img
           id="u3096p003_img"
           class="img"
-          src="./images/图书馆数据/u3096p003.svg"
+          src="/portal/console/dataV2/images/图书馆数据/u3096p003.svg"
         />
       </div>
       <div
@@ -4323,7 +4591,7 @@
         <img
           id="u3096p004_img"
           class="img"
-          src="./images/图书馆数据/u3096p004.svg"
+          src="/portal/console/dataV2/images/图书馆数据/u3096p004.svg"
         />
       </div>
       <div
@@ -4337,7 +4605,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u3097" class="ax_default ellipse">
-      <img id="u3097_img" class="img" src="./images/在校生数据分析/u521.svg" />
+      <img
+        id="u3097_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u521.svg"
+      />
       <div
         id="u3097_text"
         class="text"
@@ -4357,7 +4629,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u3099" class="ax_default ellipse">
-      <img id="u3099_img" class="img" src="./images/在校生数据分析/u521.svg" />
+      <img
+        id="u3099_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u521.svg"
+      />
       <div
         id="u3099_text"
         class="text"
@@ -4369,7 +4645,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u3100" class="ax_default ellipse">
-      <img id="u3100_img" class="img" src="./images/在校生数据分析/u521.svg" />
+      <img
+        id="u3100_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u521.svg"
+      />
       <div
         id="u3100_text"
         class="text"
@@ -4381,7 +4661,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u3101" class="ax_default ellipse">
-      <img id="u3101_img" class="img" src="./images/在校生数据分析/u521.svg" />
+      <img
+        id="u3101_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u521.svg"
+      />
       <div
         id="u3101_text"
         class="text"
@@ -4393,7 +4677,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u3102" class="ax_default ellipse">
-      <img id="u3102_img" class="img" src="./images/在校生数据分析/u521.svg" />
+      <img
+        id="u3102_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u521.svg"
+      />
       <div
         id="u3102_text"
         class="text"
@@ -4413,7 +4701,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u3104" class="ax_default ellipse">
-      <img id="u3104_img" class="img" src="./images/在校生数据分析/u521.svg" />
+      <img
+        id="u3104_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u521.svg"
+      />
       <div
         id="u3104_text"
         class="text"
@@ -4498,7 +4790,7 @@ const clickOther = (path) => {
 </script>
 
 <style lang="less" scoped>
-@import "./data/styles.css";
-@import "./files/图书馆数据/styles.css";
-@import "./resources/css/axure_rp_page.css";
+@import "/portal/console/dataV2/data/styles.css";
+@import "/portal/console/dataV2/files/图书馆数据/styles.css";
+@import "/portal/console/dataV2/resources/css/axure_rp_page.css";
 </style>

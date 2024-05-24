@@ -179,7 +179,7 @@
             <img
               id="u650_img"
               class="img"
-              src="./images/招生数据分析/新疆_u650.svg"
+              src="/portal/console/dataV2/images/招生数据分析/新疆_u650.svg"
             />
             <div id="u650_text" class="text">
               <p><span>新疆</span></p>
@@ -191,7 +191,7 @@
             <img
               id="u651_img"
               class="img"
-              src="./images/招生数据分析/西藏_u651.svg"
+              src="/portal/console/dataV2/images/招生数据分析/西藏_u651.svg"
             />
             <div id="u651_text" class="text">
               <p><span>西藏</span></p>
@@ -203,7 +203,7 @@
             <img
               id="u652_img"
               class="img"
-              src="./images/招生数据分析/青海_u652.svg"
+              src="/portal/console/dataV2/images/招生数据分析/青海_u652.svg"
             />
             <div id="u652_text" class="text">
               <p><span>青海</span></p>
@@ -215,7 +215,7 @@
             <img
               id="u653_img"
               class="img"
-              src="./images/招生数据分析/甘肃_u653.svg"
+              src="/portal/console/dataV2/images/招生数据分析/甘肃_u653.svg"
             />
             <div id="u653_text" class="text">
               <p><span>甘肃</span></p>
@@ -227,7 +227,7 @@
             <img
               id="u654_img"
               class="img"
-              src="./images/招生数据分析/宁夏_u654.svg"
+              src="/portal/console/dataV2/images/招生数据分析/宁夏_u654.svg"
             />
             <div id="u654_text" class="text">
               <p><span>宁夏</span></p>
@@ -239,7 +239,7 @@
             <img
               id="u655_img"
               class="img"
-              src="./images/招生数据分析/黑龙江_u655.svg"
+              src="/portal/console/dataV2/images/招生数据分析/黑龙江_u655.svg"
             />
             <div id="u655_text" class="text">
               <p><span>黑龙江</span></p>
@@ -251,7 +251,7 @@
             <img
               id="u656_img"
               class="img"
-              src="./images/招生数据分析/吉林_u656.svg"
+              src="/portal/console/dataV2/images/招生数据分析/吉林_u656.svg"
             />
             <div id="u656_text" class="text">
               <p><span>吉林</span></p>
@@ -263,7 +263,7 @@
             <img
               id="u657_img"
               class="img"
-              src="./images/招生数据分析/辽宁_u657.svg"
+              src="/portal/console/dataV2/images/招生数据分析/辽宁_u657.svg"
             />
             <div id="u657_text" class="text">
               <p><span>辽宁</span></p>
@@ -275,7 +275,7 @@
             <img
               id="u658_img"
               class="img"
-              src="./images/招生数据分析/海南_u658.svg"
+              src="/portal/console/dataV2/images/招生数据分析/海南_u658.svg"
             />
             <div id="u658_text" class="text">
               <p><span>海南</span></p>
@@ -287,7 +287,7 @@
             <img
               id="u659_img"
               class="img"
-              src="./images/招生数据分析/云南_u659.svg"
+              src="/portal/console/dataV2/images/招生数据分析/云南_u659.svg"
             />
             <div id="u659_text" class="text">
               <p><span>云南</span></p>
@@ -299,7 +299,7 @@
             <img
               id="u660_img"
               class="img"
-              src="./images/招生数据分析/四川_u660.svg"
+              src="/portal/console/dataV2/images/招生数据分析/四川_u660.svg"
             />
             <div id="u660_text" class="text">
               <p><span>四川</span></p>
@@ -311,7 +311,7 @@
             <img
               id="u661_img"
               class="img"
-              src="./images/招生数据分析/贵州_u661.svg"
+              src="/portal/console/dataV2/images/招生数据分析/贵州_u661.svg"
             />
             <div id="u661_text" class="text">
               <p><span>贵州</span></p>
@@ -323,7 +323,7 @@
             <img
               id="u662_img"
               class="img"
-              src="./images/招生数据分析/广西_u662.svg"
+              src="/portal/console/dataV2/images/招生数据分析/广西_u662.svg"
             />
             <div id="u662_text" class="text">
               <p><span>广西</span></p>
@@ -335,7 +335,7 @@
             <img
               id="u663_img"
               class="img"
-              src="./images/招生数据分析/广东_u663.svg"
+              src="/portal/console/dataV2/images/招生数据分析/广东_u663.svg"
             />
             <div id="u663_text" class="text">
               <p><span>广东</span></p>
@@ -347,7 +347,7 @@
             <img
               id="u664_img"
               class="img"
-              src="./images/招生数据分析/山西_u664.svg"
+              src="/portal/console/dataV2/images/招生数据分析/山西_u664.svg"
             />
             <div id="u664_text" class="text">
               <p><span>山西</span></p>
@@ -359,7 +359,7 @@
             <img
               id="u665_img"
               class="img"
-              src="./images/招生数据分析/河北_u665.svg"
+              src="/portal/console/dataV2/images/招生数据分析/河北_u665.svg"
             />
             <div id="u665_text" class="text">
               <p><span>河北</span></p>
@@ -371,7 +371,7 @@
             <img
               id="u666_img"
               class="img"
-              src="./images/招生数据分析/山东_u666.svg"
+              src="/portal/console/dataV2/images/招生数据分析/山东_u666.svg"
             />
             <div id="u666_text" class="text">
               <p><span>山东</span></p>
@@ -383,7 +383,7 @@
             <img
               id="u667_img"
               class="img"
-              src="./images/招生数据分析/河南_u667.svg"
+              src="/portal/console/dataV2/images/招生数据分析/河南_u667.svg"
             />
             <div id="u667_text" class="text">
               <p><span>河南</span></p>
@@ -395,7 +395,7 @@
             <img
               id="u668_img"
               class="img"
-              src="./images/招生数据分析/湖北_u668.svg"
+              src="/portal/console/dataV2/images/招生数据分析/湖北_u668.svg"
             />
             <div id="u668_text" class="text">
               <p><span>湖北</span></p>
@@ -407,7 +407,7 @@
             <img
               id="u669_img"
               class="img"
-              src="./images/招生数据分析/湖南_u669.svg"
+              src="/portal/console/dataV2/images/招生数据分析/湖南_u669.svg"
             />
             <div id="u669_text" class="text">
               <p><span>湖南</span></p>
@@ -419,7 +419,7 @@
             <img
               id="u670_img"
               class="img"
-              src="./images/招生数据分析/安徽_u670.svg"
+              src="/portal/console/dataV2/images/招生数据分析/安徽_u670.svg"
             />
             <div id="u670_text" class="text">
               <p><span>安徽</span></p>
@@ -431,7 +431,7 @@
             <img
               id="u671_img"
               class="img"
-              src="./images/招生数据分析/江苏_u671.svg"
+              src="/portal/console/dataV2/images/招生数据分析/江苏_u671.svg"
             />
             <div id="u671_text" class="text">
               <p><span>江苏</span></p>
@@ -443,7 +443,7 @@
             <img
               id="u672_img"
               class="img"
-              src="./images/招生数据分析/浙江_u672.svg"
+              src="/portal/console/dataV2/images/招生数据分析/浙江_u672.svg"
             />
             <div id="u672_text" class="text">
               <p><span>浙江</span></p>
@@ -455,7 +455,7 @@
             <img
               id="u673_img"
               class="img"
-              src="./images/招生数据分析/江西_u673.svg"
+              src="/portal/console/dataV2/images/招生数据分析/江西_u673.svg"
             />
             <div id="u673_text" class="text">
               <p><span>江西</span></p>
@@ -467,7 +467,7 @@
             <img
               id="u674_img"
               class="img"
-              src="./images/招生数据分析/台湾_u674.svg"
+              src="/portal/console/dataV2/images/招生数据分析/台湾_u674.svg"
             />
             <div id="u674_text" class="text">
               <p><span>台湾</span></p>
@@ -479,7 +479,7 @@
             <img
               id="u675_img"
               class="img"
-              src="./images/招生数据分析/福建_u675.svg"
+              src="/portal/console/dataV2/images/招生数据分析/福建_u675.svg"
             />
             <div id="u675_text" class="text">
               <p><span>福建</span></p>
@@ -491,7 +491,7 @@
             <img
               id="u676_img"
               class="img"
-              src="./images/招生数据分析/重庆_u676.svg"
+              src="/portal/console/dataV2/images/招生数据分析/重庆_u676.svg"
             />
             <div id="u676_text" class="text">
               <p><span>重庆</span></p>
@@ -503,7 +503,7 @@
             <img
               id="u677_img"
               class="img"
-              src="./images/招生数据分析/上海_u677.svg"
+              src="/portal/console/dataV2/images/招生数据分析/上海_u677.svg"
             />
             <div id="u677_text" class="text">
               <p><span>上海</span></p>
@@ -515,7 +515,7 @@
             <img
               id="u678_img"
               class="img"
-              src="./images/招生数据分析/天津_u678.svg"
+              src="/portal/console/dataV2/images/招生数据分析/天津_u678.svg"
             />
             <div id="u678_text" class="text">
               <p><span>天津</span></p>
@@ -527,7 +527,7 @@
             <img
               id="u679_img"
               class="img"
-              src="./images/招生数据分析/北京_u679.svg"
+              src="/portal/console/dataV2/images/招生数据分析/北京_u679.svg"
             />
             <div id="u679_text" class="text">
               <p><span>北京</span></p>
@@ -555,7 +555,7 @@
             <img
               id="u682_img"
               class="img"
-              src="./images/招生数据分析/内蒙古_u682.svg"
+              src="/portal/console/dataV2/images/招生数据分析/内蒙古_u682.svg"
             />
             <div
               id="u682_text"
@@ -571,7 +571,7 @@
             <img
               id="u683_img"
               class="img"
-              src="./images/招生数据分析/陕西_u683.svg"
+              src="/portal/console/dataV2/images/招生数据分析/陕西_u683.svg"
             />
             <div id="u683_text" class="text">
               <p><span>陕西</span></p>
@@ -594,7 +594,7 @@
             <img
               id="u685_img"
               class="img"
-              src="./images/招生数据分析/南海诸岛_u685.svg"
+              src="/portal/console/dataV2/images/招生数据分析/南海诸岛_u685.svg"
             />
             <div id="u685_text" class="text">
               <p><span>南海诸岛</span></p>
@@ -606,7 +606,7 @@
             <img
               id="u686_img"
               class="img"
-              src="./images/招生数据分析/u686.svg"
+              src="/portal/console/dataV2/images/招生数据分析/u686.svg"
             />
             <div
               id="u686_text"
@@ -622,7 +622,7 @@
             <img
               id="u687_img"
               class="img"
-              src="./images/招生数据分析/u687.svg"
+              src="/portal/console/dataV2/images/招生数据分析/u687.svg"
             />
             <div
               id="u687_text"
@@ -638,7 +638,7 @@
             <img
               id="u688_img"
               class="img"
-              src="./images/招生数据分析/u688.svg"
+              src="/portal/console/dataV2/images/招生数据分析/u688.svg"
             />
             <div
               id="u688_text"
@@ -654,7 +654,7 @@
             <img
               id="u689_img"
               class="img"
-              src="./images/招生数据分析/u688.svg"
+              src="/portal/console/dataV2/images/招生数据分析/u688.svg"
             />
             <div
               id="u689_text"
@@ -670,7 +670,7 @@
             <img
               id="u690_img"
               class="img"
-              src="./images/招生数据分析/u688.svg"
+              src="/portal/console/dataV2/images/招生数据分析/u688.svg"
             />
             <div
               id="u690_text"
@@ -686,7 +686,7 @@
             <img
               id="u691_img"
               class="img"
-              src="./images/招生数据分析/u688.svg"
+              src="/portal/console/dataV2/images/招生数据分析/u688.svg"
             />
             <div
               id="u691_text"
@@ -702,7 +702,7 @@
             <img
               id="u692_img"
               class="img"
-              src="./images/招生数据分析/u688.svg"
+              src="/portal/console/dataV2/images/招生数据分析/u688.svg"
             />
             <div
               id="u692_text"
@@ -718,7 +718,7 @@
             <img
               id="u693_img"
               class="img"
-              src="./images/招生数据分析/u688.svg"
+              src="/portal/console/dataV2/images/招生数据分析/u688.svg"
             />
             <div
               id="u693_text"
@@ -734,7 +734,7 @@
             <img
               id="u694_img"
               class="img"
-              src="./images/招生数据分析/u688.svg"
+              src="/portal/console/dataV2/images/招生数据分析/u688.svg"
             />
             <div
               id="u694_text"
@@ -750,7 +750,7 @@
             <img
               id="u695_img"
               class="img"
-              src="./images/招生数据分析/u688.svg"
+              src="/portal/console/dataV2/images/招生数据分析/u688.svg"
             />
             <div
               id="u695_text"
@@ -766,7 +766,7 @@
             <img
               id="u696_img"
               class="img"
-              src="./images/招生数据分析/u696.svg"
+              src="/portal/console/dataV2/images/招生数据分析/u696.svg"
             />
             <div
               id="u696_text"
@@ -804,7 +804,11 @@
           >
             <!-- 1 (圆形) -->
             <div id="u700" class="ax_default ellipse" data-label="1">
-              <img id="u700_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u700_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u700_text"
                 class="text"
@@ -838,7 +842,7 @@
               <img
                 id="u702_img"
                 class="img"
-                src="./images/招生数据分析/2_u702.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u702.svg"
               />
               <div
                 id="u702_text"
@@ -851,7 +855,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u703" class="ax_default ellipse" data-label="1">
-              <img id="u703_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u703_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u703_text"
                 class="text"
@@ -885,7 +893,7 @@
               <img
                 id="u705_img"
                 class="img"
-                src="./images/招生数据分析/3_u705.svg"
+                src="/portal/console/dataV2/images/招生数据分析/3_u705.svg"
               />
               <div
                 id="u705_text"
@@ -901,7 +909,7 @@
               <img
                 id="u706_img"
                 class="img"
-                src="./images/招生数据分析/2_u706.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u706.svg"
               />
               <div
                 id="u706_text"
@@ -914,7 +922,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u707" class="ax_default ellipse" data-label="1">
-              <img id="u707_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u707_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u707_text"
                 class="text"
@@ -944,7 +956,11 @@
           >
             <!-- 1 (圆形) -->
             <div id="u710" class="ax_default ellipse" data-label="1">
-              <img id="u710_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u710_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u710_text"
                 class="text"
@@ -978,7 +994,7 @@
               <img
                 id="u712_img"
                 class="img"
-                src="./images/招生数据分析/2_u702.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u702.svg"
               />
               <div
                 id="u712_text"
@@ -991,7 +1007,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u713" class="ax_default ellipse" data-label="1">
-              <img id="u713_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u713_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u713_text"
                 class="text"
@@ -1025,7 +1045,7 @@
               <img
                 id="u715_img"
                 class="img"
-                src="./images/招生数据分析/3_u705.svg"
+                src="/portal/console/dataV2/images/招生数据分析/3_u705.svg"
               />
               <div
                 id="u715_text"
@@ -1041,7 +1061,7 @@
               <img
                 id="u716_img"
                 class="img"
-                src="./images/招生数据分析/2_u706.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u706.svg"
               />
               <div
                 id="u716_text"
@@ -1054,7 +1074,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u717" class="ax_default ellipse" data-label="1">
-              <img id="u717_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u717_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u717_text"
                 class="text"
@@ -1084,7 +1108,11 @@
           >
             <!-- 1 (圆形) -->
             <div id="u720" class="ax_default ellipse" data-label="1">
-              <img id="u720_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u720_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u720_text"
                 class="text"
@@ -1118,7 +1146,7 @@
               <img
                 id="u722_img"
                 class="img"
-                src="./images/招生数据分析/2_u702.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u702.svg"
               />
               <div
                 id="u722_text"
@@ -1131,7 +1159,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u723" class="ax_default ellipse" data-label="1">
-              <img id="u723_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u723_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u723_text"
                 class="text"
@@ -1165,7 +1197,7 @@
               <img
                 id="u725_img"
                 class="img"
-                src="./images/招生数据分析/3_u705.svg"
+                src="/portal/console/dataV2/images/招生数据分析/3_u705.svg"
               />
               <div
                 id="u725_text"
@@ -1181,7 +1213,7 @@
               <img
                 id="u726_img"
                 class="img"
-                src="./images/招生数据分析/2_u706.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u706.svg"
               />
               <div
                 id="u726_text"
@@ -1194,7 +1226,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u727" class="ax_default ellipse" data-label="1">
-              <img id="u727_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u727_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u727_text"
                 class="text"
@@ -1224,7 +1260,11 @@
           >
             <!-- 1 (圆形) -->
             <div id="u730" class="ax_default ellipse" data-label="1">
-              <img id="u730_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u730_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u730_text"
                 class="text"
@@ -1258,7 +1298,7 @@
               <img
                 id="u732_img"
                 class="img"
-                src="./images/招生数据分析/2_u702.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u702.svg"
               />
               <div
                 id="u732_text"
@@ -1271,7 +1311,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u733" class="ax_default ellipse" data-label="1">
-              <img id="u733_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u733_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u733_text"
                 class="text"
@@ -1305,7 +1349,7 @@
               <img
                 id="u735_img"
                 class="img"
-                src="./images/招生数据分析/3_u705.svg"
+                src="/portal/console/dataV2/images/招生数据分析/3_u705.svg"
               />
               <div
                 id="u735_text"
@@ -1321,7 +1365,7 @@
               <img
                 id="u736_img"
                 class="img"
-                src="./images/招生数据分析/2_u706.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u706.svg"
               />
               <div
                 id="u736_text"
@@ -1334,7 +1378,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u737" class="ax_default ellipse" data-label="1">
-              <img id="u737_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u737_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u737_text"
                 class="text"
@@ -1364,7 +1412,11 @@
           >
             <!-- 1 (圆形) -->
             <div id="u740" class="ax_default ellipse" data-label="1">
-              <img id="u740_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u740_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u740_text"
                 class="text"
@@ -1398,7 +1450,7 @@
               <img
                 id="u742_img"
                 class="img"
-                src="./images/招生数据分析/2_u702.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u702.svg"
               />
               <div
                 id="u742_text"
@@ -1411,7 +1463,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u743" class="ax_default ellipse" data-label="1">
-              <img id="u743_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u743_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u743_text"
                 class="text"
@@ -1445,7 +1501,7 @@
               <img
                 id="u745_img"
                 class="img"
-                src="./images/招生数据分析/3_u705.svg"
+                src="/portal/console/dataV2/images/招生数据分析/3_u705.svg"
               />
               <div
                 id="u745_text"
@@ -1461,7 +1517,7 @@
               <img
                 id="u746_img"
                 class="img"
-                src="./images/招生数据分析/2_u706.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u706.svg"
               />
               <div
                 id="u746_text"
@@ -1474,7 +1530,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u747" class="ax_default ellipse" data-label="1">
-              <img id="u747_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u747_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u747_text"
                 class="text"
@@ -1490,7 +1550,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u748" class="ax_default _三级标题">
-      <img id="u748_img" class="img" src="./images/招生数据分析/u748.svg" />
+      <img
+        id="u748_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u748.svg"
+      />
       <div id="u748_text" class="text">
         <p><span>录取人数</span></p>
       </div>
@@ -1516,7 +1580,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u751" class="ax_default _图片">
-        <img id="u751_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u751_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u751_text"
           class="text"
@@ -1547,7 +1615,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u754" class="ax_default _图片">
-        <img id="u754_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u754_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u754_text"
           class="text"
@@ -1578,7 +1650,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u757" class="ax_default _图片">
-        <img id="u757_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u757_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u757_text"
           class="text"
@@ -1609,7 +1685,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u760" class="ax_default _图片">
-        <img id="u760_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u760_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u760_text"
           class="text"
@@ -1640,7 +1720,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u763" class="ax_default _图片">
-        <img id="u763_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u763_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u763_text"
           class="text"
@@ -1661,7 +1745,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u765" class="ax_default _三级标题">
-      <img id="u765_img" class="img" src="./images/招生数据分析/u748.svg" />
+      <img
+        id="u765_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u748.svg"
+      />
       <div id="u765_text" class="text">
         <p><span>报到人数</span></p>
       </div>
@@ -1687,7 +1775,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u768" class="ax_default _图片">
-        <img id="u768_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u768_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u768_text"
           class="text"
@@ -1718,7 +1810,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u771" class="ax_default _图片">
-        <img id="u771_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u771_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u771_text"
           class="text"
@@ -1749,7 +1845,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u774" class="ax_default _图片">
-        <img id="u774_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u774_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u774_text"
           class="text"
@@ -1780,7 +1880,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u777" class="ax_default _图片">
-        <img id="u777_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u777_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u777_text"
           class="text"
@@ -1801,7 +1905,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u779" class="ax_default _三级标题">
-      <img id="u779_img" class="img" src="./images/招生数据分析/u779.svg" />
+      <img
+        id="u779_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u779.svg"
+      />
       <div id="u779_text" class="text">
         <p><span>报到率</span></p>
       </div>
@@ -1817,7 +1925,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u781" class="ax_default box_1">
-      <img id="u781_img" class="img" src="./images/招生数据分析/u781.svg" />
+      <img
+        id="u781_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u781.svg"
+      />
       <div id="u781_text" class="text">
         <p><span>生源地TOP5</span></p>
         <p>
@@ -2147,7 +2259,11 @@
           >
             <!-- 1 (圆形) -->
             <div id="u815" class="ax_default ellipse" data-label="1">
-              <img id="u815_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u815_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u815_text"
                 class="text"
@@ -2181,7 +2297,7 @@
               <img
                 id="u817_img"
                 class="img"
-                src="./images/招生数据分析/2_u702.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u702.svg"
               />
               <div
                 id="u817_text"
@@ -2194,7 +2310,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u818" class="ax_default ellipse" data-label="1">
-              <img id="u818_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u818_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u818_text"
                 class="text"
@@ -2228,7 +2348,7 @@
               <img
                 id="u820_img"
                 class="img"
-                src="./images/招生数据分析/3_u705.svg"
+                src="/portal/console/dataV2/images/招生数据分析/3_u705.svg"
               />
               <div
                 id="u820_text"
@@ -2244,7 +2364,7 @@
               <img
                 id="u821_img"
                 class="img"
-                src="./images/招生数据分析/2_u706.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u706.svg"
               />
               <div
                 id="u821_text"
@@ -2257,7 +2377,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u822" class="ax_default ellipse" data-label="1">
-              <img id="u822_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u822_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u822_text"
                 class="text"
@@ -2287,7 +2411,11 @@
           >
             <!-- 1 (圆形) -->
             <div id="u825" class="ax_default ellipse" data-label="1">
-              <img id="u825_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u825_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u825_text"
                 class="text"
@@ -2321,7 +2449,7 @@
               <img
                 id="u827_img"
                 class="img"
-                src="./images/招生数据分析/2_u702.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u702.svg"
               />
               <div
                 id="u827_text"
@@ -2334,7 +2462,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u828" class="ax_default ellipse" data-label="1">
-              <img id="u828_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u828_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u828_text"
                 class="text"
@@ -2368,7 +2500,7 @@
               <img
                 id="u830_img"
                 class="img"
-                src="./images/招生数据分析/3_u705.svg"
+                src="/portal/console/dataV2/images/招生数据分析/3_u705.svg"
               />
               <div
                 id="u830_text"
@@ -2384,7 +2516,7 @@
               <img
                 id="u831_img"
                 class="img"
-                src="./images/招生数据分析/2_u706.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u706.svg"
               />
               <div
                 id="u831_text"
@@ -2397,7 +2529,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u832" class="ax_default ellipse" data-label="1">
-              <img id="u832_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u832_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u832_text"
                 class="text"
@@ -2427,7 +2563,11 @@
           >
             <!-- 1 (圆形) -->
             <div id="u835" class="ax_default ellipse" data-label="1">
-              <img id="u835_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u835_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u835_text"
                 class="text"
@@ -2461,7 +2601,7 @@
               <img
                 id="u837_img"
                 class="img"
-                src="./images/招生数据分析/2_u702.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u702.svg"
               />
               <div
                 id="u837_text"
@@ -2474,7 +2614,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u838" class="ax_default ellipse" data-label="1">
-              <img id="u838_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u838_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u838_text"
                 class="text"
@@ -2508,7 +2652,7 @@
               <img
                 id="u840_img"
                 class="img"
-                src="./images/招生数据分析/3_u705.svg"
+                src="/portal/console/dataV2/images/招生数据分析/3_u705.svg"
               />
               <div
                 id="u840_text"
@@ -2524,7 +2668,7 @@
               <img
                 id="u841_img"
                 class="img"
-                src="./images/招生数据分析/2_u706.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u706.svg"
               />
               <div
                 id="u841_text"
@@ -2537,7 +2681,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u842" class="ax_default ellipse" data-label="1">
-              <img id="u842_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u842_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u842_text"
                 class="text"
@@ -2567,7 +2715,11 @@
           >
             <!-- 1 (圆形) -->
             <div id="u845" class="ax_default ellipse" data-label="1">
-              <img id="u845_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u845_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u845_text"
                 class="text"
@@ -2601,7 +2753,7 @@
               <img
                 id="u847_img"
                 class="img"
-                src="./images/招生数据分析/2_u702.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u702.svg"
               />
               <div
                 id="u847_text"
@@ -2614,7 +2766,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u848" class="ax_default ellipse" data-label="1">
-              <img id="u848_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u848_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u848_text"
                 class="text"
@@ -2648,7 +2804,7 @@
               <img
                 id="u850_img"
                 class="img"
-                src="./images/招生数据分析/3_u705.svg"
+                src="/portal/console/dataV2/images/招生数据分析/3_u705.svg"
               />
               <div
                 id="u850_text"
@@ -2664,7 +2820,7 @@
               <img
                 id="u851_img"
                 class="img"
-                src="./images/招生数据分析/2_u706.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u706.svg"
               />
               <div
                 id="u851_text"
@@ -2677,7 +2833,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u852" class="ax_default ellipse" data-label="1">
-              <img id="u852_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u852_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u852_text"
                 class="text"
@@ -2707,7 +2867,11 @@
           >
             <!-- 1 (圆形) -->
             <div id="u855" class="ax_default ellipse" data-label="1">
-              <img id="u855_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u855_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u855_text"
                 class="text"
@@ -2741,7 +2905,7 @@
               <img
                 id="u857_img"
                 class="img"
-                src="./images/招生数据分析/2_u702.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u702.svg"
               />
               <div
                 id="u857_text"
@@ -2754,7 +2918,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u858" class="ax_default ellipse" data-label="1">
-              <img id="u858_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u858_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u858_text"
                 class="text"
@@ -2788,7 +2956,7 @@
               <img
                 id="u860_img"
                 class="img"
-                src="./images/招生数据分析/3_u705.svg"
+                src="/portal/console/dataV2/images/招生数据分析/3_u705.svg"
               />
               <div
                 id="u860_text"
@@ -2804,7 +2972,7 @@
               <img
                 id="u861_img"
                 class="img"
-                src="./images/招生数据分析/2_u706.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u706.svg"
               />
               <div
                 id="u861_text"
@@ -2817,7 +2985,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u862" class="ax_default ellipse" data-label="1">
-              <img id="u862_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u862_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u862_text"
                 class="text"
@@ -2847,7 +3019,11 @@
           >
             <!-- 1 (圆形) -->
             <div id="u865" class="ax_default ellipse" data-label="1">
-              <img id="u865_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u865_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u865_text"
                 class="text"
@@ -2881,7 +3057,7 @@
               <img
                 id="u867_img"
                 class="img"
-                src="./images/招生数据分析/2_u702.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u702.svg"
               />
               <div
                 id="u867_text"
@@ -2894,7 +3070,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u868" class="ax_default ellipse" data-label="1">
-              <img id="u868_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u868_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u868_text"
                 class="text"
@@ -2928,7 +3108,7 @@
               <img
                 id="u870_img"
                 class="img"
-                src="./images/招生数据分析/3_u705.svg"
+                src="/portal/console/dataV2/images/招生数据分析/3_u705.svg"
               />
               <div
                 id="u870_text"
@@ -2944,7 +3124,7 @@
               <img
                 id="u871_img"
                 class="img"
-                src="./images/招生数据分析/2_u706.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u706.svg"
               />
               <div
                 id="u871_text"
@@ -2957,7 +3137,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u872" class="ax_default ellipse" data-label="1">
-              <img id="u872_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u872_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u872_text"
                 class="text"
@@ -2987,7 +3171,11 @@
           >
             <!-- 1 (圆形) -->
             <div id="u875" class="ax_default ellipse" data-label="1">
-              <img id="u875_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u875_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u875_text"
                 class="text"
@@ -3021,7 +3209,7 @@
               <img
                 id="u877_img"
                 class="img"
-                src="./images/招生数据分析/2_u702.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u702.svg"
               />
               <div
                 id="u877_text"
@@ -3034,7 +3222,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u878" class="ax_default ellipse" data-label="1">
-              <img id="u878_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u878_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u878_text"
                 class="text"
@@ -3068,7 +3260,7 @@
               <img
                 id="u880_img"
                 class="img"
-                src="./images/招生数据分析/3_u705.svg"
+                src="/portal/console/dataV2/images/招生数据分析/3_u705.svg"
               />
               <div
                 id="u880_text"
@@ -3084,7 +3276,7 @@
               <img
                 id="u881_img"
                 class="img"
-                src="./images/招生数据分析/2_u706.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u706.svg"
               />
               <div
                 id="u881_text"
@@ -3097,7 +3289,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u882" class="ax_default ellipse" data-label="1">
-              <img id="u882_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u882_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u882_text"
                 class="text"
@@ -3127,7 +3323,11 @@
           >
             <!-- 1 (圆形) -->
             <div id="u885" class="ax_default ellipse" data-label="1">
-              <img id="u885_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u885_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u885_text"
                 class="text"
@@ -3161,7 +3361,7 @@
               <img
                 id="u887_img"
                 class="img"
-                src="./images/招生数据分析/2_u702.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u702.svg"
               />
               <div
                 id="u887_text"
@@ -3174,7 +3374,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u888" class="ax_default ellipse" data-label="1">
-              <img id="u888_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u888_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u888_text"
                 class="text"
@@ -3208,7 +3412,7 @@
               <img
                 id="u890_img"
                 class="img"
-                src="./images/招生数据分析/3_u705.svg"
+                src="/portal/console/dataV2/images/招生数据分析/3_u705.svg"
               />
               <div
                 id="u890_text"
@@ -3224,7 +3428,7 @@
               <img
                 id="u891_img"
                 class="img"
-                src="./images/招生数据分析/2_u706.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u706.svg"
               />
               <div
                 id="u891_text"
@@ -3237,7 +3441,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u892" class="ax_default ellipse" data-label="1">
-              <img id="u892_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u892_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u892_text"
                 class="text"
@@ -3267,7 +3475,11 @@
           >
             <!-- 1 (圆形) -->
             <div id="u895" class="ax_default ellipse" data-label="1">
-              <img id="u895_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u895_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u895_text"
                 class="text"
@@ -3301,7 +3513,7 @@
               <img
                 id="u897_img"
                 class="img"
-                src="./images/招生数据分析/2_u702.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u702.svg"
               />
               <div
                 id="u897_text"
@@ -3314,7 +3526,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u898" class="ax_default ellipse" data-label="1">
-              <img id="u898_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u898_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u898_text"
                 class="text"
@@ -3348,7 +3564,7 @@
               <img
                 id="u900_img"
                 class="img"
-                src="./images/招生数据分析/3_u705.svg"
+                src="/portal/console/dataV2/images/招生数据分析/3_u705.svg"
               />
               <div
                 id="u900_text"
@@ -3364,7 +3580,7 @@
               <img
                 id="u901_img"
                 class="img"
-                src="./images/招生数据分析/2_u706.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u706.svg"
               />
               <div
                 id="u901_text"
@@ -3377,7 +3593,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u902" class="ax_default ellipse" data-label="1">
-              <img id="u902_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u902_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u902_text"
                 class="text"
@@ -3407,7 +3627,11 @@
           >
             <!-- 1 (圆形) -->
             <div id="u905" class="ax_default ellipse" data-label="1">
-              <img id="u905_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u905_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u905_text"
                 class="text"
@@ -3441,7 +3665,7 @@
               <img
                 id="u907_img"
                 class="img"
-                src="./images/招生数据分析/2_u702.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u702.svg"
               />
               <div
                 id="u907_text"
@@ -3454,7 +3678,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u908" class="ax_default ellipse" data-label="1">
-              <img id="u908_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u908_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u908_text"
                 class="text"
@@ -3488,7 +3716,7 @@
               <img
                 id="u910_img"
                 class="img"
-                src="./images/招生数据分析/3_u705.svg"
+                src="/portal/console/dataV2/images/招生数据分析/3_u705.svg"
               />
               <div
                 id="u910_text"
@@ -3504,7 +3732,7 @@
               <img
                 id="u911_img"
                 class="img"
-                src="./images/招生数据分析/2_u706.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u706.svg"
               />
               <div
                 id="u911_text"
@@ -3517,7 +3745,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u912" class="ax_default ellipse" data-label="1">
-              <img id="u912_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u912_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u912_text"
                 class="text"
@@ -3547,7 +3779,11 @@
           >
             <!-- 1 (圆形) -->
             <div id="u915" class="ax_default ellipse" data-label="1">
-              <img id="u915_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u915_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u915_text"
                 class="text"
@@ -3581,7 +3817,7 @@
               <img
                 id="u917_img"
                 class="img"
-                src="./images/招生数据分析/2_u702.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u702.svg"
               />
               <div
                 id="u917_text"
@@ -3594,7 +3830,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u918" class="ax_default ellipse" data-label="1">
-              <img id="u918_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u918_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u918_text"
                 class="text"
@@ -3628,7 +3868,7 @@
               <img
                 id="u920_img"
                 class="img"
-                src="./images/招生数据分析/3_u705.svg"
+                src="/portal/console/dataV2/images/招生数据分析/3_u705.svg"
               />
               <div
                 id="u920_text"
@@ -3644,7 +3884,7 @@
               <img
                 id="u921_img"
                 class="img"
-                src="./images/招生数据分析/2_u706.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u706.svg"
               />
               <div
                 id="u921_text"
@@ -3657,7 +3897,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u922" class="ax_default ellipse" data-label="1">
-              <img id="u922_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u922_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u922_text"
                 class="text"
@@ -3687,7 +3931,11 @@
           >
             <!-- 1 (圆形) -->
             <div id="u925" class="ax_default ellipse" data-label="1">
-              <img id="u925_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u925_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u925_text"
                 class="text"
@@ -3721,7 +3969,7 @@
               <img
                 id="u927_img"
                 class="img"
-                src="./images/招生数据分析/2_u702.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u702.svg"
               />
               <div
                 id="u927_text"
@@ -3734,7 +3982,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u928" class="ax_default ellipse" data-label="1">
-              <img id="u928_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u928_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u928_text"
                 class="text"
@@ -3768,7 +4020,7 @@
               <img
                 id="u930_img"
                 class="img"
-                src="./images/招生数据分析/3_u705.svg"
+                src="/portal/console/dataV2/images/招生数据分析/3_u705.svg"
               />
               <div
                 id="u930_text"
@@ -3784,7 +4036,7 @@
               <img
                 id="u931_img"
                 class="img"
-                src="./images/招生数据分析/2_u706.svg"
+                src="/portal/console/dataV2/images/招生数据分析/2_u706.svg"
               />
               <div
                 id="u931_text"
@@ -3797,7 +4049,11 @@
 
             <!-- 1 (圆形) -->
             <div id="u932" class="ax_default ellipse" data-label="1">
-              <img id="u932_img" class="img" src="./images/综合数据/u305.svg" />
+              <img
+                id="u932_img"
+                class="img"
+                src="/portal/console/dataV2/images/综合数据/u305.svg"
+              />
               <div
                 id="u932_text"
                 class="text"
@@ -3813,7 +4069,11 @@
 
     <!-- Unnamed (垂直线) -->
     <div id="u933" class="ax_default line">
-      <img id="u933_img" class="img" src="./images/在校生数据分析/u407.svg" />
+      <img
+        id="u933_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u407.svg"
+      />
       <div
         id="u933_text"
         class="text"
@@ -3825,7 +4085,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u934" class="ax_default line">
-      <img id="u934_img" class="img" src="./images/在校生数据分析/u408.svg" />
+      <img
+        id="u934_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u408.svg"
+      />
       <div
         id="u934_text"
         class="text"
@@ -3837,7 +4101,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u935" class="ax_default line">
-      <img id="u935_img" class="img" src="./images/在校生数据分析/u409.svg" />
+      <img
+        id="u935_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u409.svg"
+      />
       <div
         id="u935_text"
         class="text"
@@ -3849,7 +4117,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u936" class="ax_default line">
-      <img id="u936_img" class="img" src="./images/在校生数据分析/u409.svg" />
+      <img
+        id="u936_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u409.svg"
+      />
       <div
         id="u936_text"
         class="text"
@@ -3861,7 +4133,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u937" class="ax_default line">
-      <img id="u937_img" class="img" src="./images/在校生数据分析/u409.svg" />
+      <img
+        id="u937_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u409.svg"
+      />
       <div
         id="u937_text"
         class="text"
@@ -3873,7 +4149,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u938" class="ax_default line">
-      <img id="u938_img" class="img" src="./images/在校生数据分析/u412.svg" />
+      <img
+        id="u938_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u412.svg"
+      />
       <div
         id="u938_text"
         class="text"
@@ -3985,7 +4265,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u951" class="ax_default line">
-      <img id="u951_img" class="img" src="./images/招生数据分析/u951.svg" />
+      <img
+        id="u951_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u951.svg"
+      />
       <div
         id="u951_text"
         class="text"
@@ -3997,7 +4281,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u952" class="ax_default ellipse">
-      <img id="u952_img" class="img" src="./images/在校生数据分析/u521.svg" />
+      <img
+        id="u952_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u521.svg"
+      />
       <div
         id="u952_text"
         class="text"
@@ -4009,7 +4297,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u953" class="ax_default ellipse">
-      <img id="u953_img" class="img" src="./images/在校生数据分析/u521.svg" />
+      <img
+        id="u953_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u521.svg"
+      />
       <div
         id="u953_text"
         class="text"
@@ -4021,7 +4313,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u954" class="ax_default ellipse">
-      <img id="u954_img" class="img" src="./images/在校生数据分析/u521.svg" />
+      <img
+        id="u954_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u521.svg"
+      />
       <div
         id="u954_text"
         class="text"
@@ -4033,7 +4329,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u955" class="ax_default ellipse">
-      <img id="u955_img" class="img" src="./images/在校生数据分析/u521.svg" />
+      <img
+        id="u955_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u521.svg"
+      />
       <div
         id="u955_text"
         class="text"
@@ -4054,7 +4354,7 @@
       <img
         id="u956_img"
         class="singleImg img"
-        src="./images/招生数据分析/u956.svg"
+        src="/portal/console/dataV2/images/招生数据分析/u956.svg"
       />
       <div
         id="u956p000"
@@ -4071,7 +4371,7 @@
         <img
           id="u956p000_img"
           class="img"
-          src="./images/招生数据分析/u956p000.svg"
+          src="/portal/console/dataV2/images/招生数据分析/u956p000.svg"
         />
       </div>
       <div
@@ -4089,7 +4389,7 @@
         <img
           id="u956p001_img"
           class="img"
-          src="./images/招生数据分析/u956p001.svg"
+          src="/portal/console/dataV2/images/招生数据分析/u956p001.svg"
         />
       </div>
       <div
@@ -4107,7 +4407,7 @@
         <img
           id="u956p002_img"
           class="img"
-          src="./images/招生数据分析/u956p002.svg"
+          src="/portal/console/dataV2/images/招生数据分析/u956p002.svg"
         />
       </div>
       <div
@@ -4121,7 +4421,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u957" class="ax_default ellipse">
-      <img id="u957_img" class="img" src="./images/招生数据分析/u957.svg" />
+      <img
+        id="u957_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u957.svg"
+      />
       <div
         id="u957_text"
         class="text"
@@ -4133,7 +4437,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u958" class="ax_default ellipse">
-      <img id="u958_img" class="img" src="./images/招生数据分析/u957.svg" />
+      <img
+        id="u958_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u957.svg"
+      />
       <div
         id="u958_text"
         class="text"
@@ -4145,7 +4453,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u959" class="ax_default ellipse">
-      <img id="u959_img" class="img" src="./images/招生数据分析/u957.svg" />
+      <img
+        id="u959_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u957.svg"
+      />
       <div
         id="u959_text"
         class="text"
@@ -4157,7 +4469,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u960" class="ax_default ellipse">
-      <img id="u960_img" class="img" src="./images/招生数据分析/u957.svg" />
+      <img
+        id="u960_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u957.svg"
+      />
       <div
         id="u960_text"
         class="text"
@@ -4178,7 +4494,7 @@
       <img
         id="u961_img"
         class="singleImg img"
-        src="./images/招生数据分析/u961.svg"
+        src="/portal/console/dataV2/images/招生数据分析/u961.svg"
       />
       <div
         id="u961p000"
@@ -4195,7 +4511,7 @@
         <img
           id="u961p000_img"
           class="img"
-          src="./images/招生数据分析/u961p000.svg"
+          src="/portal/console/dataV2/images/招生数据分析/u961p000.svg"
         />
       </div>
       <div
@@ -4213,7 +4529,7 @@
         <img
           id="u961p001_img"
           class="img"
-          src="./images/招生数据分析/u961p001.svg"
+          src="/portal/console/dataV2/images/招生数据分析/u961p001.svg"
         />
       </div>
       <div
@@ -4231,7 +4547,7 @@
         <img
           id="u961p002_img"
           class="img"
-          src="./images/招生数据分析/u961p002.svg"
+          src="/portal/console/dataV2/images/招生数据分析/u961p002.svg"
         />
       </div>
       <div
@@ -4245,7 +4561,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u962" class="ax_default ellipse">
-      <img id="u962_img" class="img" src="./images/招生数据分析/u962.svg" />
+      <img
+        id="u962_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u962.svg"
+      />
       <div
         id="u962_text"
         class="text"
@@ -4257,7 +4577,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u963" class="ax_default ellipse">
-      <img id="u963_img" class="img" src="./images/招生数据分析/u962.svg" />
+      <img
+        id="u963_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u962.svg"
+      />
       <div
         id="u963_text"
         class="text"
@@ -4269,7 +4593,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u964" class="ax_default ellipse">
-      <img id="u964_img" class="img" src="./images/招生数据分析/u962.svg" />
+      <img
+        id="u964_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u962.svg"
+      />
       <div
         id="u964_text"
         class="text"
@@ -4281,7 +4609,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u965" class="ax_default ellipse">
-      <img id="u965_img" class="img" src="./images/招生数据分析/u962.svg" />
+      <img
+        id="u965_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u962.svg"
+      />
       <div
         id="u965_text"
         class="text"
@@ -4293,7 +4625,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u966" class="ax_default ellipse">
-      <img id="u966_img" class="img" src="./images/招生数据分析/u966.svg" />
+      <img
+        id="u966_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u966.svg"
+      />
       <div
         id="u966_text"
         class="text"
@@ -4325,7 +4661,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u969" class="ax_default ellipse">
-      <img id="u969_img" class="img" src="./images/招生数据分析/u969.svg" />
+      <img
+        id="u969_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u969.svg"
+      />
       <div
         id="u969_text"
         class="text"
@@ -4357,7 +4697,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u972" class="ax_default ellipse">
-      <img id="u972_img" class="img" src="./images/招生数据分析/u972.svg" />
+      <img
+        id="u972_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u972.svg"
+      />
       <div
         id="u972_text"
         class="text"
@@ -4431,7 +4775,11 @@
 
     <!-- Unnamed (饼形图) -->
     <div id="u980" class="ax_default ellipse">
-      <img id="u980_img" class="img" src="./images/招生数据分析/u980.svg" />
+      <img
+        id="u980_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u980.svg"
+      />
       <div
         id="u980_text"
         class="text"
@@ -4443,7 +4791,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u981" class="ax_default refs-chart-data">
-      <img id="u981_img" class="img" src="./images/招生数据分析/u981.svg" />
+      <img
+        id="u981_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u981.svg"
+      />
       <div id="u981_text" class="text">
         <p><span>75%</span></p>
       </div>
@@ -4451,7 +4803,11 @@
 
     <!-- Unnamed (饼形图) -->
     <div id="u982" class="ax_default ellipse">
-      <img id="u982_img" class="img" src="./images/招生数据分析/u982.svg" />
+      <img
+        id="u982_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u982.svg"
+      />
       <div
         id="u982_text"
         class="text"
@@ -4463,7 +4819,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u983" class="ax_default refs-chart-data">
-      <img id="u983_img" class="img" src="./images/招生数据分析/u981.svg" />
+      <img
+        id="u983_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u981.svg"
+      />
       <div id="u983_text" class="text">
         <p><span>25%</span></p>
       </div>
@@ -4490,7 +4850,7 @@
       <img
         id="u986_img"
         class="img"
-        src="./images/在校生数据分析/右_u628.svg"
+        src="/portal/console/dataV2/images/在校生数据分析/右_u628.svg"
       />
       <div
         id="u986_text"
@@ -4503,7 +4863,11 @@
 
     <!-- 左 (形状) -->
     <div id="u987" class="ax_default ellipse" data-label="左">
-      <img id="u987_img" class="img" src="./images/招生数据分析/左_u987.svg" />
+      <img
+        id="u987_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/左_u987.svg"
+      />
       <div
         id="u987_text"
         class="text"
@@ -4518,7 +4882,7 @@
       <img
         id="u988_img"
         class="img"
-        src="./images/在校生数据分析/下_u630.svg"
+        src="/portal/console/dataV2/images/在校生数据分析/下_u630.svg"
       />
       <div
         id="u988_text"
@@ -4575,7 +4939,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u993" class="ax_default refs-chart-data">
-      <img id="u993_img" class="img" src="./images/招生数据分析/u993.svg" />
+      <img
+        id="u993_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u993.svg"
+      />
       <div
         id="u993_text"
         class="text"
@@ -4603,7 +4971,11 @@
 
     <!-- Unnamed (垂直线) -->
     <div id="u996" class="ax_default line">
-      <img id="u996_img" class="img" src="./images/在校生数据分析/u407.svg" />
+      <img
+        id="u996_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u407.svg"
+      />
       <div
         id="u996_text"
         class="text"
@@ -4615,7 +4987,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u997" class="ax_default line">
-      <img id="u997_img" class="img" src="./images/在校生数据分析/u436.svg" />
+      <img
+        id="u997_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u436.svg"
+      />
       <div
         id="u997_text"
         class="text"
@@ -4627,7 +5003,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u998" class="ax_default line">
-      <img id="u998_img" class="img" src="./images/在校生数据分析/u437.svg" />
+      <img
+        id="u998_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u437.svg"
+      />
       <div
         id="u998_text"
         class="text"
@@ -4639,7 +5019,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u999" class="ax_default line">
-      <img id="u999_img" class="img" src="./images/在校生数据分析/u437.svg" />
+      <img
+        id="u999_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u437.svg"
+      />
       <div
         id="u999_text"
         class="text"
@@ -4651,7 +5035,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u1000" class="ax_default line">
-      <img id="u1000_img" class="img" src="./images/在校生数据分析/u437.svg" />
+      <img
+        id="u1000_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u437.svg"
+      />
       <div
         id="u1000_text"
         class="text"
@@ -4663,7 +5051,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u1001" class="ax_default line">
-      <img id="u1001_img" class="img" src="./images/在校生数据分析/u440.svg" />
+      <img
+        id="u1001_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u440.svg"
+      />
       <div
         id="u1001_text"
         class="text"
@@ -5275,7 +5667,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u1059" class="ax_default line">
-      <img id="u1059_img" class="img" src="./images/在校生数据分析/u408.svg" />
+      <img
+        id="u1059_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u408.svg"
+      />
       <div
         id="u1059_text"
         class="text"
@@ -5313,7 +5709,11 @@
     <div id="u1063" class="ax_default">
       <!-- Unnamed (单元格) -->
       <div id="u1064" class="ax_default table_cell">
-        <img id="u1064_img" class="img" src="./images/招生数据分析/u1064.png" />
+        <img
+          id="u1064_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u1064.png"
+        />
         <div id="u1064_text" class="text">
           <p><span>1</span></p>
         </div>
@@ -5321,7 +5721,11 @@
 
       <!-- Unnamed (单元格) -->
       <div id="u1065" class="ax_default table_cell">
-        <img id="u1065_img" class="img" src="./images/招生数据分析/u1065.png" />
+        <img
+          id="u1065_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u1065.png"
+        />
         <div id="u1065_text" class="text">
           <p><span>建筑学</span></p>
         </div>
@@ -5329,7 +5733,11 @@
 
       <!-- Unnamed (单元格) -->
       <div id="u1066" class="ax_default table_cell">
-        <img id="u1066_img" class="img" src="./images/招生数据分析/u1066.png" />
+        <img
+          id="u1066_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u1066.png"
+        />
         <div id="u1066_text" class="text">
           <p><span>870</span></p>
         </div>
@@ -5337,7 +5745,11 @@
 
       <!-- Unnamed (单元格) -->
       <div id="u1067" class="ax_default table_cell">
-        <img id="u1067_img" class="img" src="./images/招生数据分析/u1064.png" />
+        <img
+          id="u1067_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u1064.png"
+        />
         <div id="u1067_text" class="text">
           <p><span>2</span></p>
         </div>
@@ -5345,7 +5757,11 @@
 
       <!-- Unnamed (单元格) -->
       <div id="u1068" class="ax_default table_cell">
-        <img id="u1068_img" class="img" src="./images/招生数据分析/u1065.png" />
+        <img
+          id="u1068_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u1065.png"
+        />
         <div id="u1068_text" class="text">
           <p><span>计算机科学</span></p>
         </div>
@@ -5353,7 +5769,11 @@
 
       <!-- Unnamed (单元格) -->
       <div id="u1069" class="ax_default table_cell">
-        <img id="u1069_img" class="img" src="./images/招生数据分析/u1066.png" />
+        <img
+          id="u1069_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u1066.png"
+        />
         <div id="u1069_text" class="text">
           <p><span>840</span></p>
         </div>
@@ -5361,7 +5781,11 @@
 
       <!-- Unnamed (单元格) -->
       <div id="u1070" class="ax_default table_cell">
-        <img id="u1070_img" class="img" src="./images/招生数据分析/u1064.png" />
+        <img
+          id="u1070_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u1064.png"
+        />
         <div id="u1070_text" class="text">
           <p><span>3</span></p>
         </div>
@@ -5369,7 +5793,11 @@
 
       <!-- Unnamed (单元格) -->
       <div id="u1071" class="ax_default table_cell">
-        <img id="u1071_img" class="img" src="./images/招生数据分析/u1065.png" />
+        <img
+          id="u1071_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u1065.png"
+        />
         <div id="u1071_text" class="text">
           <p><span>软件工程</span></p>
         </div>
@@ -5377,7 +5805,11 @@
 
       <!-- Unnamed (单元格) -->
       <div id="u1072" class="ax_default table_cell">
-        <img id="u1072_img" class="img" src="./images/招生数据分析/u1066.png" />
+        <img
+          id="u1072_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u1066.png"
+        />
         <div id="u1072_text" class="text">
           <p><span>780</span></p>
         </div>
@@ -5385,7 +5817,11 @@
 
       <!-- Unnamed (单元格) -->
       <div id="u1073" class="ax_default table_cell">
-        <img id="u1073_img" class="img" src="./images/招生数据分析/u1064.png" />
+        <img
+          id="u1073_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u1064.png"
+        />
         <div id="u1073_text" class="text">
           <p><span>4</span></p>
         </div>
@@ -5393,7 +5829,11 @@
 
       <!-- Unnamed (单元格) -->
       <div id="u1074" class="ax_default table_cell">
-        <img id="u1074_img" class="img" src="./images/招生数据分析/u1065.png" />
+        <img
+          id="u1074_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u1065.png"
+        />
         <div id="u1074_text" class="text">
           <p><span>生物科学</span></p>
         </div>
@@ -5401,7 +5841,11 @@
 
       <!-- Unnamed (单元格) -->
       <div id="u1075" class="ax_default table_cell">
-        <img id="u1075_img" class="img" src="./images/招生数据分析/u1066.png" />
+        <img
+          id="u1075_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u1066.png"
+        />
         <div id="u1075_text" class="text">
           <p><span>690</span></p>
         </div>
@@ -5409,7 +5853,11 @@
 
       <!-- Unnamed (单元格) -->
       <div id="u1076" class="ax_default table_cell">
-        <img id="u1076_img" class="img" src="./images/招生数据分析/u1064.png" />
+        <img
+          id="u1076_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u1064.png"
+        />
         <div id="u1076_text" class="text">
           <p><span>5</span></p>
         </div>
@@ -5417,7 +5865,11 @@
 
       <!-- Unnamed (单元格) -->
       <div id="u1077" class="ax_default table_cell">
-        <img id="u1077_img" class="img" src="./images/招生数据分析/u1065.png" />
+        <img
+          id="u1077_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u1065.png"
+        />
         <div id="u1077_text" class="text">
           <p><span>材料学</span></p>
         </div>
@@ -5425,7 +5877,11 @@
 
       <!-- Unnamed (单元格) -->
       <div id="u1078" class="ax_default table_cell">
-        <img id="u1078_img" class="img" src="./images/招生数据分析/u1066.png" />
+        <img
+          id="u1078_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u1066.png"
+        />
         <div id="u1078_text" class="text">
           <p><span>500</span></p>
         </div>
@@ -5450,7 +5906,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u1081" class="ax_default line">
-      <img id="u1081_img" class="img" src="./images/招生数据分析/u1081.svg" />
+      <img
+        id="u1081_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u1081.svg"
+      />
       <div
         id="u1081_text"
         class="text"
@@ -5462,7 +5922,11 @@
 
     <!-- Unnamed (垂直线) -->
     <div id="u1082" class="ax_default line">
-      <img id="u1082_img" class="img" src="./images/在校生数据分析/u407.svg" />
+      <img
+        id="u1082_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u407.svg"
+      />
       <div
         id="u1082_text"
         class="text"
@@ -5562,7 +6026,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1094" class="ax_default box_1">
-      <img id="u1094_img" class="img" src="./images/招生数据分析/u1094.svg" />
+      <img
+        id="u1094_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u1094.svg"
+      />
       <div
         id="u1094_text"
         class="text"
@@ -5582,7 +6050,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1096" class="ax_default box_1">
-      <img id="u1096_img" class="img" src="./images/招生数据分析/u1096.svg" />
+      <img
+        id="u1096_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u1096.svg"
+      />
       <div
         id="u1096_text"
         class="text"
@@ -5602,7 +6074,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1098" class="ax_default box_1">
-      <img id="u1098_img" class="img" src="./images/招生数据分析/u1098.svg" />
+      <img
+        id="u1098_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u1098.svg"
+      />
       <div
         id="u1098_text"
         class="text"
@@ -5614,7 +6090,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1099" class="ax_default box_1">
-      <img id="u1099_img" class="img" src="./images/招生数据分析/u1099.svg" />
+      <img
+        id="u1099_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u1099.svg"
+      />
       <div
         id="u1099_text"
         class="text"
@@ -5642,7 +6122,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1102" class="ax_default box_1">
-      <img id="u1102_img" class="img" src="./images/招生数据分析/u1102.svg" />
+      <img
+        id="u1102_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u1102.svg"
+      />
       <div
         id="u1102_text"
         class="text"
@@ -5662,7 +6146,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1104" class="ax_default box_1">
-      <img id="u1104_img" class="img" src="./images/招生数据分析/u1104.svg" />
+      <img
+        id="u1104_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u1104.svg"
+      />
       <div
         id="u1104_text"
         class="text"
@@ -5682,7 +6170,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1106" class="ax_default box_1">
-      <img id="u1106_img" class="img" src="./images/招生数据分析/u1106.svg" />
+      <img
+        id="u1106_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u1106.svg"
+      />
       <div
         id="u1106_text"
         class="text"
@@ -5710,7 +6202,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1109" class="ax_default box_1">
-      <img id="u1109_img" class="img" src="./images/招生数据分析/u1109.svg" />
+      <img
+        id="u1109_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u1109.svg"
+      />
       <div
         id="u1109_text"
         class="text"
@@ -5738,7 +6234,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1112" class="ax_default box_1">
-      <img id="u1112_img" class="img" src="./images/招生数据分析/u1112.svg" />
+      <img
+        id="u1112_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u1112.svg"
+      />
       <div
         id="u1112_text"
         class="text"
@@ -5766,7 +6266,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1115" class="ax_default box_1">
-      <img id="u1115_img" class="img" src="./images/招生数据分析/u1115.svg" />
+      <img
+        id="u1115_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/u1115.svg"
+      />
       <div
         id="u1115_text"
         class="text"
@@ -5786,7 +6290,7 @@
 
     <!-- Unnamed (矩形) -->
     <!-- <div id="u1117" class="ax_default label">
-      <img id="u1117_img" class="img" src="./images/综合数据/u3.svg" />
+      <img id="u1117_img" class="img" src="/portal/console/dataV2/images/综合数据/u3.svg" />
       <div id="u1117_text" class="text">
         <p><span></span></p>
       </div>
@@ -5794,7 +6298,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1118" class="ax_default line">
-      <img id="u1118_img" class="img" src="./images/综合数据/u1.svg" />
+      <img
+        id="u1118_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u1.svg"
+      />
       <div
         id="u1118_text"
         class="text"
@@ -5806,7 +6314,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1119" class="ax_default _三级标题">
-      <img id="u1119_img" class="img" src="./images/综合数据/u2.svg" />
+      <img
+        id="u1119_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u2.svg"
+      />
       <div id="u1119_text" class="text">
         <p><span>学校招生数据</span></p>
       </div>
@@ -5814,7 +6326,7 @@
 
     <!-- Unnamed (矩形) -->
     <!-- <div id="u1120" class="ax_default label">
-      <img id="u1120_img" class="img" src="./images/综合数据/u3.svg" />
+      <img id="u1120_img" class="img" src="/portal/console/dataV2/images/综合数据/u3.svg" />
       <div id="u1120_text" class="text">
         <p><span></span></p>
       </div>
@@ -5869,7 +6381,11 @@
     </div>
     <!-- Unnamed (矩形) -->
     <div id="u1129" class="ax_default box_1">
-      <img id="u1129_img" class="img" src="./images/综合数据/u23.svg" />
+      <img
+        id="u1129_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u23.svg"
+      />
       <div
         id="u1129_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -5881,7 +6397,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1124" class="ax_default box_1">
-      <img id="u1124_img" class="img" src="./images/综合数据/u16.svg" />
+      <img
+        id="u1124_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u16.svg"
+      />
       <div
         id="u1124_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -5892,7 +6412,11 @@
     </div>
     <!-- Unnamed (矩形) -->
     <div id="u1126" class="ax_default box_1">
-      <img id="u1126_img" class="img" src="./images/综合数据/u16.svg" />
+      <img
+        id="u1126_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u16.svg"
+      />
       <div
         id="u1126_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -5904,7 +6428,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1127" class="ax_default box_1">
-      <img id="u1127_img" class="img" src="./images/综合数据/u16.svg" />
+      <img
+        id="u1127_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u16.svg"
+      />
       <div
         id="u1127_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -5916,7 +6444,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1130" class="ax_default box_1">
-      <img id="u1130_img" class="img" src="./images/综合数据/u16.svg" />
+      <img
+        id="u1130_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u16.svg"
+      />
       <div
         id="u1130_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -5928,7 +6460,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1128" class="ax_default _三级标题">
-      <img id="u1128_img" class="img" src="./images/综合数据/u22.svg" />
+      <img
+        id="u1128_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u22.svg"
+      />
       <div id="u1128_text" class="text">
         <p><span>智慧校园</span></p>
       </div>
@@ -5967,7 +6503,7 @@ const clickOther = (path) => {
 </script>
 
 <style lang="less" scoped>
-@import "./data/styles.css";
-@import "./files/招生数据分析/styles.css";
-@import "./resources/css/axure_rp_page.css";
+@import "/portal/console/dataV2/data/styles.css";
+@import "/portal/console/dataV2/files/招生数据分析/styles.css";
+@import "/portal/console/dataV2/resources/css/axure_rp_page.css";
 </style>

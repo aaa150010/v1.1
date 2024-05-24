@@ -162,7 +162,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2038" class="ax_default label">
-      <img id="u2038_img" class="img" src="./images/综合数据/u3.svg" />
+      <img
+        id="u2038_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u3.svg"
+      />
       <div id="u2038_text" class="text">
         <p><span></span></p>
       </div>
@@ -170,7 +174,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2039" class="ax_default line">
-      <img id="u2039_img" class="img" src="./images/综合数据/u1.svg" />
+      <img
+        id="u2039_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u1.svg"
+      />
       <div
         id="u2039_text"
         class="text"
@@ -182,7 +190,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2040" class="ax_default _三级标题">
-      <img id="u2040_img" class="img" src="./images/综合数据/u2.svg" />
+      <img
+        id="u2040_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u2.svg"
+      />
       <div id="u2040_text" class="text">
         <p><span>科研数据分析</span></p>
       </div>
@@ -190,7 +202,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2041" class="ax_default label">
-      <img id="u2041_img" class="img" src="./images/综合数据/u3.svg" />
+      <img
+        id="u2041_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u3.svg"
+      />
       <div id="u2041_text" class="text">
         <p><span></span></p>
       </div>
@@ -234,7 +250,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2045" class="ax_default box_1">
-      <img id="u2045_img" class="img" src="./images/综合数据/u16.svg" />
+      <img
+        id="u2045_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u16.svg"
+      />
       <div
         id="u2045_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -258,7 +278,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2047" class="ax_default box_1">
-      <img id="u2047_img" class="img" src="./images/综合数据/u16.svg" />
+      <img
+        id="u2047_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u16.svg"
+      />
       <div
         id="u2047_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -270,7 +294,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2048" class="ax_default box_1">
-      <img id="u2048_img" class="img" src="./images/综合数据/u16.svg" />
+      <img
+        id="u2048_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u16.svg"
+      />
       <div
         id="u2048_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -282,7 +310,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2049" class="ax_default _三级标题">
-      <img id="u2049_img" class="img" src="./images/综合数据/u22.svg" />
+      <img
+        id="u2049_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u22.svg"
+      />
       <div id="u2049_text" class="text">
         <p><span>智慧校园</span></p>
       </div>
@@ -290,7 +322,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2050" class="ax_default box_1">
-      <img id="u2050_img" class="img" src="./images/综合数据/u23.svg" />
+      <img
+        id="u2050_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u23.svg"
+      />
       <div
         id="u2050_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -302,7 +338,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2051" class="ax_default box_1">
-      <img id="u2051_img" class="img" src="./images/综合数据/u16.svg" />
+      <img
+        id="u2051_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u16.svg"
+      />
       <div
         id="u2051_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -314,7 +354,11 @@
 
     <!-- Unnamed (饼形图) -->
     <div id="u2052" class="ax_default ellipse2">
-      <img id="u2052_img" class="img" src="./images/科研数据/u2052.svg" />
+      <img
+        id="u2052_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2052.svg"
+      />
       <div
         id="u2052_text"
         class="text"
@@ -326,7 +370,11 @@
 
     <!-- Unnamed (饼形图) -->
     <div id="u2053" class="ax_default ellipse2">
-      <img id="u2053_img" class="img" src="./images/科研数据/u2053.svg" />
+      <img
+        id="u2053_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2053.svg"
+      />
       <div
         id="u2053_text"
         class="text"
@@ -338,7 +386,11 @@
 
     <!-- Unnamed (饼形图) -->
     <div id="u2054" class="ax_default ellipse2">
-      <img id="u2054_img" class="img" src="./images/科研数据/u2054.svg" />
+      <img
+        id="u2054_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2054.svg"
+      />
       <div
         id="u2054_text"
         class="text"
@@ -350,7 +402,11 @@
 
     <!-- Unnamed (饼形图) -->
     <div id="u2055" class="ax_default ellipse2">
-      <img id="u2055_img" class="img" src="./images/科研数据/u2055.svg" />
+      <img
+        id="u2055_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2055.svg"
+      />
       <div
         id="u2055_text"
         class="text"
@@ -362,7 +418,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2056" class="ax_default ellipse2">
-      <img id="u2056_img" class="img" src="./images/科研数据/u2056.svg" />
+      <img
+        id="u2056_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2056.svg"
+      />
       <div
         id="u2056_text"
         class="text"
@@ -374,7 +434,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2057" class="ax_default box_11">
-      <img id="u2057_img" class="img" src="./images/科研数据/u2057.svg" />
+      <img
+        id="u2057_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2057.svg"
+      />
       <div
         id="u2057_text"
         class="text"
@@ -395,7 +459,7 @@
       <img
         id="u2058_img"
         class="singleImg img"
-        src="./images/科研数据/u2058.svg"
+        src="/portal/console/dataV2/images/科研数据/u2058.svg"
       />
       <div
         id="u2058p000"
@@ -412,7 +476,7 @@
         <img
           id="u2058p000_img"
           class="img"
-          src="./images/科研数据/u2058p000.svg"
+          src="/portal/console/dataV2/images/科研数据/u2058p000.svg"
         />
       </div>
       <div
@@ -426,7 +490,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2059" class="ax_default box_11">
-      <img id="u2059_img" class="img" src="./images/科研数据/u2059.svg" />
+      <img
+        id="u2059_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2059.svg"
+      />
       <div
         id="u2059_text"
         class="text"
@@ -447,7 +515,7 @@
       <img
         id="u2060_img"
         class="singleImg img"
-        src="./images/科研数据/u2060.svg"
+        src="/portal/console/dataV2/images/科研数据/u2060.svg"
       />
       <div
         id="u2060p000"
@@ -464,7 +532,7 @@
         <img
           id="u2060p000_img"
           class="img"
-          src="./images/科研数据/u2060p000.svg"
+          src="/portal/console/dataV2/images/科研数据/u2060p000.svg"
         />
       </div>
       <div
@@ -513,7 +581,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2065" class="ax_default line">
-      <img id="u2065_img" class="img" src="./images/就业数据分析/u1297.svg" />
+      <img
+        id="u2065_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1297.svg"
+      />
       <div
         id="u2065_text"
         class="text"
@@ -533,7 +605,11 @@
 
     <!-- Unnamed (垂直线) -->
     <div id="u2067" class="ax_default line">
-      <img id="u2067_img" class="img" src="./images/科研数据/u2067.svg" />
+      <img
+        id="u2067_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2067.svg"
+      />
       <div
         id="u2067_text"
         class="text"
@@ -585,7 +661,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2073" class="ax_default line">
-      <img id="u2073_img" class="img" src="./images/就业数据分析/u1297.svg" />
+      <img
+        id="u2073_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1297.svg"
+      />
       <div
         id="u2073_text"
         class="text"
@@ -597,7 +677,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2074" class="ax_default line">
-      <img id="u2074_img" class="img" src="./images/就业数据分析/u1297.svg" />
+      <img
+        id="u2074_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1297.svg"
+      />
       <div
         id="u2074_text"
         class="text"
@@ -609,7 +693,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2075" class="ax_default line">
-      <img id="u2075_img" class="img" src="./images/就业数据分析/u1297.svg" />
+      <img
+        id="u2075_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1297.svg"
+      />
       <div
         id="u2075_text"
         class="text"
@@ -801,7 +889,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2094" class="ax_default line">
-      <img id="u2094_img" class="img" src="./images/就业数据分析/u1297.svg" />
+      <img
+        id="u2094_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1297.svg"
+      />
       <div
         id="u2094_text"
         class="text"
@@ -824,7 +916,7 @@
       <img
         id="u2096_img"
         class="img"
-        src="./images/在校生数据分析/右_u628.svg"
+        src="/portal/console/dataV2/images/在校生数据分析/右_u628.svg"
       />
       <div
         id="u2096_text"
@@ -837,7 +929,11 @@
 
     <!-- 左 (形状) -->
     <div id="u2097" class="ax_default ellipse" data-label="左">
-      <img id="u2097_img" class="img" src="./images/招生数据分析/左_u987.svg" />
+      <img
+        id="u2097_img"
+        class="img"
+        src="/portal/console/dataV2/images/招生数据分析/左_u987.svg"
+      />
       <div
         id="u2097_text"
         class="text"
@@ -852,7 +948,7 @@
       <img
         id="u2098_img"
         class="img"
-        src="./images/在校生数据分析/下_u630.svg"
+        src="/portal/console/dataV2/images/在校生数据分析/下_u630.svg"
       />
       <div
         id="u2098_text"
@@ -865,7 +961,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2099" class="ax_default ellipse2">
-      <img id="u2099_img" class="img" src="./images/科研数据/u2099.svg" />
+      <img
+        id="u2099_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2099.svg"
+      />
       <div
         id="u2099_text"
         class="text"
@@ -914,7 +1014,11 @@
     >
       <!-- Unnamed (直线) -->
       <div id="u2104" class="ax_default line">
-        <img id="u2104_img" class="img" src="./images/综合数据/u176.svg" />
+        <img
+          id="u2104_img"
+          class="img"
+          src="/portal/console/dataV2/images/综合数据/u176.svg"
+        />
         <div
           id="u2104_text"
           class="text"
@@ -926,7 +1030,11 @@
 
       <!-- Unnamed (直线) -->
       <div id="u2105" class="ax_default line">
-        <img id="u2105_img" class="img" src="./images/综合数据/u176.svg" />
+        <img
+          id="u2105_img"
+          class="img"
+          src="/portal/console/dataV2/images/综合数据/u176.svg"
+        />
         <div
           id="u2105_text"
           class="text"
@@ -949,7 +1057,11 @@
     >
       <!-- Unnamed (直线) -->
       <div id="u2107" class="ax_default line">
-        <img id="u2107_img" class="img" src="./images/综合数据/u176.svg" />
+        <img
+          id="u2107_img"
+          class="img"
+          src="/portal/console/dataV2/images/综合数据/u176.svg"
+        />
         <div
           id="u2107_text"
           class="text"
@@ -961,7 +1073,11 @@
 
       <!-- Unnamed (直线) -->
       <div id="u2108" class="ax_default line">
-        <img id="u2108_img" class="img" src="./images/综合数据/u176.svg" />
+        <img
+          id="u2108_img"
+          class="img"
+          src="/portal/console/dataV2/images/综合数据/u176.svg"
+        />
         <div
           id="u2108_text"
           class="text"
@@ -984,7 +1100,11 @@
     >
       <!-- Unnamed (直线) -->
       <div id="u2110" class="ax_default line">
-        <img id="u2110_img" class="img" src="./images/综合数据/u176.svg" />
+        <img
+          id="u2110_img"
+          class="img"
+          src="/portal/console/dataV2/images/综合数据/u176.svg"
+        />
         <div
           id="u2110_text"
           class="text"
@@ -996,7 +1116,11 @@
 
       <!-- Unnamed (直线) -->
       <div id="u2111" class="ax_default line">
-        <img id="u2111_img" class="img" src="./images/综合数据/u176.svg" />
+        <img
+          id="u2111_img"
+          class="img"
+          src="/portal/console/dataV2/images/综合数据/u176.svg"
+        />
         <div
           id="u2111_text"
           class="text"
@@ -1009,7 +1133,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2112" class="ax_default _三级标题">
-      <img id="u2112_img" class="img" src="./images/科研数据/u2112.svg" />
+      <img
+        id="u2112_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2112.svg"
+      />
       <div id="u2112_text" class="text">
         <p><span>总到款（万元）</span></p>
       </div>
@@ -1017,7 +1145,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2113" class="ax_default label">
-      <img id="u2113_img" class="img" src="./images/科研数据/u2113.svg" />
+      <img
+        id="u2113_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2113.svg"
+      />
       <div id="u2113_text" class="text">
         <p><span>150,764,764</span></p>
       </div>
@@ -1025,7 +1157,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2114" class="ax_default _三级标题">
-      <img id="u2114_img" class="img" src="./images/科研数据/u2114.svg" />
+      <img
+        id="u2114_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2114.svg"
+      />
       <div id="u2114_text" class="text">
         <p><span>经费到款（万元）</span></p>
       </div>
@@ -1033,7 +1169,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2115" class="ax_default label">
-      <img id="u2115_img" class="img" src="./images/科研数据/u2115.svg" />
+      <img
+        id="u2115_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2115.svg"
+      />
       <div id="u2115_text" class="text">
         <p><span>10,764,764</span></p>
       </div>
@@ -1041,7 +1181,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2116" class="ax_default _三级标题">
-      <img id="u2116_img" class="img" src="./images/科研数据/u2112.svg" />
+      <img
+        id="u2116_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2112.svg"
+      />
       <div id="u2116_text" class="text">
         <p><span>新立项目（个）</span></p>
       </div>
@@ -1049,7 +1193,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2117" class="ax_default _三级标题">
-      <img id="u2117_img" class="img" src="./images/科研数据/u2114.svg" />
+      <img
+        id="u2117_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2114.svg"
+      />
       <div id="u2117_text" class="text">
         <p><span>合同经费（万元）</span></p>
       </div>
@@ -1057,7 +1205,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2118" class="ax_default label">
-      <img id="u2118_img" class="img" src="./images/科研数据/u2118.svg" />
+      <img
+        id="u2118_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2118.svg"
+      />
       <div id="u2118_text" class="text">
         <p><span>764</span></p>
       </div>
@@ -1065,7 +1217,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2119" class="ax_default label">
-      <img id="u2119_img" class="img" src="./images/科研数据/u2115.svg" />
+      <img
+        id="u2119_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2115.svg"
+      />
       <div id="u2119_text" class="text">
         <p><span>10,764,764</span></p>
       </div>
@@ -1073,7 +1229,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2120" class="ax_default label">
-      <img id="u2120_img" class="img" src="./images/科研数据/u2120.svg" />
+      <img
+        id="u2120_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2120.svg"
+      />
       <div
         id="u2120_text"
         class="text"
@@ -1085,7 +1245,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2121" class="ax_default icon">
-      <img id="u2121_img" class="img" src="./images/科研数据/u2121.svg" />
+      <img
+        id="u2121_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2121.svg"
+      />
       <div
         id="u2121_text"
         class="text"
@@ -1097,7 +1261,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2122" class="ax_default _三级标题">
-      <img id="u2122_img" class="img" src="./images/科研数据/u2122.svg" />
+      <img
+        id="u2122_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2122.svg"
+      />
       <div id="u2122_text" class="text">
         <p><span>同比增长</span></p>
       </div>
@@ -1113,7 +1281,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2124" class="ax_default icon">
-      <img id="u2124_img" class="img" src="./images/科研数据/u2121.svg" />
+      <img
+        id="u2124_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2121.svg"
+      />
       <div
         id="u2124_text"
         class="text"
@@ -1125,7 +1297,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2125" class="ax_default _三级标题">
-      <img id="u2125_img" class="img" src="./images/科研数据/u2122.svg" />
+      <img
+        id="u2125_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2122.svg"
+      />
       <div id="u2125_text" class="text">
         <p><span>同比增长</span></p>
       </div>
@@ -1141,7 +1317,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2127" class="ax_default icon">
-      <img id="u2127_img" class="img" src="./images/科研数据/u2121.svg" />
+      <img
+        id="u2127_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2121.svg"
+      />
       <div
         id="u2127_text"
         class="text"
@@ -1153,7 +1333,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2128" class="ax_default _三级标题">
-      <img id="u2128_img" class="img" src="./images/科研数据/u2122.svg" />
+      <img
+        id="u2128_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2122.svg"
+      />
       <div id="u2128_text" class="text">
         <p><span>同比增长</span></p>
       </div>
@@ -1209,7 +1393,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2135" class="ax_default box_1">
-      <img id="u2135_img" class="img" src="./images/就业数据分析/u1628.svg" />
+      <img
+        id="u2135_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1628.svg"
+      />
       <div
         id="u2135_text"
         class="text"
@@ -1221,7 +1409,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2136" class="ax_default box_1">
-      <img id="u2136_img" class="img" src="./images/就业数据分析/u1629.svg" />
+      <img
+        id="u2136_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1629.svg"
+      />
       <div
         id="u2136_text"
         class="text"
@@ -1233,7 +1425,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2137" class="ax_default box_1">
-      <img id="u2137_img" class="img" src="./images/就业数据分析/u1630.svg" />
+      <img
+        id="u2137_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1630.svg"
+      />
       <div
         id="u2137_text"
         class="text"
@@ -1245,7 +1441,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2138" class="ax_default box_1">
-      <img id="u2138_img" class="img" src="./images/就业数据分析/u1631.svg" />
+      <img
+        id="u2138_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1631.svg"
+      />
       <div
         id="u2138_text"
         class="text"
@@ -1257,7 +1457,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2139" class="ax_default box_1">
-      <img id="u2139_img" class="img" src="./images/科研数据/u2139.svg" />
+      <img
+        id="u2139_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2139.svg"
+      />
       <div
         id="u2139_text"
         class="text"
@@ -1277,7 +1481,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2141" class="ax_default box_1">
-      <img id="u2141_img" class="img" src="./images/科研数据/u2141.svg" />
+      <img
+        id="u2141_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2141.svg"
+      />
       <div
         id="u2141_text"
         class="text"
@@ -1289,7 +1497,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2142" class="ax_default label">
-      <img id="u2142_img" class="img" src="./images/科研数据/u2118.svg" />
+      <img
+        id="u2142_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2118.svg"
+      />
       <div id="u2142_text" class="text">
         <p><span>764个</span></p>
       </div>
@@ -1297,7 +1509,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2143" class="ax_default label">
-      <img id="u2143_img" class="img" src="./images/科研数据/u2118.svg" />
+      <img
+        id="u2143_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2118.svg"
+      />
       <div id="u2143_text" class="text">
         <p><span>664个</span></p>
       </div>
@@ -1305,7 +1521,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2144" class="ax_default label">
-      <img id="u2144_img" class="img" src="./images/科研数据/u2118.svg" />
+      <img
+        id="u2144_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2118.svg"
+      />
       <div id="u2144_text" class="text">
         <p><span>564个</span></p>
       </div>
@@ -1313,7 +1533,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2145" class="ax_default label">
-      <img id="u2145_img" class="img" src="./images/科研数据/u2118.svg" />
+      <img
+        id="u2145_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2118.svg"
+      />
       <div id="u2145_text" class="text">
         <p><span>464个</span></p>
       </div>
@@ -1321,7 +1545,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2146" class="ax_default label">
-      <img id="u2146_img" class="img" src="./images/科研数据/u2118.svg" />
+      <img
+        id="u2146_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2118.svg"
+      />
       <div id="u2146_text" class="text">
         <p><span>364个</span></p>
       </div>
@@ -1329,7 +1557,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2147" class="ax_default label">
-      <img id="u2147_img" class="img" src="./images/科研数据/u2118.svg" />
+      <img
+        id="u2147_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2118.svg"
+      />
       <div id="u2147_text" class="text">
         <p><span>264个</span></p>
       </div>
@@ -1355,7 +1587,11 @@
     >
       <!-- Unnamed (饼形图) -->
       <div id="u2150" class="ax_default ellipse">
-        <img id="u2150_img" class="img" src="./images/科研数据/u2150.svg" />
+        <img
+          id="u2150_img"
+          class="img"
+          src="/portal/console/dataV2/images/科研数据/u2150.svg"
+        />
         <div
           id="u2150_text"
           class="text"
@@ -1367,7 +1603,11 @@
 
       <!-- Unnamed (饼形图) -->
       <div id="u2151" class="ax_default ellipse">
-        <img id="u2151_img" class="img" src="./images/科研数据/u2151.svg" />
+        <img
+          id="u2151_img"
+          class="img"
+          src="/portal/console/dataV2/images/科研数据/u2151.svg"
+        />
         <div
           id="u2151_text"
           class="text"
@@ -1379,7 +1619,11 @@
 
       <!-- Unnamed (饼形图) -->
       <div id="u2152" class="ax_default ellipse">
-        <img id="u2152_img" class="img" src="./images/科研数据/u2152.svg" />
+        <img
+          id="u2152_img"
+          class="img"
+          src="/portal/console/dataV2/images/科研数据/u2152.svg"
+        />
         <div
           id="u2152_text"
           class="text"
@@ -1392,7 +1636,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2153" class="ax_default ellipse2">
-      <img id="u2153_img" class="img" src="./images/科研数据/u2153.svg" />
+      <img
+        id="u2153_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2153.svg"
+      />
       <div
         id="u2153_text"
         class="text"
@@ -1444,7 +1692,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2158" class="ax_default box_1">
-      <img id="u2158_img" class="img" src="./images/科研数据/u2158.svg" />
+      <img
+        id="u2158_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2158.svg"
+      />
       <div
         id="u2158_text"
         class="text"
@@ -1472,7 +1724,11 @@
 
     <!-- Unnamed (图片) -->
     <div id="u2161" class="ax_default _图片">
-      <img id="u2161_img" class="img" src="./images/科研数据/u2161.png" />
+      <img
+        id="u2161_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2161.png"
+      />
       <div
         id="u2161_text"
         class="text"
@@ -1484,7 +1740,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2162" class="ax_default box_11">
-      <img id="u2162_img" class="img" src="./images/科研数据/u2162.svg" />
+      <img
+        id="u2162_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2162.svg"
+      />
       <div
         id="u2162_text"
         class="text"
@@ -1496,7 +1756,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2163" class="ax_default box_11">
-      <img id="u2163_img" class="img" src="./images/科研数据/u2163.svg" />
+      <img
+        id="u2163_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2163.svg"
+      />
       <div
         id="u2163_text"
         class="text"
@@ -1508,7 +1772,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2164" class="ax_default box_11">
-      <img id="u2164_img" class="img" src="./images/科研数据/u2164.svg" />
+      <img
+        id="u2164_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2164.svg"
+      />
       <div
         id="u2164_text"
         class="text"
@@ -1520,7 +1788,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2165" class="ax_default box_11">
-      <img id="u2165_img" class="img" src="./images/科研数据/u2165.svg" />
+      <img
+        id="u2165_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2165.svg"
+      />
       <div
         id="u2165_text"
         class="text"
@@ -1532,7 +1804,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2166" class="ax_default box_11">
-      <img id="u2166_img" class="img" src="./images/科研数据/u2166.svg" />
+      <img
+        id="u2166_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2166.svg"
+      />
       <div
         id="u2166_text"
         class="text"
@@ -1555,7 +1831,11 @@
     >
       <!-- Unnamed (形状) -->
       <div id="u2168" class="ax_default box_11">
-        <img id="u2168_img" class="img" src="./images/科研数据/u2168.svg" />
+        <img
+          id="u2168_img"
+          class="img"
+          src="/portal/console/dataV2/images/科研数据/u2168.svg"
+        />
         <div
           id="u2168_text"
           class="text"
@@ -1567,7 +1847,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u2169" class="ax_default box_11">
-        <img id="u2169_img" class="img" src="./images/科研数据/u2169.svg" />
+        <img
+          id="u2169_img"
+          class="img"
+          src="/portal/console/dataV2/images/科研数据/u2169.svg"
+        />
         <div
           id="u2169_text"
           class="text"
@@ -1580,7 +1864,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2170" class="ax_default box_11">
-      <img id="u2170_img" class="img" src="./images/科研数据/u2170.svg" />
+      <img
+        id="u2170_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2170.svg"
+      />
       <div
         id="u2170_text"
         class="text"
@@ -1603,7 +1891,11 @@
     >
       <!-- Unnamed (形状) -->
       <div id="u2172" class="ax_default box_11">
-        <img id="u2172_img" class="img" src="./images/科研数据/u2172.svg" />
+        <img
+          id="u2172_img"
+          class="img"
+          src="/portal/console/dataV2/images/科研数据/u2172.svg"
+        />
         <div
           id="u2172_text"
           class="text"
@@ -1615,7 +1907,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u2173" class="ax_default box_11">
-        <img id="u2173_img" class="img" src="./images/科研数据/u2173.svg" />
+        <img
+          id="u2173_img"
+          class="img"
+          src="/portal/console/dataV2/images/科研数据/u2173.svg"
+        />
         <div
           id="u2173_text"
           class="text"
@@ -1627,7 +1923,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u2174" class="ax_default box_11">
-        <img id="u2174_img" class="img" src="./images/科研数据/u2174.svg" />
+        <img
+          id="u2174_img"
+          class="img"
+          src="/portal/console/dataV2/images/科研数据/u2174.svg"
+        />
         <div
           id="u2174_text"
           class="text"
@@ -1640,7 +1940,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2175" class="ax_default box_11">
-      <img id="u2175_img" class="img" src="./images/科研数据/u2175.svg" />
+      <img
+        id="u2175_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2175.svg"
+      />
       <div
         id="u2175_text"
         class="text"
@@ -1652,7 +1956,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2176" class="ax_default box_11">
-      <img id="u2176_img" class="img" src="./images/科研数据/u2176.svg" />
+      <img
+        id="u2176_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2176.svg"
+      />
       <div
         id="u2176_text"
         class="text"
@@ -1664,7 +1972,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2177" class="ax_default box_11">
-      <img id="u2177_img" class="img" src="./images/科研数据/u2177.svg" />
+      <img
+        id="u2177_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2177.svg"
+      />
       <div
         id="u2177_text"
         class="text"
@@ -1676,7 +1988,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2178" class="ax_default box_11">
-      <img id="u2178_img" class="img" src="./images/科研数据/u2178.svg" />
+      <img
+        id="u2178_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2178.svg"
+      />
       <div
         id="u2178_text"
         class="text"
@@ -1688,7 +2004,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2179" class="ax_default box_11">
-      <img id="u2179_img" class="img" src="./images/科研数据/u2179.svg" />
+      <img
+        id="u2179_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2179.svg"
+      />
       <div
         id="u2179_text"
         class="text"
@@ -1700,7 +2020,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2180" class="ax_default box_11">
-      <img id="u2180_img" class="img" src="./images/科研数据/u2180.svg" />
+      <img
+        id="u2180_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2180.svg"
+      />
       <div
         id="u2180_text"
         class="text"
@@ -1712,7 +2036,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2181" class="ax_default box_11">
-      <img id="u2181_img" class="img" src="./images/科研数据/u2181.svg" />
+      <img
+        id="u2181_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2181.svg"
+      />
       <div
         id="u2181_text"
         class="text"
@@ -1724,7 +2052,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2182" class="ax_default box_11">
-      <img id="u2182_img" class="img" src="./images/科研数据/u2182.svg" />
+      <img
+        id="u2182_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2182.svg"
+      />
       <div
         id="u2182_text"
         class="text"
@@ -1736,7 +2068,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2183" class="ax_default box_11">
-      <img id="u2183_img" class="img" src="./images/科研数据/u2183.svg" />
+      <img
+        id="u2183_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2183.svg"
+      />
       <div
         id="u2183_text"
         class="text"
@@ -1748,7 +2084,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2184" class="ax_default box_11">
-      <img id="u2184_img" class="img" src="./images/科研数据/u2184.svg" />
+      <img
+        id="u2184_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2184.svg"
+      />
       <div
         id="u2184_text"
         class="text"
@@ -1760,7 +2100,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2185" class="ax_default box_11">
-      <img id="u2185_img" class="img" src="./images/科研数据/u2185.svg" />
+      <img
+        id="u2185_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2185.svg"
+      />
       <div
         id="u2185_text"
         class="text"
@@ -1772,7 +2116,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2186" class="ax_default box_11">
-      <img id="u2186_img" class="img" src="./images/科研数据/u2186.svg" />
+      <img
+        id="u2186_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2186.svg"
+      />
       <div
         id="u2186_text"
         class="text"
@@ -1784,7 +2132,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2187" class="ax_default box_11">
-      <img id="u2187_img" class="img" src="./images/科研数据/u2187.svg" />
+      <img
+        id="u2187_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2187.svg"
+      />
       <div
         id="u2187_text"
         class="text"
@@ -1796,7 +2148,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2188" class="ax_default box_11">
-      <img id="u2188_img" class="img" src="./images/科研数据/u2188.svg" />
+      <img
+        id="u2188_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2188.svg"
+      />
       <div
         id="u2188_text"
         class="text"
@@ -1808,7 +2164,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2189" class="ax_default box_11">
-      <img id="u2189_img" class="img" src="./images/科研数据/u2189.svg" />
+      <img
+        id="u2189_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2189.svg"
+      />
       <div
         id="u2189_text"
         class="text"
@@ -1820,7 +2180,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2190" class="ax_default box_11">
-      <img id="u2190_img" class="img" src="./images/科研数据/u2190.svg" />
+      <img
+        id="u2190_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2190.svg"
+      />
       <div
         id="u2190_text"
         class="text"
@@ -1832,7 +2196,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2191" class="ax_default box_11">
-      <img id="u2191_img" class="img" src="./images/科研数据/u2191.svg" />
+      <img
+        id="u2191_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2191.svg"
+      />
       <div
         id="u2191_text"
         class="text"
@@ -1844,7 +2212,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2192" class="ax_default box_11">
-      <img id="u2192_img" class="img" src="./images/科研数据/u2192.svg" />
+      <img
+        id="u2192_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2192.svg"
+      />
       <div
         id="u2192_text"
         class="text"
@@ -1856,7 +2228,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2193" class="ax_default box_11">
-      <img id="u2193_img" class="img" src="./images/科研数据/u2193.svg" />
+      <img
+        id="u2193_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2193.svg"
+      />
       <div
         id="u2193_text"
         class="text"
@@ -1868,7 +2244,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2194" class="ax_default box_11">
-      <img id="u2194_img" class="img" src="./images/科研数据/u2194.svg" />
+      <img
+        id="u2194_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2194.svg"
+      />
       <div
         id="u2194_text"
         class="text"
@@ -1880,7 +2260,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2195" class="ax_default box_11">
-      <img id="u2195_img" class="img" src="./images/科研数据/u2195.svg" />
+      <img
+        id="u2195_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2195.svg"
+      />
       <div
         id="u2195_text"
         class="text"
@@ -1892,7 +2276,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2196" class="ax_default box_11">
-      <img id="u2196_img" class="img" src="./images/科研数据/u2196.svg" />
+      <img
+        id="u2196_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2196.svg"
+      />
       <div
         id="u2196_text"
         class="text"
@@ -1904,7 +2292,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2197" class="ax_default box_11">
-      <img id="u2197_img" class="img" src="./images/科研数据/u2197.svg" />
+      <img
+        id="u2197_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2197.svg"
+      />
       <div
         id="u2197_text"
         class="text"
@@ -1916,7 +2308,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2198" class="ax_default box_11">
-      <img id="u2198_img" class="img" src="./images/科研数据/u2198.svg" />
+      <img
+        id="u2198_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2198.svg"
+      />
       <div
         id="u2198_text"
         class="text"
@@ -1928,7 +2324,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2199" class="ax_default box_11">
-      <img id="u2199_img" class="img" src="./images/科研数据/u2199.svg" />
+      <img
+        id="u2199_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2199.svg"
+      />
       <div
         id="u2199_text"
         class="text"
@@ -1940,7 +2340,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2200" class="ax_default box_11">
-      <img id="u2200_img" class="img" src="./images/科研数据/u2200.svg" />
+      <img
+        id="u2200_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2200.svg"
+      />
       <div
         id="u2200_text"
         class="text"
@@ -1952,7 +2356,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2201" class="ax_default box_11">
-      <img id="u2201_img" class="img" src="./images/科研数据/u2201.svg" />
+      <img
+        id="u2201_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2201.svg"
+      />
       <div
         id="u2201_text"
         class="text"
@@ -1964,7 +2372,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2202" class="ax_default box_11">
-      <img id="u2202_img" class="img" src="./images/科研数据/u2202.svg" />
+      <img
+        id="u2202_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2202.svg"
+      />
       <div
         id="u2202_text"
         class="text"
@@ -1976,7 +2388,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2203" class="ax_default box_11">
-      <img id="u2203_img" class="img" src="./images/科研数据/u2203.svg" />
+      <img
+        id="u2203_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2203.svg"
+      />
       <div
         id="u2203_text"
         class="text"
@@ -1988,7 +2404,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2204" class="ax_default box_11">
-      <img id="u2204_img" class="img" src="./images/科研数据/u2204.svg" />
+      <img
+        id="u2204_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2204.svg"
+      />
       <div
         id="u2204_text"
         class="text"
@@ -2000,7 +2420,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2205" class="ax_default box_11">
-      <img id="u2205_img" class="img" src="./images/科研数据/u2205.svg" />
+      <img
+        id="u2205_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2205.svg"
+      />
       <div
         id="u2205_text"
         class="text"
@@ -2012,7 +2436,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2206" class="ax_default box_11">
-      <img id="u2206_img" class="img" src="./images/科研数据/u2206.svg" />
+      <img
+        id="u2206_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2206.svg"
+      />
       <div
         id="u2206_text"
         class="text"
@@ -2024,7 +2452,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2207" class="ax_default box_11">
-      <img id="u2207_img" class="img" src="./images/科研数据/u2207.svg" />
+      <img
+        id="u2207_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2207.svg"
+      />
       <div
         id="u2207_text"
         class="text"
@@ -2036,7 +2468,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2208" class="ax_default box_11">
-      <img id="u2208_img" class="img" src="./images/科研数据/u2208.svg" />
+      <img
+        id="u2208_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2208.svg"
+      />
       <div
         id="u2208_text"
         class="text"
@@ -2048,7 +2484,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2209" class="ax_default box_11">
-      <img id="u2209_img" class="img" src="./images/科研数据/u2209.svg" />
+      <img
+        id="u2209_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2209.svg"
+      />
       <div
         id="u2209_text"
         class="text"
@@ -2060,7 +2500,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2210" class="ax_default box_11">
-      <img id="u2210_img" class="img" src="./images/科研数据/u2210.svg" />
+      <img
+        id="u2210_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2210.svg"
+      />
       <div
         id="u2210_text"
         class="text"
@@ -2072,7 +2516,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2211" class="ax_default box_11">
-      <img id="u2211_img" class="img" src="./images/科研数据/u2211.svg" />
+      <img
+        id="u2211_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2211.svg"
+      />
       <div
         id="u2211_text"
         class="text"
@@ -2084,7 +2532,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2212" class="ax_default box_11">
-      <img id="u2212_img" class="img" src="./images/科研数据/u2212.svg" />
+      <img
+        id="u2212_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2212.svg"
+      />
       <div
         id="u2212_text"
         class="text"
@@ -2096,7 +2548,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2213" class="ax_default box_11">
-      <img id="u2213_img" class="img" src="./images/科研数据/u2213.svg" />
+      <img
+        id="u2213_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2213.svg"
+      />
       <div
         id="u2213_text"
         class="text"
@@ -2108,7 +2564,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2214" class="ax_default box_11">
-      <img id="u2214_img" class="img" src="./images/科研数据/u2214.svg" />
+      <img
+        id="u2214_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2214.svg"
+      />
       <div
         id="u2214_text"
         class="text"
@@ -2120,7 +2580,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2215" class="ax_default box_11">
-      <img id="u2215_img" class="img" src="./images/科研数据/u2215.svg" />
+      <img
+        id="u2215_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2215.svg"
+      />
       <div
         id="u2215_text"
         class="text"
@@ -2132,7 +2596,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2216" class="ax_default box_11">
-      <img id="u2216_img" class="img" src="./images/科研数据/u2216.svg" />
+      <img
+        id="u2216_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2216.svg"
+      />
       <div
         id="u2216_text"
         class="text"
@@ -2144,7 +2612,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2217" class="ax_default box_11">
-      <img id="u2217_img" class="img" src="./images/科研数据/u2217.svg" />
+      <img
+        id="u2217_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2217.svg"
+      />
       <div
         id="u2217_text"
         class="text"
@@ -2156,7 +2628,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2218" class="ax_default box_11">
-      <img id="u2218_img" class="img" src="./images/科研数据/u2218.svg" />
+      <img
+        id="u2218_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2218.svg"
+      />
       <div
         id="u2218_text"
         class="text"
@@ -2168,7 +2644,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2219" class="ax_default box_11">
-      <img id="u2219_img" class="img" src="./images/科研数据/u2219.svg" />
+      <img
+        id="u2219_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2219.svg"
+      />
       <div
         id="u2219_text"
         class="text"
@@ -2180,7 +2660,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2220" class="ax_default box_11">
-      <img id="u2220_img" class="img" src="./images/科研数据/u2220.svg" />
+      <img
+        id="u2220_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2220.svg"
+      />
       <div
         id="u2220_text"
         class="text"
@@ -2192,7 +2676,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2221" class="ax_default box_11">
-      <img id="u2221_img" class="img" src="./images/科研数据/u2221.svg" />
+      <img
+        id="u2221_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2221.svg"
+      />
       <div
         id="u2221_text"
         class="text"
@@ -2204,7 +2692,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2222" class="ax_default box_11">
-      <img id="u2222_img" class="img" src="./images/科研数据/u2222.svg" />
+      <img
+        id="u2222_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2222.svg"
+      />
       <div
         id="u2222_text"
         class="text"
@@ -2216,7 +2708,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2223" class="ax_default box_11">
-      <img id="u2223_img" class="img" src="./images/科研数据/u2223.svg" />
+      <img
+        id="u2223_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2223.svg"
+      />
       <div
         id="u2223_text"
         class="text"
@@ -2228,7 +2724,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2224" class="ax_default box_11">
-      <img id="u2224_img" class="img" src="./images/科研数据/u2224.svg" />
+      <img
+        id="u2224_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2224.svg"
+      />
       <div
         id="u2224_text"
         class="text"
@@ -2240,7 +2740,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2225" class="ax_default box_11">
-      <img id="u2225_img" class="img" src="./images/科研数据/u2225.svg" />
+      <img
+        id="u2225_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2225.svg"
+      />
       <div
         id="u2225_text"
         class="text"
@@ -2252,7 +2756,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2226" class="ax_default box_11">
-      <img id="u2226_img" class="img" src="./images/科研数据/u2226.svg" />
+      <img
+        id="u2226_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2226.svg"
+      />
       <div
         id="u2226_text"
         class="text"
@@ -2264,7 +2772,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2227" class="ax_default box_11">
-      <img id="u2227_img" class="img" src="./images/科研数据/u2227.svg" />
+      <img
+        id="u2227_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2227.svg"
+      />
       <div
         id="u2227_text"
         class="text"
@@ -2276,7 +2788,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2228" class="ax_default box_11">
-      <img id="u2228_img" class="img" src="./images/科研数据/u2228.svg" />
+      <img
+        id="u2228_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2228.svg"
+      />
       <div
         id="u2228_text"
         class="text"
@@ -2288,7 +2804,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2229" class="ax_default box_11">
-      <img id="u2229_img" class="img" src="./images/科研数据/u2229.svg" />
+      <img
+        id="u2229_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2229.svg"
+      />
       <div
         id="u2229_text"
         class="text"
@@ -2300,7 +2820,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2230" class="ax_default box_11">
-      <img id="u2230_img" class="img" src="./images/科研数据/u2230.svg" />
+      <img
+        id="u2230_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2230.svg"
+      />
       <div
         id="u2230_text"
         class="text"
@@ -2312,7 +2836,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2231" class="ax_default box_11">
-      <img id="u2231_img" class="img" src="./images/科研数据/u2231.svg" />
+      <img
+        id="u2231_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2231.svg"
+      />
       <div
         id="u2231_text"
         class="text"
@@ -2324,7 +2852,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2232" class="ax_default box_11">
-      <img id="u2232_img" class="img" src="./images/科研数据/u2232.svg" />
+      <img
+        id="u2232_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2232.svg"
+      />
       <div
         id="u2232_text"
         class="text"
@@ -2336,7 +2868,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2233" class="ax_default box_11">
-      <img id="u2233_img" class="img" src="./images/科研数据/u2233.svg" />
+      <img
+        id="u2233_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2233.svg"
+      />
       <div
         id="u2233_text"
         class="text"
@@ -2348,7 +2884,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2234" class="ax_default box_11">
-      <img id="u2234_img" class="img" src="./images/科研数据/u2234.svg" />
+      <img
+        id="u2234_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2234.svg"
+      />
       <div
         id="u2234_text"
         class="text"
@@ -2360,7 +2900,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2235" class="ax_default box_11">
-      <img id="u2235_img" class="img" src="./images/科研数据/u2235.svg" />
+      <img
+        id="u2235_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2235.svg"
+      />
       <div
         id="u2235_text"
         class="text"
@@ -2372,7 +2916,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2236" class="ax_default box_11">
-      <img id="u2236_img" class="img" src="./images/科研数据/u2236.svg" />
+      <img
+        id="u2236_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2236.svg"
+      />
       <div
         id="u2236_text"
         class="text"
@@ -2384,7 +2932,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2237" class="ax_default box_11">
-      <img id="u2237_img" class="img" src="./images/科研数据/u2237.svg" />
+      <img
+        id="u2237_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2237.svg"
+      />
       <div
         id="u2237_text"
         class="text"
@@ -2396,7 +2948,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2238" class="ax_default box_11">
-      <img id="u2238_img" class="img" src="./images/科研数据/u2238.svg" />
+      <img
+        id="u2238_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2238.svg"
+      />
       <div
         id="u2238_text"
         class="text"
@@ -2408,7 +2964,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2239" class="ax_default box_11">
-      <img id="u2239_img" class="img" src="./images/科研数据/u2239.svg" />
+      <img
+        id="u2239_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2239.svg"
+      />
       <div
         id="u2239_text"
         class="text"
@@ -2420,7 +2980,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2240" class="ax_default box_11">
-      <img id="u2240_img" class="img" src="./images/科研数据/u2240.svg" />
+      <img
+        id="u2240_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2240.svg"
+      />
       <div
         id="u2240_text"
         class="text"
@@ -2432,7 +2996,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2241" class="ax_default box_11">
-      <img id="u2241_img" class="img" src="./images/科研数据/u2241.svg" />
+      <img
+        id="u2241_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2241.svg"
+      />
       <div
         id="u2241_text"
         class="text"
@@ -2444,7 +3012,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2242" class="ax_default box_11">
-      <img id="u2242_img" class="img" src="./images/科研数据/u2242.svg" />
+      <img
+        id="u2242_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2242.svg"
+      />
       <div
         id="u2242_text"
         class="text"
@@ -2465,7 +3037,7 @@
       <img
         id="u2243_img"
         class="singleImg img"
-        src="./images/科研数据/u2243.svg"
+        src="/portal/console/dataV2/images/科研数据/u2243.svg"
       />
       <div
         id="u2243p000"
@@ -2482,7 +3054,7 @@
         <img
           id="u2243p000_img"
           class="img"
-          src="./images/科研数据/u2243p000.svg"
+          src="/portal/console/dataV2/images/科研数据/u2243p000.svg"
         />
       </div>
       <div
@@ -2500,7 +3072,7 @@
         <img
           id="u2243p001_img"
           class="img"
-          src="./images/科研数据/u2243p001.svg"
+          src="/portal/console/dataV2/images/科研数据/u2243p001.svg"
         />
       </div>
       <div
@@ -2523,7 +3095,7 @@
       <img
         id="u2244_img"
         class="singleImg img"
-        src="./images/科研数据/u2244.svg"
+        src="/portal/console/dataV2/images/科研数据/u2244.svg"
       />
       <div
         id="u2244p000"
@@ -2540,7 +3112,7 @@
         <img
           id="u2244p000_img"
           class="img"
-          src="./images/科研数据/u2244p000.svg"
+          src="/portal/console/dataV2/images/科研数据/u2244p000.svg"
         />
       </div>
       <div
@@ -2558,7 +3130,7 @@
         <img
           id="u2244p001_img"
           class="img"
-          src="./images/科研数据/u2244p001.svg"
+          src="/portal/console/dataV2/images/科研数据/u2244p001.svg"
         />
       </div>
       <div
@@ -2572,7 +3144,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2245" class="ax_default box_11">
-      <img id="u2245_img" class="img" src="./images/科研数据/u2245.svg" />
+      <img
+        id="u2245_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2245.svg"
+      />
       <div
         id="u2245_text"
         class="text"
@@ -2584,7 +3160,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2246" class="ax_default box_11">
-      <img id="u2246_img" class="img" src="./images/科研数据/u2246.svg" />
+      <img
+        id="u2246_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2246.svg"
+      />
       <div
         id="u2246_text"
         class="text"
@@ -2596,7 +3176,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2247" class="ax_default box_11">
-      <img id="u2247_img" class="img" src="./images/科研数据/u2247.svg" />
+      <img
+        id="u2247_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2247.svg"
+      />
       <div
         id="u2247_text"
         class="text"
@@ -2608,7 +3192,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2248" class="ax_default box_11">
-      <img id="u2248_img" class="img" src="./images/科研数据/u2248.svg" />
+      <img
+        id="u2248_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2248.svg"
+      />
       <div
         id="u2248_text"
         class="text"
@@ -2620,7 +3208,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2249" class="ax_default box_11">
-      <img id="u2249_img" class="img" src="./images/科研数据/u2249.svg" />
+      <img
+        id="u2249_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2249.svg"
+      />
       <div
         id="u2249_text"
         class="text"
@@ -2632,7 +3224,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2250" class="ax_default box_11">
-      <img id="u2250_img" class="img" src="./images/科研数据/u2250.svg" />
+      <img
+        id="u2250_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2250.svg"
+      />
       <div
         id="u2250_text"
         class="text"
@@ -2644,7 +3240,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2251" class="ax_default box_11">
-      <img id="u2251_img" class="img" src="./images/科研数据/u2251.svg" />
+      <img
+        id="u2251_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2251.svg"
+      />
       <div
         id="u2251_text"
         class="text"
@@ -2656,7 +3256,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2252" class="ax_default box_11">
-      <img id="u2252_img" class="img" src="./images/科研数据/u2252.svg" />
+      <img
+        id="u2252_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2252.svg"
+      />
       <div
         id="u2252_text"
         class="text"
@@ -2668,7 +3272,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2253" class="ax_default box_11">
-      <img id="u2253_img" class="img" src="./images/科研数据/u2253.svg" />
+      <img
+        id="u2253_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2253.svg"
+      />
       <div
         id="u2253_text"
         class="text"
@@ -2680,7 +3288,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2254" class="ax_default box_11">
-      <img id="u2254_img" class="img" src="./images/科研数据/u2254.svg" />
+      <img
+        id="u2254_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2254.svg"
+      />
       <div
         id="u2254_text"
         class="text"
@@ -2692,7 +3304,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2255" class="ax_default box_11">
-      <img id="u2255_img" class="img" src="./images/科研数据/u2255.svg" />
+      <img
+        id="u2255_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2255.svg"
+      />
       <div
         id="u2255_text"
         class="text"
@@ -2704,7 +3320,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2256" class="ax_default box_11">
-      <img id="u2256_img" class="img" src="./images/科研数据/u2256.svg" />
+      <img
+        id="u2256_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2256.svg"
+      />
       <div
         id="u2256_text"
         class="text"
@@ -2716,7 +3336,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2257" class="ax_default box_11">
-      <img id="u2257_img" class="img" src="./images/科研数据/u2257.svg" />
+      <img
+        id="u2257_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2257.svg"
+      />
       <div
         id="u2257_text"
         class="text"
@@ -2728,7 +3352,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2258" class="ax_default box_11">
-      <img id="u2258_img" class="img" src="./images/科研数据/u2258.svg" />
+      <img
+        id="u2258_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2258.svg"
+      />
       <div
         id="u2258_text"
         class="text"
@@ -2740,7 +3368,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2259" class="ax_default box_11">
-      <img id="u2259_img" class="img" src="./images/科研数据/u2259.svg" />
+      <img
+        id="u2259_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2259.svg"
+      />
       <div
         id="u2259_text"
         class="text"
@@ -2752,7 +3384,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2260" class="ax_default box_11">
-      <img id="u2260_img" class="img" src="./images/科研数据/u2260.svg" />
+      <img
+        id="u2260_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2260.svg"
+      />
       <div
         id="u2260_text"
         class="text"
@@ -2764,7 +3400,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2261" class="ax_default box_11">
-      <img id="u2261_img" class="img" src="./images/科研数据/u2261.svg" />
+      <img
+        id="u2261_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2261.svg"
+      />
       <div
         id="u2261_text"
         class="text"
@@ -2776,7 +3416,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2262" class="ax_default box_11">
-      <img id="u2262_img" class="img" src="./images/科研数据/u2262.svg" />
+      <img
+        id="u2262_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2262.svg"
+      />
       <div
         id="u2262_text"
         class="text"
@@ -2788,7 +3432,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2263" class="ax_default box_11">
-      <img id="u2263_img" class="img" src="./images/科研数据/u2263.svg" />
+      <img
+        id="u2263_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2263.svg"
+      />
       <div
         id="u2263_text"
         class="text"
@@ -2800,7 +3448,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2264" class="ax_default box_11">
-      <img id="u2264_img" class="img" src="./images/科研数据/u2264.svg" />
+      <img
+        id="u2264_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2264.svg"
+      />
       <div
         id="u2264_text"
         class="text"
@@ -2812,7 +3464,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u2265" class="ax_default box_11">
-      <img id="u2265_img" class="img" src="./images/科研数据/u2265.svg" />
+      <img
+        id="u2265_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2265.svg"
+      />
       <div
         id="u2265_text"
         class="text"
@@ -2856,7 +3512,11 @@
 
     <!-- Unnamed (垂直线) -->
     <div id="u2270" class="ax_default line">
-      <img id="u2270_img" class="img" src="./images/在校生数据分析/u407.svg" />
+      <img
+        id="u2270_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u407.svg"
+      />
       <div
         id="u2270_text"
         class="text"
@@ -2868,7 +3528,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2271" class="ax_default line">
-      <img id="u2271_img" class="img" src="./images/科研数据/u2271.svg" />
+      <img
+        id="u2271_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2271.svg"
+      />
       <div
         id="u2271_text"
         class="text"
@@ -2880,7 +3544,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2272" class="ax_default line">
-      <img id="u2272_img" class="img" src="./images/科研数据/u2272.svg" />
+      <img
+        id="u2272_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2272.svg"
+      />
       <div
         id="u2272_text"
         class="text"
@@ -2892,7 +3560,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2273" class="ax_default line">
-      <img id="u2273_img" class="img" src="./images/科研数据/u2272.svg" />
+      <img
+        id="u2273_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2272.svg"
+      />
       <div
         id="u2273_text"
         class="text"
@@ -2904,7 +3576,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2274" class="ax_default line">
-      <img id="u2274_img" class="img" src="./images/科研数据/u2272.svg" />
+      <img
+        id="u2274_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2272.svg"
+      />
       <div
         id="u2274_text"
         class="text"
@@ -2916,7 +3592,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u2275" class="ax_default line">
-      <img id="u2275_img" class="img" src="./images/科研数据/u2275.svg" />
+      <img
+        id="u2275_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2275.svg"
+      />
       <div
         id="u2275_text"
         class="text"
@@ -3032,7 +3712,11 @@
         <div id="u2288_state0_content" class="panel_state_content">
           <!-- Unnamed (形状) -->
           <div id="u2289" class="ax_default line">
-            <img id="u2289_img" class="img" src="./images/科研数据/u2289.svg" />
+            <img
+              id="u2289_img"
+              class="img"
+              src="/portal/console/dataV2/images/科研数据/u2289.svg"
+            />
             <div
               id="u2289_text"
               class="text"
@@ -3051,7 +3735,11 @@
         <div id="u2290_state0_content" class="panel_state_content">
           <!-- Unnamed (形状) -->
           <div id="u2291" class="ax_default line">
-            <img id="u2291_img" class="img" src="./images/科研数据/u2291.svg" />
+            <img
+              id="u2291_img"
+              class="img"
+              src="/portal/console/dataV2/images/科研数据/u2291.svg"
+            />
             <div
               id="u2291_text"
               class="text"
@@ -3070,7 +3758,11 @@
         <div id="u2292_state0_content" class="panel_state_content">
           <!-- Unnamed (形状) -->
           <div id="u2293" class="ax_default line">
-            <img id="u2293_img" class="img" src="./images/科研数据/u2293.svg" />
+            <img
+              id="u2293_img"
+              class="img"
+              src="/portal/console/dataV2/images/科研数据/u2293.svg"
+            />
             <div
               id="u2293_text"
               class="text"
@@ -3199,7 +3891,11 @@
     >
       <!-- Unnamed (形状) -->
       <div id="u2307" class="ax_default ellipse">
-        <img id="u2307_img" class="img" src="./images/科研数据/u2307.svg" />
+        <img
+          id="u2307_img"
+          class="img"
+          src="/portal/console/dataV2/images/科研数据/u2307.svg"
+        />
         <div
           id="u2307_text"
           class="text"
@@ -3211,7 +3907,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u2308" class="ax_default ellipse">
-        <img id="u2308_img" class="img" src="./images/科研数据/u2308.svg" />
+        <img
+          id="u2308_img"
+          class="img"
+          src="/portal/console/dataV2/images/科研数据/u2308.svg"
+        />
         <div
           id="u2308_text"
           class="text"
@@ -3223,7 +3923,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u2309" class="ax_default ellipse">
-        <img id="u2309_img" class="img" src="./images/科研数据/u2309.svg" />
+        <img
+          id="u2309_img"
+          class="img"
+          src="/portal/console/dataV2/images/科研数据/u2309.svg"
+        />
         <div
           id="u2309_text"
           class="text"
@@ -3235,7 +3939,11 @@
 
       <!-- Unnamed (圆形) -->
       <div id="u2310" class="ax_default ellipse">
-        <img id="u2310_img" class="img" src="./images/科研数据/u2310.svg" />
+        <img
+          id="u2310_img"
+          class="img"
+          src="/portal/console/dataV2/images/科研数据/u2310.svg"
+        />
         <div id="u2310_text" class="text">
           <p><span>项目</span></p>
         </div>
@@ -3359,7 +4067,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u2323" class="ax_default box_1">
-      <img id="u2323_img" class="img" src="./images/科研数据/u2323.svg" />
+      <img
+        id="u2323_img"
+        class="img"
+        src="/portal/console/dataV2/images/科研数据/u2323.svg"
+      />
       <div
         id="u2323_text"
         class="text"
@@ -3410,7 +4122,7 @@ const clickOther = (path) => {
 </script>
 
 <style lang="less" scoped>
-@import "./data/styles.css";
-@import "./files/科研数据/styles.css";
-@import "./resources/css/axure_rp_page.css";
+@import "/portal/console/dataV2/data/styles.css";
+@import "/portal/console/dataV2/files/科研数据/styles.css";
+@import "/portal/console/dataV2/resources/css/axure_rp_page.css";
 </style>

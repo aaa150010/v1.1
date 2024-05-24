@@ -150,7 +150,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1696" class="ax_default label">
-      <img id="u1696_img" class="img" src="./images/综合数据/u3.svg" />
+      <img
+        id="u1696_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u3.svg"
+      />
       <div id="u1696_text" class="text">
         <p><span></span></p>
       </div>
@@ -158,7 +162,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1697" class="ax_default line">
-      <img id="u1697_img" class="img" src="./images/综合数据/u1.svg" />
+      <img
+        id="u1697_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u1.svg"
+      />
       <div
         id="u1697_text"
         class="text"
@@ -170,7 +178,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1698" class="ax_default _三级标题">
-      <img id="u1698_img" class="img" src="./images/在校生数据分析/u616.svg" />
+      <img
+        id="u1698_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u616.svg"
+      />
       <div id="u1698_text" class="text">
         <p><span>教职工数据</span></p>
       </div>
@@ -178,7 +190,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1699" class="ax_default label">
-      <img id="u1699_img" class="img" src="./images/综合数据/u3.svg" />
+      <img
+        id="u1699_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u3.svg"
+      />
       <div id="u1699_text" class="text">
         <p><span></span></p>
       </div>
@@ -222,7 +238,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1703" class="ax_default box_1">
-      <img id="u1703_img" class="img" src="./images/综合数据/u16.svg" />
+      <img
+        id="u1703_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u16.svg"
+      />
       <div
         id="u1703_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -246,7 +266,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1705" class="ax_default box_1">
-      <img id="u1705_img" class="img" src="./images/综合数据/u16.svg" />
+      <img
+        id="u1705_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u16.svg"
+      />
       <div
         id="u1705_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -258,7 +282,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1706" class="ax_default box_1">
-      <img id="u1706_img" class="img" src="./images/综合数据/u16.svg" />
+      <img
+        id="u1706_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u16.svg"
+      />
       <div
         id="u1706_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -270,7 +298,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1707" class="ax_default _三级标题">
-      <img id="u1707_img" class="img" src="./images/综合数据/u22.svg" />
+      <img
+        id="u1707_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u22.svg"
+      />
       <div id="u1707_text" class="text">
         <p><span>智慧校园</span></p>
       </div>
@@ -278,7 +310,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1708" class="ax_default box_1">
-      <img id="u1708_img" class="img" src="./images/综合数据/u23.svg" />
+      <img
+        id="u1708_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u23.svg"
+      />
       <div
         id="u1708_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -290,7 +326,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1709" class="ax_default box_1">
-      <img id="u1709_img" class="img" src="./images/综合数据/u16.svg" />
+      <img
+        id="u1709_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u16.svg"
+      />
       <div
         id="u1709_text"
         class="text hover:text-sky-400 cursor-pointer"
@@ -302,7 +342,11 @@
 
     <!-- Unnamed (SVG) -->
     <div id="u1710" class="ax_default _默认样式">
-      <img id="u1710_img" class="img" src="./images/教职工数据/u1710.svg" />
+      <img
+        id="u1710_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1710.svg"
+      />
       <div
         id="u1710_text"
         class="text"
@@ -314,7 +358,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1711" class="ax_default icon">
-      <img id="u1711_img" class="img" src="./images/教职工数据/u1711.svg" />
+      <img
+        id="u1711_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1711.svg"
+      />
       <div
         id="u1711_text"
         class="text"
@@ -326,7 +374,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1712" class="ax_default icon">
-      <img id="u1712_img" class="img" src="./images/教职工数据/u1712.svg" />
+      <img
+        id="u1712_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1712.svg"
+      />
       <div
         id="u1712_text"
         class="text"
@@ -338,7 +390,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1713" class="ax_default icon">
-      <img id="u1713_img" class="img" src="./images/教职工数据/u1713.svg" />
+      <img
+        id="u1713_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1713.svg"
+      />
       <div
         id="u1713_text"
         class="text"
@@ -350,7 +406,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1714" class="ax_default icon">
-      <img id="u1714_img" class="img" src="./images/教职工数据/u1714.svg" />
+      <img
+        id="u1714_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1714.svg"
+      />
       <div
         id="u1714_text"
         class="text"
@@ -362,7 +422,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1715" class="ax_default icon">
-      <img id="u1715_img" class="img" src="./images/教职工数据/u1715.svg" />
+      <img
+        id="u1715_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1715.svg"
+      />
       <div
         id="u1715_text"
         class="text"
@@ -374,7 +438,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1716" class="ax_default icon">
-      <img id="u1716_img" class="img" src="./images/教职工数据/u1716.svg" />
+      <img
+        id="u1716_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1716.svg"
+      />
       <div
         id="u1716_text"
         class="text"
@@ -386,7 +454,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1717" class="ax_default icon">
-      <img id="u1717_img" class="img" src="./images/教职工数据/u1717.svg" />
+      <img
+        id="u1717_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1717.svg"
+      />
       <div
         id="u1717_text"
         class="text"
@@ -398,7 +470,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1718" class="ax_default icon">
-      <img id="u1718_img" class="img" src="./images/教职工数据/u1718.svg" />
+      <img
+        id="u1718_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1718.svg"
+      />
       <div
         id="u1718_text"
         class="text"
@@ -410,7 +486,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1719" class="ax_default icon">
-      <img id="u1719_img" class="img" src="./images/教职工数据/u1719.svg" />
+      <img
+        id="u1719_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1719.svg"
+      />
       <div
         id="u1719_text"
         class="text"
@@ -422,7 +502,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1720" class="ax_default icon">
-      <img id="u1720_img" class="img" src="./images/教职工数据/u1720.svg" />
+      <img
+        id="u1720_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1720.svg"
+      />
       <div
         id="u1720_text"
         class="text"
@@ -434,7 +518,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1721" class="ax_default icon">
-      <img id="u1721_img" class="img" src="./images/教职工数据/u1721.svg" />
+      <img
+        id="u1721_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1721.svg"
+      />
       <div
         id="u1721_text"
         class="text"
@@ -446,7 +534,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1722" class="ax_default icon">
-      <img id="u1722_img" class="img" src="./images/教职工数据/u1722.svg" />
+      <img
+        id="u1722_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1722.svg"
+      />
       <div
         id="u1722_text"
         class="text"
@@ -458,7 +550,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1723" class="ax_default icon">
-      <img id="u1723_img" class="img" src="./images/教职工数据/u1723.svg" />
+      <img
+        id="u1723_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1723.svg"
+      />
       <div
         id="u1723_text"
         class="text"
@@ -470,7 +566,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1724" class="ax_default icon">
-      <img id="u1724_img" class="img" src="./images/教职工数据/u1716.svg" />
+      <img
+        id="u1724_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1716.svg"
+      />
       <div
         id="u1724_text"
         class="text"
@@ -482,7 +582,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1725" class="ax_default icon">
-      <img id="u1725_img" class="img" src="./images/教职工数据/u1716.svg" />
+      <img
+        id="u1725_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1716.svg"
+      />
       <div
         id="u1725_text"
         class="text"
@@ -494,7 +598,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1726" class="ax_default icon">
-      <img id="u1726_img" class="img" src="./images/教职工数据/u1716.svg" />
+      <img
+        id="u1726_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1716.svg"
+      />
       <div
         id="u1726_text"
         class="text"
@@ -506,7 +614,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1727" class="ax_default icon">
-      <img id="u1727_img" class="img" src="./images/教职工数据/u1716.svg" />
+      <img
+        id="u1727_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1716.svg"
+      />
       <div
         id="u1727_text"
         class="text"
@@ -518,7 +630,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1728" class="ax_default icon">
-      <img id="u1728_img" class="img" src="./images/教职工数据/u1716.svg" />
+      <img
+        id="u1728_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1716.svg"
+      />
       <div
         id="u1728_text"
         class="text"
@@ -540,7 +656,11 @@
     >
       <!-- Unnamed (形状) -->
       <div id="u1730" class="ax_default shape">
-        <img id="u1730_img" class="img" src="./images/教职工数据/u1730.svg" />
+        <img
+          id="u1730_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1730.svg"
+        />
         <div
           id="u1730_text"
           class="text"
@@ -552,7 +672,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u1731" class="ax_default shape">
-        <img id="u1731_img" class="img" src="./images/教职工数据/u1731.svg" />
+        <img
+          id="u1731_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1731.svg"
+        />
         <div
           id="u1731_text"
           class="text"
@@ -564,7 +688,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u1732" class="ax_default shape">
-        <img id="u1732_img" class="img" src="./images/教职工数据/u1732.svg" />
+        <img
+          id="u1732_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1732.svg"
+        />
         <div
           id="u1732_text"
           class="text"
@@ -576,7 +704,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u1733" class="ax_default shape">
-        <img id="u1733_img" class="img" src="./images/教职工数据/u1733.svg" />
+        <img
+          id="u1733_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1733.svg"
+        />
         <div
           id="u1733_text"
           class="text"
@@ -588,7 +720,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u1734" class="ax_default shape">
-        <img id="u1734_img" class="img" src="./images/教职工数据/u1734.svg" />
+        <img
+          id="u1734_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1734.svg"
+        />
         <div
           id="u1734_text"
           class="text"
@@ -600,7 +736,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u1735" class="ax_default shape">
-        <img id="u1735_img" class="img" src="./images/教职工数据/u1735.svg" />
+        <img
+          id="u1735_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1735.svg"
+        />
         <div
           id="u1735_text"
           class="text"
@@ -612,7 +752,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u1736" class="ax_default shape">
-        <img id="u1736_img" class="img" src="./images/教职工数据/u1736.svg" />
+        <img
+          id="u1736_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1736.svg"
+        />
         <div
           id="u1736_text"
           class="text"
@@ -624,7 +768,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u1737" class="ax_default shape">
-        <img id="u1737_img" class="img" src="./images/教职工数据/u1737.svg" />
+        <img
+          id="u1737_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1737.svg"
+        />
         <div
           id="u1737_text"
           class="text"
@@ -636,7 +784,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u1738" class="ax_default shape">
-        <img id="u1738_img" class="img" src="./images/教职工数据/u1738.svg" />
+        <img
+          id="u1738_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1738.svg"
+        />
         <div
           id="u1738_text"
           class="text"
@@ -648,7 +800,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u1739" class="ax_default shape">
-        <img id="u1739_img" class="img" src="./images/教职工数据/u1739.svg" />
+        <img
+          id="u1739_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1739.svg"
+        />
         <div
           id="u1739_text"
           class="text"
@@ -660,7 +816,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u1740" class="ax_default shape">
-        <img id="u1740_img" class="img" src="./images/教职工数据/u1740.svg" />
+        <img
+          id="u1740_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1740.svg"
+        />
         <div
           id="u1740_text"
           class="text"
@@ -672,7 +832,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u1741" class="ax_default shape">
-        <img id="u1741_img" class="img" src="./images/教职工数据/u1741.svg" />
+        <img
+          id="u1741_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1741.svg"
+        />
         <div
           id="u1741_text"
           class="text"
@@ -684,7 +848,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u1742" class="ax_default shape">
-        <img id="u1742_img" class="img" src="./images/教职工数据/u1742.svg" />
+        <img
+          id="u1742_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1742.svg"
+        />
         <div
           id="u1742_text"
           class="text"
@@ -696,7 +864,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u1743" class="ax_default shape">
-        <img id="u1743_img" class="img" src="./images/教职工数据/u1743.svg" />
+        <img
+          id="u1743_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1743.svg"
+        />
         <div
           id="u1743_text"
           class="text"
@@ -708,7 +880,11 @@
 
       <!-- Unnamed (形状) -->
       <div id="u1744" class="ax_default shape">
-        <img id="u1744_img" class="img" src="./images/教职工数据/u1744.svg" />
+        <img
+          id="u1744_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1744.svg"
+        />
         <div
           id="u1744_text"
           class="text"
@@ -747,7 +923,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u1748" class="ax_default _图片">
-        <img id="u1748_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u1748_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u1748_text"
           class="text"
@@ -778,7 +958,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u1751" class="ax_default _图片">
-        <img id="u1751_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u1751_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u1751_text"
           class="text"
@@ -809,7 +993,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u1754" class="ax_default _图片">
-        <img id="u1754_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u1754_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u1754_text"
           class="text"
@@ -840,7 +1028,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u1757" class="ax_default _图片">
-        <img id="u1757_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u1757_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u1757_text"
           class="text"
@@ -871,7 +1063,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u1760" class="ax_default _图片">
-        <img id="u1760_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u1760_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u1760_text"
           class="text"
@@ -918,7 +1114,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u1765" class="ax_default _图片">
-        <img id="u1765_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u1765_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u1765_text"
           class="text"
@@ -949,7 +1149,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u1768" class="ax_default _图片">
-        <img id="u1768_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u1768_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u1768_text"
           class="text"
@@ -980,7 +1184,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u1771" class="ax_default _图片">
-        <img id="u1771_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u1771_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u1771_text"
           class="text"
@@ -1011,7 +1219,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u1774" class="ax_default _图片">
-        <img id="u1774_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u1774_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u1774_text"
           class="text"
@@ -1042,7 +1254,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u1777" class="ax_default _图片">
-        <img id="u1777_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u1777_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u1777_text"
           class="text"
@@ -1089,7 +1305,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u1782" class="ax_default _图片">
-        <img id="u1782_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u1782_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u1782_text"
           class="text"
@@ -1120,7 +1340,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u1785" class="ax_default _图片">
-        <img id="u1785_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u1785_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u1785_text"
           class="text"
@@ -1151,7 +1375,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u1788" class="ax_default _图片">
-        <img id="u1788_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u1788_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u1788_text"
           class="text"
@@ -1182,7 +1410,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u1791" class="ax_default _图片">
-        <img id="u1791_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u1791_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u1791_text"
           class="text"
@@ -1213,7 +1445,11 @@
     >
       <!-- Unnamed (图片) -->
       <div id="u1794" class="ax_default _图片">
-        <img id="u1794_img" class="img" src="./images/招生数据分析/u751.png" />
+        <img
+          id="u1794_img"
+          class="img"
+          src="/portal/console/dataV2/images/招生数据分析/u751.png"
+        />
         <div
           id="u1794_text"
           class="text"
@@ -1234,7 +1470,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1796" class="ax_default icon">
-      <img id="u1796_img" class="img" src="./images/教职工数据/u1716.svg" />
+      <img
+        id="u1796_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1716.svg"
+      />
       <div
         id="u1796_text"
         class="text"
@@ -1246,7 +1486,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1797" class="ax_default icon">
-      <img id="u1797_img" class="img" src="./images/教职工数据/u1716.svg" />
+      <img
+        id="u1797_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1716.svg"
+      />
       <div
         id="u1797_text"
         class="text"
@@ -1258,7 +1502,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1798" class="ax_default icon">
-      <img id="u1798_img" class="img" src="./images/教职工数据/u1716.svg" />
+      <img
+        id="u1798_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1716.svg"
+      />
       <div
         id="u1798_text"
         class="text"
@@ -1270,7 +1518,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1799" class="ax_default icon">
-      <img id="u1799_img" class="img" src="./images/教职工数据/u1716.svg" />
+      <img
+        id="u1799_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1716.svg"
+      />
       <div
         id="u1799_text"
         class="text"
@@ -1282,7 +1534,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1800" class="ax_default icon">
-      <img id="u1800_img" class="img" src="./images/教职工数据/u1716.svg" />
+      <img
+        id="u1800_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1716.svg"
+      />
       <div
         id="u1800_text"
         class="text"
@@ -1294,7 +1550,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1801" class="ax_default icon">
-      <img id="u1801_img" class="img" src="./images/教职工数据/u1716.svg" />
+      <img
+        id="u1801_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1716.svg"
+      />
       <div
         id="u1801_text"
         class="text"
@@ -1306,7 +1566,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1802" class="ax_default icon">
-      <img id="u1802_img" class="img" src="./images/教职工数据/u1717.svg" />
+      <img
+        id="u1802_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1717.svg"
+      />
       <div
         id="u1802_text"
         class="text"
@@ -1318,7 +1582,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1803" class="ax_default icon">
-      <img id="u1803_img" class="img" src="./images/教职工数据/u1718.svg" />
+      <img
+        id="u1803_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1718.svg"
+      />
       <div
         id="u1803_text"
         class="text"
@@ -1330,7 +1598,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1804" class="ax_default icon">
-      <img id="u1804_img" class="img" src="./images/教职工数据/u1719.svg" />
+      <img
+        id="u1804_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1719.svg"
+      />
       <div
         id="u1804_text"
         class="text"
@@ -1342,7 +1614,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1805" class="ax_default icon">
-      <img id="u1805_img" class="img" src="./images/教职工数据/u1720.svg" />
+      <img
+        id="u1805_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1720.svg"
+      />
       <div
         id="u1805_text"
         class="text"
@@ -1354,7 +1630,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1806" class="ax_default icon">
-      <img id="u1806_img" class="img" src="./images/教职工数据/u1721.svg" />
+      <img
+        id="u1806_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1721.svg"
+      />
       <div
         id="u1806_text"
         class="text"
@@ -1366,7 +1646,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1807" class="ax_default icon">
-      <img id="u1807_img" class="img" src="./images/教职工数据/u1722.svg" />
+      <img
+        id="u1807_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1722.svg"
+      />
       <div
         id="u1807_text"
         class="text"
@@ -1386,7 +1670,11 @@
 
     <!-- Unnamed (垂直线) -->
     <div id="u1809" class="ax_default line">
-      <img id="u1809_img" class="img" src="./images/在校生数据分析/u407.svg" />
+      <img
+        id="u1809_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u407.svg"
+      />
       <div
         id="u1809_text"
         class="text"
@@ -1398,7 +1686,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u1810" class="ax_default line">
-      <img id="u1810_img" class="img" src="./images/就业数据分析/u1241.svg" />
+      <img
+        id="u1810_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1241.svg"
+      />
       <div
         id="u1810_text"
         class="text"
@@ -1410,7 +1702,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u1811" class="ax_default line">
-      <img id="u1811_img" class="img" src="./images/就业数据分析/u1242.svg" />
+      <img
+        id="u1811_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1242.svg"
+      />
       <div
         id="u1811_text"
         class="text"
@@ -1422,7 +1718,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u1812" class="ax_default line">
-      <img id="u1812_img" class="img" src="./images/就业数据分析/u1242.svg" />
+      <img
+        id="u1812_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1242.svg"
+      />
       <div
         id="u1812_text"
         class="text"
@@ -1434,7 +1734,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u1813" class="ax_default line">
-      <img id="u1813_img" class="img" src="./images/就业数据分析/u1242.svg" />
+      <img
+        id="u1813_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1242.svg"
+      />
       <div
         id="u1813_text"
         class="text"
@@ -1446,7 +1750,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u1814" class="ax_default line">
-      <img id="u1814_img" class="img" src="./images/就业数据分析/u1245.svg" />
+      <img
+        id="u1814_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1245.svg"
+      />
       <div
         id="u1814_text"
         class="text"
@@ -1618,7 +1926,11 @@
       >
         <!-- Unnamed (饼形图) -->
         <div id="u1832" class="ax_default refs-chart-data">
-          <img id="u1832_img" class="img" src="./images/综合数据/u302.svg" />
+          <img
+            id="u1832_img"
+            class="img"
+            src="/portal/console/dataV2/images/综合数据/u302.svg"
+          />
           <div
             id="u1832_text"
             class="text"
@@ -1630,7 +1942,11 @@
 
         <!-- Unnamed (饼形图) -->
         <div id="u1833" class="ax_default refs-chart-data">
-          <img id="u1833_img" class="img" src="./images/综合数据/u303.svg" />
+          <img
+            id="u1833_img"
+            class="img"
+            src="/portal/console/dataV2/images/综合数据/u303.svg"
+          />
           <div
             id="u1833_text"
             class="text"
@@ -1642,7 +1958,11 @@
 
         <!-- Unnamed (饼形图) -->
         <div id="u1834" class="ax_default refs-chart-data">
-          <img id="u1834_img" class="img" src="./images/教职工数据/u1834.svg" />
+          <img
+            id="u1834_img"
+            class="img"
+            src="/portal/console/dataV2/images/教职工数据/u1834.svg"
+          />
           <div
             id="u1834_text"
             class="text"
@@ -1654,7 +1974,11 @@
 
         <!-- Unnamed (饼形图) -->
         <div id="u1835" class="ax_default refs-chart-data">
-          <img id="u1835_img" class="img" src="./images/教职工数据/u1835.svg" />
+          <img
+            id="u1835_img"
+            class="img"
+            src="/portal/console/dataV2/images/教职工数据/u1835.svg"
+          />
           <div
             id="u1835_text"
             class="text"
@@ -1668,7 +1992,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u1836" class="ax_default ellipse">
-      <img id="u1836_img" class="img" src="./images/综合数据/u305.svg" />
+      <img
+        id="u1836_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u305.svg"
+      />
       <div
         id="u1836_text"
         class="text"
@@ -1688,7 +2016,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u1838" class="ax_default ellipse">
-      <img id="u1838_img" class="img" src="./images/综合数据/u307.svg" />
+      <img
+        id="u1838_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u307.svg"
+      />
       <div
         id="u1838_text"
         class="text"
@@ -1708,7 +2040,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u1840" class="ax_default ellipse">
-      <img id="u1840_img" class="img" src="./images/综合数据/u309.svg" />
+      <img
+        id="u1840_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u309.svg"
+      />
       <div
         id="u1840_text"
         class="text"
@@ -1728,7 +2064,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u1842" class="ax_default ellipse">
-      <img id="u1842_img" class="img" src="./images/综合数据/u311.svg" />
+      <img
+        id="u1842_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u311.svg"
+      />
       <div
         id="u1842_text"
         class="text"
@@ -1748,7 +2088,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u1844" class="ax_default ellipse">
-      <img id="u1844_img" class="img" src="./images/综合数据/u305.svg" />
+      <img
+        id="u1844_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u305.svg"
+      />
       <div
         id="u1844_text"
         class="text"
@@ -1768,7 +2112,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u1846" class="ax_default ellipse">
-      <img id="u1846_img" class="img" src="./images/综合数据/u309.svg" />
+      <img
+        id="u1846_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u309.svg"
+      />
       <div
         id="u1846_text"
         class="text"
@@ -1788,7 +2136,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u1848" class="ax_default ellipse">
-      <img id="u1848_img" class="img" src="./images/综合数据/u311.svg" />
+      <img
+        id="u1848_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u311.svg"
+      />
       <div
         id="u1848_text"
         class="text"
@@ -1808,7 +2160,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u1850" class="ax_default ellipse">
-      <img id="u1850_img" class="img" src="./images/综合数据/u313.svg" />
+      <img
+        id="u1850_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u313.svg"
+      />
       <div
         id="u1850_text"
         class="text"
@@ -1874,7 +2230,7 @@
               <img
                 id="u1856_img"
                 class="img"
-                src="./images/教职工数据/u1856.svg"
+                src="/portal/console/dataV2/images/教职工数据/u1856.svg"
               />
               <div
                 id="u1856_text"
@@ -1890,7 +2246,7 @@
               <img
                 id="u1857_img"
                 class="img"
-                src="./images/教职工数据/u1857.svg"
+                src="/portal/console/dataV2/images/教职工数据/u1857.svg"
               />
               <div
                 id="u1857_text"
@@ -1906,7 +2262,7 @@
               <img
                 id="u1858_img"
                 class="img"
-                src="./images/教职工数据/u1858.svg"
+                src="/portal/console/dataV2/images/教职工数据/u1858.svg"
               />
               <div
                 id="u1858_text"
@@ -1922,7 +2278,7 @@
               <img
                 id="u1859_img"
                 class="img"
-                src="./images/教职工数据/u1859.svg"
+                src="/portal/console/dataV2/images/教职工数据/u1859.svg"
               />
               <div
                 id="u1859_text"
@@ -1995,7 +2351,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1867" class="ax_default box_1">
-      <img id="u1867_img" class="img" src="./images/教职工数据/u1867.svg" />
+      <img
+        id="u1867_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1867.svg"
+      />
       <div
         id="u1867_text"
         class="text"
@@ -2007,7 +2367,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1868" class="ax_default box_1">
-      <img id="u1868_img" class="img" src="./images/教职工数据/u1868.svg" />
+      <img
+        id="u1868_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1868.svg"
+      />
       <div
         id="u1868_text"
         class="text"
@@ -2019,7 +2383,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1869" class="ax_default box_1">
-      <img id="u1869_img" class="img" src="./images/教职工数据/u1869.svg" />
+      <img
+        id="u1869_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1869.svg"
+      />
       <div
         id="u1869_text"
         class="text"
@@ -2031,7 +2399,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1870" class="ax_default box_1">
-      <img id="u1870_img" class="img" src="./images/教职工数据/u1870.svg" />
+      <img
+        id="u1870_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1870.svg"
+      />
       <div
         id="u1870_text"
         class="text"
@@ -2043,7 +2415,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1871" class="ax_default box_1">
-      <img id="u1871_img" class="img" src="./images/教职工数据/u1871.svg" />
+      <img
+        id="u1871_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1871.svg"
+      />
       <div
         id="u1871_text"
         class="text"
@@ -2055,7 +2431,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1872" class="ax_default box_1">
-      <img id="u1872_img" class="img" src="./images/教职工数据/u1872.svg" />
+      <img
+        id="u1872_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1872.svg"
+      />
       <div
         id="u1872_text"
         class="text"
@@ -2067,7 +2447,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1873" class="ax_default box_1">
-      <img id="u1873_img" class="img" src="./images/教职工数据/u1873.svg" />
+      <img
+        id="u1873_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1873.svg"
+      />
       <div
         id="u1873_text"
         class="text"
@@ -2087,7 +2471,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1875" class="ax_default box_1">
-      <img id="u1875_img" class="img" src="./images/教职工数据/u1875.svg" />
+      <img
+        id="u1875_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1875.svg"
+      />
       <div
         id="u1875_text"
         class="text"
@@ -2099,7 +2487,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1876" class="ax_default box_1">
-      <img id="u1876_img" class="img" src="./images/教职工数据/u1876.svg" />
+      <img
+        id="u1876_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1876.svg"
+      />
       <div
         id="u1876_text"
         class="text"
@@ -2111,7 +2503,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1877" class="ax_default box_1">
-      <img id="u1877_img" class="img" src="./images/教职工数据/u1877.svg" />
+      <img
+        id="u1877_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1877.svg"
+      />
       <div
         id="u1877_text"
         class="text"
@@ -2131,7 +2527,11 @@
 
     <!-- Unnamed (形状) -->
     <div id="u1879" class="ax_default box_1">
-      <img id="u1879_img" class="img" src="./images/教职工数据/u1879.svg" />
+      <img
+        id="u1879_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1879.svg"
+      />
       <div
         id="u1879_text"
         class="text"
@@ -2169,7 +2569,11 @@
     >
       <!-- Unnamed (形状) -->
       <div id="u1883" class="ax_default line">
-        <img id="u1883_img" class="img" src="./images/教职工数据/u1883.svg" />
+        <img
+          id="u1883_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1883.svg"
+        />
         <div
           id="u1883_text"
           class="text"
@@ -2211,7 +2615,11 @@
     >
       <!-- Unnamed (形状) -->
       <div id="u1887" class="ax_default line">
-        <img id="u1887_img" class="img" src="./images/教职工数据/u1887.svg" />
+        <img
+          id="u1887_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1887.svg"
+        />
         <div
           id="u1887_text"
           class="text"
@@ -2253,7 +2661,11 @@
     >
       <!-- Unnamed (形状) -->
       <div id="u1891" class="ax_default line">
-        <img id="u1891_img" class="img" src="./images/教职工数据/u1891.svg" />
+        <img
+          id="u1891_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1891.svg"
+        />
         <div
           id="u1891_text"
           class="text"
@@ -2295,7 +2707,11 @@
     >
       <!-- Unnamed (形状) -->
       <div id="u1895" class="ax_default line">
-        <img id="u1895_img" class="img" src="./images/教职工数据/u1895.svg" />
+        <img
+          id="u1895_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1895.svg"
+        />
         <div
           id="u1895_text"
           class="text"
@@ -2337,7 +2753,11 @@
     >
       <!-- Unnamed (形状) -->
       <div id="u1899" class="ax_default line">
-        <img id="u1899_img" class="img" src="./images/教职工数据/u1899.svg" />
+        <img
+          id="u1899_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1899.svg"
+        />
         <div
           id="u1899_text"
           class="text"
@@ -2379,7 +2799,11 @@
     >
       <!-- Unnamed (圆形) -->
       <div id="u1903" class="ax_default ellipse">
-        <img id="u1903_img" class="img" src="./images/教职工数据/u1903.svg" />
+        <img
+          id="u1903_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1903.svg"
+        />
         <div
           id="u1903_text"
           class="text"
@@ -2391,7 +2815,11 @@
 
       <!-- Unnamed (饼形图) -->
       <div id="u1904" class="ax_default ellipse">
-        <img id="u1904_img" class="img" src="./images/教职工数据/u1904.svg" />
+        <img
+          id="u1904_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1904.svg"
+        />
         <div
           id="u1904_text"
           class="text"
@@ -2403,7 +2831,11 @@
 
       <!-- Unnamed (饼形图) -->
       <div id="u1905" class="ax_default ellipse">
-        <img id="u1905_img" class="img" src="./images/教职工数据/u1905.svg" />
+        <img
+          id="u1905_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1905.svg"
+        />
         <div
           id="u1905_text"
           class="text"
@@ -2415,7 +2847,11 @@
 
       <!-- Unnamed (饼形图) -->
       <div id="u1906" class="ax_default ellipse">
-        <img id="u1906_img" class="img" src="./images/教职工数据/u1906.svg" />
+        <img
+          id="u1906_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1906.svg"
+        />
         <div
           id="u1906_text"
           class="text"
@@ -2427,7 +2863,11 @@
 
       <!-- Unnamed (饼形图) -->
       <div id="u1907" class="ax_default ellipse">
-        <img id="u1907_img" class="img" src="./images/教职工数据/u1907.svg" />
+        <img
+          id="u1907_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1907.svg"
+        />
         <div
           id="u1907_text"
           class="text"
@@ -2439,7 +2879,11 @@
 
       <!-- Unnamed (圆形) -->
       <div id="u1908" class="ax_default ellipse">
-        <img id="u1908_img" class="img" src="./images/教职工数据/u1908.svg" />
+        <img
+          id="u1908_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u1908.svg"
+        />
         <div
           id="u1908_text"
           class="text"
@@ -2607,7 +3051,11 @@
 
     <!-- Unnamed (垂直线) -->
     <div id="u1924" class="ax_default line">
-      <img id="u1924_img" class="img" src="./images/在校生数据分析/u407.svg" />
+      <img
+        id="u1924_img"
+        class="img"
+        src="/portal/console/dataV2/images/在校生数据分析/u407.svg"
+      />
       <div
         id="u1924_text"
         class="text"
@@ -2619,7 +3067,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u1925" class="ax_default line">
-      <img id="u1925_img" class="img" src="./images/教职工数据/u1925.svg" />
+      <img
+        id="u1925_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1925.svg"
+      />
       <div
         id="u1925_text"
         class="text"
@@ -2631,7 +3083,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u1926" class="ax_default line">
-      <img id="u1926_img" class="img" src="./images/教职工数据/u1926.svg" />
+      <img
+        id="u1926_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1926.svg"
+      />
       <div
         id="u1926_text"
         class="text"
@@ -2643,7 +3099,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u1927" class="ax_default line">
-      <img id="u1927_img" class="img" src="./images/教职工数据/u1926.svg" />
+      <img
+        id="u1927_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1926.svg"
+      />
       <div
         id="u1927_text"
         class="text"
@@ -2655,7 +3115,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u1928" class="ax_default line">
-      <img id="u1928_img" class="img" src="./images/教职工数据/u1926.svg" />
+      <img
+        id="u1928_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1926.svg"
+      />
       <div
         id="u1928_text"
         class="text"
@@ -2667,7 +3131,11 @@
 
     <!-- Unnamed (直线) -->
     <div id="u1929" class="ax_default line">
-      <img id="u1929_img" class="img" src="./images/教职工数据/u1929.svg" />
+      <img
+        id="u1929_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1929.svg"
+      />
       <div
         id="u1929_text"
         class="text"
@@ -2803,7 +3271,11 @@
 
     <!-- Unnamed (矩形) -->
     <div id="u1943" class="ax_default box_1">
-      <img id="u1943_img" class="img" src="./images/教职工数据/u1943.svg" />
+      <img
+        id="u1943_img"
+        class="img"
+        src="/portal/console/dataV2/images/教职工数据/u1943.svg"
+      />
       <div
         id="u1943_text"
         class="text"
@@ -3375,7 +3847,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u1999" class="ax_default ellipse">
-      <img id="u1999_img" class="img" src="./images/综合数据/u305.svg" />
+      <img
+        id="u1999_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u305.svg"
+      />
       <div
         id="u1999_text"
         class="text"
@@ -3395,7 +3871,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2001" class="ax_default ellipse">
-      <img id="u2001_img" class="img" src="./images/综合数据/u307.svg" />
+      <img
+        id="u2001_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u307.svg"
+      />
       <div
         id="u2001_text"
         class="text"
@@ -3415,7 +3895,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2003" class="ax_default ellipse">
-      <img id="u2003_img" class="img" src="./images/综合数据/u309.svg" />
+      <img
+        id="u2003_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u309.svg"
+      />
       <div
         id="u2003_text"
         class="text"
@@ -3435,7 +3919,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2005" class="ax_default ellipse">
-      <img id="u2005_img" class="img" src="./images/综合数据/u311.svg" />
+      <img
+        id="u2005_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u311.svg"
+      />
       <div
         id="u2005_text"
         class="text"
@@ -3455,7 +3943,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2007" class="ax_default ellipse">
-      <img id="u2007_img" class="img" src="./images/综合数据/u313.svg" />
+      <img
+        id="u2007_img"
+        class="img"
+        src="/portal/console/dataV2/images/综合数据/u313.svg"
+      />
       <div
         id="u2007_text"
         class="text"
@@ -3485,7 +3977,11 @@
     >
       <!-- Unnamed (饼形图) -->
       <div id="u2010" class="ax_default ellipse">
-        <img id="u2010_img" class="img" src="./images/教职工数据/u2010.svg" />
+        <img
+          id="u2010_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u2010.svg"
+        />
         <div
           id="u2010_text"
           class="text"
@@ -3497,7 +3993,11 @@
 
       <!-- Unnamed (饼形图) -->
       <div id="u2011" class="ax_default ellipse">
-        <img id="u2011_img" class="img" src="./images/教职工数据/u2011.svg" />
+        <img
+          id="u2011_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u2011.svg"
+        />
         <div
           id="u2011_text"
           class="text"
@@ -3509,7 +4009,11 @@
 
       <!-- Unnamed (饼形图) -->
       <div id="u2012" class="ax_default ellipse">
-        <img id="u2012_img" class="img" src="./images/教职工数据/u2012.svg" />
+        <img
+          id="u2012_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u2012.svg"
+        />
         <div
           id="u2012_text"
           class="text"
@@ -3521,7 +4025,11 @@
 
       <!-- Unnamed (饼形图) -->
       <div id="u2013" class="ax_default ellipse">
-        <img id="u2013_img" class="img" src="./images/教职工数据/u2013.svg" />
+        <img
+          id="u2013_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u2013.svg"
+        />
         <div
           id="u2013_text"
           class="text"
@@ -3533,7 +4041,11 @@
 
       <!-- Unnamed (饼形图) -->
       <div id="u2014" class="ax_default ellipse">
-        <img id="u2014_img" class="img" src="./images/教职工数据/u2014.svg" />
+        <img
+          id="u2014_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u2014.svg"
+        />
         <div
           id="u2014_text"
           class="text"
@@ -3545,7 +4057,11 @@
 
       <!-- Unnamed (饼形图) -->
       <div id="u2015" class="ax_default ellipse">
-        <img id="u2015_img" class="img" src="./images/教职工数据/u2015.svg" />
+        <img
+          id="u2015_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u2015.svg"
+        />
         <div
           id="u2015_text"
           class="text"
@@ -3557,7 +4073,11 @@
 
       <!-- Unnamed (圆形) -->
       <div id="u2016" class="ax_default ellipse">
-        <img id="u2016_img" class="img" src="./images/教职工数据/u2016.svg" />
+        <img
+          id="u2016_img"
+          class="img"
+          src="/portal/console/dataV2/images/教职工数据/u2016.svg"
+        />
         <div
           id="u2016_text"
           class="text"
@@ -3586,7 +4106,11 @@
 
     <!-- Unnamed (圆形) -->
     <div id="u2019" class="ax_default ellipse">
-      <img id="u2019_img" class="img" src="./images/就业数据分析/u1276.svg" />
+      <img
+        id="u2019_img"
+        class="img"
+        src="/portal/console/dataV2/images/就业数据分析/u1276.svg"
+      />
       <div
         id="u2019_text"
         class="text"
@@ -3637,7 +4161,7 @@ const clickOther = (path) => {
 </script>
 
 <style lang="less" scoped>
-@import "./data/styles.css";
-@import "./files/教职工数据/styles.css";
-@import "./resources/css/axure_rp_page.css";
+@import "/portal/console/dataV2/data/styles.css";
+@import "/portal/console/dataV2/files/教职工数据/styles.css";
+@import "/portal/console/dataV2/resources/css/axure_rp_page.css";
 </style>
