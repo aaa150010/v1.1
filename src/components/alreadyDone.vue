@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="max-height: 100vh;overflow:scroll;">
     <a-card  :bordered="false" >
       <a-table :columns="columns" :data-source="data" :pagination="false" :loading="loading">
         <!--      <template #headerCell="{ column }">-->
@@ -29,7 +29,7 @@
         </template>
       </a-table>
       <!--  查看的dialog-->
-      <a-modal v-model:open="open" title="办理" @ok="handleOk3" :width="800">
+      <a-modal v-model:open="open" title="办理" @ok="handleOk3" :width="800" :maskClosable="false">
         <div style="height: 600px;overflow: scroll">
           <a-form :model="reviewFormState" ref="reviewFormStateRef" :rules="rules2">
             <a-form-item label="项目名称">
@@ -90,7 +90,7 @@
                 <div>
                   <div>佐证材料</div>
                   <div v-for="item1 in item.feedBack.feedBackAttachment" style="margin: 10px;">
-                    <a style="color: blue">{{item1.name}}</a>
+                    <a style="color: blue" class="underBox" @click="handleDown(item1)">{{item1.name}}</a>
                     <a style="margin-left: 30px" @click="handleDown(item1)">查看</a>
                   </div>
                 </div>
@@ -109,13 +109,16 @@ import {nextTick, onMounted, ref} from "vue";
 import {getDoneTaskList} from "@/api/alreadyDone";
 import {getTaskInfo} from "@/api/workprogress";
 import PersonInfo from "@/components/getPersonInfo/personInfo.vue";
-import {exportFile} from "@/api/user";
+import {exportFile, getFilterList} from "@/api/user";
 const open=ref(false)
+const filterList=ref([])
 const columns = ref([
   {
     title: '项目名称',
     dataIndex: 'projectName',
     key: 'projectName',
+    filters: filterList,
+    onFilter: (value, record) => record.projectName == value,
   },
   {
     title: '任务名称',
@@ -163,6 +166,7 @@ onMounted(()=>{
   getDoneTaskList().then(res=>{
     if (res.result=='ok'){
       data.value=res.data
+      filterList.value=getFilterList(data.value)
     }
   }).finally(()=>{
     loading.value=false

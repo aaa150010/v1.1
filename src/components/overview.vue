@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="max-height: 100vh;overflow:scroll;">
     <a-card title="工作进度" :bordered="false"  style="margin-top: 10px">
      <div style="display: flex;justify-content: space-around">
        <div>
@@ -67,7 +67,7 @@
       </template>
     </a-card>
 <!--    未完成model-->
-    <a-modal v-model:open="open1" title="未完成任务数" @cancel="handleOk1" @ok="handleOk1" :width="1200" :maskClosable="false">
+    <a-modal v-model:open="open1" title="未完成任务数" @cancel="handleOk1" @ok="handleOk1" :width="1500" :maskClosable="false">
       <div style="height: 600px;overflow: scroll">
         <workprogress v-if="open1"></workprogress>
       </div>
@@ -167,7 +167,7 @@
               <div>
                 <div>佐证材料</div>
                 <div v-for="item1 in item.feedBack.feedBackAttachment" style="margin: 10px;">
-                  <a style="color: blue">{{item1.name}}</a>
+                  <a style="color: blue" class="underBox" @click="handleDown(item1)">{{item1.name}}</a>
                   <a style="margin-left: 30px" @click="handleDown(item1)">查看</a>
                 </div>
               </div>
@@ -207,7 +207,7 @@ import PersonInfo from "@/components/getPersonInfo/personInfo.vue";
 import HalfTime from "@/components/halfTime.vue";
 import OverTime from "@/components/overTime.vue";
 import Favorite from "@/components/favorite.vue";
-import {exportFile} from "@/api/user";
+import {exportFile, getFilterList} from "@/api/user";
 const workbenchObj=ref({
   percent:0,
   completeTaskNumber:0,
@@ -265,6 +265,7 @@ const handleItem=(status)=>{
     getTaskInfoList(status,true,'').then(res=>{
       if (res.result=='ok'){
         data.value=res.data
+        filterList.value=getFilterList(data.value)
       }
     }).finally(()=>{
       loading.value=false
@@ -279,11 +280,14 @@ const handleOk1=()=>{
 }
 const title=ref('待审核任务数')
 const open2=ref(false)
+const filterList=ref([])
 const columns = ref([
   {
     title: '项目名称',
     dataIndex: 'projectName',
     key: 'projectName',
+    filters: filterList,
+    onFilter: (value, record) => record.projectName == value,
   },
   {
     title: '任务名称',

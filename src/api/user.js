@@ -46,7 +46,6 @@ export function exportFile(url, fileName) {
 // 将处理后的数组重新拼接成新的 URL 字符串
   let newUrl = newUrlParts.join('&');
   let newUrl1=`${newUrl}&sid=${localStorage.getItem('sid')}`
-  console.log(newUrl1);
   link.href = newUrl1;
   link.download = fileName;
   // fix Firefox
@@ -54,4 +53,16 @@ export function exportFile(url, fileName) {
   body.appendChild(link);
   link.click();
   body.removeChild(link);
+}
+// 遍历循环对象组成新数组
+export function getFilterList(objectArray){
+  let newArray=[]
+  if (objectArray.length>0){
+    newArray = objectArray.map(item => ({
+      text: item.projectName,
+      value: item.projectName
+    }));
+  }
+  let uniqueData = [...new Set(newArray.map(JSON.stringify))].map(JSON.parse)
+  return uniqueData
 }

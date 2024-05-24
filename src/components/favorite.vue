@@ -90,7 +90,7 @@
                 <div>
                   <div>佐证材料</div>
                   <div v-for="item1 in item.feedBack.feedBackAttachment" style="margin: 10px;">
-                    <a style="color: blue">{{item1.name}}</a>
+                    <a style="color: blue" class="underBox" @click="handleDown(item1)">{{item1.name}}</a>
                     <a style="margin-left: 30px" @click="handleDown(item1)">查看</a>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ import {nextTick, onMounted, ref} from "vue";
 import {getTaskInfoList} from "@/api/overview";
 import PersonInfo from "@/components/getPersonInfo/personInfo.vue";
 import {getTaskInfo} from "@/api/workprogress";
-import {exportFile} from "@/api/user";
+import {exportFile, getFilterList} from "@/api/user";
 const props=defineProps({
   status:{required:true,type:String},
   projectCode:{required:true,type:String},
@@ -119,17 +119,21 @@ onMounted(()=>{
   getTaskInfoList(props.status,false,props.projectCode).then(res=>{
     if (res.result=='ok'){
       data.value=res.data
+      filterList.value=getFilterList(data.value)
     }
   }).finally(()=>{
     loading.value=false
   })
 })
 const open=ref(false)
+const filterList=ref([])
 const columns = ref([
   {
     title: '项目名称',
     dataIndex: 'projectName',
     key: 'projectName',
+    filters: filterList,
+    onFilter: (value, record) => record.projectName == value,
   },
   {
     title: '任务名称',

@@ -17,7 +17,6 @@
     </a-tabs>
   </div>
   <div>
-
   </div>
 </div>
 </template>

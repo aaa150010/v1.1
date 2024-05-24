@@ -1,5 +1,5 @@
 <template>
-<div>
+<div style="max-height: 100vh;overflow:scroll;">
   <a-card  :bordered="false" >
     <a-table :columns="columns" :data-source="data" :pagination="false" :loading="loading">
 <!--      <template #headerCell="{ column }">-->
@@ -48,8 +48,15 @@
         <a-form-item label="进度反馈" name="progressFeedback">
           <a-textarea style="height: 80px" v-model:value="addFormState.progressFeedback" />
         </a-form-item>
-        <a-form-item label="任务自评分" name="selfScore">
-          <a-input-number style="width: 100%" v-model:value="addFormState.selfScore" />
+        <a-form-item label="任务自评分" name="selfScore" >
+          <div style="display: flex;width: 100%;justify-content: space-between">
+            <div style="width: 70%">
+              <a-slider v-model:value="addFormState.selfScore"  :max="taskScore" :step="0.1"/>
+            </div>
+            <div style="width: 30%;margin-left: 10px">
+              <a-input-number v-model:value="addFormState.selfScore"  :max="taskScore" />
+            </div>
+          </div>
         </a-form-item>
         <div>
           <div style="display: flex;justify-content: space-between">
@@ -62,7 +69,7 @@
             </div>
           </div>
           <div class="fieldItem" v-for="item in valueObjList" :key="item" style="display: flex;justify-content: space-between;">
-            <div style="color: blue">{{item.label}}</div>
+            <div style="color: blue" class="underBox" @click="handleDown(item)">{{item.label}}</div>
             <div>
               <a style="margin-left: 20px" @click="handleDown(item)">查看</a>
               <a style="margin-left: 20px" @click="updataFile">修改</a>
@@ -109,7 +116,7 @@
             <div>
               <div>佐证材料</div>
               <div v-for="item1 in item.feedBack.feedBackAttachment" style="margin: 10px;">
-                <a style="color: blue">{{item1.name}}</a>
+                <a style="color: blue" class="underBox" @click="handleDown(item1)">{{item1.name}}</a>
                 <a style="margin-left: 30px" @click="handleDown(item1)">查看</a>
               </div>
             </div>
@@ -174,7 +181,14 @@
           <a-textarea placeholder="请输入审核意见" style="height: 80px" v-model:value="reviewFormState.reviewComments" />
         </a-form-item>
         <a-form-item label="审核得分" name="auditScore"  v-if="reviewFormState.auditResult=='通过'||reviewFormState.auditResult==null">
-          <a-input-number placeholder="请输入审核得分" style="width: 100%" v-model:value="reviewFormState.auditScore" />
+          <div style="display: flex;width: 100%;justify-content: space-between">
+            <div style="width: 70%">
+              <a-slider v-model:value="addFormState.auditScore"  :max="taskScore" :step="0.1"/>
+            </div>
+            <div style="width: 30%;margin-left: 10px">
+              <a-input-number v-model:value="addFormState.auditScore"  :max="taskScore" />
+            </div>
+          </div>
         </a-form-item>
         <a-divider></a-divider>
         <template v-for="item in forFeedBackList" :key="item">
@@ -215,7 +229,7 @@
             <div>
               <div>佐证材料</div>
               <div v-for="item1 in item.feedBack.feedBackAttachment" style="margin: 10px;">
-                <a style="color: blue">{{item1.name}}</a>
+                <a style="color: blue" class="underBox" @click="handleDown(item1)">{{item1.name}}</a>
                 <a style="margin-left: 30px" @click="handleDown(item1)">查看</a>
               </div>
             </div>
@@ -236,17 +250,21 @@ import { SmileOutlined} from '@ant-design/icons-vue';
 import Localupload from "@/components/localupload.vue";
 import {message} from "ant-design-vue";
 import PersonInfo from "@/components/getPersonInfo/personInfo.vue";
-import {exportFile} from "@/api/user";
+import {exportFile, getFilterList} from "@/api/user";
 const activeKey = ref('1');
 const loading=ref(false)
 const open1 =ref(false)
 const open2 =ref(false)
 const open3=ref(false)
+const data=ref([])
+const filterList=ref([])
 const columns = ref([
   {
     title: '项目名称',
     dataIndex: 'projectName',
     key: 'projectName',
+    filters: filterList,
+    onFilter: (value, record) => record.projectName == value,
   },
   {
     title: '任务名称',
@@ -278,6 +296,16 @@ const columns = ref([
     dataIndex: 'assessmentDepartmentName',
   },
   {
+    title: '任务下发时间',
+    key: 'startTime',
+    dataIndex: 'startTime',
+  },
+  {
+    title: '任务截止时间',
+    key: 'endTime',
+    dataIndex: 'endTime',
+  },
+  {
     title: '状态',
     key: 'status',
     dataIndex: 'status',
@@ -287,7 +315,6 @@ const columns = ref([
     key: 'action',
   },
 ]);
-const data=ref([])
 //新增的form
 const addFormRef=ref()
 const reviewFormStateRef=ref()
@@ -366,6 +393,7 @@ onMounted(()=>{
   getTodoTaskList().then(res=>{
     if (res.result=='ok'){
       data.value=res.data
+      filterList.value=getFilterList(data.value)
     }
   }).finally(()=>{
     loading.value=false
@@ -500,6 +528,7 @@ const handleOk1=()=>{
               getTodoTaskList().then(res=>{
                 if (res.result=='ok'){
                   data.value=res.data
+                  filterList.value=getFilterList(data.value)
                   console.log(res.data)
                 }
               }).finally(()=>{
@@ -534,6 +563,7 @@ const handleOk3=()=>{
           getTodoTaskList().then(res=>{
             if (res.result=='ok'){
               data.value=res.data
+              filterList.value=getFilterList(data.value)
             }
           }).finally(()=>{
             loading.value=false
