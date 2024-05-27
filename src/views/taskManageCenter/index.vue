@@ -74,8 +74,9 @@
                 <span>>></span>
               </div>
               <div>
-                类型：<a-tag color="orange">教学</a-tag
-                ><a-tag color="green">管理</a-tag>
+                类型：<a-tag color="orange">{{
+                  item.projectType ? item.projectType : "其他"
+                }}</a-tag>
               </div>
             </div>
             <div v-if="projectList.length == 0">暂无项目</div>
@@ -407,10 +408,10 @@ const orderBy = ref("DESC");
 
 const projectList = ref([]);
 const projectTypeList = ref([
-  { value: "PROJECT_NAME", label: "教学" },
-  { value: "PROJECT_YEAR", label: "事务" },
-  { value: "PROJECT_TYPE", label: "生活" },
-  { value: "PROJECT_OTHER", label: "其他" },
+  { value: "教学", label: "教学" },
+  { value: "事务", label: "事务" },
+  { value: "生活", label: "生活" },
+  { value: "其他", label: "其他" },
 ]);
 const projectModelList = ref([]);
 const projectModelAllList = ref([]);

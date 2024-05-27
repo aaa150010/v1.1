@@ -8,7 +8,9 @@
     </div>
     <div>总任务数:{{ dataObj.totalTasks }}</div>
     <div>完成进度:{{ dataObj.schedule }}%</div>
-    <div>目标值:当前值={{ dataObj.taskScore }}:{{ dataObj.score }}(分)</div>
+    <div>
+      目标值:当前值:审核值={{ dataObj.taskScore }}:{{ dataObj.score }}:0(分)
+    </div>
     <div>{{ dataObj.startTime + "~" + dataObj.endTime }}</div>
     <personInfoGlobal
       :name="dataObj.personResponsibleName"

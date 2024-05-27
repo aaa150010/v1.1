@@ -64,10 +64,13 @@
             <div class="clear-right"></div>
           </div>
         </div>
-        <div class="border w-64 p-4 center" v-if="projectModelList.length <= 6">
+        <div
+          class="border w-64 p-4 min-h-72 center"
+          v-if="projectModelList.length <= 6"
+        >
           更多模板敬请期待！
         </div>
-        <div v-if="projectModelList.length == 0">暂无模板</div>
+        <!-- <div v-if="projectModelList.length == 0">暂无模板</div> -->
       </div>
       <div>
         <a-pagination

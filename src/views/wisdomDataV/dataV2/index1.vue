@@ -4745,7 +4745,6 @@ import { useRouter, useRoute, onBeforeRouteUpdate } from "vue-router";
 
 const router = useRouter();
 const route = useRoute();
-
 const clickOther = (path) => {
   router.push({ path: path });
 };

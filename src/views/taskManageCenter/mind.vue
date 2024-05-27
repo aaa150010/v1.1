@@ -181,6 +181,7 @@ const registerGraph = () => {
 registerGraph();
 
 let render;
+let graph;
 
 const deleteNode = (item, treeListVar) => {
   treeList.value = treeListVar;
@@ -234,7 +235,7 @@ const seeDetail = (item) => {
 };
 
 const initGraph = () => {
-  const graph = new Graph({
+  graph = new Graph({
     container: document.getElementById("container"),
     grid: {
       size: 10,
@@ -484,8 +485,12 @@ const getProjectTree = (first) => {
     type: "MindMap",
   }).then((res) => {
     if (res.result == "ok") {
-      dataTree.value = addTreeProperty(res.data);
-      render(first);
+      if (res.data) {
+        dataTree.value = addTreeProperty(res.data);
+        render(first);
+      } else {
+        graph.clearCells();
+      }
     }
   });
 };
@@ -515,8 +520,12 @@ const getProjectTreeKeepCollapse = () => {
     type: "MindMap",
   }).then((res) => {
     if (res.result == "ok") {
-      dataTree.value = addTreeKeepCollapse(res.data);
-      render();
+      if (res.data) {
+        dataTree.value = addTreeKeepCollapse(res.data);
+        render();
+      } else {
+        graph.clearCells();
+      }
     }
   });
 };

@@ -189,6 +189,8 @@ import countTo from "@/components/countTo";
 const router = useRouter();
 const route = useRoute();
 
+// console.log(window.location.host);
+
 const unCompleteTaskList = ref(0);
 const completeTaskList = ref(0);
 const departmentTaskInfo = ref([]);

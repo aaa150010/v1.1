@@ -138,6 +138,17 @@
         ></a-form-item>
       </a-col>
       <a-col :span="24">
+        <a-form-item label="任务类型" name="taskType"
+          ><a-select
+            v-model:value="formNode.taskType"
+            show-search
+            :disabled="type == 'seeDetail'"
+            style="width: 100%"
+            :options="taskTypeList"
+          ></a-select
+        ></a-form-item>
+      </a-col>
+      <a-col :span="24">
         <a-form-item label="任务分数" name="taskScore">
           <a-row>
             <a-col :span="12">
@@ -261,7 +272,10 @@ const formNode = reactive({
       : userInfo.userId,
   startTime: dayjs(store.state.nodeConfig.selectRow.startTime),
   endTime: dayjs(store.state.nodeConfig.selectRow.endTime),
-  taskType: 1,
+  taskType:
+    store.state.nodeConfig.type != "add"
+      ? store.state.nodeConfig.selectRow.assessmentMethod
+      : "指标任务",
   assessmentMethod:
     store.state.nodeConfig.type != "add"
       ? store.state.nodeConfig.selectRow.assessmentMethod
@@ -329,7 +343,16 @@ const rulesNode = {
       trigger: "blur",
     },
   ],
+  taskType: [
+    {
+      required: true,
+      message: "必填项",
+      trigger: "blur",
+    },
+  ],
 };
+
+const taskTypeList = ref([{ value: "指标任务", label: "指标任务" }]);
 
 const handleOk = () => {
   formNodeRef.value.validate().then(async () => {
