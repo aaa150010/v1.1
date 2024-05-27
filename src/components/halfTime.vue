@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="max-height: 100vh;overflow:scroll;">
     <a-card  :bordered="false" >
       <a-table :columns="columns" :data-source="data" :pagination="false" :loading="loading">
         <!--      <template #headerCell="{ column }">-->
@@ -48,7 +48,17 @@
           <a-form-item label="进度反馈" name="progressFeedback">
             <a-textarea style="height: 80px" v-model:value="addFormState.progressFeedback" />
           </a-form-item>
-          <a-form-item label="任务自评分" name="selfScore">
+          <a-form-item label="任务进度" name="taskSchedule">
+            <a-input-number
+                v-model:value="addFormState.taskSchedule"
+                :min="0"
+                :max="100"
+                :formatter="value => `${value}%`"
+                style="width: 100%"
+                :parser="value => value.replace('%', '')"
+            />
+          </a-form-item>
+          <a-form-item label="任务自评分" name="selfScore" >
             <div style="display: flex;width: 100%;justify-content: space-between">
               <div style="width: 70%">
                 <a-slider v-model:value="addFormState.selfScore"  :max="taskScore" :step="0.1"/>
@@ -79,29 +89,6 @@
           </div>
           <a-divider></a-divider>
           <template v-for="item in forFeedBackList" :key="item">
-            <!--        反馈-->
-            <div style="border: 2px solid rgba(240, 240, 240);padding: 8px;margin-bottom: 10px">
-              <div style="font-size: 18px;text-align: center">反馈</div>
-              <div class="fieldItem">
-                <span>反馈部门：{{item.feedBack.feedBackDepartmentName}}</span>
-              </div>
-              <div class="fieldItem">
-                <a style="color: blue" @click="handleGetInfo(item.feedBack.feedBackPerson)">反馈人：{{item.feedBack.feedBackPersonName}}</a>
-              </div>
-              <div class="fieldItem">
-                <span>任务反馈时间：{{item.feedBack.feedBackTime}}</span>
-              </div>
-              <div class="fieldItem">
-                <span>进度反馈：{{item.feedBack.progressFeedBack}}</span>
-              </div>
-              <div>
-                <div>佐证材料</div>
-                <div v-for="item1 in item.feedBack.feedBackAttachment" style="margin: 10px;">
-                  <a style="color: blue" class="underBox" @click="handleDown(item1)">{{item1.name}}</a>
-                  <a style="margin-left: 30px" @click="handleDown(item1)">查看</a>
-                </div>
-              </div>
-            </div>
             <!--        审核  根据result字段判断是否渲染-->
             <div style="border: 2px solid rgba(240, 240, 240);padding: 8px;margin-bottom: 10px" v-if="item.review.auditResult!==''">
               <div style="font-size: 18px;text-align: center">审核</div>
@@ -119,6 +106,32 @@
               </div>
               <div class="fieldItem">
                 <span>审核得分：{{item.review.auditScore}}</span>
+              </div>
+            </div>
+            <!--        反馈-->
+            <div style="border: 2px solid rgba(240, 240, 240);padding: 8px;margin-bottom: 10px">
+              <div style="font-size: 18px;text-align: center">反馈</div>
+              <div class="fieldItem">
+                <span>反馈部门：{{item.feedBack.feedBackDepartmentName}}</span>
+              </div>
+              <div class="fieldItem">
+                <a style="color: blue" @click="handleGetInfo(item.feedBack.feedBackPerson)">反馈人：{{item.feedBack.feedBackPersonName}}</a>
+              </div>
+              <div class="fieldItem">
+                <span>任务反馈时间：{{item.feedBack.feedBackTime}}</span>
+              </div>
+              <div class="fieldItem">
+                <span>任务进度：{{item.feedBack.taskSchedule}}%</span>
+              </div>
+              <div class="fieldItem">
+                <span>进度反馈：{{item.feedBack.progressFeedBack}}</span>
+              </div>
+              <div>
+                <div>佐证材料</div>
+                <div v-for="item1 in item.feedBack.feedBackAttachment" style="margin: 10px;">
+                  <a style="color: blue" class="underBox" @click="handleDown(item1)">{{item1.name}}</a>
+                  <a style="margin-left: 30px" @click="handleDown(item1)">查看</a>
+                </div>
               </div>
             </div>
           </template>
@@ -180,13 +193,13 @@
           <a-form-item label="审核意见" name="reviewComments">
             <a-textarea placeholder="请输入审核意见" style="height: 80px" v-model:value="reviewFormState.reviewComments" />
           </a-form-item>
-          <a-form-item label="审核得分" name="auditScore"   v-if="reviewFormState.auditResult=='通过'||reviewFormState.auditResult==null">
+          <a-form-item label="审核得分" name="auditScore"  v-if="reviewFormState.auditResult=='通过'||reviewFormState.auditResult==null">
             <div style="display: flex;width: 100%;justify-content: space-between">
               <div style="width: 70%">
-                <a-slider v-model:value="addFormState.auditScore"  :max="taskScore" :step="0.1"/>
+                <a-slider v-model:value="reviewFormState.auditScore"  :max="taskScore" :step="0.1"/>
               </div>
               <div style="width: 30%;margin-left: 10px">
-                <a-input-number v-model:value="addFormState.auditScore"  :max="taskScore" />
+                <a-input-number v-model:value="reviewFormState.auditScore"  :max="taskScore" />
               </div>
             </div>
           </a-form-item>
@@ -222,6 +235,9 @@
               </div>
               <div class="fieldItem">
                 <span>任务反馈时间：{{item.feedBack.feedBackTime}}</span>
+              </div>
+              <div class="fieldItem">
+                <span>任务进度：{{item.feedBack.taskSchedule}}%</span>
               </div>
               <div class="fieldItem">
                 <span>进度反馈：{{item.feedBack.progressFeedBack}}</span>
@@ -355,6 +371,13 @@ const rules=ref({
       required:true,
     },
   ],
+  taskSchedule: [
+    {
+      required: true,
+      message: '请输入任务进度',
+      trigger: 'blur',
+    },
+  ],
 })
 const rules2=ref({
   auditResult: [
@@ -400,6 +423,7 @@ const handleClick=(record)=>{
     addFormState.value.taskCode=record.taskCode
     // 每次打开置空
     addFormState.value.selfScore=null
+    addFormState.value.taskSchedule=null
     addFormState.value.progressFeedback=null
     addFormState.value.supportingMaterials=null
     value.value=[]

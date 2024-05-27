@@ -66,6 +66,9 @@
                   <span>任务反馈时间：{{item.feedBack.feedBackTime}}</span>
                 </div>
                 <div class="fieldItem">
+                  <span>任务进度：{{item.feedBack.taskSchedule}}%</span>
+                </div>
+                <div class="fieldItem">
                   <span>进度反馈：{{item.feedBack.progressFeedBack}}</span>
                 </div>
                 <div>
