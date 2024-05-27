@@ -14,38 +14,6 @@
         复杂任务管理系统
       </div>
       <a-menu :selectedKeys="activeKey" @click="handleClick">
-        <!--        <a-menu-item-->
-        <!--          key="/index/workbench"-->
-        <!--          @click="$router.push('/index/workbench')"-->
-        <!--          >工作台</a-menu-item-->
-        <!--        >-->
-        <!--        <a-menu-item-->
-        <!--          key="/index/datalake"-->
-        <!--          @click="$router.push('/index/datalake')"-->
-        <!--          >数据湖</a-menu-item-->
-        <!--        >-->
-        <!--        <a-menu-item-->
-        <!--          key="/index/departmentView"-->
-        <!--          @click="$router.push('/index/departmentView')"-->
-        <!--          >调度中心</a-menu-item-->
-        <!--        >-->
-        <!--        <a-menu-item-->
-        <!--          key="/index/information"-->
-        <!--          @click="$router.push('/index/information')"-->
-        <!--        >-->
-        <!--          <a class="head-example">消息</a>-->
-        <!--          <a-badge count="25" />-->
-        <!--        </a-menu-item>-->
-        <!--        <a-menu-item-->
-        <!--          key="/index/wisdomDataV"-->
-        <!--          @click="$router.push('/index/wisdomDataV')"-->
-        <!--          >智慧驾舱</a-menu-item-->
-        <!--        >-->
-        <!--        <a-menu-item-->
-        <!--          key="/index/taskManageCenter"-->
-        <!--          @click="$router.push('/index/taskManageCenter')"-->
-        <!--          >任务管理中心</a-menu-item-->
-        <!--        >-->
         <a-menu-item
           @click="$router.push(item.module)"
           v-for="item in leftMenu"
