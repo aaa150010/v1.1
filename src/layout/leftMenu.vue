@@ -11,7 +11,7 @@
     <div>
       <div class="personInfo1">
         <img :src="src1" style="height: 30px" />
-        复杂任务管理系统
+        高校项目管理系统
       </div>
       <a-menu :selectedKeys="activeKey" @click="handleClick">
         <a-menu-item
@@ -19,12 +19,19 @@
           v-for="item in leftMenu"
           :key="item.module"
         >
-          <div v-if="item.module !== '/index/information'">
-            {{ item.menuTitle }}
+          <div
+            v-if="item.module !== '/index/information'"
+            class="flex items-center"
+          >
+            <span v-html="item.icon"></span>
+            <span style="margin-left: 4px">{{ item.menuTitle }}</span>
           </div>
-          <div v-else>
-            <a class="head-example">{{ item.menuTitle }}</a>
-            <a-badge :count="store.unreadNumber" />
+          <div class="flex items-center" v-else>
+            <span v-html="item.icon"></span>
+            <span style="margin-left: 4px">
+              <a class="head-example">{{ item.menuTitle }}</a>
+              <a-badge :count="store.unreadNumber" />
+            </span>
           </div>
         </a-menu-item>
       </a-menu>

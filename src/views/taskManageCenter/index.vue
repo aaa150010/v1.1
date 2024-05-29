@@ -203,9 +203,9 @@
             >
           </a-select>
         </a-form-item>
-        <a-form-item label="项目类型" name="PROJECT_TYPE">
+        <a-form-item label="项目类型" name="projectType">
           <a-select
-            v-model:value="formProject.PROJECT_TYPE"
+            v-model:value="formProject.projectType"
             allowClear
             placeholder="选择类型"
           >
@@ -349,7 +349,7 @@ const showOne = ref(false);
 const filterOption = ref([
   { value: "PROJECT_NAME", label: "项目名称" },
   { value: "PROJECT_YEAR", label: "项目年份" },
-  { value: "PROJECT_TYPE", label: "项目类型" },
+  // { value: "PROJECT_TYPE", label: "项目类型" },
 ]);
 
 const filterObj = ref({
@@ -451,6 +451,7 @@ const formProject = ref({
   templateCode: "",
   listed: false,
   feedback: false,
+  projectType: "",
 });
 
 const formProjectRules = {
@@ -534,10 +535,20 @@ const getProjectList = () => {
 };
 
 const getProjectListBack = () => {
-  return getProjectApi({ order: orderBy.value, flag: true }).then((res) => {
+  return getProjectApi({
+    order: orderBy.value,
+    flag: true,
+    conditions: filtersCheckList(filterObj.value),
+  }).then((res) => {
     if (res.result == "ok") {
       activeKey.value = 0;
-      projectList.value = res.data;
+      projectList.value = res.data.projectData;
+      if (res.data.condition) {
+        let { checks, form } = JSON.parse(res.data.condition);
+        filterObj.value.checks = checks;
+        filterObj.value.form = { ...filterObj.value.form, ...form };
+      }
+      showOne.value = res.data.showOne == "false" ? false : true;
     }
   });
 };

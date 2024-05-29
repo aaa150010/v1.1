@@ -60,6 +60,11 @@
     <a-button class="absolute top-2 left-28" @click="toggleCollapseAll(false)"
       >收缩全部</a-button
     >
+    <a-button class="absolute top-2 right-2"
+      ><a-checkbox v-model:checked="showOne" @change="updateShowOne"
+        >仅展示和我相关任务</a-checkbox
+      ></a-button
+    >
   </div>
 </template>
 
@@ -71,15 +76,17 @@ import { Graph, Cell, Node, Path, Shape } from "@antv/x6";
 import Hierarchy from "@antv/hierarchy";
 import { useStore } from "vuex";
 import { getTaskDetailByCodeApi } from "@/api/departmentView.js";
-import { getProjectTreeApi } from "@/api/taskManage.js";
+import { getProjectTreeApi, updateShowOneApi } from "@/api/taskManage.js";
 import download from "downloadjs";
 import { isLeaf } from "ant-design-vue/es/vc-cascader/utils/commonUtil";
-import {exportFile} from "@/api/user";
+import { exportFile } from "@/api/user";
+import { message, Modal } from "ant-design-vue";
 const props = defineProps(["selectRow"]);
 
 const TeleportContainer = getTeleport();
 
 const dataTree = ref({});
+const showOne = ref(props.showOne);
 
 const detailVisible = ref(false);
 const taskDetail = ref({});
@@ -331,9 +338,12 @@ const getProjectTree = (first) => {
 };
 
 const handleDown = (item) => {
-  let newUrl = item.url.replace(/sid=(\w+(-\w+){3,})/, 'sid=@sid').replace('.','').replace("@sid", localStorage.getItem("sid"))
-  let link =`${import.meta.env.VITE_APP_BASE_API}/portal/r${newUrl}`
-  exportFile(link,item.label)
+  let newUrl = item.url
+    .replace(/sid=(\w+(-\w+){3,})/, "sid=@sid")
+    .replace(".", "")
+    .replace("@sid", localStorage.getItem("sid"));
+  let link = `${import.meta.env.VITE_APP_BASE_API}/portal/r${newUrl}`;
+  exportFile(link, item.label);
 };
 
 const toggleCollapseAll = (flag) => {
@@ -348,6 +358,17 @@ watch(
     await getProjectTree(true);
   }
 );
+
+const updateShowOne = () => {
+  return updateShowOneApi({
+    showOne: showOne.value,
+  }).then((res) => {
+    if (res.result == "ok") {
+      message.success("更新成功！");
+      getProjectTree(true);
+    }
+  });
+};
 </script>
 
 <style></style>
