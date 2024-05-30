@@ -1,6 +1,5 @@
 <template>
   <div>
-    <a-card  :bordered="false" >
       <a-table :columns="columns" :data-source="data" :pagination="false" :loading="loading">
         <!--      <template #headerCell="{ column }">-->
         <!--        <template v-if="column.key === 'name'">-->
@@ -171,7 +170,6 @@
           </a-form>
         </div>
       </a-modal>
-    </a-card>
     <!--  查询个人信息model-->
     <person-info :user-id="userId" ref="personRef"></person-info>
   </div>

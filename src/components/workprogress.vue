@@ -1,6 +1,5 @@
 <template>
 <div style="max-height: 100vh;overflow:scroll;">
-  <a-card  :bordered="false" >
     <a-table :columns="columns" :data-source="data" :pagination="false" :loading="loading">
 <!--      <template #headerCell="{ column }">-->
 <!--        <template v-if="column.key === 'name'">-->
@@ -25,7 +24,6 @@
         </template>
       </template>
     </a-table>
-  </a-card>
 <!--  未完成打开的提交dialog-->
   <a-modal v-model:open="open1" title="办理" @ok="handleOk1" :width="800" :maskClosable="false">
     <div style="height: 600px;overflow: scroll">
