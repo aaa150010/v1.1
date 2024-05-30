@@ -1,5 +1,14 @@
 <template>
-  <div class="w-full h-full bg-slate-200 px-4 relative rounded-md">
+  <div
+    class="w-full h-full px-4 relative rounded-md"
+    :style="
+      dataObj.status == '未完成'
+        ? 'background-color: #e7e5e4'
+        : dataObj.status == '审核中'
+        ? 'background-color: #fde68a'
+        : 'background-color: #bfdbfe'
+    "
+  >
     <div
       class="text-blue-400 underline cursor-pointer txt_over_one"
       @click="getNode().store.data.openDetail(dataObj)"

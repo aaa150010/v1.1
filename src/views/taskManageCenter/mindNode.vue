@@ -1,6 +1,13 @@
 <template>
   <div
-    class="w-full h-full bg-slate-200 px-4 relative rounded-md"
+    class="w-full h-full px-4 relative rounded-md"
+    :style="
+      dataObj.status == '未完成'
+        ? 'background-color: #e7e5e4'
+        : dataObj.status == '审核中'
+        ? 'background-color: #fde68a'
+        : 'background-color: #bfdbfe'
+    "
     @contextmenu.prevent.stop="selectRowClick(dataObj)"
     v-menus:right="getNode().store.data.data.havePermission ? menus : []"
   >

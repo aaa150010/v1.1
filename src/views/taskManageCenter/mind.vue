@@ -13,6 +13,30 @@
     <a-button class="absolute top-2 left-28" @click="toggleCollapseAll(false)"
       >收缩全部</a-button
     >
+    <div class="absolute bottom-2 left-2 flex">
+      <span class="center">
+        <span
+          class="w-6 h-6 rounded-full inline-block"
+          style="background-color: #e7e5e4"
+        ></span>
+        <span class="ml-2">未完成</span>
+      </span>
+      <span class="center ml-2">
+        <span
+          class="w-6 h-6 rounded-full inline-block"
+          style="background-color: #fde68a"
+        ></span>
+        <span class="ml-2">审核中</span>
+      </span>
+      <span class="center ml-2">
+        <span
+          class="w-6 h-6 rounded-full inline-block"
+          style="background-color: #bfdbfe"
+        ></span>
+        <span class="ml-2">已完成</span>
+      </span>
+    </div>
+
     <a-button class="absolute top-2 right-2"
       ><a-checkbox v-model:checked="showOne" @change="updateShowOne"
         >仅展示和我相关任务</a-checkbox
