@@ -418,6 +418,7 @@ import {message} from "ant-design-vue";
 import PersonInfo from "@/components/getPersonInfo/personInfo.vue";
 import {exportFile, getFilterList} from "@/api/user";
 import {getHalfTask} from "../api/overview";
+import {getFilterList1} from "../api/user";
 const activeKey = ref('1');
 const loading=ref(false)
 const open1 =ref(false)
@@ -425,6 +426,7 @@ const open2 =ref(false)
 const open3=ref(false)
 const data=ref([])
 const filterList=ref([])
+const filterList1=ref([])
 const columns = ref([
   {
     title: '项目名称',
@@ -432,19 +434,28 @@ const columns = ref([
     key: 'projectName',
     filters: filterList,
     onFilter: (value, record) => record.projectName == value,
+    width:150,
+    ellipsis: true,
   },
   {
     title: '任务名称',
     dataIndex: 'taskName',
     key: 'taskName',
-    width:200,
+    width:150,
     ellipsis: true,
   },
   {
     title: '任务说明',
     key: 'targetDescription',
     dataIndex: 'targetDescription',
-    width:300,
+    width:200,
+    ellipsis: true,
+  },
+  {
+    title: '未完成子任务数',
+    key: 'unCompleteChildren',
+    dataIndex: 'unCompleteChildren',
+    width:150,
     ellipsis: true,
   },
   {
@@ -458,35 +469,52 @@ const columns = ref([
     title: '考核方式',
     key: 'assessmentMethod',
     dataIndex: 'assessmentMethod',
+    width:100,
+    ellipsis: true,
   },
   {
     title: '责任部门',
     key: 'responsibleDepartmentName',
     dataIndex: 'responsibleDepartmentName',
+    width:150,
+    ellipsis: true,
   },
   {
     title: '考核部门',
     key: 'assessmentDepartmentName',
     dataIndex: 'assessmentDepartmentName',
+    width:150,
+    ellipsis: true,
   },
   {
     title: '任务下发时间',
     key: 'startTime',
     dataIndex: 'startTime',
+    width:150,
+    ellipsis: true,
   },
   {
     title: '任务截止时间',
     key: 'endTime',
     dataIndex: 'endTime',
+    width:150,
+    ellipsis: true,
   },
   {
     title: '状态',
     key: 'status',
     dataIndex: 'status',
+    filters: filterList1,
+    onFilter: (value, record) => record.status == value,
+    width:100,
+    ellipsis: true,
   },
   {
     title: '操作',
     key: 'action',
+    width:80,
+    ellipsis: true,
+    fixed: 'right',
   },
 ]);
 //新增的form
@@ -605,6 +633,7 @@ onMounted(()=>{
     if (res.result=='ok'){
       data.value=res.data
       filterList.value=getFilterList(data.value)
+      filterList1.value=getFilterList1(data.value)
     }
   }).finally(()=>{
     loading.value=false
@@ -768,6 +797,7 @@ const handleOk1=()=>{
               if (res.result=='ok'){
                 data.value=res.data
                 filterList.value=getFilterList(data.value)
+                filterList1.value=getFilterList1(data.value)
                 console.log(res.data)
               }
             }).finally(()=>{
@@ -803,6 +833,7 @@ const handleOk3=()=>{
             if (res.result=='ok'){
               data.value=res.data
               filterList.value=getFilterList(data.value)
+              filterList1.value=getFilterList1(data.value)
             }
           }).finally(()=>{
             loading.value=false

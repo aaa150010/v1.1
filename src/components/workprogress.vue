@@ -417,6 +417,7 @@ import Localupload from "@/components/localupload.vue";
 import {message} from "ant-design-vue";
 import PersonInfo from "@/components/getPersonInfo/personInfo.vue";
 import {exportFile, getFilterList} from "@/api/user";
+import {getFilterList1} from "../api/user";
 const activeKey = ref('1');
 const loading=ref(false)
 const open1 =ref(false)
@@ -424,6 +425,7 @@ const open2 =ref(false)
 const open3=ref(false)
 const data=ref([])
 const filterList=ref([])
+const filterList1=ref([])
 const columns = ref([
   {
     title: '项目名称',
@@ -501,6 +503,8 @@ const columns = ref([
     title: '状态',
     key: 'status',
     dataIndex: 'status',
+    filters: filterList1,
+    onFilter: (value, record) => record.status == value,
     width:100,
     ellipsis: true,
   },
@@ -628,6 +632,7 @@ onMounted(()=>{
     if (res.result=='ok'){
       data.value=res.data
       filterList.value=getFilterList(data.value)
+      filterList1.value=getFilterList1(data.value)
     }
   }).finally(()=>{
     loading.value=false
@@ -790,6 +795,7 @@ const handleOk1=()=>{
                 if (res.result=='ok'){
                   data.value=res.data
                   filterList.value=getFilterList(data.value)
+                  filterList1.value=getFilterList1(data.value)
                   console.log(res.data)
                 }
               }).finally(()=>{
@@ -825,6 +831,7 @@ const handleOk3=()=>{
             if (res.result=='ok'){
               data.value=res.data
               filterList.value=getFilterList(data.value)
+              filterList1.value=getFilterList1(data.value)
             }
           }).finally(()=>{
             loading.value=false

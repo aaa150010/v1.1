@@ -280,6 +280,7 @@ import HalfTime from "@/components/halfTime.vue";
 import OverTime from "@/components/overTime.vue";
 import Favorite from "@/components/favorite.vue";
 import {exportFile, getFilterList} from "@/api/user";
+import {getFilterList1} from "../api/user";
 const workbenchObj=ref({
   percent:0,
   completeTaskNumber:0,
@@ -337,6 +338,7 @@ const handleItem=(status)=>{
       if (res.result=='ok'){
         data.value=res.data
         filterList.value=getFilterList(data.value)
+        filterList1.value=getFilterList1(data.value)
       }
     }).finally(()=>{
       loading.value=false
@@ -352,6 +354,7 @@ const handleOk1=()=>{
 const title=ref('待审核任务数')
 const open2=ref(false)
 const filterList=ref([])
+const filterList1=ref([])
 const columns = ref([
   {
     title: '项目名称',
@@ -374,6 +377,13 @@ const columns = ref([
     key: 'targetDescription',
     dataIndex: 'targetDescription',
     width:200,
+    ellipsis: true,
+  },
+  {
+    title: '未完成子任务数',
+    key: 'unCompleteChildren',
+    dataIndex: 'unCompleteChildren',
+    width:150,
     ellipsis: true,
   },
   {
@@ -422,6 +432,8 @@ const columns = ref([
     title: '状态',
     key: 'status',
     dataIndex: 'status',
+    filters: filterList1,
+    onFilter: (value, record) => record.status == value,
     width:100,
     ellipsis: true,
   },

@@ -65,3 +65,15 @@ export function getFilterList(objectArray){
   let uniqueData = [...new Set(newArray.map(JSON.stringify))].map(JSON.parse)
   return uniqueData
 }
+// 遍历循环对象组成新数组
+export function getFilterList1(objectArray){
+  let newArray=[]
+  if (objectArray.length>0){
+    newArray = objectArray.map(item => ({
+      text: item.status,
+      value: item.status
+    }));
+  }
+  let uniqueData = [...new Set(newArray.map(JSON.stringify))].map(JSON.parse)
+  return uniqueData
+}
