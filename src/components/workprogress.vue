@@ -204,6 +204,9 @@
             <div class="fieldItem">
               <span>进度反馈：{{item.feedBack.progressFeedBack}}</span>
             </div>
+            <div class="fieldItem">
+              <span>自评分：{{item.feedBack.feedBackSelfScore}}</span>
+            </div>
             <div>
               <div>佐证材料</div>
               <div v-for="item1 in item.feedBack.feedBackAttachment" style="margin: 10px;">
@@ -385,6 +388,9 @@
             </div>
             <div class="fieldItem">
               <span>进度反馈：{{item.feedBack.progressFeedBack}}</span>
+            </div>
+            <div class="fieldItem">
+              <span>自评分：{{item.feedBack.feedBackSelfScore}}</span>
             </div>
             <div>
               <div>佐证材料</div>
@@ -658,6 +664,7 @@ const handleClick=(record)=>{
         taskScore.value=res.data.task.score
         reviewFormState.value.projectName=res.data.task.projectName
         reviewFormState.value.taskName=res.data.task.taskName
+        reviewFormState.value.taskCode=record.taskCode
         reviewFormState.value.taskDescription=res.data.task.taskDescription
         reviewFormState.value.assessmentDepartmentName=res.data.task.assessmentDepartmentName
         reviewFormState.value.responsibleDepartmentName=res.data.task.responsibleDepartmentName
