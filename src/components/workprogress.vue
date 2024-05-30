@@ -21,7 +21,7 @@
           {{ record.taskDescription==''?record.targetDescription:record.taskDescription }}
         </template>
         <template v-if="column.key === 'action'">
-         <a style="color: blue" @click="handleClick(record)">办理</a>
+         <a style="color: blue" @click="handleClick(record)" v-if="record.unCompleteChildren==0">办理</a>
         </template>
       </template>
     </a-table>
@@ -203,6 +203,9 @@
             </div>
             <div class="fieldItem">
               <span>进度反馈：{{item.feedBack.progressFeedBack}}</span>
+            </div>
+            <div class="fieldItem">
+              <span>自评分：{{item.feedBack.feedBackSelfScore}}</span>
             </div>
             <div>
               <div>佐证材料</div>
@@ -386,6 +389,9 @@
             <div class="fieldItem">
               <span>进度反馈：{{item.feedBack.progressFeedBack}}</span>
             </div>
+            <div class="fieldItem">
+              <span>自评分：{{item.feedBack.feedBackSelfScore}}</span>
+            </div>
             <div>
               <div>佐证材料</div>
               <div v-for="item1 in item.feedBack.feedBackAttachment" style="margin: 10px;">
@@ -425,19 +431,28 @@ const columns = ref([
     key: 'projectName',
     filters: filterList,
     onFilter: (value, record) => record.projectName == value,
+    width:150,
+    ellipsis: true,
   },
   {
     title: '任务名称',
     dataIndex: 'taskName',
     key: 'taskName',
-    width:200,
+    width:150,
     ellipsis: true,
   },
   {
     title: '任务说明',
     key: 'targetDescription',
     dataIndex: 'targetDescription',
-    width:300,
+    width:200,
+    ellipsis: true,
+  },
+  {
+    title: '未完成子任务数',
+    key: 'unCompleteChildren',
+    dataIndex: 'unCompleteChildren',
+    width:150,
     ellipsis: true,
   },
   {
@@ -451,35 +466,50 @@ const columns = ref([
     title: '考核方式',
     key: 'assessmentMethod',
     dataIndex: 'assessmentMethod',
+    width:100,
+    ellipsis: true,
   },
   {
     title: '责任部门',
     key: 'responsibleDepartmentName',
     dataIndex: 'responsibleDepartmentName',
+    width:150,
+    ellipsis: true,
   },
   {
     title: '考核部门',
     key: 'assessmentDepartmentName',
     dataIndex: 'assessmentDepartmentName',
+    width:150,
+    ellipsis: true,
   },
   {
     title: '任务下发时间',
     key: 'startTime',
     dataIndex: 'startTime',
+    width:150,
+    ellipsis: true,
   },
   {
     title: '任务截止时间',
     key: 'endTime',
     dataIndex: 'endTime',
+    width:150,
+    ellipsis: true,
   },
   {
     title: '状态',
     key: 'status',
     dataIndex: 'status',
+    width:100,
+    ellipsis: true,
   },
   {
     title: '操作',
     key: 'action',
+    width:80,
+    ellipsis: true,
+    fixed: 'right',
   },
 ]);
 //新增的form
@@ -658,6 +688,7 @@ const handleClick=(record)=>{
         taskScore.value=res.data.task.score
         reviewFormState.value.projectName=res.data.task.projectName
         reviewFormState.value.taskName=res.data.task.taskName
+        reviewFormState.value.taskCode=record.taskCode
         reviewFormState.value.taskDescription=res.data.task.taskDescription
         reviewFormState.value.assessmentDepartmentName=res.data.task.assessmentDepartmentName
         reviewFormState.value.responsibleDepartmentName=res.data.task.responsibleDepartmentName
