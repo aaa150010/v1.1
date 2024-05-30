@@ -21,7 +21,7 @@
             {{ record.taskDescription==''?record.targetDescription:record.taskDescription }}
           </template>
           <template v-if="column.key === 'action'">
-            <a style="color: blue" @click="handleClick(record)">办理</a>
+            <a style="color: blue" @click="handleClick(record)" v-if="record.unCompleteChildren==0">办理</a>
           </template>
         </template>
       </a-table>
