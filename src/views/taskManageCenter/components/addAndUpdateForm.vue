@@ -46,8 +46,12 @@
           </a-col>
         </a-row>
         <a-divider v-if="type == 'add'" class="my-2" />
-        <a-form-item label="" name="taskType">
-          <a-radio-group v-model:value="formNode.taskType" button-style="solid">
+        <a-form-item label="任务类型" name="taskType">
+          <a-radio-group
+            :disabled="type == 'seeDetail'"
+            v-model:value="formNode.taskType"
+            button-style="solid"
+          >
             <a-radio-button
               v-for="item in taskTypeList"
               :key="item.value"
@@ -186,7 +190,7 @@
               </a-row>
             </a-form-item>
           </a-col>
-          <a-col :span="24">
+          <a-col :span="24" v-if="formNode.taskType == '分发任务'">
             <a-form-item
               label="任务说明"
               name="taskDescription"
@@ -234,6 +238,7 @@
               <a-radio-group
                 v-model:value="formNode.targetType"
                 button-style="solid"
+                :disabled="type == 'seeDetail'"
                 @change="formNode.targetValue = null"
               >
                 <a-radio-button
@@ -255,7 +260,7 @@
               <a-row>
                 <a-col :span="12">
                   <a-slider
-                    v-model:value="formNode.targetValue"
+                    v-model:value="formNode.targetValue1"
                     :disabled="type == 'seeDetail'"
                     :step="0.1"
                     placeholder="请填写任务分数"
@@ -362,16 +367,15 @@ const formNode = reactive({
   endTime: dayjs(store.state.nodeConfig.selectRow.endTime),
   taskType:
     store.state.nodeConfig.type != "add"
-      ? store.state.nodeConfig.selectRow.assessmentMethod
+      ? store.state.nodeConfig.selectRow.taskType
       : "分发任务",
   assessmentMethod:
     store.state.nodeConfig.type != "add"
       ? store.state.nodeConfig.selectRow.assessmentMethod
       : "审核评分",
-  targetType:
-    store.state.nodeConfig.type != "add"
-      ? store.state.nodeConfig.selectRow.targetType
-      : "数字",
+  targetType: store.state.nodeConfig.selectRow.targetType
+    ? store.state.nodeConfig.selectRow.targetType
+    : "数字",
   taskDescription:
     store.state.nodeConfig.type != "add"
       ? store.state.nodeConfig.selectRow.taskDescription
@@ -383,6 +387,26 @@ const formNode = reactive({
   sort:
     store.state.nodeConfig.type != "add"
       ? store.state.nodeConfig.selectRow.sort
+      : null,
+  targetName:
+    store.state.nodeConfig.type != "add"
+      ? store.state.nodeConfig.selectRow.targetName
+      : null,
+  targetDescription:
+    store.state.nodeConfig.type != "add"
+      ? store.state.nodeConfig.selectRow.targetDescription
+      : null,
+  targetValue:
+    store.state.nodeConfig.type != "add"
+      ? store.state.nodeConfig.selectRow.targetValue
+      : null,
+  targetValue1:
+    store.state.nodeConfig.type != "add"
+      ? store.state.nodeConfig.selectRow.targetValue
+      : null,
+  targetValue2:
+    store.state.nodeConfig.type != "add"
+      ? store.state.nodeConfig.selectRow.targetValue
       : null,
 });
 const rulesNode = {

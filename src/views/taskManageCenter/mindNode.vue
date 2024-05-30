@@ -9,7 +9,15 @@
     <div>总任务数:{{ dataObj.totalTasks }}</div>
     <div>完成进度:{{ dataObj.schedule }}%</div>
     <div>
-      目标值:当前值:审核值={{ dataObj.taskScore }}:{{ dataObj.score }}:0(分)
+      <span class="text-red-400">目标值</span>/
+      <span class="text-blue-400">当前值</span>/
+      <span class="text-yellow-600">审核值</span>
+      =
+      <span class="text-red-400">{{ dataObj.taskScore }}</span
+      >/ <span class="text-blue-400">{{ dataObj.score }}</span
+      >/
+      <span class="text-yellow-600">{{ dataObj.expectedScore }}</span>
+      (分)
     </div>
     <div>{{ dataObj.startTime + "~" + dataObj.endTime }}</div>
     <personInfoGlobal

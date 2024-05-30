@@ -1,7 +1,7 @@
 <template>
-  <div class="h-full flex">
+  <div class="h-full w-full overflow-x-auto" style="white-space: nowrap">
     <div
-      class="border w-56 h-full overflow-y-auto mr-2 p-2"
+      class="inline-block border w-64 h-full overflow-y-auto mr-2 p-2"
       v-for="item in dataTree"
       :key="item.id"
     >
@@ -23,10 +23,23 @@
         v-for="itemChild in item.children"
         :key="itemChild.id"
       >
-        <div>{{ itemChild.name }}</div>
+        <a-tooltip>
+          <template #title>{{ itemChild.name }}</template>
+          <div class="txt_over_one cursor-pointer">{{ itemChild.name }}</div>
+        </a-tooltip>
+
         <div>任务总数：{{ itemChild.totalTasks }}</div>
         <div>完成进度：{{ itemChild.schedule }}%</div>
-        <div>当前得分：{{ itemChild.score }}分</div>
+        <div>
+          <span class="text-red-400">目标</span>/
+          <span class="text-blue-400">当前</span>/
+          <span class="text-yellow-600">审核</span>(值) =
+          <span class="text-red-400">{{ itemChild.taskScore }}</span
+          >/ <span class="text-blue-400">{{ itemChild.score }}</span
+          >/
+          <span class="text-yellow-600">{{ itemChild.expectedScore }}</span>
+          (分)
+        </div>
         <div>{{ itemChild.startTime }}~{{ itemChild.endTime }}</div>
         <div
           class="float-right text-blue-400 underline cursor-pointer"

@@ -36,7 +36,6 @@
                 :startVal="0"
                 :endVal="unCompleteTaskList"
                 :duration="3000"
-                class="mx-auto"
               ></countTo>
             </div>
             <div

@@ -81,7 +81,7 @@ import download from "downloadjs";
 import { isLeaf } from "ant-design-vue/es/vc-cascader/utils/commonUtil";
 import { exportFile } from "@/api/user";
 import { message, Modal } from "ant-design-vue";
-const props = defineProps(["selectRow"]);
+const props = defineProps(["selectRow", "showOne"]);
 
 const TeleportContainer = getTeleport();
 
