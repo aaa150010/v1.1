@@ -42,7 +42,6 @@ export function exportFile(url, fileName) {
       newUrlParts.push(part);
     }
   }
-
 // 将处理后的数组重新拼接成新的 URL 字符串
   let newUrl = newUrlParts.join('&');
   let newUrl1=`${newUrl}&sid=${localStorage.getItem('sid')}`

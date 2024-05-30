@@ -97,4 +97,8 @@ export default defineComponent({
 .underBox:hover{
   text-decoration:underline
 }
+.textUnder{
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
 </style>

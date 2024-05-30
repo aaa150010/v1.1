@@ -38,12 +38,78 @@
             <a-form-item label="任务名称">
               <a-input disabled v-model:value="reviewFormState.taskName" />
             </a-form-item>
+            <a-row>
+              <a-col :span="12">
+                <a-form-item label="责任部门">
+                  <a-input
+                      v-model:value="reviewFormState.responsibleDepartmentName"
+                      disabled
+                      style="width: 100%"
+                  />
+                </a-form-item>
+              </a-col>
+              <a-col :span="12">
+                <a-form-item label="责任人">
+                  <a style="color: blue" @click="handleGetInfo(reviewFormState.personResponsible)">
+                    {{reviewFormState.personResponsibleName}}
+                  </a>
+                </a-form-item>
+              </a-col>
+            </a-row>
+            <a-row>
+              <a-col :span="12">
+                <a-form-item label="任务开始时间">
+                  <a-input
+                      v-model:value="reviewFormState.startTime"
+                      disabled
+                      style="width: 100%"
+                  />
+                </a-form-item>
+              </a-col>
+              <a-col :span="12">
+                <a-form-item label="任务截止时间">
+                  <a-input
+                      v-model:value="reviewFormState.endTime"
+                      disabled
+                      style="width: 100%"
+                  />
+                </a-form-item>
+              </a-col>
+            </a-row>
+            <a-row>
+              <a-col :span="12">
+                <a-form-item label="考核方式">
+                  <a-input
+                      v-model:value="reviewFormState.assessmentMethod"
+                      disabled
+                      style="width: 100%"
+                  />
+                </a-form-item>
+              </a-col>
+              <a-col :span="12">
+                <a-form-item label="任务类型">
+                  <a-input
+                      v-model:value="reviewFormState.taskType"
+                      disabled
+                      style="width: 100%"
+                  />
+                </a-form-item>
+              </a-col>
+            </a-row>
             <a-form-item label="任务分数">
               <a-input disabled v-model:value="taskScore" />
             </a-form-item>
-            <a-form-item label="任务说明">
+            <a-form-item label="任务说明" v-if="reviewFormState.taskType=='分发任务'">
               <a-textarea disabled v-model:value="reviewFormState.taskDescription" />
             </a-form-item>
+            <template v-else>
+              <a-form-item label="量化指标名称">
+                <a-input disabled v-model:value="reviewFormState.targetName" />
+              </a-form-item>
+              <a-form-item label="量化指标说明">
+                <a-input disabled v-model:value="reviewFormState.targetDescription" />
+              </a-form-item>
+            </template>
             <a-form-item label="责任部门">
               <a-input disabled v-model:value="reviewFormState.assessmentDepartmentName" />
             </a-form-item>
@@ -98,7 +164,6 @@
                   </div>
                 </div>
               </div>
-
             </template>
           </a-form>
         </div>
@@ -113,8 +178,8 @@ import {nextTick, onMounted, ref} from "vue";
 import {getDoneTaskList} from "@/api/alreadyDone";
 import {getTaskInfo} from "@/api/workprogress";
 import PersonInfo from "@/components/getPersonInfo/personInfo.vue";
-import {getOverTask} from "@/api/overview";
 import {exportFile, getFilterList} from "@/api/user";
+import {getOverTask} from "../api/overview";
 const open=ref(false)
 const filterList=ref([])
 const columns = ref([
@@ -134,9 +199,16 @@ const columns = ref([
   },
   {
     title: '任务说明',
-    key: 'taskDescription',
-    dataIndex: 'taskDescription',
+    key: 'targetDescription',
+    dataIndex: 'targetDescription',
     width:300,
+    ellipsis: true,
+  },
+  {
+    title: '发布人',
+    key: 'taskPublisherName',
+    dataIndex: 'taskPublisherName',
+    width:100,
     ellipsis: true,
   },
   {
@@ -155,12 +227,22 @@ const columns = ref([
     dataIndex: 'assessmentDepartmentName',
   },
   {
+    title: '任务下发时间',
+    key: 'startTime',
+    dataIndex: 'startTime',
+  },
+  {
+    title: '任务截止时间',
+    key: 'endTime',
+    dataIndex: 'endTime',
+  },
+  {
     title: '状态',
     key: 'status',
     dataIndex: 'status',
   },
   {
-    title: '查看',
+    title: '操作',
     key: 'action',
   },
 ]);
@@ -185,19 +267,28 @@ const reviewFormState=ref({
   assessmentDepartmentName:null,
   startTime:null,
 })
+const forFeedBackList=ref([])
 //任务总分，任务自评分和审核得分都不能超过这个
 const taskScore=ref()
-const forFeedBackList=ref([])
 const handleClick=(record)=>{
   getTaskInfo(record.taskCode).then(res=>{
     if (res.result=='ok'){
-      taskScore.value=res.data.task.score
       forFeedBackList.value=res.data.feedBackList
       reviewFormState.value.projectName=res.data.task.projectName
       reviewFormState.value.taskName=res.data.task.taskName
       reviewFormState.value.taskDescription=res.data.task.taskDescription
       reviewFormState.value.assessmentDepartmentName=res.data.task.assessmentDepartmentName
       reviewFormState.value.startTime=res.data.task.startTime
+      reviewFormState.value.endTime=res.data.task.endTime
+      reviewFormState.value.personResponsibleName=res.data.task.personResponsibleName
+      reviewFormState.value.personResponsible=record.personResponsible
+      reviewFormState.value.assessmentMethod=res.data.task.assessmentMethod
+      reviewFormState.value.taskType=res.data.task.taskType
+      reviewFormState.value.targetName=res.data.task.targetName
+      reviewFormState.value.taskType=res.data.task.taskType
+      reviewFormState.value.targetDescription=record.targetDescription
+      reviewFormState.value.responsibleDepartmentName=res.data.task.responsibleDepartmentName
+      taskScore.value=res.data.task.score
       open.value=true
     }
   })
@@ -209,6 +300,9 @@ const handleGetInfo=(uid)=>{
   nextTick(()=>{
     personRef.value.openModel()
   })
+}
+const handleOk3=()=>{
+  open.value=false
 }
 const handleDown=(item)=>{
   let link =`${import.meta.env.VITE_APP_BASE_API}/portal/r${item.url.replace('.','')}&sid=${localStorage.getItem('sid')}`

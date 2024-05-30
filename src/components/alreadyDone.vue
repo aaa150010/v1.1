@@ -1,5 +1,5 @@
 <template>
-  <div style="max-height: 100vh;overflow:scroll;">
+  <div>
     <a-card  :bordered="false" >
       <a-table :columns="columns" :data-source="data" :pagination="false" :loading="loading">
         <!--      <template #headerCell="{ column }">-->
@@ -29,7 +29,7 @@
         </template>
       </a-table>
       <!--  查看的dialog-->
-      <a-modal v-model:open="open" title="办理" @ok="handleOk3" :width="800" :maskClosable="false">
+      <a-modal v-model:open="open" title="办理" @ok="handleOk3" :width="800">
         <div style="height: 600px;overflow: scroll">
           <a-form :model="reviewFormState" ref="reviewFormStateRef" :rules="rules2">
             <a-form-item label="项目名称">
@@ -38,12 +38,78 @@
             <a-form-item label="任务名称">
               <a-input disabled v-model:value="reviewFormState.taskName" />
             </a-form-item>
+            <a-row>
+              <a-col :span="12">
+                <a-form-item label="责任部门">
+                  <a-input
+                      v-model:value="reviewFormState.responsibleDepartmentName"
+                      disabled
+                      style="width: 100%"
+                  />
+                </a-form-item>
+              </a-col>
+              <a-col :span="12">
+                <a-form-item label="责任人">
+                  <a style="color: blue" @click="handleGetInfo(reviewFormState.personResponsible)">
+                    {{reviewFormState.personResponsibleName}}
+                  </a>
+                </a-form-item>
+              </a-col>
+            </a-row>
+            <a-row>
+              <a-col :span="12">
+                <a-form-item label="任务开始时间">
+                  <a-input
+                      v-model:value="reviewFormState.startTime"
+                      disabled
+                      style="width: 100%"
+                  />
+                </a-form-item>
+              </a-col>
+              <a-col :span="12">
+                <a-form-item label="任务截止时间">
+                  <a-input
+                      v-model:value="reviewFormState.endTime"
+                      disabled
+                      style="width: 100%"
+                  />
+                </a-form-item>
+              </a-col>
+            </a-row>
+            <a-row>
+              <a-col :span="12">
+                <a-form-item label="考核方式">
+                  <a-input
+                      v-model:value="reviewFormState.assessmentMethod"
+                      disabled
+                      style="width: 100%"
+                  />
+                </a-form-item>
+              </a-col>
+              <a-col :span="12">
+                <a-form-item label="任务类型">
+                  <a-input
+                      v-model:value="reviewFormState.taskType"
+                      disabled
+                      style="width: 100%"
+                  />
+                </a-form-item>
+              </a-col>
+            </a-row>
             <a-form-item label="任务分数">
               <a-input disabled v-model:value="taskScore" />
             </a-form-item>
-            <a-form-item label="任务说明">
+            <a-form-item label="任务说明" v-if="reviewFormState.taskType=='分发任务'">
               <a-textarea disabled v-model:value="reviewFormState.taskDescription" />
             </a-form-item>
+            <template v-else>
+              <a-form-item label="量化指标名称">
+                <a-input disabled v-model:value="reviewFormState.targetName" />
+              </a-form-item>
+              <a-form-item label="量化指标说明">
+                <a-input disabled v-model:value="reviewFormState.targetDescription" />
+              </a-form-item>
+            </template>
             <a-form-item label="责任部门">
               <a-input disabled v-model:value="reviewFormState.assessmentDepartmentName" />
             </a-form-item>
@@ -132,9 +198,16 @@ const columns = ref([
   },
   {
     title: '任务说明',
-    key: 'taskDescription',
-    dataIndex: 'taskDescription',
+    key: 'targetDescription',
+    dataIndex: 'targetDescription',
     width:300,
+    ellipsis: true,
+  },
+  {
+    title: '发布人',
+    key: 'taskPublisherName',
+    dataIndex: 'taskPublisherName',
+    width:100,
     ellipsis: true,
   },
   {
@@ -153,12 +226,22 @@ const columns = ref([
     dataIndex: 'assessmentDepartmentName',
   },
   {
+    title: '任务下发时间',
+    key: 'startTime',
+    dataIndex: 'startTime',
+  },
+  {
+    title: '任务截止时间',
+    key: 'endTime',
+    dataIndex: 'endTime',
+  },
+  {
     title: '状态',
     key: 'status',
     dataIndex: 'status',
   },
   {
-    title: '查看',
+    title: '操作',
     key: 'action',
   },
 ]);
@@ -195,6 +278,15 @@ const handleClick=(record)=>{
       reviewFormState.value.taskDescription=res.data.task.taskDescription
       reviewFormState.value.assessmentDepartmentName=res.data.task.assessmentDepartmentName
       reviewFormState.value.startTime=res.data.task.startTime
+      reviewFormState.value.endTime=res.data.task.endTime
+      reviewFormState.value.personResponsibleName=res.data.task.personResponsibleName
+      reviewFormState.value.personResponsible=record.personResponsible
+      reviewFormState.value.assessmentMethod=res.data.task.assessmentMethod
+      reviewFormState.value.taskType=res.data.task.taskType
+      reviewFormState.value.targetName=res.data.task.targetName
+      reviewFormState.value.taskType=res.data.task.taskType
+      reviewFormState.value.targetDescription=record.targetDescription
+      reviewFormState.value.responsibleDepartmentName=res.data.task.responsibleDepartmentName
       taskScore.value=res.data.task.score
       open.value=true
     }

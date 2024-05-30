@@ -6,7 +6,7 @@
          <a-progress type="dashboard" :percent="workbenchObj.percent" />
        </div>
        <div class="oneItemTotal">
-         <div style="width: 40px;height: 40px;text-align: center;line-height: 40px">{{workbenchObj.projectNumber}}</div>
+         <div style="width: 40px;height: 40px;text-align: center;line-height: 40px;">{{workbenchObj.projectNumber}}</div>
          <div>参与的项目数</div>
        </div>
        <div class="oneItem" @click="handleItem('未完成')">
@@ -73,7 +73,7 @@
       </div>
     </a-modal>
 <!--    待审核和已完成model-->
-    <a-modal v-model:open="open2" :title="title" @cancel="handleOk1" @ok="handleOk1" :maskClosable="false" :width="1200">
+    <a-modal v-model:open="open2" :title="title" @cancel="handleOk1" @ok="handleOk1" :maskClosable="false" :width="1500">
       <div style="height: 600px;overflow: scroll">
       <a-table :columns="columns" :data-source="data" :pagination="false" :loading="loading">
         <!--      <template #headerCell="{ column }">-->
@@ -115,12 +115,78 @@
           <a-form-item label="任务名称">
             <a-input disabled v-model:value="reviewFormState.taskName" />
           </a-form-item>
+          <a-row>
+            <a-col :span="12">
+              <a-form-item label="责任部门">
+                <a-input
+                    v-model:value="reviewFormState.responsibleDepartmentName"
+                    disabled
+                    style="width: 100%"
+                />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="责任人">
+                <a style="color: blue" @click="handleGetInfo(reviewFormState.personResponsible)">
+                  {{reviewFormState.personResponsibleName}}
+                </a>
+              </a-form-item>
+            </a-col>
+          </a-row>
+          <a-row>
+            <a-col :span="12">
+              <a-form-item label="任务开始时间">
+                <a-input
+                    v-model:value="reviewFormState.startTime"
+                    disabled
+                    style="width: 100%"
+                />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="任务截止时间">
+                <a-input
+                    v-model:value="reviewFormState.endTime"
+                    disabled
+                    style="width: 100%"
+                />
+              </a-form-item>
+            </a-col>
+          </a-row>
+          <a-row>
+            <a-col :span="12">
+              <a-form-item label="考核方式">
+                <a-input
+                    v-model:value="reviewFormState.assessmentMethod"
+                    disabled
+                    style="width: 100%"
+                />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="任务类型">
+                <a-input
+                    v-model:value="reviewFormState.taskType"
+                    disabled
+                    style="width: 100%"
+                />
+              </a-form-item>
+            </a-col>
+          </a-row>
           <a-form-item label="任务分数">
             <a-input disabled v-model:value="taskScore" />
           </a-form-item>
-          <a-form-item label="任务说明">
+          <a-form-item label="任务说明" v-if="reviewFormState.taskType=='分发任务'">
             <a-textarea disabled v-model:value="reviewFormState.taskDescription" />
           </a-form-item>
+          <template v-else>
+            <a-form-item label="量化指标名称">
+              <a-input disabled v-model:value="reviewFormState.targetName" />
+            </a-form-item>
+            <a-form-item label="量化指标说明">
+              <a-input disabled v-model:value="reviewFormState.targetDescription" />
+            </a-form-item>
+          </template>
           <a-form-item label="责任部门">
             <a-input disabled v-model:value="reviewFormState.assessmentDepartmentName" />
           </a-form-item>
@@ -182,19 +248,19 @@
     <!--  查询个人信息model-->
     <person-info :user-id="userId" ref="personRef"></person-info>
 <!--    耗时过半-->
-    <a-modal v-model:open="open4" title="耗时过半的任务" @cancel="handleOk4" :maskClosable="false" @ok="handleOk4" :width="1200">
+    <a-modal v-model:open="open4" title="耗时过半的任务" @cancel="handleOk4" :maskClosable="false" @ok="handleOk4" :width="1500">
       <div style="height: 600px;overflow: scroll">
         <half-time v-if="open4"></half-time>
       </div>
     </a-modal>
 <!--    已逾期-->
-    <a-modal v-model:open="open5" title="已逾期任务" @cancel="handleOk5" :maskClosable="false" @ok="handleOk5" :width="1200">
+    <a-modal v-model:open="open5" title="已逾期任务" @cancel="handleOk5" :maskClosable="false" @ok="handleOk5" :width="1500">
       <div style="height: 600px;overflow: scroll">
         <over-time v-if="open5"></over-time>
       </div>
     </a-modal>
 <!--    关注里面的model，分为未完成|已完成|审核中-->
-    <a-modal v-model:open="open6" :title="title6"@cancel="handleOk6" @ok="handleOk6" :width="1200" :maskClosable="false">
+    <a-modal v-model:open="open6" :title="title6"@cancel="handleOk6" @ok="handleOk6" :width="1500" :maskClosable="false">
       <div style="height: 600px;overflow: scroll">
         <favorite :project-code="projectCode" :status="status" ref="favoriteRef" v-if="open6"></favorite>
       </div>
@@ -235,7 +301,6 @@ const getWorkData=()=>{
       }else {
         workbenchObj.value.percent= ((res.data.completeTaskNumber/res.data.totalTaskNumber)* 100).toFixed(0)
       }
-
       workbenchObj.value.completeTaskNumber=res.data.completeTaskNumber
       workbenchObj.value.overdueTaskNumber=res.data.overdueTaskNumber
       workbenchObj.value.projectNumber=res.data.projectNumber
@@ -301,9 +366,16 @@ const columns = ref([
   },
   {
     title: '任务说明',
-    key: 'taskDescription',
-    dataIndex: 'taskDescription',
+    key: 'targetDescription',
+    dataIndex: 'targetDescription',
     width:300,
+    ellipsis: true,
+  },
+  {
+    title: '发布人',
+    key: 'taskPublisherName',
+    dataIndex: 'taskPublisherName',
+    width:100,
     ellipsis: true,
   },
   {
@@ -322,12 +394,22 @@ const columns = ref([
     dataIndex: 'assessmentDepartmentName',
   },
   {
+    title: '任务下发时间',
+    key: 'startTime',
+    dataIndex: 'startTime',
+  },
+  {
+    title: '任务截止时间',
+    key: 'endTime',
+    dataIndex: 'endTime',
+  },
+  {
     title: '状态',
     key: 'status',
     dataIndex: 'status',
   },
   {
-    title: '查看',
+    title: '操作',
     key: 'action',
   },
 ]);
@@ -355,6 +437,15 @@ const handleClick=(record)=>{
       reviewFormState.value.taskDescription=res.data.task.taskDescription
       reviewFormState.value.assessmentDepartmentName=res.data.task.assessmentDepartmentName
       reviewFormState.value.startTime=res.data.task.startTime
+      reviewFormState.value.endTime=res.data.task.endTime
+      reviewFormState.value.personResponsibleName=res.data.task.personResponsibleName
+      reviewFormState.value.personResponsible=record.personResponsible
+      reviewFormState.value.assessmentMethod=res.data.task.assessmentMethod
+      reviewFormState.value.taskType=res.data.task.taskType
+      reviewFormState.value.targetName=res.data.task.targetName
+      reviewFormState.value.taskType=res.data.task.taskType
+      reviewFormState.value.targetDescription=record.targetDescription
+      reviewFormState.value.responsibleDepartmentName=res.data.task.responsibleDepartmentName
     }
   })
 }

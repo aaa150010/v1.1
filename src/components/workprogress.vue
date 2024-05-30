@@ -18,10 +18,7 @@
           </a-tooltip>
         </template>
         <template v-if="column.key === 'taskDescription'">
-          <a-tooltip placement="topLeft" color="#108ee9">
-            <template #title>    {{ record.taskDescription }}</template>
-            {{ record.taskDescription }}
-          </a-tooltip>
+          {{ record.taskDescription==''?record.targetDescription:record.taskDescription }}
         </template>
         <template v-if="column.key === 'action'">
          <a style="color: blue" @click="handleClick(record)">办理</a>
@@ -39,14 +36,80 @@
         <a-form-item label="任务名称">
           <a-input disabled v-model:value="addFormState.taskName" />
         </a-form-item>
+        <a-row>
+          <a-col :span="12">
+            <a-form-item label="责任部门">
+              <a-input
+                  v-model:value="addFormState.responsibleDepartmentName"
+                  disabled
+                  style="width: 100%"
+              />
+            </a-form-item>
+          </a-col>
+          <a-col :span="12">
+            <a-form-item label="责任人">
+              <a style="color: blue" @click="handleGetInfo(addFormState.personResponsible)">
+                {{addFormState.personResponsibleName}}
+              </a>
+            </a-form-item>
+          </a-col>
+        </a-row>
+        <a-row>
+          <a-col :span="12">
+            <a-form-item label="任务开始时间">
+              <a-input
+                  v-model:value="addFormState.startTime"
+                  disabled
+                  style="width: 100%"
+              />
+            </a-form-item>
+          </a-col>
+          <a-col :span="12">
+            <a-form-item label="任务截止时间">
+              <a-input
+                  v-model:value="addFormState.endTime"
+                  disabled
+                  style="width: 100%"
+              />
+            </a-form-item>
+          </a-col>
+        </a-row>
+        <a-row>
+          <a-col :span="12">
+            <a-form-item label="考核方式">
+              <a-input
+                  v-model:value="addFormState.assessmentMethod"
+                  disabled
+                  style="width: 100%"
+              />
+            </a-form-item>
+          </a-col>
+          <a-col :span="12">
+            <a-form-item label="任务类型">
+              <a-input
+                  v-model:value="addFormState.taskType"
+                  disabled
+                  style="width: 100%"
+              />
+            </a-form-item>
+          </a-col>
+        </a-row>
         <a-form-item label="任务分数">
           <a-input disabled v-model:value="taskScore" />
         </a-form-item>
-        <a-form-item label="任务说明">
+        <a-form-item label="任务说明" v-if="addFormState.taskType=='分发任务'">
           <a-textarea disabled v-model:value="addFormState.taskDescription" />
         </a-form-item>
+        <template v-else>
+          <a-form-item label="量化指标名称">
+            <a-input disabled v-model:value="addFormState.targetName" />
+          </a-form-item>
+          <a-form-item label="量化指标说明">
+            <a-input disabled v-model:value="addFormState.targetDescription" />
+          </a-form-item>
+        </template>
         <a-form-item label="进度反馈" name="progressFeedback">
-          <a-textarea style="height: 80px" v-model:value="addFormState.progressFeedback" />
+          <a-textarea  v-model:value="addFormState.progressFeedback" />
         </a-form-item>
         <a-form-item label="任务进度" name="taskSchedule">
           <a-input-number
@@ -67,6 +130,21 @@
               <a-input-number v-model:value="addFormState.selfScore"  :max="taskScore" />
             </div>
           </div>
+        </a-form-item>
+        <a-form-item label="量化指标数值" name="targetValue1" v-if="addFormState.taskType=='指标任务'&&addFormState.targetType=='数字'">
+          <div style="display: flex;width: 100%;justify-content: space-between">
+<!--            任务为指标任务，且任务类型为数字-->
+            <div style="width: 70%">
+              <a-slider v-model:value="addFormState.targetValue1" :max="addFormState.maxValue" :step="0.1"/>
+            </div>
+            <div style="width: 30%;margin-left: 10px">
+              <a-input-number v-model:value="addFormState.targetValue1" :max="addFormState.targetValue"/>
+            </div>
+          </div>
+        </a-form-item>
+        <a-form-item label="量化指标数值" name="targetValue2" v-if="addFormState.taskType=='指标任务'&&addFormState.targetType=='字母'">
+          <!--          任务为指标任务，且任务类型为字母-->
+            <a-input v-model:value="addFormState.targetValue2" placeholder="请填写量化指标数值A-Z"></a-input>
         </a-form-item>
         <div>
           <div style="display: flex;justify-content: space-between">
@@ -171,13 +249,79 @@
         <a-form-item label="任务名称">
           <a-input disabled v-model:value="reviewFormState.taskName" />
         </a-form-item>
+        <a-row>
+          <a-col :span="12">
+            <a-form-item label="责任部门">
+              <a-input
+                  v-model:value="reviewFormState.responsibleDepartmentName"
+                  disabled
+                  style="width: 100%"
+              />
+            </a-form-item>
+          </a-col>
+          <a-col :span="12">
+            <a-form-item label="责任人">
+              <a style="color: blue" @click="handleGetInfo(reviewFormState.personResponsible)">
+                {{reviewFormState.personResponsibleName}}
+              </a>
+            </a-form-item>
+          </a-col>
+        </a-row>
+        <a-row>
+          <a-col :span="12">
+            <a-form-item label="任务开始时间">
+              <a-input
+                  v-model:value="reviewFormState.startTime"
+                  disabled
+                  style="width: 100%"
+              />
+            </a-form-item>
+          </a-col>
+          <a-col :span="12">
+            <a-form-item label="任务截止时间">
+              <a-input
+                  v-model:value="reviewFormState.endTime"
+                  disabled
+                  style="width: 100%"
+              />
+            </a-form-item>
+          </a-col>
+        </a-row>
+        <a-row>
+          <a-col :span="12">
+            <a-form-item label="考核方式">
+              <a-input
+                  v-model:value="reviewFormState.assessmentMethod"
+                  disabled
+                  style="width: 100%"
+              />
+            </a-form-item>
+          </a-col>
+          <a-col :span="12">
+            <a-form-item label="任务类型">
+              <a-input
+                  v-model:value="reviewFormState.taskType"
+                  disabled
+                  style="width: 100%"
+              />
+            </a-form-item>
+          </a-col>
+        </a-row>
         <a-form-item label="任务分数">
           <a-input disabled v-model:value="taskScore" />
         </a-form-item>
-        <a-form-item label="任务说明">
+        <a-form-item label="任务说明" v-if="reviewFormState.taskType=='分发任务'">
           <a-textarea disabled v-model:value="reviewFormState.taskDescription" />
         </a-form-item>
-        <a-form-item label="责任部门">
+        <template v-else>
+          <a-form-item label="量化指标名称">
+            <a-input disabled v-model:value="reviewFormState.targetName" />
+          </a-form-item>
+          <a-form-item label="量化指标说明">
+            <a-input disabled v-model:value="reviewFormState.targetDescription" />
+          </a-form-item>
+        </template>
+        <a-form-item label="审核部门">
           <a-input disabled v-model:value="reviewFormState.assessmentDepartmentName" />
         </a-form-item>
         <a-form-item label="任务下发时间">
@@ -291,9 +435,16 @@ const columns = ref([
   },
   {
     title: '任务说明',
-    key: 'taskDescription',
-    dataIndex: 'taskDescription',
+    key: 'targetDescription',
+    dataIndex: 'targetDescription',
     width:300,
+    ellipsis: true,
+  },
+  {
+    title: '发布人',
+    key: 'taskPublisherName',
+    dataIndex: 'taskPublisherName',
+    width:100,
     ellipsis: true,
   },
   {
@@ -338,8 +489,19 @@ const addFormState=ref({
   projectName:null,
   taskName:null,
   taskDescription:null,
-  assessmentDepartmentName:null,
+  // 责任部门
+  responsibleDepartmentName:null,
+  // 责任人
+  personResponsibleName:null,
+  // 责任人id
+  personResponsible:null,
+  // 时间
   startTime:null,
+  endTime:null,
+  // 考核方式
+  assessmentMethod:null,
+  // 任务类型
+  taskType:null,
 })
 const reviewFormState=ref({
   taskCode:null,
@@ -387,6 +549,25 @@ const rules=ref({
       trigger: 'blur',
     },
   ],
+  targetValue1:[
+    {
+      required: true,
+      message: '请输入量化指标数值',
+      trigger: 'blur',
+    },
+  ],
+  targetValue2:[
+    {
+      required: true,
+      message: "必填项",
+      trigger: "blur",
+    },
+    {
+      pattern: /^[A-Z]+$/,
+      message: "格式不对",
+      trigger: "blur",
+    },
+  ]
 })
 const rules2=ref({
   auditResult: [
@@ -423,18 +604,36 @@ onMounted(()=>{
   })
 })
 const handleClick=(record)=>{
-  // console.log(record)
+  console.log(record)
   // 根据状态判断打开哪个dialog
   if (record.status=='未完成'){
     addFormState.value.projectName=record.projectName
     addFormState.value.taskName=record.taskName
     addFormState.value.taskDescription=record.taskDescription
     addFormState.value.taskCode=record.taskCode
+    addFormState.value.responsibleDepartmentName=record.responsibleDepartmentName
+    addFormState.value.personResponsibleName=record.personResponsibleName
+    addFormState.value.personResponsible=record.personResponsible
+    addFormState.value.startTime=record.startTime
+    addFormState.value.endTime=record.endTime
+    addFormState.value.assessmentMethod=record.assessmentMethod
+    addFormState.value.taskType=record.taskType
+    // 如果是分发任务显示量化值
+    addFormState.value.targetName=record.targetName
+    addFormState.value.targetDescription=record.taskType
+    // 赋值任务类型（指标任务才有量化）
+    addFormState.value.taskType=record.taskType
+    // 赋值量化指标类型，根据类型判断是数字输入还是字母输入
+    addFormState.value.targetType=record.targetType
+    // 存放量化指标最大值
+    addFormState.value.maxValue=record.targetValue1
     // 每次打开置空
     addFormState.value.selfScore=null
     addFormState.value.taskSchedule=null
     addFormState.value.progressFeedback=null
     addFormState.value.supportingMaterials=null
+    addFormState.value.targetValue1=null
+    addFormState.value.targetValue2=null
     value.value=[]
     searchValue.value=null
     activeKey.value='1'
@@ -461,10 +660,17 @@ const handleClick=(record)=>{
         reviewFormState.value.taskName=res.data.task.taskName
         reviewFormState.value.taskDescription=res.data.task.taskDescription
         reviewFormState.value.assessmentDepartmentName=res.data.task.assessmentDepartmentName
+        reviewFormState.value.responsibleDepartmentName=res.data.task.responsibleDepartmentName
         reviewFormState.value.startTime=res.data.task.startTime
+        reviewFormState.value.endTime=res.data.task.endTime
+        reviewFormState.value.personResponsibleName=res.data.task.personResponsibleName
+        reviewFormState.value.personResponsible=record.personResponsible
+        reviewFormState.value.assessmentMethod=res.data.task.assessmentMethod
+        reviewFormState.value.taskType=res.data.task.taskType
+        reviewFormState.value.targetName=res.data.task.targetName
+        reviewFormState.value.taskType=res.data.task.taskType
         forFeedBackList.value=res.data.feedBackList
-        reviewFormState.value.taskCode=record.taskCode
-        console.log(res.data)
+        reviewFormState.value.targetDescription=record.targetDescription
       }
     })
   }
