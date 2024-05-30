@@ -74,7 +74,7 @@
                 <span>>></span>
               </div>
               <div>
-                类型：<a-tag color="orange">{{
+                类型：<a-tag :color="item.color">{{
                   item.projectType ? item.projectType : "其他"
                 }}</a-tag>
               </div>
@@ -529,7 +529,7 @@ const getProjectList = () => {
         filterObj.value.checks = checks;
         filterObj.value.form = { ...filterObj.value.form, ...form };
       }
-      showOne.value = res.data.showOne == "false" ? false : true;
+      showOne.value = res.data.showOne + "" == "false" ? false : true;
     }
   });
 };

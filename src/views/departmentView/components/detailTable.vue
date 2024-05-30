@@ -15,7 +15,11 @@
     >
       <template #bodyCell="{ column, text, record }">
         <template v-if="column.dataIndex == 'taskDescription'">
-          <span>{{ text ? text : "暂无说明" }}</span>
+          <span>{{
+            record.taskDescription
+              ? record.taskDescription
+              : record.targetDescription
+          }}</span>
           <span
             class="cursor-pointer text-blue-400 float-right underline"
             @click="openDetail(record)"
@@ -34,7 +38,7 @@
       v-model:open="detailVisible"
       title="查看详细"
       @ok="handleOk"
-      width="800px"
+      width="1000px"
       destroyOnClose
       :footer="null"
     >
@@ -45,10 +49,24 @@
             taskDetail.taskDescription ? taskDetail.taskDescription : "暂无说明"
           }}
         </div>
-        <div>任务下发时间：{{ taskDetail.issuingTime }}</div>
-        <div>任务截止时间： {{ taskDetail.endTime }}</div>
-        <div>责任部门：{{ taskDetail.executionDepartmentName }}</div>
-        <div>任务状态：{{ taskDetail.status }}</div>
+        <div class="grid grid-cols-2">
+          <div>任务下发时间：{{ taskDetail.issuingTime }}</div>
+          <div>任务截止时间： {{ taskDetail.endTime }}</div>
+        </div>
+        <div class="grid grid-cols-2">
+          <div>责任部门：{{ taskDetail.executionDepartmentName }}</div>
+          <div>任务状态：{{ taskDetail.status }}</div>
+        </div>
+        <div class="grid grid-cols-2">
+          <div>考核方式：{{ taskDetail.assessmentMethod }}</div>
+          <div>任务类型：{{ taskDetail.taskType }}</div>
+        </div>
+        <div v-if="taskDetail.targetDescription">
+          量化指标说明：{{ taskDetail.targetDescription }}
+        </div>
+        <div v-if="taskDetail.targetName">
+          量化指标名称：{{ taskDetail.targetName }}
+        </div>
       </div>
       <a-divider></a-divider>
       <div style="height: 500px; overflow-y: auto">
@@ -208,7 +226,7 @@ const columns = ref([
     title: "提交审核时间",
     align: "center",
     dataIndex: "submissionTime",
-    width: 150,
+    width: 200,
     key: "submissionTime",
     filter: ["1"],
   },
