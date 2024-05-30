@@ -12,11 +12,29 @@
     >
       <div>
         <div>任务名称：{{ taskDetail.taskName }}</div>
-        <div>任务说明：{{ taskDetail.taskDescription }}</div>
-        <div>任务下发时间：{{ taskDetail.issuingTime }}</div>
-        <div>任务截止时间： {{ taskDetail.endTime }}</div>
-        <div>责任部门：{{ taskDetail.executionDepartmentName }}</div>
-        <div>任务状态：{{ taskDetail.status }}</div>
+        <div>
+          任务说明：{{
+            taskDetail.taskDescription ? taskDetail.taskDescription : "暂无说明"
+          }}
+        </div>
+        <div class="grid grid-cols-2">
+          <div>任务下发时间：{{ taskDetail.issuingTime }}</div>
+          <div>任务截止时间： {{ taskDetail.endTime }}</div>
+        </div>
+        <div class="grid grid-cols-2">
+          <div>责任部门：{{ taskDetail.executionDepartmentName }}</div>
+          <div>任务状态：{{ taskDetail.status }}</div>
+        </div>
+        <div class="grid grid-cols-2">
+          <div>考核方式：{{ taskDetail.assessmentMethod }}</div>
+          <div>任务类型：{{ taskDetail.taskType }}</div>
+        </div>
+        <div v-if="taskDetail.targetDescription">
+          量化指标说明：{{ taskDetail.targetDescription }}
+        </div>
+        <div v-if="taskDetail.targetName">
+          量化指标名称：{{ taskDetail.targetName }}
+        </div>
       </div>
       <a-divider></a-divider>
       <div style="height: 500px; overflow-y: auto">

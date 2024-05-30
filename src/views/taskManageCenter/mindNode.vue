@@ -1,5 +1,9 @@
 <template>
-  <div class="w-full h-full bg-slate-200 px-4 relative rounded-md">
+  <div
+    class="w-full h-full bg-slate-200 px-4 relative rounded-md"
+    @contextmenu.prevent.stop="selectRowClick(dataObj)"
+    v-menus:right="getNode().store.data.data.havePermission ? menus : []"
+  >
     <div
       class="text-blue-400 underline cursor-pointer txt_over_one"
       @click="getNode().store.data.seeDetail(dataObj)"

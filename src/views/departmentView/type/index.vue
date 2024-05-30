@@ -81,9 +81,9 @@ const columns = ref([
   },
   {
     title: "评分标准",
-    dataIndex: "describe",
+    dataIndex: "taskDescription",
     width: 300,
-    key: "describe",
+    key: "taskDescription",
   },
   {
     title: "得分",

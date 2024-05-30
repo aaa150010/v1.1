@@ -71,7 +71,7 @@
                 <span>>></span>
               </div>
               <div>
-                类型：<a-tag color="orange">{{
+                类型：<a-tag :color="item.color">{{
                   item.projectType ? item.projectType : "其他"
                 }}</a-tag>
               </div>
