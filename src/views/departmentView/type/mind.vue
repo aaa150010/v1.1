@@ -29,11 +29,16 @@
           <div>考核方式：{{ taskDetail.assessmentMethod }}</div>
           <div>任务类型：{{ taskDetail.taskType }}</div>
         </div>
+        <div class="grid grid-cols-2">
+          <div v-if="taskDetail.targetName">
+            量化指标名称：{{ taskDetail.targetName }}
+          </div>
+          <div v-if="taskDetail.targetValue">
+            量化指标值：{{ taskDetail.targetValue }}
+          </div>
+        </div>
         <div v-if="taskDetail.targetDescription">
           量化指标说明：{{ taskDetail.targetDescription }}
-        </div>
-        <div v-if="taskDetail.targetName">
-          量化指标名称：{{ taskDetail.targetName }}
         </div>
       </div>
       <a-divider></a-divider>
@@ -42,6 +47,7 @@
           <div>
             <div>执行部门：{{ item.feedbackDepartmentName }}</div>
             <div>执行人： {{ item.feedbackPersonName }}</div>
+
             <div>任务反馈时间： {{ item.submissionTime }}</div>
             <div>任务反馈说明： {{ item.progressFeedback }}</div>
             <div>
@@ -58,13 +64,17 @@
               </div>
             </div>
             <div>任务自评分： {{ item.selfScore }}分</div>
+            <div>任务进度： {{ item.taskSchedule }}%</div>
+            <div v-if="item.targetValue">
+              量化指标值：{{ item.targetValue }}
+            </div>
           </div>
           <a-divider></a-divider>
           <div>
-            <div>提交审核时间：{{ item.submissionTime }}</div>
             <div>审核时间： {{ item.reviewData.auditTime }}</div>
             <div>审核部门： {{ item.reviewData.auditDepartmentName }}</div>
             <div>审核人： {{ item.reviewData.reviewerName }}</div>
+            <div>审核得分： {{ item.reviewData.auditScore }}</div>
             <div>审核意见：{{ item.reviewData.auditResult }}</div>
             <div>审核说明： {{ item.reviewData.reviewComments }}</div>
           </div>
