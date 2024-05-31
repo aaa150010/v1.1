@@ -68,8 +68,8 @@
     </a-card>
 <!--    未完成model-->
     <a-modal v-model:open="open1" title="未完成任务数" @cancel="handleOk1" @ok="handleOk1" :width="1500" :maskClosable="false">
-      <div style="height: 600px;overflow: scroll">
-        <workprogress v-if="open1"></workprogress>
+      <div style="height: 600px;">
+        <workprogress v-if="open1" :height="'600px'"></workprogress>
       </div>
     </a-modal>
 <!--    待审核和已完成model-->

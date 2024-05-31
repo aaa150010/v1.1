@@ -6,7 +6,7 @@
         <overview v-if="activeKey=='1'"></overview>
       </a-tab-pane>
       <a-tab-pane key="2" tab="我的待办">
-        <workprogress v-if="activeKey=='2'"></workprogress>
+        <workprogress v-if="activeKey=='2'" :height="'100vh'"></workprogress>
       </a-tab-pane>
       <a-tab-pane key="3" tab="我的已办">
         <already-done v-if="activeKey=='3'"></already-done>

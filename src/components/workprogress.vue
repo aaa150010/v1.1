@@ -1,6 +1,6 @@
 <template>
-<div style="max-height: 100vh;overflow:scroll;">
-    <a-table :columns="columns" :data-source="data" :pagination="false" :loading="loading">
+<div :style="{height: props.height,overflow:'scroll'}">
+    <a-table :columns="columns" :data-source="data" :pagination="false" :loading="loading" >
 <!--      <template #headerCell="{ column }">-->
 <!--        <template v-if="column.key === 'name'">-->
 <!--        <span>-->
@@ -424,6 +424,10 @@ const open3=ref(false)
 const data=ref([])
 const filterList=ref([])
 const filterList1=ref([])
+const props=defineProps(
+    {height:{type:String,required:true
+    }
+    })
 const columns = ref([
   {
     title: '项目名称',

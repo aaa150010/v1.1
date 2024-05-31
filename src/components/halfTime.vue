@@ -1,5 +1,5 @@
 <template>
-  <div style="max-height: 100vh;overflow:scroll;">
+  <div style="height: 600px;overflow:scroll;">
       <a-table :columns="columns" :data-source="data" :pagination="false" :loading="loading">
         <!--      <template #headerCell="{ column }">-->
         <!--        <template v-if="column.key === 'name'">-->
