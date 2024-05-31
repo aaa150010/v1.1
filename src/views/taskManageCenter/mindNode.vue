@@ -9,7 +9,12 @@
         : 'background-color: #bfdbfe'
     "
     @contextmenu.prevent.stop="selectRowClick(dataObj)"
-    v-menus:right="getNode().store.data.data.havePermission ? menus : []"
+    v-menus:right="
+      getNode().store.data.data.havePermission &&
+      getNode().store.data.data.status != '已完成'
+        ? menus
+        : []
+    "
   >
     <div
       class="text-blue-400 underline cursor-pointer txt_over_one"
@@ -39,7 +44,10 @@
     <span
       class="absolute right-2 bottom-2 cursor-pointer text-lg"
       @click.stop="selectRowClick(dataObj)"
-      v-if="getNode().store.data.data.havePermission"
+      v-if="
+        getNode().store.data.data.havePermission &&
+        getNode().store.data.data.status != '已完成'
+      "
       v-menus:left="menus"
       >...</span
     >
@@ -121,6 +129,12 @@ const vMenus = directive;
 
 onMounted(() => {
   dataObj.value = getNode().store.data.data;
+
+  console.log(
+    getNode().store.data.data.havePermission &&
+      dataObj.value.status != "已完成",
+    9
+  );
 });
 
 const toggleCollapse = (flag) => {
