@@ -32,7 +32,7 @@
           <a-input disabled v-model:value="addFormState.projectName" />
         </a-form-item>
         <a-form-item label="任务名称">
-          <a-input disabled v-model:value="addFormState.taskName" />
+          <a-input disabled v-model:value="addFormState.taskName"/>
         </a-form-item>
         <a-row>
           <a-col :span="12">
